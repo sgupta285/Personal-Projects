@@ -1,0 +1,44 @@
+<!-- fragment_company_selected.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/handshake">
+
+    <TextView
+        android:id="@+id/companyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Company Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/companyDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Company Details"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/selectPartnerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Partner"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

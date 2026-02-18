@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/light_blue"
+    tools:context=".ui.main.ProblemSubmissionFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_find_your_match"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find Your Match"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/subtitle_problem_submission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter the project details and choose the category that best fits your requirements."
+            android:textSize="14sp"
+            android:textColor="@color/gray"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/project_details_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Describe your project's needs..."
+            android:inputType="textMultiLine"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:minHeight="100dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/category_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select a Category"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/black" />
+
+        <Spinner
+            android:id="@+id/category_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_background"
+            android:layout_marginBottom="16dp"
+            android:spinnerMode="dropdown" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/subcategory_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Tags to Refine Your Category"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/tag_chip_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:chipSpacing="8dp"
+            android:layout_marginBottom="16dp"
+            app:singleSelection="true"/>
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Analyze and Match"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/matchName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name: "
+            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+        <TextView
+            android:id="@+id/matchRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ranking: "
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <TextView
+            android:id="@+id/matchCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category: "
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <TextView
+            android:id="@+id/matchLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location: "
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <TextView
+            android:id="@+id/matchSector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sector: "
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <TextView
+            android:id="@+id/matchMarketCap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Market Cap: "
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <TextView
+            android:id="@+id/matchStockSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stock Symbol: "
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Delete" />
+
+        <Button
+            android:id="@+id/notifyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Notify" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

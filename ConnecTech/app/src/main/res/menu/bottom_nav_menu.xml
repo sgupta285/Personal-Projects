@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/problemSubmissionFragment"
+        android:title="Home"
+        android:icon="@drawable/ic_home" />
+
+    <item
+        android:id="@+id/inboxFragment"
+        android:title="Inbox"
+        android:icon="@drawable/ic_inbox" />
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:title="Settings"
+        android:icon="@drawable/ic_settings" />
+
+    <item
+        android:id="@+id/companyListFragment"
+        android:title="My Companies"
+        android:icon="@drawable/ic_companies" />
+</menu>

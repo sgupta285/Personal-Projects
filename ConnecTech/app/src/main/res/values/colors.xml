@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="primary">#6200EE</color>
+    <color name="background">#FFFFFF</color>
+    <color name="editTextBackground">#F5F5F5</color>
+    <color name="linkColor">#1976D2</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="textColorHint">#808080</color>
+
+    <color name="lightBlue">#DFF6FF</color>
+
+    <color name="gray">#808080</color>
+    <color name="purple_500">#6200EE</color>
+    
+    <color name="gray_dark">#606060</color>
+    <color name="gold">#FFD700</color>
+   
+    <color name="blue_500">#007BFF</color>
+    <color name="button_color">#4CAF50</color>
+    <color name="light_blue">#E0F7FA</color>
+    <color name="dark_purple">#301934</color>
+
+    <color name="blue">#0000FF</color>
+    <color name="green">#00FF00</color>
+</resources>

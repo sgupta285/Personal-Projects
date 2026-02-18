@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <CheckBox
+            android:id="@+id/selectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Select" />
+
+        <!-- Match Name -->
+        <TextView
+            android:id="@+id/matchName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Match Name"
+            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+        <!-- Match Rating -->
+        <TextView
+            android:id="@+id/matchRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating: 4.5"
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <!-- Match Category -->
+        <TextView
+            android:id="@+id/matchCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category: AI/ML"
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <!-- Match Location -->
+        <TextView
+            android:id="@+id/matchLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location: New York"
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <!-- Match Email -->
+        <TextView
+            android:id="@+id/matchEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email: contact@techinnovators.com"
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <!-- Match Phone -->
+        <TextView
+            android:id="@+id/matchPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone: 123-456-7890"
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <!-- Match Description -->
+        <TextView
+            android:id="@+id/matchDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description: Leading AI and Machine Learning solutions."
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <TextView
+            android:id="@+id/matchSector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sector: Technology"
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <TextView
+            android:id="@+id/matchMarketCap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Market Cap: \$1B"
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <TextView
+            android:id="@+id/matchStockSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stock Symbol: GOOG"
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

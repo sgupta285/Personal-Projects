@@ -1,0 +1,83 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">ConnecTech</string>
+
+    <!-- Authentication Labels -->
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="reset_password">Reset Password</string>
+
+    <!-- Button Texts -->
+    <string name="login_button">Login</string>
+    <string name="magic_button">Click to experience the magic</string>
+    <string name="register_button">Register</string>
+    <string name="reset_password_button">Reset Password</string>
+
+    <!-- Error Messages -->
+    <string name="error_empty_fields">Please fill out all fields</string>
+    <string name="error_empty_email_password">Please enter email and password</string>
+    <string name="error_empty_email">Please enter your email</string>
+    <string name="error_password_mismatch">Passwords do not match</string>
+    <string name="error_generic">Something went wrong</string>
+
+    <!-- Success Messages -->
+    <string name="success_login">Login successful</string>
+    <string name="success_registration">Registration successful</string>
+    <string name="success_reset_password">Reset link sent to email</string>
+
+    <!-- Screen Titles -->
+    <string name="login_screen_title">Welcome Back</string>
+    <string name="register_screen_title">Create New Account</string>
+    <string name="forgot_password_screen_title">Reset Your Password</string>
+
+    <!-- Inbox Page -->
+    <string name="inbox_title">Inbox</string>
+    <string name="profile_label">Info</string>
+    <string name="search_hint">Search inbox</string>
+    <string name="page_label">Page</string>
+    <string name="pagination_next">Next</string>
+    <string name="pagination_previous">Previous</string>
+
+    <!-- Bottom Navigation -->
+    <string name="home">Home</string>
+    <string name="inbox">Inbox</string>
+    <string name="options">Options</string>
+    <string name="settings">Settings</string>
+
+
+    <!-- API Related Strings (Placeholder) -->
+    <string name="api_base_url">https://api.connectech.com/</string>
+
+    <!-- Profile Page -->
+    <string name="about_us">About Us</string>
+    <string name="about_us_description">ConnecTech connects businesses with trusted, pre-vetted tech service providers, making it easy to find the right partner for projects like software development, IT services, or system integration. Our platform ensures seamless collaboration, helping businesses efficiently match with providers that meet their specific needs, timelines, and budgets.</string>
+
+    <!-- Settings Page -->
+    <string name="your_profile">Your Profile</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="ongoing_contract">Ongoing Contract</string>
+    <string name="previous_contract">Previous Contract</string>
+    <string name="scanned_documents">Scanned Documents</string>
+    <string name="progress">Progress</string>
+    <string name="help_center">Help Center</string>
+    <string name="logout">Logout</string>
+
+    <!-- Placeholder or Static Content -->
+    <string name="provider_name">Provider Name</string>
+    <string name="provider_rating">Provider Rating</string>
+    <string name="authenticating">Authenticating...</string>
+    <string name="logout_button">Logout</string>
+    <string name="change_password">Change Password</string>
+    <string name="change_password_button">Change Password Button</string>
+
+    <string name="rating_format">Rating: %d</string>
+    <string name="category_format">Category: %s</string>
+    <string name="location_format">Location: %s</string>
+    <string name="sector_format">Sector: %s</string>
+    <string name="market_cap_format">Market Cap: %s</string>
+    <string name="stock_symbol_format">Stock Symbol: %s</string>
+
+</resources>

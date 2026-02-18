@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/listbackground">
+
+    <!-- Title for the screen -->
+    <TextView
+        android:id="@+id/best_matches_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Best Matches"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/black" />
+
+    <!-- Subtitle for the screen -->
+    <TextView
+        android:id="@+id/best_matches_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Here are the best companies matching your requirements:"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/gray"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Divider for better UI separation -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_marginBottom="8dp" />
+
+    <!-- RecyclerView to display the list of matched tech providers -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/best_matches_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp" />
+
+    <!-- Footer section with an action button -->
+</LinearLayout>

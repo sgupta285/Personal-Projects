@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Wrap the entire layout in a <layout> tag if using Data Binding -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Removed the duplicate XML declaration here -->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:background="@color/lightBlue">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Profile Section -->
+                <TextView
+                    android:id="@+id/profileTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_profile"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="16dp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:padding="10dp"
+                    android:background="@drawable/rounded_edittext_background"
+                    android:layout_marginTop="8dp" />
+
+                <ImageView
+                    android:id="@+id/profilePicture"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_profileimage"
+                    android:background="@drawable/circular_image_background"
+                    android:scaleType="centerCrop" />
+
+                <!-- Settings Options -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="24dp">
+
+                    <Button
+                        android:id="@+id/btnOngoingContract"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ongoing_contract"
+                        android:layout_marginTop="8dp" />
+
+                    <Button
+                        android:id="@+id/btnPreviousContract"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/previous_contract"
+                        android:layout_marginTop="8dp" />
+
+                    <Button
+                        android:id="@+id/btnScannedDocuments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/scanned_documents"
+                        android:layout_marginTop="8dp" />
+
+                    <Button
+                        android:id="@+id/btnProgress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/progress"
+                        android:layout_marginTop="8dp" />
+
+                    <Button
+                        android:id="@+id/btnaboutus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_us"
+                        android:layout_marginTop="8dp" />
+
+                    <Button
+                        android:id="@+id/btnLogout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/logout"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

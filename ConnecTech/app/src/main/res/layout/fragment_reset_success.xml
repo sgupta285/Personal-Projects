@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.cs407.connectech.auth.SuccessMessageViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_blue"
+        tools:context=".auth.ResetSuccessFragment">
+
+        <!-- Success Message -->
+        <TextView
+            android:id="@+id/success_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.successMessage}"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="100dp"
+            android:padding="16dp" />
+
+        <!-- Navigation Hint -->
+        <TextView
+            android:id="@+id/navigate_hint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/magic_button"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/success_message"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"
+            android:padding="12dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

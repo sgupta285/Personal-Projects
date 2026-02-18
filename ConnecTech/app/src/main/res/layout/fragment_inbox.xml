@@ -1,0 +1,153 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:listitem="@layout/item_message"
+    tools:context=".inbox.InboxFragment">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/inbox_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/inbox_title"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- Profile Icon -->
+    <LinearLayout
+        android:id="@+id/profile_icon_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp">
+
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@string/profile_label" /> <!--android:src="@drawable/ic_person"-->
+
+        <TextView
+            android:id="@+id/profile_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_label"
+            android:textSize="12sp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/search_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/inbox_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/search_hint" /> <!--android:src="@drawable/ic_search"-->
+
+            <EditText
+                android:id="@+id/search_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/search_hint"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/textColorHint"
+                android:imeOptions="actionSearch" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Problem Details -->
+    <TextView
+        android:id="@+id/tvProblemDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Problem Details"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/search_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp" />
+
+    <!-- Category -->
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvProblemDetails"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp" />
+
+    <!-- Selected Tags -->
+    <TextView
+        android:id="@+id/tvSelectedTags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected Tags"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvCategory"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp" />
+
+    <!-- RecyclerView for Messages -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inbox_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSelectedTags"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/pagination_recycler_view"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Pagination RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pagination_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/light_blue" /> <!--app:menu="@menu/bottom_navigation_menu"-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
