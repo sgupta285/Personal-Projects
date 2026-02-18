@@ -1,0 +1,27 @@
+# Core
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.14.1
+statsmodels==0.14.2
+
+# Database
+psycopg2-binary==2.9.9
+sqlalchemy==2.0.35
+
+# Redis
+redis==5.1.0
+
+# Visualization
+matplotlib==3.9.2
+seaborn==0.13.2
+
+# Monitoring
+prometheus-client==0.21.0
+structlog==24.4.0
+
+# Testing
+pytest==8.3.3
+pytest-cov==5.0.0
+
+# Data
+yfinance==0.2.41
