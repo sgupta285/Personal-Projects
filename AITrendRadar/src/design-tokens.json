@@ -1,0 +1,345 @@
+{
+  "$schema": "https://schemas.figma.com/design-tokens/draft-1",
+  "$description": "Trend Radar Design Tokens - Exported from code",
+  "$version": "1.0.0",
+  "$exportDate": "2025-09-30T12:00:00.000Z",
+  "color": {
+    "surface": {
+      "background": {
+        "$value": "#0a0a0f",
+        "$type": "color"
+      },
+      "foreground": {
+        "$value": "#f5f5f7",
+        "$type": "color"
+      },
+      "card": {
+        "$value": "#151519",
+        "$type": "color"
+      },
+      "card-foreground": {
+        "$value": "#f5f5f7",
+        "$type": "color"
+      },
+      "popover": {
+        "$value": "#151519",
+        "$type": "color"
+      },
+      "popover-foreground": {
+        "$value": "#f5f5f7",
+        "$type": "color"
+      },
+      "primary": {
+        "$value": "#f5f5f7",
+        "$type": "color"
+      },
+      "primary-foreground": {
+        "$value": "#0a0a0f",
+        "$type": "color"
+      },
+      "secondary": {
+        "$value": "#1f1f24",
+        "$type": "color"
+      },
+      "secondary-foreground": {
+        "$value": "#f5f5f7",
+        "$type": "color"
+      },
+      "muted": {
+        "$value": "#2a2a31",
+        "$type": "color"
+      },
+      "muted-foreground": {
+        "$value": "#a1a1aa",
+        "$type": "color"
+      },
+      "input": {
+        "$value": "transparent",
+        "$type": "color"
+      },
+      "input-background": {
+        "$value": "#1f1f24",
+        "$type": "color"
+      },
+      "switch-background": {
+        "$value": "#3f3f46",
+        "$type": "color"
+      }
+    },
+    "semantic": {
+      "accent": {
+        "$value": "#0066FF",
+        "$type": "color",
+        "$description": "Primary brand accent color"
+      },
+      "accent-foreground": {
+        "$value": "#ffffff",
+        "$type": "color"
+      },
+      "accent-secondary": {
+        "$value": "#0052cc",
+        "$type": "color",
+        "$description": "Darker accent for hover states"
+      },
+      "destructive": {
+        "$value": "#ef4444",
+        "$type": "color"
+      },
+      "destructive-foreground": {
+        "$value": "#ffffff",
+        "$type": "color"
+      },
+      "border": {
+        "$value": "rgba(255, 255, 255, 0.1)",
+        "$type": "color"
+      },
+      "ring": {
+        "$value": "#0066FF",
+        "$type": "color",
+        "$description": "Focus ring color"
+      }
+    },
+    "charts": {
+      "chart-1": {
+        "$value": "#3b82f6",
+        "$type": "color",
+        "$description": "Blue - Primary chart color"
+      },
+      "chart-2": {
+        "$value": "#10b981",
+        "$type": "color",
+        "$description": "Green - Success/positive trends"
+      },
+      "chart-3": {
+        "$value": "#f59e0b",
+        "$type": "color",
+        "$description": "Amber - Warning/neutral trends"
+      },
+      "chart-4": {
+        "$value": "#8b5cf6",
+        "$type": "color",
+        "$description": "Purple - Secondary data"
+      },
+      "chart-5": {
+        "$value": "#ef4444",
+        "$type": "color",
+        "$description": "Red - Error/negative trends"
+      }
+    }
+  },
+  "typography": {
+    "size": {
+      "display": {
+        "$value": "3.5rem",
+        "$type": "dimension",
+        "$description": "56px - Hero headlines"
+      },
+      "h1": {
+        "$value": "2.75rem",
+        "$type": "dimension",
+        "$description": "44px - Page titles"
+      },
+      "h2": {
+        "$value": "2rem",
+        "$type": "dimension",
+        "$description": "32px - Section headers"
+      },
+      "h3": {
+        "$value": "1.5rem",
+        "$type": "dimension",
+        "$description": "24px - Subsection headers"
+      },
+      "base": {
+        "$value": "1rem",
+        "$type": "dimension",
+        "$description": "16px - Body text"
+      },
+      "small": {
+        "$value": "0.875rem",
+        "$type": "dimension",
+        "$description": "14px - Labels, captions"
+      }
+    },
+    "lineHeight": {
+      "display": {
+        "$value": "4rem",
+        "$type": "dimension",
+        "$description": "64px"
+      },
+      "h1": {
+        "$value": "3.25rem",
+        "$type": "dimension",
+        "$description": "52px"
+      },
+      "h2": {
+        "$value": "2.5rem",
+        "$type": "dimension",
+        "$description": "40px"
+      },
+      "h3": {
+        "$value": "2rem",
+        "$type": "dimension",
+        "$description": "32px"
+      },
+      "base": {
+        "$value": "1.5rem",
+        "$type": "dimension",
+        "$description": "24px"
+      },
+      "small": {
+        "$value": "1.25rem",
+        "$type": "dimension",
+        "$description": "20px"
+      }
+    },
+    "fontWeight": {
+      "medium": {
+        "$value": "500",
+        "$type": "fontWeight"
+      },
+      "normal": {
+        "$value": "400",
+        "$type": "fontWeight"
+      },
+      "semibold": {
+        "$value": "600",
+        "$type": "fontWeight"
+      }
+    },
+    "fontFamily": {
+      "sans": {
+        "$value": "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif",
+        "$type": "fontFamily"
+      }
+    }
+  },
+  "spacing": {
+    "$description": "Standard Tailwind spacing scale used in the application",
+    "1": {
+      "$value": "4px",
+      "$type": "dimension"
+    },
+    "2": {
+      "$value": "8px",
+      "$type": "dimension"
+    },
+    "3": {
+      "$value": "12px",
+      "$type": "dimension"
+    },
+    "4": {
+      "$value": "16px",
+      "$type": "dimension"
+    },
+    "5": {
+      "$value": "20px",
+      "$type": "dimension"
+    },
+    "6": {
+      "$value": "24px",
+      "$type": "dimension"
+    },
+    "8": {
+      "$value": "32px",
+      "$type": "dimension"
+    },
+    "10": {
+      "$value": "40px",
+      "$type": "dimension"
+    },
+    "12": {
+      "$value": "48px",
+      "$type": "dimension"
+    },
+    "16": {
+      "$value": "64px",
+      "$type": "dimension"
+    },
+    "20": {
+      "$value": "80px",
+      "$type": "dimension"
+    },
+    "24": {
+      "$value": "96px",
+      "$type": "dimension"
+    }
+  },
+  "radius": {
+    "sm": {
+      "$value": "8px",
+      "$type": "dimension",
+      "$description": "Small cards, chips"
+    },
+    "md": {
+      "$value": "10px",
+      "$type": "dimension",
+      "$description": "Inputs, buttons (calculated: --radius - 2px)"
+    },
+    "lg": {
+      "$value": "12px",
+      "$type": "dimension",
+      "$description": "Cards, modals (base --radius)"
+    },
+    "xl": {
+      "$value": "16px",
+      "$type": "dimension",
+      "$description": "Large containers (calculated: --radius + 4px)"
+    }
+  },
+  "shadow": {
+    "$description": "Elevation system",
+    "sm": {
+      "$value": "0 1px 2px rgba(0, 0, 0, 0.06)",
+      "$type": "shadow",
+      "$description": "Subtle elevation"
+    },
+    "md": {
+      "$value": "0 4px 10px rgba(0, 0, 0, 0.10)",
+      "$type": "shadow",
+      "$description": "Cards, dropdowns"
+    },
+    "lg": {
+      "$value": "0 10px 24px rgba(0, 0, 0, 0.14)",
+      "$type": "shadow",
+      "$description": "Modals, popovers"
+    },
+    "accent-glow": {
+      "$value": "0 0 20px rgba(0, 102, 255, 0.3)",
+      "$type": "shadow",
+      "$description": "Accent hover states"
+    }
+  },
+  "breakpoints": {
+    "$description": "Responsive breakpoints",
+    "mobile": {
+      "$value": "0px",
+      "$type": "dimension",
+      "$description": "Small phones - base styles"
+    },
+    "sm": {
+      "$value": "640px",
+      "$type": "dimension",
+      "$description": "Large phones"
+    },
+    "md": {
+      "$value": "768px",
+      "$type": "dimension",
+      "$description": "Tablets"
+    },
+    "lg": {
+      "$value": "1024px",
+      "$type": "dimension",
+      "$description": "Laptops"
+    },
+    "xl": {
+      "$value": "1280px",
+      "$type": "dimension",
+      "$description": "Desktops"
+    },
+    "2xl": {
+      "$value": "1536px",
+      "$type": "dimension",
+      "$description": "Large displays"
+    }
+  }
+}
