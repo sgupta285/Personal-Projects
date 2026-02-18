@@ -1,0 +1,25 @@
+{
+  "name": "clearcause-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ClearCause — AI-Powered Contract Analysis",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "vite build && aws s3 sync dist/ s3://clearcause-dev-frontend --delete && aws cloudfront create-invalidation --distribution-id $CF_DIST_ID --paths '/*'"
+  },
+  "dependencies": {
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "lucide-react": "^0.400.0",
+    "amazon-cognito-identity-js": "^6.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.0",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.0",
+    "vite": "^5.4.0"
+  }
+}

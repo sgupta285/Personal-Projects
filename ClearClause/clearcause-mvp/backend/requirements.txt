@@ -1,0 +1,13 @@
+# ClearCause Backend Dependencies
+# Install: pip install -r requirements.txt
+
+# Core
+boto3>=1.34.0
+openai>=1.12.0
+
+# PDF Processing
+PyMuPDF>=1.24.0
+reportlab>=4.1.0
+
+# Utilities
+python-dateutil>=2.8.0
