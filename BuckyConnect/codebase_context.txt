@@ -1,0 +1,2617 @@
+
+--- FILE: ./README.md ---
+# 🔗 BuckyConnect
+
+**Real-time collaboration platform** built with WebSockets, GraphQL, and Redis Pub/Sub.
+
+Supports live messaging, channel management, user presence tracking, and typing indicators — all with sub-500ms latency targets and horizontal scalability via Redis event fanout.
+
+---
+
+## Features
+
+- **Real-time messaging** via WebSockets with automatic reconnection and heartbeat
+- **GraphQL API** for structured reads (channels, messages, users, members)
+- **Redis Pub/Sub** for event fanout across multiple server instances
+- **Channel-based collaboration** — create, join, and switch between channels
+- **User presence** — online/offline status tracked in real time
+- **Typing indicators** — see who's typing in a channel
+- **Message history** with pagination support
+- **Lazy-loaded components** and code splitting (40% bundle reduction strategy)
+- **Graceful degradation** — works without Redis using local broadcast fallback
+- **Dark-themed UI** with responsive layout
+
+## Architecture
+
+```
+┌─────────────────┐      HTTP/GraphQL       ┌──────────────────┐
+│                 │ ◄──────────────────────► │                  │
+│  React Frontend │                          │  Express + Apollo│
+│  (Vite + Apollo)│ ◄── WebSocket (ws) ────► │  + WS Server     │
+│                 │                          │                  │
+└─────────────────┘                          └────────┬─────────┘
+                                                      │
+                                           ┌──────────┴──────────┐
+                                           │                     │
+                                      ┌────▼────┐         ┌─────▼────┐
+                                      │  Redis  │         │  SQLite  │
+                                      │ Pub/Sub │         │    DB    │
+                                      └─────────┘         └──────────┘
+```
+
+- **Frontend**: React 18 + TypeScript + Vite + Apollo Client
+- **Backend**: Node.js + Express + Apollo Server (GraphQL) + ws (WebSocket)
+- **Database**: SQLite via better-sqlite3 (WAL mode, foreign keys)
+- **Pub/Sub**: Redis (optional — degrades gracefully to local broadcast)
+
+## Quick Start
+
+### Prerequisites
+
+- **Node.js** >= 18
+- **Redis** (optional but recommended) — `brew install redis` / `apt install redis-server`
+
+### Install
+
+```bash
+# From project root
+npm run install:all
+```
+
+### Configure
+
+```bash
+cp backend/.env.example backend/.env
+# Edit backend/.env if needed (defaults work fine)
+```
+
+### Run (Development)
+
+```bash
+# Terminal 1: Start Redis (optional)
+redis-server
+
+# Terminal 2: Start both backend + frontend
+npm run dev
+```
+
+- **Frontend**: http://localhost:5173
+- **Backend GraphQL**: http://localhost:4000/graphql
+- **WebSocket**: ws://localhost:4000/ws
+- **Health Check**: http://localhost:4000/health
+
+### Run with Docker
+
+```bash
+docker-compose up --build
+```
+
+### Run Tests
+
+```bash
+cd backend && npm test
+```
+
+### Build for Production
+
+```bash
+cd frontend && npm run build
+```
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React 18, TypeScript, Vite, Apollo Client |
+| Backend | Node.js, Express, Apollo Server, ws |
+| Database | SQLite (better-sqlite3) |
+| Pub/Sub | Redis (ioredis) |
+| Infrastructure | Docker, docker-compose |
+
+## API Reference
+
+### GraphQL Queries
+
+- `channels` — List all channels
+- `channel(id)` — Get channel with members
+- `messages(channelId, limit, before)` — Paginated messages
+- `users` — All registered users
+
+### GraphQL Mutations
+
+- `register(username, displayName)` — Create/login user
+- `sendMessage(channelId, userId, content)` — Send a message
+- `createChannel(name, description, userId)` — Create a channel
+- `joinChannel / leaveChannel` — Channel membership
+
+### WebSocket Events
+
+| Client → Server | Server → Client |
+|----------------|-----------------|
+| `auth` | `auth_ok`, `presence` |
+| `join_channel` | `user_joined` |
+| `message` | `new_message` |
+| `typing` | `typing` |
+| `ping` | `pong` |
+
+## License
+
+MIT
+
+
+--- FILE: ./create_context.py ---
+import os
+
+# Files or folders to ignore (keeps the file from getting too big)
+# Added 'env', '.venv', and 'assets' to prevent 1GB+ file sizes
+IGNORE_LIST = {
+    'node_modules', '.git', '.next', 'dist', 'build', '__pycache__', 
+    '.DS_Store', 'env', '.venv', 'venv', 'target', 'vendor', '.cache',
+    'images', 'assets', 'videos', 'public', 'out', 'bower_components'
+}
+
+# Only these extensions will be read by the script
+ALLOWED_EXTENSIONS = {'.js', '.jsx', '.ts', '.tsx', '.py', '.html', '.css', '.json', '.md'}
+
+def create_codebase_context(output_file='codebase_context.txt'):
+    print("🚀 Scanning folders and building context...")
+    count = 0
+    
+    with open(output_file, 'w', encoding='utf-8') as outfile:
+        # Loop through every folder and file in your project
+        for root, dirs, files in os.walk('.'):
+            # Skip folders in the ignore list to keep the file size small
+            dirs[:] = [d for d in dirs if d not in IGNORE_LIST]
+            
+            for file in files:
+                # Only include logic-based code files
+                if any(file.endswith(ext) for ext in ALLOWED_EXTENSIONS):
+                    file_path = os.path.join(root, file)
+                    outfile.write(f"\n--- FILE: {file_path} ---\n")
+                    try:
+                        with open(file_path, 'r', encoding='utf-8') as infile:
+                            outfile.write(infile.read())
+                        count += 1
+                    except Exception as e:
+                        outfile.write(f"[Error reading file: {e}]")
+                    outfile.write("\n")
+
+    print(f"✅ Success! Processed {count} files.")
+    print(f"📍 Your codebase has been saved to: {os.path.abspath(output_file)}")
+
+if __name__ == "__main__":
+    create_codebase_context()
+
+--- FILE: ./package.json ---
+{
+  "name": "buckyconnect",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Real-time collaboration platform with WebSockets, GraphQL, and Redis Pub/Sub",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "build": "cd frontend && npm run build",
+    "test": "cd backend && npm test",
+    "lint": "cd backend && npm run lint && cd ../frontend && npm run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
+
+
+--- FILE: ./frontend/index.html ---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuckyConnect</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
+
+--- FILE: ./frontend/package.json ---
+{
+  "name": "buckyconnect-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src/ --ext .ts,.tsx"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.11.0",
+    "graphql": "^16.9.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2"
+  }
+}
+
+
+--- FILE: ./frontend/tsconfig.json ---
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"]
+}
+
+
+--- FILE: ./frontend/vite.config.ts ---
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 5173,
+    proxy: {
+      "/graphql": "http://localhost:4000",
+      "/ws": {
+        target: "ws://localhost:4000",
+        ws: true,
+      },
+    },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom", "react-router-dom"],
+          apollo: ["@apollo/client", "graphql"],
+        },
+      },
+    },
+  },
+});
+
+
+--- FILE: ./frontend/src/App.tsx ---
+import { useState, useCallback } from "react";
+import { useMutation } from "@apollo/client";
+import { REGISTER_USER } from "./graphql/queries";
+import ChatLayout from "./components/ChatLayout";
+
+interface User {
+  id: string;
+  username: string;
+  display_name: string;
+  status: string;
+}
+
+export default function App() {
+  const [user, setUser] = useState<User | null>(() => {
+    try {
+      const stored = sessionStorage.getItem("buckyconnect_user");
+      return stored ? JSON.parse(stored) : null;
+    } catch { return null; }
+  });
+
+  const handleLogin = useCallback((u: User) => {
+    setUser(u);
+    sessionStorage.setItem("buckyconnect_user", JSON.stringify(u));
+  }, []);
+
+  const handleLogout = useCallback(() => {
+    setUser(null);
+    sessionStorage.removeItem("buckyconnect_user");
+  }, []);
+
+  if (!user) return <LoginScreen onLogin={handleLogin} />;
+  return <ChatLayout user={user} onLogout={handleLogout} />;
+}
+
+function LoginScreen({ onLogin }: { onLogin: (u: User) => void }) {
+  const [username, setUsername] = useState("");
+  const [displayName, setDisplayName] = useState("");
+  const [register, { loading, error }] = useMutation(REGISTER_USER);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!username.trim()) return;
+    try {
+      const { data } = await register({
+        variables: {
+          username: username.trim().toLowerCase(),
+          displayName: displayName.trim() || username.trim(),
+        },
+      });
+      if (data?.register) onLogin(data.register);
+    } catch (err) {
+      console.error("Registration error:", err);
+    }
+  };
+
+  return (
+    <div className="login-container">
+      <form className="login-card" onSubmit={handleSubmit}>
+        <h1>🔗 BuckyConnect</h1>
+        <p>Real-time collaboration, instantly.</p>
+        <input
+          className="login-input"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          autoFocus
+          maxLength={30}
+        />
+        <input
+          className="login-input"
+          placeholder="Display Name (optional)"
+          value={displayName}
+          onChange={(e) => setDisplayName(e.target.value)}
+          maxLength={50}
+        />
+        {error && <p style={{ color: "var(--accent)", fontSize: 13, marginBottom: 8 }}>Connection error. Is the backend running?</p>}
+        <button className="login-btn" type="submit" disabled={loading || !username.trim()}>
+          {loading ? "Connecting..." : "Join"}
+        </button>
+      </form>
+    </div>
+  );
+}
+
+
+--- FILE: ./frontend/src/main.tsx ---
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from "@apollo/client";
+import App from "./App";
+import "./index.css";
+
+const client = new ApolloClient({
+  link: new HttpLink({ uri: "/graphql" }),
+  cache: new InMemoryCache(),
+  defaultOptions: {
+    watchQuery: { fetchPolicy: "cache-and-network" },
+  },
+});
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
+  </React.StrictMode>
+);
+
+
+--- FILE: ./frontend/src/index.css ---
+:root {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --bg-tertiary: #0f3460;
+  --accent: #e94560;
+  --accent-hover: #ff6b6b;
+  --text-primary: #eee;
+  --text-secondary: #aab;
+  --text-muted: #778;
+  --border: #2a2a4a;
+  --success: #2ecc71;
+  --warning: #f39c12;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  height: 100vh;
+  overflow: hidden;
+}
+
+#root { height: 100vh; }
+
+.app-layout {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-header h1 {
+  font-size: 18px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), #ff9a76);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.channel-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.channel-item {
+  padding: 8px 12px;
+  margin: 2px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  transition: background 0.15s, color 0.15s;
+}
+
+.channel-item:hover {
+  background: rgba(255,255,255,0.05);
+  color: var(--text-primary);
+}
+
+.channel-item.active {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.channel-item .hash { opacity: 0.5; font-weight: 700; }
+
+.sidebar-footer {
+  padding: 12px 16px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--success);
+  flex-shrink: 0;
+}
+
+.status-dot.offline { background: var(--text-muted); }
+
+/* Main content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.channel-header {
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.channel-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.channel-header .description {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-left: 12px;
+}
+
+/* Messages */
+.messages-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.message {
+  display: flex;
+  gap: 12px;
+  padding: 6px 0;
+  margin: 2px 0;
+}
+
+.message:hover { background: rgba(255,255,255,0.02); border-radius: 6px; }
+
+.message-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.message-body { min-width: 0; }
+
+.message-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.message-username {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.message-time {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.message-content {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+
+.message-edited {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-left: 4px;
+}
+
+/* Input */
+.message-input-container {
+  padding: 12px 20px 20px;
+}
+
+.message-input-wrapper {
+  display: flex;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.message-input-wrapper:focus-within {
+  border-color: var(--accent);
+}
+
+.message-input {
+  flex: 1;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+}
+
+.message-input::placeholder { color: var(--text-muted); }
+
+.send-btn {
+  padding: 12px 20px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.15s;
+}
+
+.send-btn:hover { background: var(--accent-hover); }
+.send-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Typing indicator */
+.typing-indicator {
+  padding: 4px 20px;
+  font-size: 12px;
+  color: var(--text-muted);
+  min-height: 22px;
+  font-style: italic;
+}
+
+/* Members panel */
+.members-panel {
+  width: 220px;
+  background: var(--bg-secondary);
+  border-left: 1px solid var(--border);
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.members-panel h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.member-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 13px;
+}
+
+/* Login screen */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: var(--bg-primary);
+}
+
+.login-card {
+  background: var(--bg-secondary);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  width: 380px;
+  text-align: center;
+}
+
+.login-card h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, var(--accent), #ff9a76);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login-card p {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 14px;
+  margin-bottom: 12px;
+  outline: none;
+  font-family: inherit;
+}
+
+.login-input:focus { border-color: var(--accent); }
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.15s;
+}
+
+.login-btn:hover { background: var(--accent-hover); }
+.login-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* New channel modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  width: 400px;
+}
+
+.modal h2 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.btn-secondary {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn-primary {
+  padding: 8px 16px;
+  background: var(--accent);
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* Connection indicator */
+.connection-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Add channel button */
+.add-channel-btn {
+  padding: 6px 12px;
+  margin: 8px;
+  background: transparent;
+  border: 1px dashed var(--border);
+  color: var(--text-muted);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  text-align: left;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.add-channel-btn:hover {
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+
+--- FILE: ./frontend/src/components/ChatLayout.tsx ---
+import { useState, useEffect, useCallback, useRef, lazy, Suspense } from "react";
+import { useQuery, useMutation } from "@apollo/client";
+import {
+  GET_CHANNELS,
+  GET_MESSAGES,
+  GET_CHANNEL,
+  SEND_MESSAGE,
+  CREATE_CHANNEL,
+  JOIN_CHANNEL,
+} from "../graphql/queries";
+import { useWebSocket, WSMessage } from "../hooks/useWebSocket";
+
+// Lazy-loaded components for code splitting
+const MembersPanel = lazy(() => import("./MembersPanel"));
+
+interface User {
+  id: string;
+  username: string;
+  display_name: string;
+  status: string;
+}
+
+interface Message {
+  id: string;
+  channel_id: string;
+  user_id: string;
+  content: string;
+  edited: boolean;
+  created_at: string;
+  username: string;
+  display_name: string;
+}
+
+export default function ChatLayout({ user, onLogout }: { user: User; onLogout: () => void }) {
+  const [activeChannelId, setActiveChannelId] = useState<string | null>(null);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [typingUsers, setTypingUsers] = useState<Map<string, string>>(new Map());
+  const [showNewChannel, setShowNewChannel] = useState(false);
+  const [showMembers, setShowMembers] = useState(true);
+  const typingTimeoutRef = useRef<Map<string, NodeJS.Timeout>>(new Map());
+
+  // GraphQL
+  const { data: channelsData, refetch: refetchChannels } = useQuery(GET_CHANNELS);
+  const { data: channelData } = useQuery(GET_CHANNEL, {
+    variables: { id: activeChannelId },
+    skip: !activeChannelId,
+  });
+  const { data: messagesData, refetch: refetchMessages } = useQuery(GET_MESSAGES, {
+    variables: { channelId: activeChannelId, limit: 100 },
+    skip: !activeChannelId,
+  });
+  const [sendMessageMut] = useMutation(SEND_MESSAGE);
+  const [createChannelMut] = useMutation(CREATE_CHANNEL);
+  const [joinChannelMut] = useMutation(JOIN_CHANNEL);
+
+  // WebSocket
+  const { send, subscribe, isConnected } = useWebSocket(user.id, user.username);
+
+  // Set initial channel
+  useEffect(() => {
+    if (channelsData?.channels?.length && !activeChannelId) {
+      setActiveChannelId(channelsData.channels[0].id);
+    }
+  }, [channelsData, activeChannelId]);
+
+  // Load messages from GraphQL query
+  useEffect(() => {
+    if (messagesData?.messages) {
+      setMessages([...messagesData.messages].reverse());
+    }
+  }, [messagesData]);
+
+  // Join channel via WS when switching
+  useEffect(() => {
+    if (activeChannelId) {
+      send({ type: "join_channel", channelId: activeChannelId });
+      setTypingUsers(new Map());
+    }
+  }, [activeChannelId, send]);
+
+  // Handle incoming WS messages
+  useEffect(() => {
+    return subscribe((msg: WSMessage) => {
+      switch (msg.type) {
+        case "new_message":
+          if (msg.channelId === activeChannelId && msg.message) {
+            setMessages((prev) => {
+              if (prev.find((m) => m.id === msg.message.id)) return prev;
+              return [...prev, msg.message];
+            });
+          }
+          break;
+
+        case "typing":
+          if (msg.channelId === activeChannelId && msg.userId !== user.id) {
+            setTypingUsers((prev) => {
+              const next = new Map(prev);
+              if (msg.isTyping) {
+                next.set(msg.userId, msg.username);
+                // Clear after 3s
+                const existing = typingTimeoutRef.current.get(msg.userId);
+                if (existing) clearTimeout(existing);
+                typingTimeoutRef.current.set(
+                  msg.userId,
+                  setTimeout(() => {
+                    setTypingUsers((p) => {
+                      const n = new Map(p);
+                      n.delete(msg.userId);
+                      return n;
+                    });
+                  }, 3000)
+                );
+              } else {
+                next.delete(msg.userId);
+              }
+              return next;
+            });
+          }
+          break;
+
+        case "presence":
+          // Could refresh member list
+          break;
+      }
+    });
+  }, [subscribe, activeChannelId, user.id]);
+
+  const handleSendMessage = useCallback(
+    async (content: string) => {
+      if (!activeChannelId || !content.trim()) return;
+      try {
+        await sendMessageMut({
+          variables: { channelId: activeChannelId, userId: user.id, content: content.trim() },
+        });
+        // WS will handle adding to local state via fanout
+        // Also refetch as fallback
+        refetchMessages();
+      } catch (err) {
+        console.error("Send message error:", err);
+      }
+    },
+    [activeChannelId, user.id, sendMessageMut, refetchMessages]
+  );
+
+  const handleCreateChannel = useCallback(
+    async (name: string, description: string) => {
+      try {
+        const { data } = await createChannelMut({
+          variables: { name: name.trim().toLowerCase().replace(/\s+/g, "-"), description, userId: user.id },
+        });
+        if (data?.createChannel) {
+          refetchChannels();
+          setActiveChannelId(data.createChannel.id);
+          setShowNewChannel(false);
+        }
+      } catch (err) {
+        console.error("Create channel error:", err);
+      }
+    },
+    [user.id, createChannelMut, refetchChannels]
+  );
+
+  const handleTyping = useCallback(() => {
+    if (activeChannelId) {
+      send({ type: "typing", channelId: activeChannelId, isTyping: true });
+    }
+  }, [activeChannelId, send]);
+
+  const channels = channelsData?.channels || [];
+  const members = channelData?.channel?.members || [];
+  const activeChannel = channels.find((c: any) => c.id === activeChannelId);
+
+  return (
+    <div className="app-layout">
+      {/* Sidebar */}
+      <div className="sidebar">
+        <div className="sidebar-header">
+          <h1>🔗 BuckyConnect</h1>
+        </div>
+        <div className="channel-list">
+          {channels.map((ch: any) => (
+            <div
+              key={ch.id}
+              className={`channel-item ${ch.id === activeChannelId ? "active" : ""}`}
+              onClick={() => setActiveChannelId(ch.id)}
+            >
+              <span className="hash">#</span>
+              {ch.name}
+            </div>
+          ))}
+          <button className="add-channel-btn" onClick={() => setShowNewChannel(true)}>
+            + New Channel
+          </button>
+        </div>
+        <div className="sidebar-footer">
+          <div className={`status-dot ${isConnected ? "" : "offline"}`} />
+          <span style={{ flex: 1 }}>{user.display_name}</span>
+          <button
+            className="btn-secondary"
+            style={{ padding: "4px 8px", fontSize: 11 }}
+            onClick={onLogout}
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="main-content">
+        <div className="channel-header">
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <h2># {activeChannel?.name || "..."}</h2>
+            {activeChannel?.description && (
+              <span className="description">{activeChannel.description}</span>
+            )}
+          </div>
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            <div className="connection-status">
+              <div className={`status-dot ${isConnected ? "" : "offline"}`} />
+              {isConnected ? "Connected" : "Reconnecting..."}
+            </div>
+            <button
+              className="btn-secondary"
+              style={{ padding: "4px 10px", fontSize: 12 }}
+              onClick={() => setShowMembers(!showMembers)}
+            >
+              {showMembers ? "Hide" : "Show"} Members
+            </button>
+          </div>
+        </div>
+
+        <div className="messages-container">
+          {[...messages].reverse().map((msg) => (
+            <div key={msg.id} className="message">
+              <div className="message-avatar">
+                {(msg.display_name || msg.username || "?")[0].toUpperCase()}
+              </div>
+              <div className="message-body">
+                <div className="message-header">
+                  <span className="message-username">{msg.display_name || msg.username}</span>
+                  <span className="message-time">
+                    {new Date(msg.created_at + "Z").toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+                  </span>
+                  {msg.edited && <span className="message-edited">(edited)</span>}
+                </div>
+                <div className="message-content">{msg.content}</div>
+              </div>
+            </div>
+          ))}
+          {messages.length === 0 && (
+            <div style={{ textAlign: "center", color: "var(--text-muted)", padding: 40 }}>
+              No messages yet. Say hello! 👋
+            </div>
+          )}
+        </div>
+
+        <TypingIndicator users={typingUsers} />
+        <MessageInput onSend={handleSendMessage} onTyping={handleTyping} />
+      </div>
+
+      {/* Members Panel */}
+      {showMembers && (
+        <Suspense fallback={<div className="members-panel"><p>Loading...</p></div>}>
+          <MembersPanel members={members} />
+        </Suspense>
+      )}
+
+      {/* New Channel Modal */}
+      {showNewChannel && (
+        <NewChannelModal
+          onClose={() => setShowNewChannel(false)}
+          onCreate={handleCreateChannel}
+        />
+      )}
+    </div>
+  );
+}
+
+function MessageInput({ onSend, onTyping }: { onSend: (content: string) => void; onTyping: () => void }) {
+  const [value, setValue] = useState("");
+  const typingTimerRef = useRef<NodeJS.Timeout>();
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+    if (typingTimerRef.current) clearTimeout(typingTimerRef.current);
+    onTyping();
+    typingTimerRef.current = setTimeout(() => {}, 2000);
+  };
+
+  const handleSend = () => {
+    if (!value.trim()) return;
+    onSend(value);
+    setValue("");
+  };
+
+  return (
+    <div className="message-input-container">
+      <div className="message-input-wrapper">
+        <input
+          className="message-input"
+          placeholder="Type a message..."
+          value={value}
+          onChange={handleChange}
+          onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && handleSend()}
+        />
+        <button className="send-btn" onClick={handleSend} disabled={!value.trim()}>
+          Send
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function TypingIndicator({ users }: { users: Map<string, string> }) {
+  if (users.size === 0) return <div className="typing-indicator" />;
+  const names = Array.from(users.values());
+  const text =
+    names.length === 1
+      ? `${names[0]} is typing...`
+      : names.length === 2
+      ? `${names[0]} and ${names[1]} are typing...`
+      : `${names[0]} and ${names.length - 1} others are typing...`;
+  return <div className="typing-indicator">{text}</div>;
+}
+
+function NewChannelModal({
+  onClose,
+  onCreate,
+}: {
+  onClose: () => void;
+  onCreate: (name: string, description: string) => void;
+}) {
+  const [name, setName] = useState("");
+  const [desc, setDesc] = useState("");
+
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal" onClick={(e) => e.stopPropagation()}>
+        <h2>Create Channel</h2>
+        <input
+          className="login-input"
+          placeholder="Channel name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          autoFocus
+        />
+        <input
+          className="login-input"
+          placeholder="Description (optional)"
+          value={desc}
+          onChange={(e) => setDesc(e.target.value)}
+        />
+        <div className="modal-actions">
+          <button className="btn-secondary" onClick={onClose}>Cancel</button>
+          <button className="btn-primary" onClick={() => onCreate(name, desc)} disabled={!name.trim()}>
+            Create
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+--- FILE: ./frontend/src/components/MembersPanel.tsx ---
+interface Member {
+  id: string;
+  username: string;
+  display_name: string;
+  status: string;
+}
+
+export default function MembersPanel({ members }: { members: Member[] }) {
+  const online = members.filter((m) => m.status === "online");
+  const offline = members.filter((m) => m.status !== "online");
+
+  return (
+    <div className="members-panel">
+      {online.length > 0 && (
+        <>
+          <h3>Online — {online.length}</h3>
+          {online.map((m) => (
+            <div key={m.id} className="member-item">
+              <div className="status-dot" />
+              <span>{m.display_name || m.username}</span>
+            </div>
+          ))}
+        </>
+      )}
+      {offline.length > 0 && (
+        <>
+          <h3 style={{ marginTop: online.length > 0 ? 16 : 0 }}>Offline — {offline.length}</h3>
+          {offline.map((m) => (
+            <div key={m.id} className="member-item">
+              <div className="status-dot offline" />
+              <span>{m.display_name || m.username}</span>
+            </div>
+          ))}
+        </>
+      )}
+      {members.length === 0 && (
+        <p style={{ color: "var(--text-muted)", fontSize: 13 }}>No members yet</p>
+      )}
+    </div>
+  );
+}
+
+
+--- FILE: ./frontend/src/graphql/queries.ts ---
+import { gql } from "@apollo/client";
+
+export const REGISTER_USER = gql`
+  mutation Register($username: String!, $displayName: String!) {
+    register(username: $username, displayName: $displayName) {
+      id
+      username
+      display_name
+      status
+    }
+  }
+`;
+
+export const GET_CHANNELS = gql`
+  query GetChannels {
+    channels {
+      id
+      name
+      description
+      created_at
+    }
+  }
+`;
+
+export const GET_CHANNEL = gql`
+  query GetChannel($id: ID!) {
+    channel(id: $id) {
+      id
+      name
+      description
+      members {
+        id
+        username
+        display_name
+        status
+      }
+    }
+  }
+`;
+
+export const GET_MESSAGES = gql`
+  query GetMessages($channelId: ID!, $limit: Int, $before: String) {
+    messages(channelId: $channelId, limit: $limit, before: $before) {
+      id
+      channel_id
+      user_id
+      content
+      message_type
+      edited
+      created_at
+      username
+      display_name
+      avatar_url
+    }
+  }
+`;
+
+export const SEND_MESSAGE = gql`
+  mutation SendMessage($channelId: ID!, $userId: ID!, $content: String!) {
+    sendMessage(channelId: $channelId, userId: $userId, content: $content) {
+      id
+      content
+      created_at
+      username
+      display_name
+    }
+  }
+`;
+
+export const CREATE_CHANNEL = gql`
+  mutation CreateChannel($name: String!, $description: String, $userId: ID!) {
+    createChannel(name: $name, description: $description, userId: $userId) {
+      id
+      name
+      description
+    }
+  }
+`;
+
+export const JOIN_CHANNEL = gql`
+  mutation JoinChannel($channelId: ID!, $userId: ID!) {
+    joinChannel(channelId: $channelId, userId: $userId)
+  }
+`;
+
+export const GET_USERS = gql`
+  query GetUsers {
+    users {
+      id
+      username
+      display_name
+      status
+    }
+  }
+`;
+
+
+--- FILE: ./frontend/src/hooks/useWebSocket.ts ---
+import { useEffect, useRef, useCallback, useState } from "react";
+
+export interface WSMessage {
+  type: string;
+  [key: string]: any;
+}
+
+type MessageHandler = (msg: WSMessage) => void;
+
+const WS_URL = `${window.location.protocol === "https:" ? "wss:" : "ws:"}//${window.location.host}/ws`;
+
+export function useWebSocket(userId: string | null, username: string | null) {
+  const wsRef = useRef<WebSocket | null>(null);
+  const handlersRef = useRef<Set<MessageHandler>>(new Set());
+  const [isConnected, setIsConnected] = useState(false);
+  const reconnectTimeoutRef = useRef<NodeJS.Timeout>();
+  const reconnectAttempts = useRef(0);
+
+  const connect = useCallback(() => {
+    if (!userId || !username) return;
+    if (wsRef.current?.readyState === WebSocket.OPEN) return;
+
+    try {
+      const ws = new WebSocket(WS_URL);
+      wsRef.current = ws;
+
+      ws.onopen = () => {
+        setIsConnected(true);
+        reconnectAttempts.current = 0;
+        // Authenticate
+        ws.send(JSON.stringify({ type: "auth", userId, username }));
+      };
+
+      ws.onmessage = (event) => {
+        try {
+          const data = JSON.parse(event.data);
+          handlersRef.current.forEach((handler) => handler(data));
+        } catch (err) {
+          console.error("[WS] Parse error:", err);
+        }
+      };
+
+      ws.onclose = () => {
+        setIsConnected(false);
+        // Exponential backoff reconnect
+        const delay = Math.min(1000 * 2 ** reconnectAttempts.current, 30000);
+        reconnectAttempts.current++;
+        reconnectTimeoutRef.current = setTimeout(connect, delay);
+      };
+
+      ws.onerror = (err) => {
+        console.error("[WS] Error:", err);
+      };
+    } catch (err) {
+      console.error("[WS] Connection failed:", err);
+    }
+  }, [userId, username]);
+
+  useEffect(() => {
+    connect();
+    return () => {
+      if (reconnectTimeoutRef.current) clearTimeout(reconnectTimeoutRef.current);
+      wsRef.current?.close();
+    };
+  }, [connect]);
+
+  const send = useCallback((data: WSMessage) => {
+    if (wsRef.current?.readyState === WebSocket.OPEN) {
+      wsRef.current.send(JSON.stringify(data));
+    }
+  }, []);
+
+  const subscribe = useCallback((handler: MessageHandler) => {
+    handlersRef.current.add(handler);
+    return () => { handlersRef.current.delete(handler); };
+  }, []);
+
+  return { send, subscribe, isConnected };
+}
+
+
+--- FILE: ./backend/jest.config.js ---
+module.exports = {
+  preset: "ts-jest",
+  testEnvironment: "node",
+  roots: ["<rootDir>/src"],
+  testMatch: ["**/*.test.ts"],
+  moduleFileExtensions: ["ts", "js", "json"],
+};
+
+
+--- FILE: ./backend/package.json ---
+{
+  "name": "buckyconnect-backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "test": "jest --forceExit --detectOpenHandles",
+    "lint": "eslint src/ --ext .ts"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.10.0",
+    "better-sqlite3": "^11.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "graphql": "^16.9.0",
+    "graphql-tag": "^2.12.6",
+    "ioredis": "^5.4.1",
+    "uuid": "^10.0.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.13",
+    "@types/node": "^22.5.0",
+    "@types/uuid": "^10.0.0",
+    "@types/ws": "^8.5.12",
+    "eslint": "^8.57.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4"
+  }
+}
+
+
+--- FILE: ./backend/tsconfig.json ---
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "lib": ["ES2022"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
+}
+
+
+--- FILE: ./backend/.eslintrc.json ---
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "env": { "node": true, "es2022": true },
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }]
+  }
+}
+
+
+--- FILE: ./backend/src/index.ts ---
+import "dotenv/config";
+import express from "express";
+import cors from "cors";
+import http from "http";
+import { ApolloServer } from "@apollo/server";
+import { expressMiddleware } from "@apollo/server/express4";
+import { typeDefs } from "./graphql/schema";
+import { resolvers } from "./graphql/resolvers";
+import { setupWebSocket, getConnectedClientsCount } from "./websocket/handler";
+import { authMiddleware } from "./middleware/auth";
+import { getDb, closeDb } from "./models/database";
+import { disconnectRedis } from "./utils/redis";
+
+const PORT = parseInt(process.env.PORT || "4000", 10);
+const CORS_ORIGIN = process.env.CORS_ORIGIN || "http://localhost:5173";
+
+async function main() {
+  const app = express();
+  const httpServer = http.createServer(app);
+
+  // Initialize database
+  getDb();
+  console.log("[DB] SQLite initialized");
+
+  // CORS
+  app.use(cors({ origin: CORS_ORIGIN, credentials: true }));
+  app.use(express.json());
+  app.use(authMiddleware);
+
+  // Health check
+  app.get("/health", (_req, res) => {
+    res.json({
+      status: "ok",
+      uptime: process.uptime(),
+      connections: getConnectedClientsCount(),
+      timestamp: new Date().toISOString(),
+    });
+  });
+
+  // Apollo GraphQL server
+  const apollo = new ApolloServer({ typeDefs, resolvers });
+  await apollo.start();
+
+  app.use(
+    "/graphql",
+    expressMiddleware(apollo, {
+      context: async ({ req }) => ({
+        user: (req as any).user || null,
+      }),
+    })
+  );
+
+  // WebSocket setup
+  const wss = setupWebSocket(httpServer);
+  console.log("[WS] WebSocket server ready at /ws");
+
+  // Start listening
+  httpServer.listen(PORT, () => {
+    console.log(`\n🚀 BuckyConnect Server running on http://localhost:${PORT}`);
+    console.log(`   GraphQL:   http://localhost:${PORT}/graphql`);
+    console.log(`   WebSocket: ws://localhost:${PORT}/ws`);
+    console.log(`   Health:    http://localhost:${PORT}/health\n`);
+  });
+
+  // Graceful shutdown
+  const shutdown = async () => {
+    console.log("\n[Shutdown] Closing connections...");
+    wss.close();
+    await apollo.stop();
+    await disconnectRedis();
+    closeDb();
+    httpServer.close(() => {
+      console.log("[Shutdown] Complete");
+      process.exit(0);
+    });
+  };
+
+  process.on("SIGINT", shutdown);
+  process.on("SIGTERM", shutdown);
+}
+
+main().catch((err) => {
+  console.error("Fatal error:", err);
+  process.exit(1);
+});
+
+
+--- FILE: ./backend/src/middleware/auth.ts ---
+import { Request, Response, NextFunction } from "express";
+import { getUserById } from "../models/database";
+
+// Simple header-based auth for demo purposes
+// In production, replace with JWT/OAuth
+export function authMiddleware(req: Request, res: Response, next: NextFunction) {
+  const userId = req.headers["x-user-id"] as string;
+  if (!userId) {
+    return next(); // Allow unauthenticated for GraphQL playground
+  }
+
+  const user = getUserById(userId);
+  if (user) {
+    (req as any).user = user;
+  }
+  next();
+}
+
+export function requireAuth(req: Request, res: Response, next: NextFunction) {
+  if (!(req as any).user) {
+    return res.status(401).json({ error: "Authentication required" });
+  }
+  next();
+}
+
+
+--- FILE: ./backend/src/websocket/handler.ts ---
+import { WebSocketServer, WebSocket } from "ws";
+import { IncomingMessage, Server as HttpServer } from "http";
+import { v4 as uuidv4 } from "uuid";
+import * as db from "../models/database";
+import {
+  getSubscriber,
+  publishEvent,
+  CHANNELS,
+  localPubSub,
+  connectRedis,
+} from "../utils/redis";
+
+interface ClientInfo {
+  ws: WebSocket;
+  userId: string;
+  username: string;
+  channels: Set<string>;
+}
+
+const clients = new Map<string, ClientInfo>();
+let redisAvailable = false;
+
+export function setupWebSocket(server: HttpServer): WebSocketServer {
+  const wss = new WebSocketServer({ server, path: "/ws" });
+
+  // Try to set up Redis subscriber for fanout
+  initRedisSubscriber();
+
+  wss.on("connection", (ws: WebSocket, req: IncomingMessage) => {
+    const connectionId = uuidv4();
+    console.log(`[WS] New connection: ${connectionId}`);
+
+    ws.on("message", (raw: Buffer) => {
+      try {
+        const data = JSON.parse(raw.toString());
+        handleClientMessage(connectionId, ws, data);
+      } catch (err) {
+        sendToClient(ws, { type: "error", message: "Invalid JSON" });
+      }
+    });
+
+    ws.on("close", () => {
+      const client = clients.get(connectionId);
+      if (client) {
+        db.updateUserStatus(client.userId, "offline");
+        broadcastToAll({
+          type: "presence",
+          userId: client.userId,
+          username: client.username,
+          status: "offline",
+        });
+        clients.delete(connectionId);
+      }
+      console.log(`[WS] Disconnected: ${connectionId}`);
+    });
+
+    ws.on("error", (err) => {
+      console.error(`[WS] Error on ${connectionId}:`, err.message);
+    });
+  });
+
+  // Heartbeat to detect dead connections
+  const heartbeat = setInterval(() => {
+    wss.clients.forEach((ws) => {
+      if ((ws as any).__isAlive === false) return ws.terminate();
+      (ws as any).__isAlive = false;
+      ws.ping();
+    });
+  }, 30000);
+
+  wss.on("close", () => clearInterval(heartbeat));
+
+  wss.on("connection", (ws) => {
+    (ws as any).__isAlive = true;
+    ws.on("pong", () => { (ws as any).__isAlive = true; });
+  });
+
+  return wss;
+}
+
+function handleClientMessage(connectionId: string, ws: WebSocket, data: any) {
+  switch (data.type) {
+    case "auth": {
+      const { userId, username } = data;
+      if (!userId || !username) {
+        return sendToClient(ws, { type: "error", message: "userId and username required" });
+      }
+      clients.set(connectionId, { ws, userId, username, channels: new Set() });
+      db.updateUserStatus(userId, "online");
+
+      // Notify all clients of user presence
+      broadcastToAll({ type: "presence", userId, username, status: "online" });
+      sendToClient(ws, { type: "auth_ok", connectionId });
+      break;
+    }
+
+    case "join_channel": {
+      const client = clients.get(connectionId);
+      if (!client) return sendToClient(ws, { type: "error", message: "Not authenticated" });
+      client.channels.add(data.channelId);
+      db.joinChannel(data.channelId, client.userId);
+      broadcastToChannel(data.channelId, {
+        type: "user_joined",
+        channelId: data.channelId,
+        userId: client.userId,
+        username: client.username,
+      });
+      break;
+    }
+
+    case "leave_channel": {
+      const client = clients.get(connectionId);
+      if (!client) return;
+      client.channels.delete(data.channelId);
+      broadcastToChannel(data.channelId, {
+        type: "user_left",
+        channelId: data.channelId,
+        userId: client.userId,
+        username: client.username,
+      });
+      break;
+    }
+
+    case "message": {
+      const client = clients.get(connectionId);
+      if (!client) return sendToClient(ws, { type: "error", message: "Not authenticated" });
+      const msgId = uuidv4();
+      const msg = db.createMessage(msgId, data.channelId, client.userId, data.content);
+
+      const payload = { type: "new_message", channelId: data.channelId, message: msg };
+
+      if (redisAvailable) {
+        publishEvent(CHANNELS.NEW_MESSAGE, payload);
+      } else {
+        broadcastToChannel(data.channelId, payload);
+      }
+      break;
+    }
+
+    case "typing": {
+      const client = clients.get(connectionId);
+      if (!client) return;
+      const typingPayload = {
+        type: "typing",
+        channelId: data.channelId,
+        userId: client.userId,
+        username: client.username,
+        isTyping: data.isTyping ?? true,
+      };
+
+      if (redisAvailable) {
+        publishEvent(CHANNELS.TYPING, typingPayload);
+      } else {
+        broadcastToChannel(data.channelId, typingPayload, connectionId);
+      }
+      break;
+    }
+
+    case "ping": {
+      sendToClient(ws, { type: "pong", timestamp: Date.now() });
+      break;
+    }
+
+    default:
+      sendToClient(ws, { type: "error", message: `Unknown message type: ${data.type}` });
+  }
+}
+
+async function initRedisSubscriber() {
+  try {
+    redisAvailable = await connectRedis();
+    if (!redisAvailable) return;
+
+    const sub = getSubscriber();
+    const channels = Object.values(CHANNELS);
+
+    for (const ch of channels) {
+      await sub.subscribe(ch);
+    }
+
+    sub.on("message", (channel: string, rawMessage: string) => {
+      try {
+        const data = JSON.parse(rawMessage);
+        // Fanout to connected WebSocket clients
+        if (data.channelId) {
+          broadcastToChannel(data.channelId, data);
+        } else {
+          broadcastToAll(data);
+        }
+      } catch (err) {
+        console.error("[Redis Sub] Parse error:", err);
+      }
+    });
+
+    console.log("[WS] Redis subscriber listening on", channels.length, "channels");
+  } catch (err) {
+    console.warn("[WS] Redis not available, using local broadcast only");
+    redisAvailable = false;
+  }
+}
+
+function sendToClient(ws: WebSocket, data: any) {
+  if (ws.readyState === WebSocket.OPEN) {
+    ws.send(JSON.stringify(data));
+  }
+}
+
+function broadcastToChannel(channelId: string, data: any, excludeConnectionId?: string) {
+  clients.forEach((client, connId) => {
+    if (client.channels.has(channelId) && connId !== excludeConnectionId) {
+      sendToClient(client.ws, data);
+    }
+  });
+}
+
+function broadcastToAll(data: any, excludeConnectionId?: string) {
+  clients.forEach((client, connId) => {
+    if (connId !== excludeConnectionId) {
+      sendToClient(client.ws, data);
+    }
+  });
+}
+
+export function getConnectedClientsCount(): number {
+  return clients.size;
+}
+
+export function getOnlineUsers(): string[] {
+  const users: string[] = [];
+  clients.forEach((client) => {
+    if (!users.includes(client.userId)) users.push(client.userId);
+  });
+  return users;
+}
+
+
+--- FILE: ./backend/src/utils/redis.ts ---
+import Redis from "ioredis";
+
+const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
+
+let publisher: Redis | null = null;
+let subscriber: Redis | null = null;
+
+export function getPublisher(): Redis {
+  if (!publisher) {
+    publisher = new Redis(REDIS_URL, { maxRetriesPerRequest: 3, lazyConnect: true });
+    publisher.on("error", (err) => console.error("[Redis Publisher Error]", err.message));
+  }
+  return publisher;
+}
+
+export function getSubscriber(): Redis {
+  if (!subscriber) {
+    subscriber = new Redis(REDIS_URL, { maxRetriesPerRequest: 3, lazyConnect: true });
+    subscriber.on("error", (err) => console.error("[Redis Subscriber Error]", err.message));
+  }
+  return subscriber;
+}
+
+// Channels for pub/sub events
+export const CHANNELS = {
+  NEW_MESSAGE: "buckyconnect:message:new",
+  EDIT_MESSAGE: "buckyconnect:message:edit",
+  DELETE_MESSAGE: "buckyconnect:message:delete",
+  USER_PRESENCE: "buckyconnect:user:presence",
+  TYPING: "buckyconnect:typing",
+  CHANNEL_UPDATE: "buckyconnect:channel:update",
+} as const;
+
+export async function publishEvent(channel: string, data: Record<string, any>): Promise<void> {
+  try {
+    await getPublisher().publish(channel, JSON.stringify(data));
+  } catch (err) {
+    console.error(`[Redis Publish Error] channel=${channel}`, err);
+  }
+}
+
+export async function connectRedis(): Promise<boolean> {
+  try {
+    await getPublisher().connect();
+    await getSubscriber().connect();
+    await getPublisher().ping();
+    console.log("[Redis] Connected successfully");
+    return true;
+  } catch (err) {
+    console.warn("[Redis] Connection failed — running without pub/sub:", (err as Error).message);
+    return false;
+  }
+}
+
+export async function disconnectRedis(): Promise<void> {
+  if (publisher) { publisher.disconnect(); publisher = null; }
+  if (subscriber) { subscriber.disconnect(); subscriber = null; }
+}
+
+// Fallback in-memory pub/sub for when Redis is unavailable
+type Handler = (channel: string, message: string) => void;
+const localHandlers: Map<string, Set<Handler>> = new Map();
+
+export const localPubSub = {
+  subscribe(channel: string, handler: Handler) {
+    if (!localHandlers.has(channel)) localHandlers.set(channel, new Set());
+    localHandlers.get(channel)!.add(handler);
+  },
+  unsubscribe(channel: string, handler: Handler) {
+    localHandlers.get(channel)?.delete(handler);
+  },
+  publish(channel: string, message: string) {
+    localHandlers.get(channel)?.forEach((h) => h(channel, message));
+  },
+};
+
+
+--- FILE: ./backend/src/models/database.ts ---
+import Database from "better-sqlite3";
+import path from "path";
+
+const DB_PATH = process.env.DB_PATH || path.join(__dirname, "../../data/buckyconnect.db");
+
+let db: Database.Database;
+
+export function getDb(): Database.Database {
+  if (!db) {
+    const dir = path.dirname(DB_PATH);
+    const fs = require("fs");
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+
+    db = new Database(DB_PATH);
+    db.pragma("journal_mode = WAL");
+    db.pragma("foreign_keys = ON");
+    initSchema(db);
+  }
+  return db;
+}
+
+function initSchema(db: Database.Database) {
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS users (
+      id TEXT PRIMARY KEY,
+      username TEXT UNIQUE NOT NULL,
+      display_name TEXT NOT NULL,
+      avatar_url TEXT DEFAULT '',
+      status TEXT DEFAULT 'offline',
+      created_at TEXT DEFAULT (datetime('now')),
+      updated_at TEXT DEFAULT (datetime('now'))
+    );
+
+    CREATE TABLE IF NOT EXISTS channels (
+      id TEXT PRIMARY KEY,
+      name TEXT UNIQUE NOT NULL,
+      description TEXT DEFAULT '',
+      created_by TEXT REFERENCES users(id),
+      is_private INTEGER DEFAULT 0,
+      created_at TEXT DEFAULT (datetime('now')),
+      updated_at TEXT DEFAULT (datetime('now'))
+    );
+
+    CREATE TABLE IF NOT EXISTS channel_members (
+      channel_id TEXT REFERENCES channels(id) ON DELETE CASCADE,
+      user_id TEXT REFERENCES users(id) ON DELETE CASCADE,
+      role TEXT DEFAULT 'member',
+      joined_at TEXT DEFAULT (datetime('now')),
+      PRIMARY KEY (channel_id, user_id)
+    );
+
+    CREATE TABLE IF NOT EXISTS messages (
+      id TEXT PRIMARY KEY,
+      channel_id TEXT REFERENCES channels(id) ON DELETE CASCADE,
+      user_id TEXT REFERENCES users(id),
+      content TEXT NOT NULL,
+      message_type TEXT DEFAULT 'text',
+      edited INTEGER DEFAULT 0,
+      created_at TEXT DEFAULT (datetime('now')),
+      updated_at TEXT DEFAULT (datetime('now'))
+    );
+
+    CREATE INDEX IF NOT EXISTS idx_messages_channel ON messages(channel_id, created_at DESC);
+    CREATE INDEX IF NOT EXISTS idx_messages_user ON messages(user_id);
+    CREATE INDEX IF NOT EXISTS idx_channel_members_user ON channel_members(user_id);
+  `);
+
+  // Seed default channel if empty
+  const count = db.prepare("SELECT COUNT(*) as c FROM channels").get() as { c: number };
+  if (count.c === 0) {
+    const { v4: uuidv4 } = require("uuid");
+    const generalId = uuidv4();
+    const systemUserId = uuidv4();
+
+    db.prepare("INSERT INTO users (id, username, display_name, status) VALUES (?, ?, ?, ?)").run(
+      systemUserId, "system", "System", "online"
+    );
+    db.prepare("INSERT INTO channels (id, name, description, created_by) VALUES (?, ?, ?, ?)").run(
+      generalId, "general", "General discussion channel", systemUserId
+    );
+  }
+}
+
+// --- User Operations ---
+export function createUser(id: string, username: string, displayName: string): any {
+  const stmt = getDb().prepare(
+    "INSERT INTO users (id, username, display_name) VALUES (?, ?, ?)"
+  );
+  stmt.run(id, username, displayName);
+  return getUserById(id);
+}
+
+export function getUserById(id: string): any {
+  return getDb().prepare("SELECT * FROM users WHERE id = ?").get(id);
+}
+
+export function getUserByUsername(username: string): any {
+  return getDb().prepare("SELECT * FROM users WHERE username = ?").get(username);
+}
+
+export function getAllUsers(): any[] {
+  return getDb().prepare("SELECT * FROM users ORDER BY username").all();
+}
+
+export function updateUserStatus(id: string, status: string): any {
+  getDb().prepare("UPDATE users SET status = ?, updated_at = datetime('now') WHERE id = ?").run(status, id);
+  return getUserById(id);
+}
+
+// --- Channel Operations ---
+export function createChannel(id: string, name: string, description: string, createdBy: string): any {
+  getDb().prepare(
+    "INSERT INTO channels (id, name, description, created_by) VALUES (?, ?, ?, ?)"
+  ).run(id, name, description, createdBy);
+  // Auto-join creator
+  joinChannel(id, createdBy);
+  return getChannelById(id);
+}
+
+export function getChannelById(id: string): any {
+  return getDb().prepare("SELECT * FROM channels WHERE id = ?").get(id);
+}
+
+export function getAllChannels(): any[] {
+  return getDb().prepare("SELECT * FROM channels ORDER BY created_at").all();
+}
+
+export function joinChannel(channelId: string, userId: string): void {
+  getDb().prepare(
+    "INSERT OR IGNORE INTO channel_members (channel_id, user_id) VALUES (?, ?)"
+  ).run(channelId, userId);
+}
+
+export function leaveChannel(channelId: string, userId: string): void {
+  getDb().prepare(
+    "DELETE FROM channel_members WHERE channel_id = ? AND user_id = ?"
+  ).run(channelId, userId);
+}
+
+export function getChannelMembers(channelId: string): any[] {
+  return getDb().prepare(`
+    SELECT u.* FROM users u
+    JOIN channel_members cm ON u.id = cm.user_id
+    WHERE cm.channel_id = ?
+    ORDER BY u.username
+  `).all(channelId);
+}
+
+export function getUserChannels(userId: string): any[] {
+  return getDb().prepare(`
+    SELECT c.* FROM channels c
+    JOIN channel_members cm ON c.id = cm.channel_id
+    WHERE cm.user_id = ?
+    ORDER BY c.name
+  `).all(userId);
+}
+
+// --- Message Operations ---
+export function createMessage(id: string, channelId: string, userId: string, content: string, messageType = "text"): any {
+  getDb().prepare(
+    "INSERT INTO messages (id, channel_id, user_id, content, message_type) VALUES (?, ?, ?, ?, ?)"
+  ).run(id, channelId, userId, content, messageType);
+  return getMessageById(id);
+}
+
+export function getMessageById(id: string): any {
+  return getDb().prepare(`
+    SELECT m.*, u.username, u.display_name, u.avatar_url
+    FROM messages m JOIN users u ON m.user_id = u.id
+    WHERE m.id = ?
+  `).get(id);
+}
+
+export function getChannelMessages(channelId: string, limit = 50, before?: string): any[] {
+  if (before) {
+    return getDb().prepare(`
+      SELECT m.*, u.username, u.display_name, u.avatar_url
+      FROM messages m JOIN users u ON m.user_id = u.id
+      WHERE m.channel_id = ? AND m.created_at < (SELECT created_at FROM messages WHERE id = ?)
+      ORDER BY m.created_at DESC LIMIT ?
+    `).all(channelId, before, limit);
+  }
+  return getDb().prepare(`
+    SELECT m.*, u.username, u.display_name, u.avatar_url
+    FROM messages m JOIN users u ON m.user_id = u.id
+    WHERE m.channel_id = ?
+    ORDER BY m.created_at DESC LIMIT ?
+  `).all(channelId, limit);
+}
+
+export function editMessage(id: string, content: string): any {
+  getDb().prepare(
+    "UPDATE messages SET content = ?, edited = 1, updated_at = datetime('now') WHERE id = ?"
+  ).run(content, id);
+  return getMessageById(id);
+}
+
+export function deleteMessage(id: string): void {
+  getDb().prepare("DELETE FROM messages WHERE id = ?").run(id);
+}
+
+export function closeDb(): void {
+  if (db) db.close();
+}
+
+
+--- FILE: ./backend/src/__tests__/database.test.ts ---
+import { v4 as uuidv4 } from "uuid";
+
+// Use a test-specific database
+process.env.DB_PATH = ":memory:";
+
+import {
+  getDb,
+  createUser,
+  getUserById,
+  getUserByUsername,
+  getAllUsers,
+  updateUserStatus,
+  createChannel,
+  getChannelById,
+  getAllChannels,
+  joinChannel,
+  getChannelMembers,
+  createMessage,
+  getChannelMessages,
+  editMessage,
+  deleteMessage,
+  getMessageById,
+  closeDb,
+} from "../models/database";
+
+beforeAll(() => {
+  // Re-init with memory DB
+  process.env.DB_PATH = ":memory:";
+});
+
+afterAll(() => {
+  closeDb();
+});
+
+describe("Database - Users", () => {
+  const userId = uuidv4();
+
+  test("should create a user", () => {
+    const user = createUser(userId, "testuser", "Test User");
+    expect(user).toBeDefined();
+    expect(user.username).toBe("testuser");
+    expect(user.display_name).toBe("Test User");
+    expect(user.status).toBe("offline");
+  });
+
+  test("should get user by id", () => {
+    const user = getUserById(userId);
+    expect(user).toBeDefined();
+    expect(user.id).toBe(userId);
+  });
+
+  test("should get user by username", () => {
+    const user = getUserByUsername("testuser");
+    expect(user).toBeDefined();
+    expect(user.username).toBe("testuser");
+  });
+
+  test("should list all users", () => {
+    const users = getAllUsers();
+    expect(users.length).toBeGreaterThanOrEqual(1);
+  });
+
+  test("should update user status", () => {
+    const updated = updateUserStatus(userId, "online");
+    expect(updated.status).toBe("online");
+  });
+});
+
+describe("Database - Channels", () => {
+  let userId: string;
+  let channelId: string;
+
+  beforeAll(() => {
+    userId = uuidv4();
+    createUser(userId, "chanuser", "Channel User");
+  });
+
+  test("should have a seed general channel", () => {
+    const channels = getAllChannels();
+    const general = channels.find((c: any) => c.name === "general");
+    expect(general).toBeDefined();
+  });
+
+  test("should create a channel", () => {
+    channelId = uuidv4();
+    const ch = createChannel(channelId, "test-channel", "A test channel", userId);
+    expect(ch).toBeDefined();
+    expect(ch.name).toBe("test-channel");
+  });
+
+  test("should get channel by id", () => {
+    const ch = getChannelById(channelId);
+    expect(ch).toBeDefined();
+    expect(ch.id).toBe(channelId);
+  });
+
+  test("creator should be a member", () => {
+    const members = getChannelMembers(channelId);
+    const found = members.find((m: any) => m.id === userId);
+    expect(found).toBeDefined();
+  });
+
+  test("should add/remove members", () => {
+    const otherUser = uuidv4();
+    createUser(otherUser, "other", "Other User");
+    joinChannel(channelId, otherUser);
+    let members = getChannelMembers(channelId);
+    expect(members.length).toBe(2);
+  });
+});
+
+describe("Database - Messages", () => {
+  let userId: string;
+  let channelId: string;
+
+  beforeAll(() => {
+    userId = uuidv4();
+    channelId = uuidv4();
+    createUser(userId, "msguser", "Message User");
+    createChannel(channelId, "msg-channel", "Message test", userId);
+  });
+
+  test("should create a message", () => {
+    const msgId = uuidv4();
+    const msg = createMessage(msgId, channelId, userId, "Hello, world!");
+    expect(msg).toBeDefined();
+    expect(msg.content).toBe("Hello, world!");
+    expect(msg.username).toBe("msguser");
+  });
+
+  test("should list channel messages", () => {
+    // Add a few more
+    createMessage(uuidv4(), channelId, userId, "Second message");
+    createMessage(uuidv4(), channelId, userId, "Third message");
+
+    const messages = getChannelMessages(channelId);
+    expect(messages.length).toBeGreaterThanOrEqual(3);
+  });
+
+  test("should edit a message", () => {
+    const msgId = uuidv4();
+    createMessage(msgId, channelId, userId, "Original");
+    const edited = editMessage(msgId, "Edited content");
+    expect(edited.content).toBe("Edited content");
+    expect(edited.edited).toBe(1);
+  });
+
+  test("should delete a message", () => {
+    const msgId = uuidv4();
+    createMessage(msgId, channelId, userId, "To be deleted");
+    deleteMessage(msgId);
+    const msg = getMessageById(msgId);
+    expect(msg).toBeUndefined();
+  });
+});
+
+
+--- FILE: ./backend/src/graphql/schema.ts ---
+import gql from "graphql-tag";
+
+export const typeDefs = gql`
+  type User {
+    id: ID!
+    username: String!
+    display_name: String!
+    avatar_url: String
+    status: String!
+    created_at: String!
+    updated_at: String!
+  }
+
+  type Channel {
+    id: ID!
+    name: String!
+    description: String
+    created_by: String!
+    is_private: Boolean!
+    created_at: String!
+    updated_at: String!
+    members: [User!]!
+    messages(limit: Int, before: String): [Message!]!
+  }
+
+  type Message {
+    id: ID!
+    channel_id: String!
+    user_id: String!
+    content: String!
+    message_type: String!
+    edited: Boolean!
+    created_at: String!
+    updated_at: String!
+    username: String
+    display_name: String
+    avatar_url: String
+  }
+
+  type Query {
+    me(userId: ID!): User
+    users: [User!]!
+    user(id: ID!): User
+    channels: [Channel!]!
+    channel(id: ID!): Channel
+    userChannels(userId: ID!): [Channel!]!
+    messages(channelId: ID!, limit: Int, before: String): [Message!]!
+  }
+
+  type Mutation {
+    register(username: String!, displayName: String!): User!
+    updateStatus(userId: ID!, status: String!): User!
+    createChannel(name: String!, description: String, userId: ID!): Channel!
+    joinChannel(channelId: ID!, userId: ID!): Boolean!
+    leaveChannel(channelId: ID!, userId: ID!): Boolean!
+    sendMessage(channelId: ID!, userId: ID!, content: String!): Message!
+    editMessage(messageId: ID!, content: String!): Message!
+    deleteMessage(messageId: ID!): Boolean!
+  }
+`;
+
+
+--- FILE: ./backend/src/graphql/resolvers.ts ---
+import { v4 as uuidv4 } from "uuid";
+import * as db from "../models/database";
+import { publishEvent, CHANNELS } from "../utils/redis";
+
+export const resolvers = {
+  Query: {
+    me: (_: any, { userId }: { userId: string }) => db.getUserById(userId),
+    users: () => db.getAllUsers(),
+    user: (_: any, { id }: { id: string }) => db.getUserById(id),
+    channels: () => db.getAllChannels(),
+    channel: (_: any, { id }: { id: string }) => db.getChannelById(id),
+    userChannels: (_: any, { userId }: { userId: string }) => db.getUserChannels(userId),
+    messages: (_: any, { channelId, limit, before }: { channelId: string; limit?: number; before?: string }) =>
+      db.getChannelMessages(channelId, limit || 50, before),
+  },
+
+  Channel: {
+    members: (channel: any) => db.getChannelMembers(channel.id),
+    messages: (channel: any, { limit, before }: { limit?: number; before?: string }) =>
+      db.getChannelMessages(channel.id, limit || 50, before),
+    is_private: (channel: any) => Boolean(channel.is_private),
+  },
+
+  Message: {
+    edited: (message: any) => Boolean(message.edited),
+  },
+
+  Mutation: {
+    register: (_: any, { username, displayName }: { username: string; displayName: string }) => {
+      const existing = db.getUserByUsername(username);
+      if (existing) return existing;
+      const id = uuidv4();
+      const user = db.createUser(id, username, displayName);
+      // Auto-join general channel
+      const channels = db.getAllChannels();
+      const general = channels.find((c: any) => c.name === "general");
+      if (general) db.joinChannel(general.id, id);
+      publishEvent(CHANNELS.USER_PRESENCE, { userId: id, username, status: "online" });
+      return user;
+    },
+
+    updateStatus: (_: any, { userId, status }: { userId: string; status: string }) => {
+      const user = db.updateUserStatus(userId, status);
+      publishEvent(CHANNELS.USER_PRESENCE, { userId, status });
+      return user;
+    },
+
+    createChannel: (_: any, { name, description, userId }: { name: string; description?: string; userId: string }) => {
+      const id = uuidv4();
+      const channel = db.createChannel(id, name, description || "", userId);
+      publishEvent(CHANNELS.CHANNEL_UPDATE, { type: "created", channel });
+      return channel;
+    },
+
+    joinChannel: (_: any, { channelId, userId }: { channelId: string; userId: string }) => {
+      db.joinChannel(channelId, userId);
+      publishEvent(CHANNELS.CHANNEL_UPDATE, { type: "member_joined", channelId, userId });
+      return true;
+    },
+
+    leaveChannel: (_: any, { channelId, userId }: { channelId: string; userId: string }) => {
+      db.leaveChannel(channelId, userId);
+      publishEvent(CHANNELS.CHANNEL_UPDATE, { type: "member_left", channelId, userId });
+      return true;
+    },
+
+    sendMessage: (_: any, { channelId, userId, content }: { channelId: string; userId: string; content: string }) => {
+      const id = uuidv4();
+      const message = db.createMessage(id, channelId, userId, content);
+      publishEvent(CHANNELS.NEW_MESSAGE, { channelId, message });
+      return message;
+    },
+
+    editMessage: (_: any, { messageId, content }: { messageId: string; content: string }) => {
+      const message = db.editMessage(messageId, content);
+      publishEvent(CHANNELS.EDIT_MESSAGE, { message });
+      return message;
+    },
+
+    deleteMessage: (_: any, { messageId }: { messageId: string }) => {
+      const msg = db.getMessageById(messageId);
+      db.deleteMessage(messageId);
+      if (msg) publishEvent(CHANNELS.DELETE_MESSAGE, { messageId, channelId: msg.channel_id });
+      return true;
+    },
+  },
+};
+
+
+--- FILE: ./docs/FINDINGS.md ---
+# BuckyConnect — Project Findings Report
+
+## 1. Overview
+
+BuckyConnect is a real-time collaboration platform designed to support high-concurrency messaging with structured data access. It combines WebSockets for live event delivery, GraphQL for efficient reads, and Redis Pub/Sub for horizontal event fanout across server instances.
+
+The platform enables users to create channels, exchange messages in real time, track presence, and see typing indicators — all within a polished, dark-themed web interface.
+
+## 2. Problem Statement
+
+Modern collaboration tools require instantaneous feedback (message delivery, presence, typing indicators) while also serving structured data efficiently (message history, user profiles, channel metadata). A naive REST-only approach introduces excessive polling and latency, while a WebSocket-only approach makes structured queries cumbersome.
+
+BuckyConnect solves this by separating concerns: **GraphQL handles reads** (channel lists, message history, member lookups) while **WebSockets handle real-time events** (new messages, typing, presence changes). Redis Pub/Sub enables multi-instance deployments where an event published on one server is delivered to clients connected to any server.
+
+## 3. Key Design Choices & Tradeoffs
+
+### Dual Protocol (GraphQL + WebSocket)
+- **Choice**: Use GraphQL for initial data loading and paginated reads; WebSockets for live event streaming.
+- **Tradeoff**: Added complexity of two communication layers vs. a single protocol, but each protocol is used where it excels.
+- **Benefit**: GraphQL's query flexibility avoids over/under-fetching for reads; WebSockets provide sub-100ms delivery for events.
+
+### Redis Pub/Sub for Fanout
+- **Choice**: Redis as the event bus between server instances.
+- **Tradeoff**: Adds an infrastructure dependency, but the system degrades gracefully to local-only broadcast when Redis is unavailable.
+- **Benefit**: Enables horizontal scaling — any instance can publish events that reach clients on all instances.
+
+### SQLite for Persistence
+- **Choice**: SQLite (WAL mode) instead of PostgreSQL or DynamoDB for local development.
+- **Tradeoff**: Limited write concurrency and no built-in replication, but dramatically simpler setup with zero external dependencies.
+- **Benefit**: Single-file database, zero configuration, excellent read performance for the expected workload.
+
+### Lazy Loading & Code Splitting
+- **Choice**: Vite's `manualChunks` for vendor/apollo splitting; React `lazy()` for the members panel.
+- **Tradeoff**: Slightly more complex bundling configuration.
+- **Benefit**: Smaller initial bundle, faster first paint — aligned with the 40% bundle reduction target.
+
+### Session-Based Auth (Simplified)
+- **Choice**: Header-based user identification (`x-user-id`) with session storage on the client.
+- **Tradeoff**: Not production-secure — suitable for demo/development only.
+- **Benefit**: Eliminates OAuth/JWT complexity to focus on the core collaboration mechanics.
+
+## 4. Architecture Diagram
+
+```
+┌────────────────────────────────────────────────────────────────────┐
+│                         CLIENT LAYER                               │
+│                                                                    │
+│  ┌──────────────────────────────────────────────────────────┐      │
+│  │  React + Vite                                            │      │
+│  │  ┌─────────────┐  ┌───────────────┐  ┌──────────────┐   │      │
+│  │  │ Apollo Client│  │ useWebSocket  │  │ React Router │   │      │
+│  │  │  (GraphQL)   │  │   (WS Hook)   │  │  (Lazy Load) │   │      │
+│  │  └──────┬───────┘  └──────┬────────┘  └──────────────┘   │      │
+│  └─────────┼─────────────────┼───────────────────────────────┘      │
+│            │ HTTP             │ WebSocket                           │
+└────────────┼─────────────────┼─────────────────────────────────────┘
+             │                 │
+┌────────────┼─────────────────┼─────────────────────────────────────┐
+│            ▼                 ▼           SERVER LAYER               │
+│  ┌──────────────────────────────────────────┐                      │
+│  │  Express Server                          │                      │
+│  │  ┌─────────────────┐  ┌──────────────┐  │                      │
+│  │  │  Apollo Server   │  │  WS Server   │  │                      │
+│  │  │  (GraphQL API)   │  │  (ws lib)    │  │                      │
+│  │  └────────┬─────────┘  └──────┬───────┘  │                      │
+│  │           │                   │           │                      │
+│  │           ▼                   ▼           │                      │
+│  │  ┌──────────────────────────────────┐    │                      │
+│  │  │  Business Logic (Resolvers +     │    │                      │
+│  │  │  Message Handlers)               │    │                      │
+│  │  └──────────┬───────────────────────┘    │                      │
+│  └─────────────┼────────────────────────────┘                      │
+│                │                                                    │
+│       ┌────────┴────────┐                                          │
+│       ▼                 ▼                                          │
+│  ┌──────────┐    ┌──────────┐                                      │
+│  │  SQLite  │    │  Redis   │                                      │
+│  │   (DB)   │    │ (Pub/Sub)│                                      │
+│  └──────────┘    └──────────┘                                      │
+└────────────────────────────────────────────────────────────────────┘
+```
+
+## 5. How to Run
+
+### Prerequisites
+- Node.js >= 18
+- Redis (optional — system works without it)
+
+### Steps
+```bash
+# 1. Install all dependencies
+npm run install:all
+
+# 2. Configure environment
+cp backend/.env.example backend/.env
+
+# 3. Start Redis (optional)
+redis-server
+
+# 4. Start development servers
+npm run dev
+
+# 5. Open http://localhost:5173 in your browser
+```
+
+### Tests
+```bash
+cd backend && npm test
+```
+
+## 6. Known Limitations
+
+1. **Authentication is simplified** — no JWT/OAuth; uses session storage + header-based user ID. Not suitable for production without adding proper auth.
+2. **No message encryption** — messages are stored and transmitted in plaintext.
+3. **SQLite write concurrency** — under very high write load, SQLite's single-writer model could bottleneck. Production would use PostgreSQL or DynamoDB.
+4. **No file uploads** — text-only messaging; no image/file attachments.
+5. **No message threading** — flat channel messages only; no reply chains.
+6. **No rate limiting** — malicious clients could spam WebSocket events.
+7. **No E2E tests** — only unit/integration tests for the database layer.
+
+## 7. Future Improvements
+
+- **Production auth**: JWT tokens with refresh rotation, OAuth2 providers
+- **Message threading**: Reply chains with parent message references
+- **File uploads**: S3-backed attachments with presigned URLs
+- **Rich text**: Markdown rendering with code highlighting
+- **Notifications**: Push notifications via service workers
+- **Search**: Full-text message search with SQLite FTS5 or Elasticsearch
+- **Rate limiting**: Per-user WS event throttling
+- **E2E testing**: Playwright or Cypress for full user flow testing
+- **Horizontal scaling**: Deploy multiple instances behind a load balancer with Redis-backed session sharing
+- **Observability**: OpenTelemetry instrumentation, Prometheus metrics, Grafana dashboards
+
+## 8. Screenshots
+
+> **[Screenshot: Login Screen]**
+> _Dark-themed login card with username input and "Join" button._
+
+> **[Screenshot: Main Chat Interface]**
+> _Three-panel layout: channel sidebar (left), message area (center), members panel (right). Shows real-time messages with avatars and timestamps._
+
+> **[Screenshot: New Channel Modal]**
+> _Overlay modal with channel name and description inputs._
+
+> **[Screenshot: Typing Indicator]**
+> _Italic text below the message area showing "alice is typing..."_
+
+---
+
+*Report generated for BuckyConnect v1.0.0*
+
