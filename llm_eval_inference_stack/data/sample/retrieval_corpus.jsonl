@@ -1,0 +1,4 @@
+{"doc_id": "doc_1", "text": "vLLM is a high-throughput and memory-efficient inference and serving engine for LLMs. It supports OpenAI-compatible model serving for production-style deployment."}
+{"doc_id": "doc_2", "text": "MLflow helps track experiments, log metrics, store artifacts, and improve reproducibility across machine learning and LLM workflows."}
+{"doc_id": "doc_3", "text": "FastAPI is a modern Python web framework used to build APIs with automatic validation, type hints, and interactive documentation."}
+{"doc_id": "doc_4", "text": "Retrieval quality in search systems can be evaluated using metrics like Recall at K and Mean Reciprocal Rank."}

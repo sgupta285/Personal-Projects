@@ -1,0 +1,4 @@
+{"question_id": "q1", "question": "What is vLLM used for?", "gold_doc_id": "doc_1", "reference_answer": "vLLM is used for efficient LLM inference and serving, including OpenAI-compatible API serving."}
+{"question_id": "q2", "question": "Why is MLflow useful in an LLM stack?", "gold_doc_id": "doc_2", "reference_answer": "MLflow is useful for tracking experiments, logging metrics and artifacts, and improving reproducibility."}
+{"question_id": "q3", "question": "What does FastAPI provide for this project?", "gold_doc_id": "doc_3", "reference_answer": "FastAPI provides the API layer, request validation, and documentation endpoints."}
+{"question_id": "q4", "question": "Which metrics are common for retrieval quality?", "gold_doc_id": "doc_4", "reference_answer": "Common retrieval metrics include Recall at K and Mean Reciprocal Rank."}
