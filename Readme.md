@@ -1,6 +1,4 @@
-# Projects (GitHub-Ready)
-
-This file contains clean, public-facing project summaries (no course names, no “homework”).
+# Projects
 
 ---
 
@@ -21,6 +19,18 @@ This file contains clean, public-facing project summaries (no course names, no �
 - Improved accuracy by 45% and achieved MAE ~10.0 (0–100); processed 1M+ records end-to-end.
 - Deployed inference on AWS Lambda with MLflow model versioning and a Redis-backed feature store; reduced latency ~30% via parallelization/provisioned concurrency.
 **Skills/Tools:** Python, XGBoost, LightGBM, scikit-learn, Optuna, MLflow, AWS Lambda, Redis, feature engineering, pipeline automation, Docker
+
+## LLM Evaluation & Inference Stack — Benchmarking + High-Throughput Serving
+- Built a scalable evaluation + inference stack for transformer-based LLMs, benchmarking latency, throughput, retrieval quality, and answer relevance across prompts, checkpoints, and serving configurations.
+- Optimized serving with vLLM, dynamic batching, and async FastAPI endpoints to support fast side-by-side experiments; added structured logging and traceable run metadata for safer debugging and deployment decisions.
+- Integrated MLflow to track parameters, metrics, and artifacts across model iterations, making it easier to compare prompt changes, model checkpoints, decoding settings, and serving strategies reproducibly.
+**Skills/Tools:** Python, Hugging Face Transformers, vLLM, FastAPI, MLflow, async inference, dynamic batching, retrieval evaluation, answer relevance scoring, structured logging, Docker
+
+## Ads Integrity & Content Moderation Platform — Fraud Detection + Policy Enforcement
+- Built an ads integrity platform that screens creatives and metadata before serving using event-driven moderation services, real-time scoring, and policy-aware review workflows.
+- Combined a lightweight ML classifier with a rules engine to detect spam, scams, misleading content, and policy violations; routed high-risk ads to manual review while approved ads continued into the serving pipeline.
+- Added Kafka-based event streaming, Redis risk caching, Postgres-backed advertiser/ad metadata, and a React analytics dashboard to surface fraud trends, moderation actions, and advertiser risk scores.
+**Skills/Tools:** Python, FastAPI, Kafka, Redis, PostgreSQL, scikit-learn, rule engines, content moderation, fraud detection, React, Docker, AWS/GCP
 
 ## Real-Time Fraud Detection API — Low-Latency ML Inference + Drift Monitoring
 - Built a production fraud scoring API using FastAPI + Redis caching, deployed on Kubernetes with autoscaling and circuit-breaker reliability patterns.

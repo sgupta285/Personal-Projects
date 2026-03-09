@@ -1,0 +1,116 @@
+[
+  {
+    "advertiser_name": "NorthPeak Retail",
+    "advertiser_domain": "northpeak.co",
+    "title": "Spring Running Collection",
+    "body": "Discover lightweight shoes and new trail layers for your next weekend run.",
+    "landing_page_url": "https://northpeak.co/spring-running",
+    "call_to_action": "Shop now",
+    "category": "retail",
+    "creative_text": "New spring arrivals. Free shipping over $75.",
+    "creative_tags": [
+      "running",
+      "spring",
+      "footwear"
+    ],
+    "geo_targets": [
+      "US",
+      "CA"
+    ],
+    "budget_cents": 250000
+  },
+  {
+    "advertiser_name": "Yield Booster Labs",
+    "advertiser_domain": "yield-booster.click",
+    "title": "Guaranteed returns in 24 hours",
+    "body": "Start with $100 and watch it turn into $1,000 with our private crypto doubling strategy.",
+    "landing_page_url": "https://yield-booster.click/instant-wealth",
+    "call_to_action": "Act now",
+    "category": "finance",
+    "creative_text": "Free money system. Guaranteed returns.",
+    "creative_tags": [
+      "crypto",
+      "wealth",
+      "urgent"
+    ],
+    "geo_targets": [
+      "US",
+      "GB",
+      "AU",
+      "DE",
+      "FR",
+      "IT"
+    ],
+    "budget_cents": 900000
+  },
+  {
+    "advertiser_name": "Glow Clinic Online",
+    "advertiser_domain": "glow-clinic.xyz",
+    "title": "Miracle cure for acne scars",
+    "body": "Before and after transformations in just three days using our secret formula.",
+    "landing_page_url": "https://glow-clinic.xyz/miracle-cure",
+    "call_to_action": "Learn more",
+    "category": "health",
+    "creative_text": "Miracle cure. Before and after proof.",
+    "creative_tags": [
+      "beauty",
+      "quick-results"
+    ],
+    "geo_targets": [
+      "US"
+    ],
+    "budget_cents": 180000
+  },
+  {
+    "advertiser_name": "Maple & Main Home",
+    "advertiser_domain": "maplemainhome.com",
+    "title": "Handcrafted dining tables",
+    "body": "Solid oak furniture designed for long family dinners and everyday living.",
+    "landing_page_url": "https://maplemainhome.com/dining",
+    "call_to_action": "Browse collection",
+    "category": "home",
+    "creative_text": "Crafted from sustainably sourced wood.",
+    "creative_tags": [
+      "furniture",
+      "home"
+    ],
+    "geo_targets": [
+      "US"
+    ],
+    "budget_cents": 130000
+  },
+  {
+    "advertiser_name": "QuickCash Hub",
+    "advertiser_domain": "quick-cash-fast-loans-247.ru",
+    "title": "No credit check instant approval",
+    "body": "Apply today and get approved in minutes, even with bad credit.",
+    "landing_page_url": "https://quick-cash-fast-loans-247.ru/loan",
+    "call_to_action": "Apply now",
+    "category": "finance",
+    "creative_text": "Instant approval. No credit check.",
+    "creative_tags": [
+      "loan",
+      "cash",
+      "approval"
+    ],
+    "geo_targets": [
+      "US",
+      "MX",
+      "BR",
+      "IN",
+      "ZA",
+      "NG",
+      "ID",
+      "PH",
+      "EG",
+      "TR",
+      "MY",
+      "VN",
+      "PK",
+      "CL",
+      "AR",
+      "PE"
+    ],
+    "budget_cents": 700000
+  }
+]
