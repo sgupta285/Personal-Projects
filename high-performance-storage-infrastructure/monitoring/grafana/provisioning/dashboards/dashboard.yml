@@ -1,0 +1,9 @@
+apiVersion: 1
+
+providers:
+  - name: storage-benchmarks
+    folder: Storage
+    type: file
+    disableDeletion: true
+    options:
+      path: /var/lib/grafana/dashboards

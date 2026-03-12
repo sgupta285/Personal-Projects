@@ -1,0 +1,6 @@
+{
+  "sizes_bytes": [65536, 262144, 1048576],
+  "concurrency_levels": [1, 4, 8],
+  "ops_per_level": 12,
+  "hot_object_count": 8
+}

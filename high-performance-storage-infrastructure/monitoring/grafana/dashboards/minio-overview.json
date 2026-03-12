@@ -1,0 +1,32 @@
+{
+  "title": "Storage Benchmark Overview",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "30s",
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "S3 Requests / sec",
+      "gridPos": {"x": 0, "y": 0, "w": 12, "h": 8},
+      "targets": [{"expr": "rate(minio_s3_requests_total[1m])", "legendFormat": "requests"}]
+    },
+    {
+      "type": "timeseries",
+      "title": "HTTP Requests / sec",
+      "gridPos": {"x": 12, "y": 0, "w": 12, "h": 8},
+      "targets": [{"expr": "rate(minio_http_requests_duration_ms_count[1m])", "legendFormat": "http"}]
+    },
+    {
+      "type": "timeseries",
+      "title": "Disk Storage Used",
+      "gridPos": {"x": 0, "y": 8, "w": 12, "h": 8},
+      "targets": [{"expr": "minio_cluster_capacity_used_bytes", "legendFormat": "used"}]
+    },
+    {
+      "type": "timeseries",
+      "title": "Disk Storage Free",
+      "gridPos": {"x": 12, "y": 8, "w": 12, "h": 8},
+      "targets": [{"expr": "minio_cluster_capacity_free_bytes", "legendFormat": "free"}]
+    }
+  ]
+}

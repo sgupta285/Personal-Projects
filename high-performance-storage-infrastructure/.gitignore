@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.venv/
+venv/
+.env
+.DS_Store
+data/store/benchmarks/
+data/benchmarks/*.csv
+data/benchmarks/*.json
+data/reports/*.html
+data/reports/*.png
+data/reports/*.md
+!data/store/.gitkeep
+!data/benchmarks/.gitkeep
+!data/reports/.gitkeep

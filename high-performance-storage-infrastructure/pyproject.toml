@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "storageinfra"
+version = "0.1.0"
+description = "High-performance storage infrastructure benchmarking project"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Srijan Gupta" }]
+dependencies = [
+  "boto3>=1.34,<2.0",
+  "numpy>=1.26,<3.0",
+  "pandas>=2.2,<3.0",
+  "plotly>=5.24,<6.0",
+  "matplotlib>=3.8,<4.0",
+  "pytest>=8.3,<9.0",
+  "python-dotenv>=1.0,<2.0"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+addopts = "-q"

@@ -1,0 +1,8 @@
+{
+  "best_upload_throughput_mb_s": 756.32,
+  "best_download_hot_throughput_mb_s": 2783.5,
+  "fastest_p95_ms": 0.41,
+  "average_hot_cache_hit_rate": 0.222,
+  "restart_recovery_success": true,
+  "cache_speedup_x": 11.37
+}
