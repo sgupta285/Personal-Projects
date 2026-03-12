@@ -1,0 +1,72 @@
+with base as (
+    select
+        account_id,
+        plan_tier,
+        contract_type,
+        region,
+        industry,
+        monthly_recurring_revenue,
+        seat_count,
+        tenure_months,
+        days_since_last_activity,
+        avg_weekly_sessions_30d,
+        avg_weekly_sessions_prev_30d,
+        transactions_30d,
+        transactions_prev_30d,
+        support_tickets_90d,
+        unresolved_tickets,
+        payment_failures_90d,
+        plan_change_count_180d,
+        nps_score,
+        csat_score,
+        admin_logins_30d,
+        api_calls_30d,
+        feature_adoption_score,
+        onboarding_completion_pct,
+        training_sessions_attended,
+        auto_renew,
+        last_marketing_touch_days,
+        churned_60d
+    from raw_customer_events
+),
+feature_table as (
+    select
+        account_id,
+        plan_tier,
+        contract_type,
+        region,
+        industry,
+        monthly_recurring_revenue,
+        seat_count,
+        tenure_months,
+        days_since_last_activity,
+        avg_weekly_sessions_30d,
+        avg_weekly_sessions_prev_30d,
+        avg_weekly_sessions_30d - avg_weekly_sessions_prev_30d as engagement_delta,
+        case
+            when avg_weekly_sessions_prev_30d = 0 then avg_weekly_sessions_30d
+            else avg_weekly_sessions_30d / avg_weekly_sessions_prev_30d
+        end as activity_ratio,
+        transactions_30d,
+        transactions_prev_30d,
+        transactions_30d - transactions_prev_30d as transaction_delta,
+        support_tickets_90d,
+        unresolved_tickets,
+        support_tickets_90d / nullif(seat_count, 0) * 10 as ticket_burden,
+        unresolved_tickets / nullif(case when support_tickets_90d = 0 then 1 else support_tickets_90d end, 0) as unresolved_ticket_rate,
+        payment_failures_90d,
+        plan_change_count_180d,
+        nps_score,
+        csat_score,
+        admin_logins_30d,
+        api_calls_30d,
+        feature_adoption_score,
+        onboarding_completion_pct,
+        training_sessions_attended,
+        auto_renew,
+        monthly_recurring_revenue / nullif(seat_count, 0) as mrr_per_seat,
+        last_marketing_touch_days,
+        churned_60d
+    from base
+)
+select * from feature_table;
