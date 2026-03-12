@@ -105,15 +105,60 @@
 **Skills/Tools:** Python (statsmodels), R (estimatr/randomizr), causal inference, 2SLS, LATE, clustered SE, power analysis, causal forests, experimental design
 
 ## Minimum Wage Employment Effects — Modern DID + Event Study
-- Evaluated policy impact using Callaway–Sant’Anna DID to address pitfalls of TWFE under staggered adoption.
+- Evaluated policy impact using Callaway–Sant'Anna DID to address pitfalls of TWFE under staggered adoption.
 - Validated assumptions using event study pre-trend checks and communicated time dynamics clearly.
 - Reported heterogeneous effects (e.g., -2.1% food service) and produced a structured 15-page policy brief with defensible methodology.
-**Skills/Tools:** R (did, fixest), Stata, difference-in-differences, Callaway–Sant’Anna, event study, BLS microdata, policy writing, causal diagnostics
+**Skills/Tools:** R (did, fixest), Stata, difference-in-differences, Callaway–Sant'Anna, event study, BLS microdata, policy writing, causal diagnostics
 
 ## AI Trend Radar — Trend Detection + Evidence-Backed Summarization
 - Built a multi-source trend intelligence pipeline that surfaces emerging topics using time-window velocity/momentum scoring and novelty/persistence signals.
-- Reduced noise via deduplication and semantic clustering so repeated reposts don’t inflate trend strength; grouped scattered mentions into coherent trend clusters.
-- Added an LLM layer to generate concise, evidence-backed trend summaries (key entities, sentiment direction, why it’s trending) with drill-down examples for verification.
+- Reduced noise via deduplication and semantic clustering so repeated reposts don't inflate trend strength; grouped scattered mentions into coherent trend clusters.
+- Added an LLM layer to generate concise, evidence-backed trend summaries (key entities, sentiment direction, why it's trending) with drill-down examples for verification.
 **Skills/Tools:** Python, embeddings, semantic clustering, deduplication, trend scoring, LLM summarization, entity extraction, sentiment signals, PostgreSQL, Redis, Docker, dashboarding (React/Next.js)
+
+## Kubernetes Observability Platform — Metrics, Logs, Traces
+- Built scalable observability infrastructure for Kubernetes clusters using Prometheus metrics collection, Grafana dashboards, and OpenTelemetry distributed tracing deployed via Helm charts.
+- Implemented custom K8s operators in Go for automated monitoring configuration, developed infrastructure-as-code with Terraform, and created alerting rules maintaining sub-500ms latency.
+**Skills/Tools:** Kubernetes, Prometheus, Grafana, OpenTelemetry, Helm, Go, Terraform, custom operators, distributed tracing, alerting
+
+## High-Performance Storage Infrastructure — Distributed Storage at Scale
+- Deployed distributed storage system using Ceph and MinIO on Kubernetes, achieving high-throughput data access patterns and optimizing performance for concurrent workloads.
+- Automated storage provisioning with Terraform and Python operators, implemented monitoring via Prometheus/Grafana, and optimized Redis caching for improved read performance.
+**Skills/Tools:** Ceph, MinIO, Kubernetes, Terraform, Python, Prometheus, Grafana, Redis, distributed storage, performance optimization
+
+## Cloud-Native Production Platform — AWS + K8s Infrastructure
+- Architected production infrastructure on AWS using Kubernetes with auto-scaling, deploying via Terraform IaC, processing 500+ QPS with 80ms p95 latency.
+- Built comprehensive observability using Prometheus, Grafana, and distributed tracing for monitoring system health, debugging production issues, and tracking performance with automated alerting.
+**Skills/Tools:** AWS, Kubernetes, Docker, Terraform, Prometheus, Grafana, Jaeger, auto-scaling, load balancing, production infrastructure
+
+## Infrastructure Automation Framework — DevOps Tools & Pipelines
+- Developed infrastructure automation tools in Python and Go for Kubernetes deployment orchestration, processing 100K+ operations with optimized throughput via parallelization.
+- Implemented GitOps workflows with Terraform and Helm, built monitoring dashboards, and created clean production-grade code for operational excellence and reliability.
+**Skills/Tools:** Python, Go, Terraform, Ansible, Helm, Git, GitOps, Kubernetes, automation, CI/CD
+
+## Real-Time Control System — Embedded + High-Rate Data Processing
+- Developed real-time control algorithms and data acquisition systems processing high-rate sensor data, implementing efficient data structures and concurrent processing to maintain deterministic timing constraints.
+- Built automated deployment pipelines and monitoring infrastructure, implementing comprehensive testing frameworks and debugging tools to ensure system reliability and performance under production workloads.
+**Skills/Tools:** C++, Python, embedded systems, real-time systems, Linux, RTOS, control algorithms, data acquisition, concurrency
+
+## Geometry Processing Pipeline — 3D Mesh Processing + Optimization
+- Architected geometry processing pipeline converting complex 3D models into optimized machine instructions, implementing efficient algorithms for mesh processing, path planning, and collision detection with sub-millisecond latency.
+- Optimized computational performance through C++ template metaprogramming, SIMD instructions, and parallel processing, achieving high-throughput geometry conversion while maintaining numerical precision and robustness.
+**Skills/Tools:** C++, Python, computational geometry, mesh processing, SIMD, parallel computing, optimization, numerical algorithms
+
+## Distributed Data Acquisition System — High-Rate Streaming + Storage
+- Built high-rate data acquisition and storage system handling streaming sensor data at scale, implementing lock-free concurrent data structures and zero-copy networking for minimal latency overhead.
+- Developed production-grade C++ system with comprehensive error handling, automated testing, and monitoring, optimizing throughput via profiling-driven performance tuning and efficient resource management.
+**Skills/Tools:** C++, Python, Linux, concurrent data structures, lock-free programming, zero-copy networking, real-time systems, performance optimization
+
+## Marketing Attribution & Response Modeling — Multi-Touch Attribution
+- Built multi-touch attribution models analyzing 1M+ customer journeys using machine learning and causal inference, quantifying channel contribution to conversions and optimizing marketing spend.
+- Developed market response models using Python on Spark, integrated third-party data sources, and designed experiments measuring advertising effectiveness across channels with statistical rigor.
+**Skills/Tools:** Python, SQL, Spark, causal inference, attribution modeling, machine learning, A/B testing, marketing analytics
+
+## Dynamic Pricing Algorithm Optimization — Revenue Maximization
+- Designed dynamic pricing algorithms incorporating marketplace dynamics, demand elasticity, and competitive positioning using machine learning on 284K transactions, maximizing revenue and conversion rates.
+- Built experimental frameworks testing pricing strategies via A/B testing, analyzed statistical significance, and connected technical insights to strategic pricing decisions increasing efficiency 12%.
+**Skills/Tools:** Python, XGBoost, SQL, optimization, pricing algorithms, A/B testing, demand modeling, revenue optimization
 
 ---
