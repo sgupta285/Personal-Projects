@@ -1,0 +1,11 @@
+name                  = "platform-dev"
+aws_region            = "us-east-1"
+vpc_cidr              = "10.20.0.0/16"
+public_subnet_cidrs   = ["10.20.1.0/24", "10.20.2.0/24"]
+private_subnet_cidrs  = ["10.20.11.0/24", "10.20.12.0/24"]
+azs                   = ["us-east-1a", "us-east-1b"]
+db_username           = "appuser"
+db_password           = "replace-me"
+db_name               = "orders"
+gateway_image         = "123456789012.dkr.ecr.us-east-1.amazonaws.com/platform-gateway:latest"
+gateway_desired_count = 1

@@ -1,0 +1,72 @@
+version: "3.9"
+
+services:
+  catalog:
+    build:
+      context: ./services/catalog
+    ports:
+      - "8001:8001"
+    environment:
+      SERVICE_NAME: catalog
+    command: uvicorn catalog_service.main:app --host 0.0.0.0 --port 8001
+
+  orders:
+    build:
+      context: ./services/orders
+    ports:
+      - "8002:8002"
+    environment:
+      SERVICE_NAME: orders
+      ORDER_DB_PATH: /data/orders.db
+    volumes:
+      - orders_data:/data
+    command: uvicorn orders_service.main:app --host 0.0.0.0 --port 8002
+
+  gateway:
+    build:
+      context: ./services/gateway
+    ports:
+      - "8000:8000"
+    depends_on:
+      - catalog
+      - orders
+    environment:
+      CATALOG_URL: http://catalog:8001
+      ORDERS_URL: http://orders:8002
+      SERVICE_NAME: gateway
+    command: uvicorn gateway_service.main:app --host 0.0.0.0 --port 8000
+
+  frontend:
+    build:
+      context: ./services/frontend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - gateway
+
+  prometheus:
+    image: prom/prometheus:v2.54.1
+    volumes:
+      - ./monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./monitoring/alerts/platform-alerts.yml:/etc/prometheus/platform-alerts.yml:ro
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+    ports:
+      - "9090:9090"
+    depends_on:
+      - gateway
+      - catalog
+      - orders
+
+  grafana:
+    image: grafana/grafana:11.2.0
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    depends_on:
+      - prometheus
+
+volumes:
+  orders_data:

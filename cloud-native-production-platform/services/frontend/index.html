@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Cloud-Native Production Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: Arial, sans-serif; background:#0f172a; color:#e2e8f0; margin:0; padding:0; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 48px 20px; }
+    .card { background:#111827; border:1px solid #334155; border-radius:16px; padding:24px; margin-bottom:20px; }
+    h1, h2 { margin-top:0; }
+    button { background:#2563eb; color:white; border:none; border-radius:10px; padding:10px 16px; cursor:pointer; }
+    pre { background:#020617; padding:16px; border-radius:12px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Cloud-Native Production Platform</h1>
+      <p>This frontend talks to the gateway service and gives a simple public face to the platform.</p>
+      <button onclick="loadProducts()">Load products</button>
+      <button onclick="createOrder()">Create sample order</button>
+    </div>
+
+    <div class="card">
+      <h2>Response</h2>
+      <pre id="output">Waiting for action...</pre>
+    </div>
+  </div>
+
+  <script>
+    const gatewayBase = "http://localhost:8000";
+
+    async function loadProducts() {
+      const res = await fetch(`${gatewayBase}/products`);
+      const data = await res.json();
+      document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+    }
+
+    async function createOrder() {
+      const payload = { customer_id: "demo-user-1", sku: "sku-101", quantity: 2 };
+      const res = await fetch(`${gatewayBase}/orders`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      const data = await res.json();
+      document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+    }
+  </script>
+</body>
+</html>

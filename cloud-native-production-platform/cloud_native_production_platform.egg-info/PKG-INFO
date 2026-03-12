@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: cloud-native-production-platform
+Version: 0.1.0
+Summary: Production-style cloud-native platform with Docker Compose local stack and Terraform AWS infrastructure
+Requires-Python: >=3.10
+Requires-Dist: fastapi<1.0,>=0.115
+Requires-Dist: uvicorn[standard]<1.0,>=0.30
+Requires-Dist: httpx<1.0,>=0.27
+Requires-Dist: prometheus-client<1.0,>=0.20
+Requires-Dist: pytest<9.0,>=8.3

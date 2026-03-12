@@ -1,0 +1,50 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  test-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Run tests
+        run: pytest
+
+      - name: Build local service images
+        run: |
+          docker build -t platform-gateway ./services/gateway
+          docker build -t platform-catalog ./services/catalog
+          docker build -t platform-orders ./services/orders
+          docker build -t platform-frontend ./services/frontend
+
+      - uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform fmt check
+        run: terraform -chdir=infra/terraform/environments/dev fmt -check -recursive
+
+      - name: Terraform validate dev
+        run: |
+          terraform -chdir=infra/terraform/environments/dev init -backend=false
+          terraform -chdir=infra/terraform/environments/dev validate
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: test-and-validate
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Deployment stage intentionally requires AWS credentials, ECR repository names, and tfvars secrets."

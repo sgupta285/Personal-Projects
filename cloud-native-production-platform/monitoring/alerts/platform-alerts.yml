@@ -1,0 +1,19 @@
+groups:
+  - name: platform-alerts
+    rules:
+      - alert: GatewayHighLatencyP95
+        expr: histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket{service="gateway"}[5m])) by (le)) > 0.5
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: Gateway p95 latency is elevated
+          description: Check dependency latency to catalog and orders, then inspect recent deploys.
+      - alert: OrderCreateErrors
+        expr: increase(http_requests_total{service="orders",path="/orders"}[10m]) < 1
+        for: 20m
+        labels:
+          severity: info
+        annotations:
+          summary: Orders endpoint is quiet
+          description: This may be expected in dev. In prod, confirm ALB routing and gateway health.

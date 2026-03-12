@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+cloud_native_production_platform.egg-info/PKG-INFO
+cloud_native_production_platform.egg-info/SOURCES.txt
+cloud_native_production_platform.egg-info/dependency_links.txt
+cloud_native_production_platform.egg-info/requires.txt
+cloud_native_production_platform.egg-info/top_level.txt
+tests/test_catalog.py
+tests/test_gateway.py
+tests/test_orders.py
