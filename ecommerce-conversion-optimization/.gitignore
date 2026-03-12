@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+venv/
+.pytest_cache/
+.DS_Store
+data/raw/*.csv
+data/processed/*.csv
+data/*.db
+artifacts/*
+!artifacts/.gitkeep
+!artifacts/README.md

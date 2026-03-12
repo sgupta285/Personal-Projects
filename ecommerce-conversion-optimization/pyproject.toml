@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecommerce-conversion-optimization"
+version = "0.1.0"
+description = "Funnel analytics and A/B testing workflow for e-commerce conversion optimization"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Srijan Gupta" }]
+dependencies = [
+  "pandas>=2.2,<3.0",
+  "numpy>=1.26,<3.0",
+  "scipy>=1.13,<2.0",
+  "statsmodels>=0.14,<1.0",
+  "sqlalchemy>=2.0,<3.0",
+  "python-dotenv>=1.0,<2.0",
+  "streamlit>=1.38,<2.0",
+  "plotly>=5.24,<6.0",
+  "matplotlib>=3.9,<4.0",
+  "pytest>=8.3,<9.0"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+addopts = "-q"
