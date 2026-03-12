@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+src/marketing_attribution/__init__.py
+src/marketing_attribution/attribution.py
+src/marketing_attribution/config.py
+src/marketing_attribution/optimizer.py
+src/marketing_attribution/reporting.py
+src/marketing_attribution/response.py
+src/marketing_attribution/storage.py
+src/marketing_attribution/synthetic_data.py
+src/marketing_attribution_response_modeling.egg-info/PKG-INFO
+src/marketing_attribution_response_modeling.egg-info/SOURCES.txt
+src/marketing_attribution_response_modeling.egg-info/dependency_links.txt
+src/marketing_attribution_response_modeling.egg-info/requires.txt
+src/marketing_attribution_response_modeling.egg-info/top_level.txt
+tests/test_attribution.py
+tests/test_optimizer.py
