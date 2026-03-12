@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Dynamic Pricing Dashboard</title>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; background: #f8fafc; color: #0f172a; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 24px; }
+    .card { background: white; border-radius: 14px; padding: 16px; box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08); }
+    .chart { background: white; border-radius: 14px; padding: 8px; margin-top: 18px; box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08); }
+    table { width: 100%; border-collapse: collapse; background: white; margin-top: 18px; }
+    th, td { border: 1px solid #e2e8f0; padding: 8px; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>Dynamic Pricing Dashboard</h1>
+  <p>Model-driven pricing recommendations with backtest results and sample sensitivity analysis.</p>
+
+  <div class="cards" id="cards"></div>
+  <div class="chart"><div id="curveChart"></div></div>
+  <div class="chart"><div id="priceChart"></div></div>
+
+  <h2>Top Recommendations</h2>
+  <table id="recTable">
+    <thead></thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    async function loadData() {
+      const response = await fetch('/dashboard-metrics');
+      const payload = await response.json();
+
+      const cards = [
+        ['RMSE', payload.model_metrics.rmse.toFixed(2)],
+        ['WMAPE', (payload.model_metrics.wmape * 100).toFixed(2) + '%'],
+        ['Profit uplift', payload.backtest_summary.profit_uplift_pct + '%'],
+        ['Revenue uplift', payload.backtest_summary.revenue_uplift_pct + '%'],
+        ['Win rate', payload.backtest_summary.recommendation_win_rate + '%']
+      ];
+      document.getElementById('cards').innerHTML = cards.map(([k, v]) => `<div class="card"><h3>${k}</h3><p>${v}</p></div>`).join('');
+
+      const curve = payload.sample_curve;
+      Plotly.newPlot('curveChart', [
+        { x: curve.map(r => r.candidate_price), y: curve.map(r => r.expected_profit), name: 'Expected profit', mode: 'lines' },
+        { x: curve.map(r => r.candidate_price), y: curve.map(r => r.expected_revenue), name: 'Expected revenue', mode: 'lines' }
+      ], { title: 'Sample price sensitivity curve' });
+
+      const recs = payload.recommendations;
+      Plotly.newPlot('priceChart', [{
+        x: recs.map(r => r.current_price),
+        y: recs.map(r => r.recommended_price),
+        text: recs.map(r => `${r.product_id} (${r.channel})`),
+        mode: 'markers',
+        type: 'scatter'
+      }], { title: 'Recommended price versus current price', xaxis: {title: 'Current price'}, yaxis: {title: 'Recommended price'} });
+
+      const headers = Object.keys(recs[0]).slice(0, 8);
+      document.querySelector('#recTable thead').innerHTML = '<tr>' + headers.map(h => `<th>${h}</th>`).join('') + '</tr>';
+      document.querySelector('#recTable tbody').innerHTML = recs.slice(0, 20).map(row =>
+        '<tr>' + headers.map(h => `<td>${row[h]}</td>`).join('') + '</tr>'
+      ).join('');
+    }
+    loadData();
+  </script>
+</body>
+</html>
