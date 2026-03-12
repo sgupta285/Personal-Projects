@@ -1,0 +1,34 @@
+{
+  "terraform": [
+    {
+      "tool": "terraform-structure",
+      "ok": true,
+      "message": "found main.tf"
+    },
+    {
+      "tool": "terraform-structure",
+      "ok": true,
+      "message": "found variables.tf"
+    },
+    {
+      "tool": "terraform-structure",
+      "ok": true,
+      "message": "found providers.tf"
+    },
+    {
+      "tool": "template-check",
+      "ok": true,
+      "message": "no unresolved placeholders found"
+    },
+    {
+      "tool": "terraform-exec",
+      "ok": true,
+      "message": "dry-run: would execute terraform fmt -check -recursive and terraform validate"
+    }
+  ],
+  "helm": {
+    "tool": "helm-lint",
+    "ok": true,
+    "message": "dry-run: would execute helm lint examples/generated/helm-orders"
+  }
+}

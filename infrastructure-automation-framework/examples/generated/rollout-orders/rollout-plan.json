@@ -1,0 +1,59 @@
+{
+  "service": "orders-api",
+  "version": "2026.03.12",
+  "owner": "platform-team",
+  "environment": "dev",
+  "namespace": "commerce-dev",
+  "cluster": "platform-dev",
+  "strategy": "canary",
+  "prechecks": [
+    {
+      "name": "terraform plan clean",
+      "description": "Confirm no unexpected infrastructure drift."
+    },
+    {
+      "name": "helm render reviewed",
+      "description": "Validate image tag, host, and resource requests before apply."
+    },
+    {
+      "name": "synthetic order flow",
+      "description": "Run smoke checks against create-order and list-order endpoints."
+    }
+  ],
+  "phases": [
+    {
+      "traffic_percent": 10,
+      "pause_seconds": 120,
+      "success_metric": "error_rate < 1% and p95_latency < 300ms",
+      "action": "shift traffic to 10% for orders-api:2026.03.12"
+    },
+    {
+      "traffic_percent": 25,
+      "pause_seconds": 120,
+      "success_metric": "error_rate < 1% and p95_latency < 300ms",
+      "action": "shift traffic to 25% for orders-api:2026.03.12"
+    },
+    {
+      "traffic_percent": 50,
+      "pause_seconds": 120,
+      "success_metric": "error_rate < 1% and p95_latency < 300ms",
+      "action": "shift traffic to 50% for orders-api:2026.03.12"
+    },
+    {
+      "traffic_percent": 100,
+      "pause_seconds": 120,
+      "success_metric": "error_rate < 1% and p95_latency < 300ms",
+      "action": "shift traffic to 100% for orders-api:2026.03.12"
+    }
+  ],
+  "abort_conditions": [
+    {
+      "name": "error rate spike",
+      "condition": "5xx error rate > 2% for 5m"
+    },
+    {
+      "name": "latency regression",
+      "condition": "p95 latency > 400ms for 10m"
+    }
+  ]
+}

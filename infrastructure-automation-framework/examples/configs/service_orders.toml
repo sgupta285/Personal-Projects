@@ -1,0 +1,33 @@
+[service]
+name = "orders-api"
+owner = "platform-team"
+port = 8080
+replicas = 2
+language = "python"
+health_path = "/health"
+
+[container]
+base_image = "python:3.11-slim"
+start_command = "uvicorn app.main:app --host 0.0.0.0 --port 8080"
+
+[runtime]
+cpu_request = "250m"
+memory_request = "256Mi"
+cpu_limit = "500m"
+memory_limit = "512Mi"
+
+[deploy]
+namespace = "commerce-dev"
+host = "orders.dev.internal"
+image_repository = "ghcr.io/example/orders-api"
+autoscaling_min = 2
+autoscaling_max = 5
+target_cpu_utilization = 70
+
+[[env_vars]]
+key = "APP_ENV"
+value = "dev"
+
+[[env_vars]]
+key = "LOG_LEVEL"
+value = "info"

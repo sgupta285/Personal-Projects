@@ -1,0 +1,35 @@
+[service]
+name = "orders-api"
+version = "2026.03.12"
+owner = "platform-team"
+
+[environment]
+name = "dev"
+namespace = "commerce-dev"
+cluster = "platform-dev"
+
+[strategy]
+mode = "canary"
+canary_percentages = [10, 25, 50, 100]
+pause_seconds = 120
+success_metric = "error_rate < 1% and p95_latency < 300ms"
+
+[[checks]]
+name = "terraform plan clean"
+description = "Confirm no unexpected infrastructure drift."
+
+[[checks]]
+name = "helm render reviewed"
+description = "Validate image tag, host, and resource requests before apply."
+
+[[checks]]
+name = "synthetic order flow"
+description = "Run smoke checks against create-order and list-order endpoints."
+
+[[abort_conditions]]
+name = "error rate spike"
+condition = "5xx error rate > 2% for 5m"
+
+[[abort_conditions]]
+name = "latency regression"
+condition = "p95 latency > 400ms for 10m"

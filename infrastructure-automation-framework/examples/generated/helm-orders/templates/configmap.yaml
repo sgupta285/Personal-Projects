@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: orders-api-config
+  namespace: commerce-dev
+data:
+  APP_ENV: "dev"
+  LOG_FORMAT: "json"
+  SERVICE_OWNER: "platform-team"

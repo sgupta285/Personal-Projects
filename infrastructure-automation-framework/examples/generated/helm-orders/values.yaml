@@ -1,0 +1,22 @@
+service:
+  name: orders-api
+  namespace: commerce-dev
+  port: 8080
+  image: ghcr.io/example/orders-api:latest
+  host: orders.dev.internal
+resources:
+  requests:
+    cpu: 250m
+    memory: 256Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
+autoscaling:
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 70
+env:
+  - name: APP_ENV
+    value: "dev"
+  - name: LOG_LEVEL
+    value: "info"

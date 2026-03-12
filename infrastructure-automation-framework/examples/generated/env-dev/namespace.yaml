@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: commerce-dev
+  labels:
+    environment: dev
+    region: us-east-1

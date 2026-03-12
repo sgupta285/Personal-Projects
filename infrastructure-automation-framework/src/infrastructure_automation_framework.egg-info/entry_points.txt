@@ -1,0 +1,2 @@
+[console_scripts]
+infraforge = infraforge.cli:main
