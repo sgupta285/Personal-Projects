@@ -1,0 +1,8 @@
+build/
+__pycache__/
+*.pyc
+docs/generated/
+!docs/generated/control_response.png
+!docs/generated/jitter_histogram.png
+!docs/generated/timing_table.csv
+!docs/generated/analysis_summary.json

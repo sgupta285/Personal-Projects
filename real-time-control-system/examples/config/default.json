@@ -1,0 +1,33 @@
+{
+  "duration_seconds": 12.0,
+  "control_period_ms": 10,
+  "sensor_period_ms": 10,
+  "max_sensor_delay_ms": 30,
+  "noise_stddev": 2.0,
+  "plant_gain": 1.0,
+  "plant_time_constant": 0.35,
+  "disturbance_start_s": 6.0,
+  "disturbance_end_s": 7.0,
+  "disturbance_magnitude": -35.0,
+  "controller": {
+    "kp": 0.9,
+    "ki": 2.6,
+    "kd": 0.03,
+    "integral_min": -80.0,
+    "integral_max": 80.0,
+    "output_min": 0.0,
+    "output_max": 100.0
+  },
+  "filter": {
+    "type": "kalman",
+    "moving_average_window": 5,
+    "kalman_process_variance": 0.08,
+    "kalman_measurement_variance": 6.0
+  },
+  "setpoint_profile": [
+    { "time_s": 0.0, "value": 0.0 },
+    { "time_s": 1.0, "value": 40.0 },
+    { "time_s": 4.0, "value": 65.0 },
+    { "time_s": 8.5, "value": 50.0 }
+  ]
+}
