@@ -1,0 +1,95 @@
+{
+  "timings": {
+    "cleanup_seconds": 0.0005854229998476512,
+    "smoothing_seconds": 0.00019614600000750215,
+    "simplification_seconds": 0.0003463159998773335,
+    "slicing_seconds": 0.0021511050001663534
+  },
+  "validations": {
+    "original": {
+      "vertex_count": 9,
+      "face_count": 13,
+      "degenerate_faces": 1,
+      "surface_area": 6.0,
+      "bbox_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bbox_max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "extents": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "cleaned": {
+      "vertex_count": 8,
+      "face_count": 12,
+      "degenerate_faces": 0,
+      "surface_area": 7.656854,
+      "bbox_min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bbox_max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "extents": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "smoothed": {
+      "vertex_count": 8,
+      "face_count": 12,
+      "degenerate_faces": 0,
+      "surface_area": 5.477604,
+      "bbox_min": [
+        0.06,
+        0.03,
+        0.06
+      ],
+      "bbox_max": [
+        0.91,
+        0.97,
+        0.91
+      ],
+      "extents": [
+        0.85,
+        0.94,
+        0.85
+      ]
+    },
+    "simplified": {
+      "vertex_count": 8,
+      "face_count": 12,
+      "degenerate_faces": 0,
+      "surface_area": 5.477604,
+      "bbox_min": [
+        0.06,
+        0.03,
+        0.06
+      ],
+      "bbox_max": [
+        0.91,
+        0.97,
+        0.91
+      ],
+      "extents": [
+        0.85,
+        0.94,
+        0.85
+      ]
+    }
+  },
+  "slice_layers": 4
+}

@@ -1,0 +1,95 @@
+{
+  "timings": {
+    "cleanup_seconds": 0.001817053999957352,
+    "smoothing_seconds": 0.011627152999835744,
+    "simplification_seconds": 0.006291450999924564,
+    "slicing_seconds": 0.006113529999993261
+  },
+  "validations": {
+    "original": {
+      "vertex_count": 625,
+      "face_count": 1152,
+      "degenerate_faces": 0,
+      "surface_area": 16.153077,
+      "bbox_min": [
+        0.0,
+        0.0,
+        0.35
+      ],
+      "bbox_max": [
+        4.0,
+        4.0,
+        0.85
+      ],
+      "extents": [
+        4.0,
+        4.0,
+        0.5
+      ]
+    },
+    "cleaned": {
+      "vertex_count": 625,
+      "face_count": 1152,
+      "degenerate_faces": 0,
+      "surface_area": 16.153077,
+      "bbox_min": [
+        0.0,
+        0.0,
+        0.35
+      ],
+      "bbox_max": [
+        4.0,
+        4.0,
+        0.85
+      ],
+      "extents": [
+        4.0,
+        4.0,
+        0.5
+      ]
+    },
+    "smoothed": {
+      "vertex_count": 625,
+      "face_count": 1152,
+      "degenerate_faces": 0,
+      "surface_area": 15.990456,
+      "bbox_min": [
+        0.01,
+        0.01,
+        0.35032
+      ],
+      "bbox_max": [
+        3.99,
+        3.99,
+        0.84968
+      ],
+      "extents": [
+        3.98,
+        3.98,
+        0.499359
+      ]
+    },
+    "simplified": {
+      "vertex_count": 272,
+      "face_count": 481,
+      "degenerate_faces": 0,
+      "surface_area": 14.762739,
+      "bbox_min": [
+        0.062222,
+        0.087083,
+        0.352493
+      ],
+      "bbox_max": [
+        3.912917,
+        3.912917,
+        0.847569
+      ],
+      "extents": [
+        3.850694,
+        3.825833,
+        0.495076
+      ]
+    }
+  },
+  "slice_layers": 2
+}

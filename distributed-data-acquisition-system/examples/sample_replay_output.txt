@@ -1,0 +1,3 @@
+message 1 source=1 sequence=1 kind=1 value=0.8468 latency_ms=0.0231
+message 2 source=2 sequence=1 kind=1 value=0.9051 latency_ms=0.0208
+message 3 source=3 sequence=1 kind=1 value=0.1312 latency_ms=0.0177

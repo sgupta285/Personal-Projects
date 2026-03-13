@@ -1,0 +1,11 @@
+build/
+data/generated/*.bin
+data/generated/*.csv
+data/generated/*.json
+data/generated/*.prom
+results/*.png
+results/*.md
+results/*.json
+.venv/
+__pycache__/
+.DS_Store

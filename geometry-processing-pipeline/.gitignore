@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.pytest_cache/
+artifacts/*.png
+artifacts/*.csv
+artifacts/*.json
+artifacts/*.obj
+artifacts/*.stl
+!artifacts/.gitkeep

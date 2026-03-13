@@ -1,0 +1,4 @@
+scenario,sources,rate_hz,duration_s,burst_every_ms,burst_multiplier,writer_sleep_ms,source_queue_capacity,writer_queue_capacity,batch_size
+baseline,4,6000,3,0,1,0,4096,8192,256
+burst_traffic,4,9000,3,300,8,0,2048,4096,256
+slow_consumer,4,9000,3,0,1,20,2048,2048,256
