@@ -1,0 +1,217 @@
+{
+  "summary": {
+    "totalRuns": 1,
+    "byStatus": {
+      "queued": 0,
+      "running": 0,
+      "paused": 0,
+      "completed": 1,
+      "failed": 0,
+      "cancelled": 0
+    },
+    "averageCostUsd": 0.0036,
+    "averageLatencyMs": 105,
+    "interventionRate": 0,
+    "failureRate": 0
+  },
+  "latestRun": {
+    "id": "run_rx2zuzd5",
+    "agentName": "support-agent",
+    "userIntent": "download the latest invoice and email it to the finance alias",
+    "status": "completed",
+    "createdAt": "2026-03-31T01:14:54.087Z",
+    "updatedAt": "2026-03-31T01:14:54.094Z",
+    "currentStepIndex": 2,
+    "model": "gpt-4.1-mini",
+    "promptConfig": "default.operator.v1",
+    "totalCostUsd": 0.0036,
+    "totalLatencyMs": 105,
+    "tags": [
+      "billing",
+      "demo"
+    ],
+    "steps": [
+      {
+        "id": "step_0mz2tn5f",
+        "name": "Load account workspace",
+        "rationale": "The agent needs the authenticated workspace before it can inspect billing data.",
+        "toolName": "browser.navigate",
+        "status": "completed",
+        "input": {
+          "url": "https://example.test/account"
+        },
+        "costUsd": 0.0008,
+        "latencyMs": 25,
+        "retryCount": 0,
+        "startedAt": "2026-03-31T01:14:54.088Z",
+        "completedAt": "2026-03-31T01:14:54.090Z",
+        "output": {
+          "summary": "browser.navigate finished successfully",
+          "confidence": 0.87
+        }
+      },
+      {
+        "id": "step_ffqvvz60",
+        "name": "Open billing screen",
+        "rationale": "Billing pages usually contain the latest statement or downloadable invoice.",
+        "toolName": "browser.click",
+        "status": "completed",
+        "input": {
+          "selector": "[data-nav='billing']"
+        },
+        "costUsd": 0.0012,
+        "latencyMs": 35,
+        "retryCount": 0,
+        "startedAt": "2026-03-31T01:14:54.090Z",
+        "completedAt": "2026-03-31T01:14:54.092Z",
+        "output": {
+          "summary": "browser.click finished successfully",
+          "confidence": 0.84
+        }
+      },
+      {
+        "id": "step_oanro4d9",
+        "name": "Download latest invoice",
+        "rationale": "The user asked for the latest invoice, so the agent should capture the most recent artifact.",
+        "toolName": "browser.download",
+        "status": "completed",
+        "input": {
+          "selector": "[data-testid='latest-invoice']"
+        },
+        "costUsd": 0.0016,
+        "latencyMs": 45,
+        "retryCount": 0,
+        "startedAt": "2026-03-31T01:14:54.092Z",
+        "completedAt": "2026-03-31T01:14:54.094Z",
+        "output": {
+          "summary": "browser.download finished successfully",
+          "confidence": 0.81
+        }
+      }
+    ],
+    "interventions": [],
+    "startedAt": "2026-03-31T01:14:54.087Z",
+    "completedAt": "2026-03-31T01:14:54.094Z"
+  },
+  "events": [
+    {
+      "runId": "run_rx2zuzd5",
+      "type": "run.created",
+      "timestamp": "2026-03-31T01:14:54.087Z",
+      "payload": {
+        "agentName": "support-agent",
+        "intent": "download the latest invoice and email it to the finance alias"
+      }
+    },
+    {
+      "runId": "run_rx2zuzd5",
+      "type": "run.started",
+      "timestamp": "2026-03-31T01:14:54.088Z",
+      "payload": {
+        "totalSteps": 3
+      }
+    },
+    {
+      "runId": "run_rx2zuzd5",
+      "type": "step.started",
+      "timestamp": "2026-03-31T01:14:54.088Z",
+      "payload": {
+        "stepId": "step_0mz2tn5f",
+        "stepName": "Load account workspace",
+        "toolName": "browser.navigate"
+      }
+    },
+    {
+      "runId": "run_rx2zuzd5",
+      "type": "step.completed",
+      "timestamp": "2026-03-31T01:14:54.090Z",
+      "payload": {
+        "stepId": "step_0mz2tn5f",
+        "stepName": "Load account workspace",
+        "latencyMs": 25,
+        "costUsd": 0.0008,
+        "toolName": "browser.navigate"
+      }
+    },
+    {
+      "runId": "run_rx2zuzd5",
+      "type": "run.cost_updated",
+      "timestamp": "2026-03-31T01:14:54.090Z",
+      "payload": {
+        "totalCostUsd": 0.0008,
+        "totalLatencyMs": 25
+      }
+    },
+    {
+      "runId": "run_rx2zuzd5",
+      "type": "step.started",
+      "timestamp": "2026-03-31T01:14:54.090Z",
+      "payload": {
+        "stepId": "step_ffqvvz60",
+        "stepName": "Open billing screen",
+        "toolName": "browser.click"
+      }
+    },
+    {
+      "runId": "run_rx2zuzd5",
+      "type": "step.completed",
+      "timestamp": "2026-03-31T01:14:54.092Z",
+      "payload": {
+        "stepId": "step_ffqvvz60",
+        "stepName": "Open billing screen",
+        "latencyMs": 35,
+        "costUsd": 0.0012,
+        "toolName": "browser.click"
+      }
+    },
+    {
+      "runId": "run_rx2zuzd5",
+      "type": "run.cost_updated",
+      "timestamp": "2026-03-31T01:14:54.092Z",
+      "payload": {
+        "totalCostUsd": 0.002,
+        "totalLatencyMs": 60
+      }
+    },
+    {
+      "runId": "run_rx2zuzd5",
+      "type": "step.started",
+      "timestamp": "2026-03-31T01:14:54.092Z",
+      "payload": {
+        "stepId": "step_oanro4d9",
+        "stepName": "Download latest invoice",
+        "toolName": "browser.download"
+      }
+    },
+    {
+      "runId": "run_rx2zuzd5",
+      "type": "step.completed",
+      "timestamp": "2026-03-31T01:14:54.094Z",
+      "payload": {
+        "stepId": "step_oanro4d9",
+        "stepName": "Download latest invoice",
+        "latencyMs": 45,
+        "costUsd": 0.0016,
+        "toolName": "browser.download"
+      }
+    },
+    {
+      "runId": "run_rx2zuzd5",
+      "type": "run.cost_updated",
+      "timestamp": "2026-03-31T01:14:54.094Z",
+      "payload": {
+        "totalCostUsd": 0.0036,
+        "totalLatencyMs": 105
+      }
+    },
+    {
+      "runId": "run_rx2zuzd5",
+      "type": "run.completed",
+      "timestamp": "2026-03-31T01:14:54.094Z",
+      "payload": {
+        "totalCostUsd": 0.0036,
+        "totalLatencyMs": 105
+      }
+    }
+  ]
+}

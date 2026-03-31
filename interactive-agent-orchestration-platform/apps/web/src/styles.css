@@ -1,0 +1,219 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+}
+
+.shell {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.hero {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  color: #475569;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: 40px;
+  line-height: 1.05;
+}
+
+.hero-copy {
+  max-width: 760px;
+  margin: 0;
+  color: #475569;
+  font-size: 17px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.metric-card,
+.panel,
+.step-card,
+.intervention-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.05);
+}
+
+.metric-card {
+  padding: 20px;
+}
+
+.metric-label {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.metric-value {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.metric-detail {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 20px;
+}
+
+.panel {
+  padding: 20px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.run-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.run-table th,
+.run-table td {
+  text-align: left;
+  padding: 14px 12px;
+  border-top: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.run-table tbody tr {
+  cursor: pointer;
+}
+
+.run-table tbody tr.selected {
+  background: #eef2ff;
+}
+
+.run-agent {
+  font-weight: 600;
+}
+
+.run-intent {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-running {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status-paused {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-failed {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.status-pending,
+.status-queued,
+.status-cancelled {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.detail-grid section + section {
+  margin-top: 20px;
+}
+
+.kv-list {
+  margin: 0;
+  padding-left: 18px;
+  color: #334155;
+}
+
+.step-list,
+.intervention-list {
+  display: grid;
+  gap: 12px;
+}
+
+.step-card,
+.intervention-card {
+  padding: 16px;
+}
+
+.step-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.step-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.step-meta {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+@media (max-width: 1100px) {
+  .metrics-grid,
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}

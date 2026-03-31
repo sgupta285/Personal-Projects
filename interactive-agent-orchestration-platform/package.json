@@ -1,0 +1,16 @@
+{
+  "name": "interactive-agent-orchestration-platform",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Control plane and operator UI for multi-step AI agents",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build:core": "tsc -p packages/core/tsconfig.json",
+    "test:core": "node --test packages/core/dist/tests/*.test.js",
+    "smoke:core": "node scripts/run-core-smoke.cjs",
+    "validate": "npm run build:core && npm run test:core && npm run smoke:core"
+  }
+}

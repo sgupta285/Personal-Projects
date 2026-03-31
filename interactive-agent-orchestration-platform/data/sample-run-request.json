@@ -1,0 +1,7 @@
+{
+  "agentName": "billing-agent",
+  "userIntent": "Log into the billing portal, download the latest invoice, and email the result to finance.",
+  "model": "gpt-4.1-mini",
+  "promptConfig": "default.operator.v1",
+  "tags": ["billing", "export", "finance"]
+}
