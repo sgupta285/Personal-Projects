@@ -112,7 +112,3 @@ ConnecTech is a sophisticated B2B matchmaking platform aimed at bridging the gap
 - **Minimum SDK**: 24 (Android 7.0 Nougat).
 - **Target SDK**: 35 (Android 14).
 
-### **Setup**
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/ConnecTech.git
