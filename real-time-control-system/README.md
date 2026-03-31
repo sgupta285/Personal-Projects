@@ -90,3 +90,7 @@ real-time-control-system/
 ## Notes
 
 This is intentionally simulation-first. The abstractions are designed so the sensor and actuator layers can be replaced with hardware bindings later without rewriting the control, logging, or analysis pipeline.
+
+## License 
+
+MIT
