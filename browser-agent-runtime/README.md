@@ -446,17 +446,6 @@ Current limitations:
 - configurable approval workflows for dangerous actions
 - OpenTelemetry integration for distributed traces
 
-## Why this reads well on GitHub
-
-This repository is built to look like something a systems-minded engineer would actually keep public:
-
-- practical architecture
-- clean boundaries
-- reproducible local setup
-- tests for critical runtime rules
-- Docker-based local deployment
-- explicit tradeoffs
-- no vague hand-waving about “AI agents” without control mechanisms
 
 ## License
 
