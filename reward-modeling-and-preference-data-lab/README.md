@@ -253,26 +253,6 @@ The starter implementation uses a transparent normalized winner-count method:
 
 This is intentionally simple. It is easy to inspect and easy to replace with Bradley-Terry, Thurstone, Plackett-Luce, or a learned reward-model target pipeline later.
 
-## Suggested extensions
+## License 
 
-If you want to push the project further, the next high-leverage improvements would be:
-
-- replace TF-IDF retrieval with pgvector embeddings in PostgreSQL
-- add import connectors for data collected from the human-labeling platform
-- support pairwise-only and scalar-score feedback tasks
-- add annotator calibration and longitudinal quality tracking
-- log full experiments to MLflow or Weights & Biases
-- export training-ready preference pairs and reward-model datasets
-- add bootstrap confidence intervals to the bias and agreement reports
-
-## What I validated while building this repo
-
-- the Python files compile cleanly
-- the included test suite passes locally in this environment
-- the sample seed script runs successfully
-- the analysis export script generates a summary artifact
-- the zip is packaged cleanly for direct GitHub upload
-
-## Notes on productionizing
-
-The starter build optimizes for clean local setup and clear architecture. In a production version, I would switch the persistence layer to PostgreSQL, replace the retrieval backend with pgvector, add authentication and RBAC, move artifact storage to object storage, and add asynchronous jobs for large exports and background analysis.
+MIT
