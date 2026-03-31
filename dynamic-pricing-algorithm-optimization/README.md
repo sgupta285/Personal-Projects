@@ -110,3 +110,6 @@ dynamic-pricing-algorithm-optimization/
 ├── src/pricing_engine/
 └── tests/
 ```
+## License 
+
+MIT
