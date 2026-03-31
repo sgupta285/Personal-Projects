@@ -129,3 +129,7 @@ make test
 ## Suggested GitHub description
 
 Production-style SaaS churn intelligence system with synthetic customer data, feature engineering, XGBoost risk scoring, SHAP explanations, FastAPI serving, Streamlit monitoring, and intervention routing.
+
+## License 
+
+MIT
