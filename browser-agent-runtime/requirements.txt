@@ -1,0 +1,11 @@
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+sqlalchemy>=2.0.35
+psycopg[binary]>=3.2.0
+redis>=5.1.0
+pydantic>=2.9.0
+pydantic-settings>=2.5.0
+playwright>=1.48.0
+python-slugify>=8.0.4
+orjson>=3.10.7
+tenacity>=9.0.0
