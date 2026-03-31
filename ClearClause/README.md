@@ -228,3 +228,7 @@ The core analysis runs in 6 steps:
 ---
 
 **Disclaimer:** ClearCause is for informational purposes only and does not constitute legal advice. Consult a qualified attorney for your specific situation.
+
+## License 
+
+MIT
