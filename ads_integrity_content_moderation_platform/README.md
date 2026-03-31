@@ -167,10 +167,7 @@ Even with those simplifications, the codebase is structured the way I would stru
 4. Open `http://localhost:3000`
 5. Watch the dashboard update as ads move into approved, review, or blocked buckets
 
-## Future extensions
 
-- add image OCR and CV-based creative screening
-- add advertiser allowlists, blocklists, and country risk models
-- add a reviewer queue with assignment rules
-- add streaming metrics to ClickHouse or BigQuery
-- add model drift and policy-rule audit tracking
+## License 
+
+MIT
