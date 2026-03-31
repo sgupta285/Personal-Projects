@@ -525,19 +525,6 @@ This repository is intentionally lightweight enough to run locally, so a few thi
 
 Those tradeoffs keep the project easy to run while still making the architecture credible and extensible.
 
----
-
-## Roadmap ideas
-
-A few strong next steps if you want to keep expanding it:
-
-- add authenticated multi-user workspaces
-- add artifact storage for screenshots and DOM snapshots
-- add benchmark suites for browser, document, and customer-support agents
-- add model-based grading with guardrails and adjudication
-- add comparison pages for prompt or model A/B experiments
-- add trace replay for browser tasks
-- add W&B logging alongside MLflow
 
 ---
 
