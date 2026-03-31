@@ -324,14 +324,3 @@ The included tests cover:
 - quality-control scoring
 - API flow from user creation to review and admin metrics
 
-## Why this reads well on GitHub
-
-This project presents well because it is more than a backend endpoint collection. It has:
-- a clear operational story
-- realistic task types
-- explicit review and quality loops
-- backend and frontend structure
-- seed data and local bootstrapping
-- a README that explains not just how to run it, but why it exists
-
-That makes it useful both as a portfolio project and as a base for a more serious internal labeling system.
