@@ -63,3 +63,7 @@ The repository already includes generated sample outputs under `examples/generat
 ```bash
 pytest
 ```
+
+## License
+
+MIT
