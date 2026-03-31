@@ -95,4 +95,6 @@ Run `make bootstrap` to generate or refresh:
 - `docs/screenshots/local-stack.png`
 - `docs/screenshots/metrics-overview.png`
 
+## License 
 
+MIT
