@@ -167,3 +167,7 @@ git push -u origin main
 - prompt registry and regression testing
 - async job queue for long-running evaluations
 - vector database integration for larger retrieval corpora
+
+##License
+
+MIT
