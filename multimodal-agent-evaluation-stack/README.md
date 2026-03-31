@@ -455,13 +455,6 @@ Key choices:
 - failure mode analysis is rule-based and explainable
 - MLflow logging stores model and prompt configuration alongside metrics
 
-For larger scale use, you can extend this with:
-
-- frozen artifact bundles
-- dataset hashing
-- exact prompt snapshots
-- tool-interface schema versioning
-- browser replay traces
 
 ## Known limitations
 
