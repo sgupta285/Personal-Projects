@@ -1,0 +1,20 @@
+{
+  "benchmark_id": "compare_pricing_plans_v1",
+  "name": "Compare Pricing Plans",
+  "version": "v1",
+  "task_type": "tool_using_reasoning",
+  "evaluator_type": "rubric",
+  "instructions": "Review plan documentation and recommend the best plan for an admin-heavy use case with strong controls and auditability requirements.",
+  "expected_tools": ["knowledge_lookup"],
+  "expected_output": {
+    "required_fields": ["recommendation", "justification"],
+    "preferred_answer": "enterprise",
+    "ideal_max_steps": 4,
+    "success_threshold": 0.8
+  },
+  "metadata": {
+    "environment": "text_and_tool",
+    "difficulty": "medium",
+    "version_frozen": true
+  }
+}

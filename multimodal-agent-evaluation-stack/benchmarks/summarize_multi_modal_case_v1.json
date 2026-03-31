@@ -1,0 +1,20 @@
+{
+  "benchmark_id": "summarize_multi_modal_case_v1",
+  "name": "Summarize Multi Modal Case",
+  "version": "v1",
+  "task_type": "multimodal_summary",
+  "evaluator_type": "rubric",
+  "instructions": "Given text notes, screenshot-derived observations, and action history, produce a concise structured case summary that preserves key facts and a recommendation.",
+  "expected_tools": ["screenshot_reader"],
+  "expected_output": {
+    "required_fields": ["recommendation", "justification"],
+    "preferred_answer": "enterprise",
+    "ideal_max_steps": 5,
+    "success_threshold": 0.75
+  },
+  "metadata": {
+    "environment": "multimodal",
+    "difficulty": "medium",
+    "version_frozen": true
+  }
+}

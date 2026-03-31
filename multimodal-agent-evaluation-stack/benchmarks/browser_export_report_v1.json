@@ -1,0 +1,21 @@
+{
+  "benchmark_id": "browser_export_report_v1",
+  "name": "Browser Export Report",
+  "version": "v1",
+  "task_type": "browser_agent",
+  "evaluator_type": "exact_match",
+  "instructions": "Navigate a dashboard, open the reports area, export the monthly report, and return a structured completion payload.",
+  "expected_tools": ["navigate", "download"],
+  "expected_output": {
+    "expected_payload": {
+      "status": "exported",
+      "artifact": "report.csv"
+    },
+    "required_fields": ["status", "artifact"]
+  },
+  "metadata": {
+    "environment": "browser",
+    "difficulty": "medium",
+    "version_frozen": true
+  }
+}
