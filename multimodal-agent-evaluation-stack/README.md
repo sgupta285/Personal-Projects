@@ -498,19 +498,7 @@ Right now screenshot references are stored as metadata paths or URLs. You can ex
 - full trace replay pages
 - Playwright trace bundle ingestion
 
----
 
-## Suggested portfolio talking points
-
-If you are putting this on GitHub or a resume, the strongest story is not that you “built an evaluation dashboard.”
-
-The stronger story is:
-
-- designed a benchmarked evaluation stack for multimodal and tool-using agents
-- tracked trajectory quality, latency, cost, and failure recovery rather than only end-task success
-- built deterministic evaluators and failure classifiers for agent debugging
-- integrated experiment tracking so prompt, model, and benchmark changes stayed comparable over time
-- added a dashboard that let operators inspect traces and slice results by benchmark or failure mode
 
 ---
 
@@ -524,9 +512,6 @@ This repository is intentionally lightweight enough to run locally, so a few thi
 - authentication is not included by default
 
 Those tradeoffs keep the project easy to run while still making the architecture credible and extensible.
-
-
----
 
 ## License
 
