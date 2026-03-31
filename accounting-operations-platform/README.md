@@ -1,8 +1,7 @@
 # Accounting Operations Platform
 
-A GitHub-ready accounting operations platform focused on invoice intake, approval workflows, vendor management, payment tracking, auditability, and operator visibility. The repo is intentionally designed to look like a practical internal tool a finance-ops or shared-services team would actually use.
+A accounting operations platform focused on invoice intake, approval workflows, vendor management, payment tracking, auditability, and operator visibility. The repo is intentionally designed to look like a practical internal tool a finance-ops or shared-services team would actually use.
 
-This project is one of the domain variants from your broader project list. Instead of treating it as a thin rebrand, this implementation turns the underlying workflow ideas into a real accounting-focused product with traceable invoice state changes, approval decisions, payment scheduling, reconciliation support, and operations reporting.
 
 ## Why this project exists
 
