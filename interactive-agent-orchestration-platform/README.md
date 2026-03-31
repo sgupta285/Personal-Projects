@@ -372,22 +372,6 @@ There are a few obvious directions to take this further:
 - show intervention reasons and failure categories in the dashboard
 - integrate LangGraph or another graph runtime for more complex branching flows
 
-## Why this makes a strong portfolio project
-
-This project is compelling because it sits at the layer where many agent systems break in practice.
-
-It shows that the build is not only about prompts or tool calls. It is about:
-
-- state management
-- traceability
-- realtime systems
-- intervention design
-- failure recovery
-- operator trust
-- measurable system behavior
-
-That combination makes the repo useful for roles involving agent platforms, workflow automation, AI infrastructure, developer tools, internal operations tooling, or reliability-minded applied AI systems.
-
 ## License
 
 MIT
