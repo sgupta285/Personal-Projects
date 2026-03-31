@@ -126,10 +126,6 @@ make test
 - SQLite is used for local reproducibility, while the storage layer is structured so moving to Postgres is easy.
 - The intervention policy is intentionally simple and explainable.
 
-## Suggested GitHub description
-
-Production-style SaaS churn intelligence system with synthetic customer data, feature engineering, XGBoost risk scoring, SHAP explanations, FastAPI serving, Streamlit monitoring, and intervention routing.
-
 ## License 
 
 MIT
