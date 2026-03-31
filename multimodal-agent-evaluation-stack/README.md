@@ -463,45 +463,6 @@ For larger scale use, you can extend this with:
 - tool-interface schema versioning
 - browser replay traces
 
----
-
-## How to extend the project
-
-### Add a new benchmark
-
-1. Create a new JSON file in `benchmarks/`
-2. Define expected output and evaluator type
-3. Load it through `POST /benchmarks/load-defaults` or `POST /benchmarks`
-
-### Add a new evaluator
-
-1. Implement a new evaluator in `backend/app/evaluators.py`
-2. Register it in the evaluator dispatch map
-3. Add tests in `backend/tests/`
-
-### Add richer failure analysis
-
-You can extend the analyzer to detect:
-
-- tool loops
-- brittle selector dependence
-- repeated invalid retries
-- partial completion before a false success claim
-- excessive clarification turns
-
-### Add screenshot or browser-state storage
-
-Right now screenshot references are stored as metadata paths or URLs. You can expand this by adding:
-
-- S3 or GCS artifact storage
-- thumbnail generation
-- full trace replay pages
-- Playwright trace bundle ingestion
-
-
-
----
-
 ## Known limitations
 
 This repository is intentionally lightweight enough to run locally, so a few things are simplified:
