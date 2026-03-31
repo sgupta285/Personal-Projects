@@ -306,7 +306,7 @@ Even internal tools benefit from a visible operator surface. A lightweight React
 
 ## Notes on realism
 
-This repo intentionally avoids fake “magic AI” claims. It focuses on process reliability, auditability, and operational correctness. The implementation is simple enough to run locally and detailed enough to present as a serious engineering project.
+It focuses on process reliability, auditability, and operational correctness. The implementation is simple enough to run locally and detailed enough to present as a serious engineering project.
 
 ## License
 
