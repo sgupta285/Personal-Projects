@@ -1,0 +1,92 @@
+[
+  {
+    "task_type": "classification",
+    "priority": 95,
+    "batch_name": "demo-batch-01",
+    "requires_review": true,
+    "seed_task": true,
+    "payload": {
+      "instruction": "Read the support ticket and classify whether the customer issue is billing, shipping, or product defect.",
+      "ticket": "My package arrived on time but one earbud is dead and will not charge.",
+      "options": [
+        "billing",
+        "shipping",
+        "product_defect"
+      ]
+    },
+    "gold": {
+      "key": "label",
+      "label": "product_defect"
+    }
+  },
+  {
+    "task_type": "pairwise_preference",
+    "priority": 85,
+    "batch_name": "demo-batch-01",
+    "requires_review": true,
+    "seed_task": false,
+    "payload": {
+      "instruction": "Choose the better answer for helpfulness and groundedness.",
+      "prompt": "How do I reset my router?",
+      "candidate_a": "Unplug it for ten seconds, plug it back in, and wait two minutes.",
+      "candidate_b": "Buy a new one. Routers never recover once they glitch."
+    },
+    "gold": {
+      "key": "winner",
+      "winner": "candidate_a"
+    }
+  },
+  {
+    "task_type": "freeform_critique",
+    "priority": 80,
+    "batch_name": "demo-batch-01",
+    "requires_review": true,
+    "seed_task": false,
+    "payload": {
+      "instruction": "Write a concise critique of the answer quality.",
+      "prompt": "Can I take ibuprofen with food?",
+      "model_answer": "Yes, and taking it with food can help reduce stomach irritation."
+    },
+    "gold": null
+  },
+  {
+    "task_type": "moderation_review",
+    "priority": 90,
+    "batch_name": "demo-batch-01",
+    "requires_review": true,
+    "seed_task": true,
+    "payload": {
+      "instruction": "Decide whether the content should be approved or escalated.",
+      "content": "I hate this product and I want a refund right now.",
+      "policy_hint": "Escalate only for threats, self-harm, or disallowed content."
+    },
+    "gold": {
+      "key": "decision",
+      "decision": "approve"
+    }
+  },
+  {
+    "task_type": "ranking",
+    "priority": 70,
+    "batch_name": "demo-batch-01",
+    "requires_review": true,
+    "seed_task": false,
+    "payload": {
+      "instruction": "Rank the three summaries from best to worst.",
+      "prompt": "Summarize the product launch retro.",
+      "candidates": [
+        "The launch shipped on time and users liked the onboarding, but analytics broke for 36 hours.",
+        "Everything was perfect and no one found any problems.",
+        "The team had some issues. It was okay overall."
+      ]
+    },
+    "gold": {
+      "key": "ranking",
+      "ranking": [
+        0,
+        2,
+        1
+      ]
+    }
+  }
+]

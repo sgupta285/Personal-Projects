@@ -1,0 +1,22 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111827;
+  background: #f7f8fb;
+}
+body { margin: 0; }
+.page { max-width: 1100px; margin: 0 auto; padding: 40px 20px 80px; }
+.hero { background: white; border-radius: 20px; padding: 32px; box-shadow: 0 10px 30px rgba(17,24,39,0.06); }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 12px; color: #6b7280; }
+h1 { font-size: 40px; line-height: 1.1; margin: 8px 0 16px; }
+.subtext { font-size: 17px; line-height: 1.7; color: #4b5563; max-width: 780px; }
+.statsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 24px 0; }
+.statCard, .panelCard { background: white; border-radius: 18px; padding: 24px; box-shadow: 0 10px 30px rgba(17,24,39,0.05); }
+.statCard span { display: block; color: #6b7280; margin-bottom: 12px; }
+.statCard strong { font-size: 32px; }
+.cardGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.panelCard h2 { margin-top: 0; }
+.panelCard p { color: #4b5563; line-height: 1.6; }
+@media (max-width: 900px) {
+  .statsGrid, .cardGrid { grid-template-columns: 1fr; }
+  h1 { font-size: 30px; }
+}

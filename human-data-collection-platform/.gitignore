@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+frontend/node_modules/
+frontend/dist/
+artifacts/
+*.sqlite3
+*.db
