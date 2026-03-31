@@ -358,20 +358,6 @@ The following parts are included as real project structure and code, but were no
 
 The repository includes everything needed to run those normally in a regular local environment.
 
-## Good extensions for a next iteration
-
-There are a few obvious directions to take this further:
-
-- persist runs, steps, and interventions in PostgreSQL
-- add Redis pub/sub between the worker and realtime service
-- capture screenshots, DOM state, and tool artifacts for browser-based agents
-- expose prompt-config history and model version lineage
-- add role-based permissions for who can pause, retry, or override runs
-- support run replay from historical traces
-- add cost budgets and policy checks before dangerous actions
-- show intervention reasons and failure categories in the dashboard
-- integrate LangGraph or another graph runtime for more complex branching flows
-
 ## License
 
 MIT
