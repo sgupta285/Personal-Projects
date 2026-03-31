@@ -65,3 +65,7 @@ make test
 - The report also tracks order value, revenue per session, confidence intervals, observed power, and MDE.
 - Segment-level lift is included because aggregate results can hide where the treatment actually works.
 - The data is synthetic, but the measurement workflow mirrors a real growth or product analytics project.
+
+## License 
+
+MIT
