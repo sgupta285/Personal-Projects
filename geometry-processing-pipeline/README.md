@@ -62,4 +62,8 @@ After running the scripts, the repo generates:
 
 ## Design choices
 
-This implementation focuses on reproducibility and readability rather than advanced CAD kernels. That makes it well suited for portfolio review, local experimentation, and extension into CNC or additive-manufacturing style workflows.
+This implementation focuses on reproducibility and readability rather than advanced CAD kernels. That makes it well suited for local experimentation, and extension into CNC or additive-manufacturing style workflows.
+
+## License 
+
+MIT
