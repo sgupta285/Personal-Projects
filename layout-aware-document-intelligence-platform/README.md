@@ -357,32 +357,6 @@ I chose to keep the first implementation focused and inspectable.
 
 These choices make the system easier to run and extend without hiding the core architecture behind too much scaffolding.
 
-## Good next steps if you want to deepen it
-
-1. Add document-type classification before extraction.
-2. Separate OCR service from the API/worker container.
-3. Add a multimodal extractor for signature fields, checkboxes, and images.
-4. Build confidence scoring per block and per table.
-5. Add revision diffs at the text-block level, not just summary counts.
-6. Add S3 or GCS artifact storage.
-7. Add user auth and audit trails.
-8. Add a review UI for annotation and correction.
-
-## Why this is a strong portfolio project
-
-It shows the kind of engineering range that simple PDF demos do not:
-
-- backend API design
-- async job processing
-- schema design
-- document parsing
-- layout reasoning
-- deterministic validation
-- storage and revision history
-- debugging artifacts
-- deployable container setup
-
-It also has a clean path to several domain variants, including insurance, operations, legal review, clinical summarization, and compliance workflows.
 
 ## Reference implementation choices
 
@@ -390,4 +364,4 @@ This build leans on FastAPI for the API layer, PyMuPDF for positioned text extra
 
 ## License
 
-This project is provided as a portfolio and learning build. Add your preferred license before publishing publicly if you want explicit reuse terms.
+MIT
