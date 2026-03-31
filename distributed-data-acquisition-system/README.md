@@ -100,3 +100,7 @@ make test
 ## Notes
 
 The project stays local-first. It simulates data sources directly in process, which keeps the repo easy to run on a laptop while still surfacing the timing, batching, and backpressure decisions that matter in a real acquisition service.
+
+## License 
+
+MIT
