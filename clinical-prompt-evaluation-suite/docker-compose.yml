@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    container_name: clinical-prompt-eval-api
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: sqlite:///./clinical_prompt_eval.db
+      DEFAULT_PROVIDER: mock
+    volumes:
+      - ./:/app

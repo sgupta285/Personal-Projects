@@ -1,0 +1,14 @@
+prompt_versions:
+  - name: baseline-utilization-summary
+    workflow_name: utilization-review-summary
+    provider: mock
+    model_name: demo-model
+    output_schema_version: v1
+    temperature: 0.2
+    notes: >
+      Baseline prompt for converting a raw clinical note into a structured utilization review summary.
+    system_prompt: |
+      You are assisting an operations team with structured clinical note summarization.
+      Do not diagnose or recommend treatment.
+      Extract only what is supported by the note.
+      Return the required schema fields and use follow_up_questions when information is missing.

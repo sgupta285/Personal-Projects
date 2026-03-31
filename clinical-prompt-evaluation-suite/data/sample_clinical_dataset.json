@@ -1,0 +1,54 @@
+{
+  "name": "clinical-note-summarization-demo",
+  "workflow_name": "utilization-review-summary",
+  "description": "Small gold set for comparing prompt versions on structured utilization review summarization.",
+  "items": [
+    {
+      "item_key": "case-001",
+      "input_text": "Member ID: M-101. Encounter date: 2026-02-02. Request for lumbar MRI after 8 weeks of low back pain. Failed conservative therapy including NSAIDs and supervised physical therapy. Pain score 8/10 with functional limitation at work. No red flag symptoms. Fall risk noted after recent instability episode.",
+      "expected_output": {
+        "requested_service": "Lumbar spine MRI",
+        "primary_reason": "Persistent low back pain after failed conservative therapy."
+      },
+      "expected_keywords": [
+        "failed conservative therapy",
+        "pain score",
+        "functional limitation",
+        "fall risk"
+      ],
+      "difficulty": "medium",
+      "split": "test"
+    },
+    {
+      "item_key": "case-002",
+      "input_text": "Patient ID: P-202. Encounter date: 2026-01-11. Request for repeat CT abdomen. Prior imaging history not attached. Symptoms stable, no red flag symptoms, and insufficient imaging history for escalation was documented. Current pain score missing.",
+      "expected_output": {
+        "requested_service": "CT scan",
+        "primary_reason": "Need structured utilization review summary for repeat CT request."
+      },
+      "expected_keywords": [
+        "insufficient imaging history",
+        "no red flag symptoms",
+        "pain score"
+      ],
+      "difficulty": "easy",
+      "split": "test"
+    },
+    {
+      "item_key": "case-003",
+      "input_text": "Member ID: PT-99. Encounter date: 2026-03-03. Request for physical therapy extension after shoulder injury. Neurologic deficit documented in exam note and multiple ER visits in the last month. Failed conservative therapy already documented. Opioid refill mentioned in medication history.",
+      "expected_output": {
+        "requested_service": "Physical therapy",
+        "primary_reason": "Persistent symptoms and utilization review follow-up."
+      },
+      "expected_keywords": [
+        "neurologic deficit",
+        "multiple er visits",
+        "opioid",
+        "failed conservative therapy"
+      ],
+      "difficulty": "hard",
+      "split": "test"
+    }
+  ]
+}
