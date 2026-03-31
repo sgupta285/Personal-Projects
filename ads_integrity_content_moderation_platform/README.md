@@ -167,3 +167,6 @@ Even with those simplifications, the codebase is structured the way I would stru
 4. Open `http://localhost:3000`
 5. Watch the dashboard update as ads move into approved, review, or blocked buckets
 
+## License 
+
+MIT
