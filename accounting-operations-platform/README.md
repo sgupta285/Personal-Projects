@@ -293,17 +293,6 @@ For a project like this, explicit repository methods keep business logic easy to
 ### Why include a frontend scaffold
 Even internal tools benefit from a visible operator surface. A lightweight React dashboard makes the repo feel like a full product rather than an API-only prototype.
 
-## How this would evolve in production
-
-- replace SQLite with PostgreSQL
-- add S3 or blob storage for invoice PDFs
-- integrate OCR and layout extraction for invoice documents
-- add role-based access control and SSO
-- support GL coding and ERP sync
-- add exception queues and SLA alerts
-- build reconciliation workflows against bank or AP systems
-- track approval bottlenecks by department
-
 ## Notes on realism
 
 It focuses on process reliability, auditability, and operational correctness. The implementation is simple enough to run locally and detailed enough to present as a serious engineering project.
