@@ -111,3 +111,7 @@ This zip ships with generated local benchmark outputs so the repository feels co
 
 - The primary supported storage backend is MinIO. Ceph is intentionally left out of the runnable setup to keep the project local and practical.
 - Redis is referenced in the deployment topology, but the benchmark defaults to an in-memory cache so the repo works with a single Python install.
+
+## License 
+
+MIT
