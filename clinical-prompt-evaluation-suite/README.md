@@ -371,3 +371,7 @@ This is not a single notebook or a thin prompt wrapper. It demonstrates:
 - domain-aware safeguards
 
 That combination makes it a good portfolio project for roles touching applied AI, evaluation systems, healthcare operations tooling, ML platforms, or prompt quality infrastructure.
+
+## License 
+
+MIT
