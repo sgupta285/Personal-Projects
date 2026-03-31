@@ -324,3 +324,6 @@ The included tests cover:
 - quality-control scoring
 - API flow from user creation to review and admin metrics
 
+## License 
+
+MIT
