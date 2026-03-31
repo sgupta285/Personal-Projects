@@ -1,0 +1,204 @@
+{
+  "dataset": {
+    "name": "support-chat-preferences",
+    "description": "Pairwise and listwise judgments over support-assistant responses.",
+    "task_family": "preference_ranking"
+  },
+  "examples": [
+    {
+      "prompt_text": "A customer says the refund policy feels unfair. Draft a response that de-escalates and explains the policy clearly.",
+      "task_type": "ranking",
+      "context": {
+        "channel": "email",
+        "tone": "calm",
+        "policy": "14-day refund window"
+      },
+      "metadata": {
+        "domain": "support",
+        "difficulty": "medium"
+      },
+      "candidates": [
+        {
+          "label": "A",
+          "response_text": "I understand why this feels frustrating. Our refund policy allows returns within 14 days of delivery, and I want to help you see what options still exist. If your order arrived recently, I can guide you through the return steps today.",
+          "model_name": "gpt-4.1-mini",
+          "metadata": {
+            "position": 1
+          }
+        },
+        {
+          "label": "B",
+          "response_text": "The policy is clearly stated on the website. You are outside the allowed return period, so no refund can be issued. Please review the terms before ordering in the future.",
+          "model_name": "baseline-template",
+          "metadata": {
+            "position": 2
+          }
+        },
+        {
+          "label": "C",
+          "response_text": "Thanks for raising this. I can see why the 14-day window may feel strict. While I cannot override policy from this inbox, I can check whether your order qualifies for store credit or an exception review.",
+          "model_name": "claude-3.5-haiku",
+          "metadata": {
+            "position": 3
+          }
+        }
+      ]
+    },
+    {
+      "prompt_text": "Summarize a product bug report into a concise triage note for engineering.",
+      "task_type": "ranking",
+      "context": {
+        "channel": "ticket",
+        "component": "checkout"
+      },
+      "metadata": {
+        "domain": "triage",
+        "difficulty": "easy"
+      },
+      "candidates": [
+        {
+          "label": "A",
+          "response_text": "Users intermittently see a spinner that never resolves after clicking Pay Now on mobile Safari. Impact appears concentrated in guest checkout and began after the March payment SDK update.",
+          "model_name": "gpt-4.1-mini",
+          "metadata": {
+            "position": 1
+          }
+        },
+        {
+          "label": "B",
+          "response_text": "Bug in checkout. Needs fixing soon. Customers are upset and engineering should investigate the payment flow carefully.",
+          "model_name": "baseline-template",
+          "metadata": {
+            "position": 2
+          }
+        },
+        {
+          "label": "C",
+          "response_text": "Checkout issue reported on mobile Safari. The payment submission spinner can hang indefinitely, especially for guest users, with first reports appearing after the March SDK change.",
+          "model_name": "claude-3.5-haiku",
+          "metadata": {
+            "position": 3
+          }
+        }
+      ]
+    },
+    {
+      "prompt_text": "Rank candidate explanations for why a recommendation model might underperform on new users.",
+      "task_type": "ranking",
+      "context": {
+        "audience": "ml-team",
+        "setting": "offline review"
+      },
+      "metadata": {
+        "domain": "ml",
+        "difficulty": "hard"
+      },
+      "candidates": [
+        {
+          "label": "A",
+          "response_text": "The model may rely too heavily on historical interaction density, so cold-start users lack enough signal for personalization and get generic recommendations.",
+          "model_name": "gpt-4.1-mini",
+          "metadata": {
+            "position": 1
+          }
+        },
+        {
+          "label": "B",
+          "response_text": "New users are hard. The recommendation model probably needs more data or a retrain.",
+          "model_name": "baseline-template",
+          "metadata": {
+            "position": 2
+          }
+        },
+        {
+          "label": "C",
+          "response_text": "Underperformance on new users often points to a cold-start gap: weak priors, sparse behavioral data, and limited feature coverage for bootstrapping preferences.",
+          "model_name": "claude-3.5-haiku",
+          "metadata": {
+            "position": 3
+          }
+        }
+      ]
+    }
+  ],
+  "preferences": [
+    {
+      "example_index": 0,
+      "annotator_id": "ann_001",
+      "ranking_labels": [
+        "A",
+        "C",
+        "B"
+      ],
+      "notes": "A is empathetic and actionable.",
+      "metadata": {
+        "shift": "morning"
+      }
+    },
+    {
+      "example_index": 0,
+      "annotator_id": "ann_002",
+      "ranking_labels": [
+        "C",
+        "A",
+        "B"
+      ],
+      "notes": "C is slightly more policy-aware.",
+      "metadata": {
+        "shift": "evening"
+      }
+    },
+    {
+      "example_index": 1,
+      "annotator_id": "ann_001",
+      "ranking_labels": [
+        "A",
+        "C",
+        "B"
+      ],
+      "notes": "A is clearest for engineers.",
+      "metadata": {
+        "shift": "morning"
+      }
+    },
+    {
+      "example_index": 1,
+      "annotator_id": "ann_003",
+      "ranking_labels": [
+        "C",
+        "A",
+        "B"
+      ],
+      "notes": "C is equally good but a bit broader.",
+      "metadata": {
+        "shift": "weekend"
+      }
+    },
+    {
+      "example_index": 2,
+      "annotator_id": "ann_001",
+      "ranking_labels": [
+        "C",
+        "A",
+        "B"
+      ],
+      "notes": "C explains the mechanism best.",
+      "metadata": {
+        "shift": "morning"
+      }
+    },
+    {
+      "example_index": 2,
+      "annotator_id": "ann_002",
+      "ranking_labels": [
+        "A",
+        "C",
+        "B"
+      ],
+      "notes": "A is more concrete.",
+      "metadata": {
+        "shift": "evening"
+      }
+    }
+  ]
+}
