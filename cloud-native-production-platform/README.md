@@ -95,6 +95,4 @@ Run `make bootstrap` to generate or refresh:
 - `docs/screenshots/local-stack.png`
 - `docs/screenshots/metrics-overview.png`
 
-## Suggested GitHub description
 
-Production-style cloud platform demo with containerized services, ECS-focused Terraform modules, Prometheus/Grafana observability, CI/CD workflow, and platform operations docs.
