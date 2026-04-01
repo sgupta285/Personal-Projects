@@ -430,12 +430,6 @@ It mirrors how smaller ML teams often operate in practice. A single serving repo
 - The feature store is minimal and does not implement full point-in-time joins.
 - Canary and rollback behavior are represented through config and deployment scaffolding rather than a full progressive delivery controller.
 
-## Limitations
-
-- The synthetic data generator is realistic enough for demos, not for domain conclusions.
-- The benchmark client is for local and staging-style load checks, not a full distributed performance test.
-- The Terraform module is a clean starting point, not a full AWS platform bootstrap.
-
 ## Reproducibility notes
 
 - All seeds are centralized in the training code.
