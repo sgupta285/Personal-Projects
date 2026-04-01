@@ -45,43 +45,43 @@ Across these builds, I focus on systems that are not only technically correct, b
 |---|---|---|
 | **ClearClause** | Production-minded legal RAG, hybrid retrieval, reranking, low-latency inference, observability | `Python` `FastAPI` `pgvector` `Redis` `Kubernetes` |
 | **SpecMe** | Agentic product copilot, structured workflows, versioned outputs, human-in-the-loop product UX | `TypeScript` `Next.js` `FastAPI` `pgvector` `Docker` |
-| **Browser Agent Runtime** | Frontier-style browser automation, tool interfaces, action planning, permission-aware agents | `Python` `Playwright` `CDP` `FastAPI` `Redis` |
+| **Browser-agent-runtime** | Frontier-style browser automation, tool interfaces, action planning, permission-aware agents | `Python` `Playwright` `CDP` `FastAPI` `Redis` |
 | **Layout-Aware Document Intelligence Platform** | Multimodal document understanding, deterministic parsing, VLM-style pipelines, enterprise infra | `Python` `Rust` `FastAPI` `Kubernetes` `PostgreSQL` |
 | **Production ML Serving Infrastructure** | Model deployment, real-time/batch predictions, comprehensive monitoring, MLOps | `Python` `PyTorch` `FastAPI` `Kubernetes` `AWS` |
 | **BuckyConnect** | Real-time product engineering, GraphQL, WebSockets, AWS deployment | `React` `TypeScript` `GraphQL` `Redis` `AWS` |
 | **Low-Latency Matching Engine and Market Data Feed** | Systems-level performance, feed handling, event processing, low-latency trading infrastructure | `C++` `Linux` `Sockets` `Python` |
-| **Customer Segmentation and GTM Analytics Platform** | Segmentation modeling, dashboarding, GTM analytics, reproducible business insights | `Python` `SQL` `scikit-learn` `Tableau` |
+| **Product Metrics & Analytics Framework** | Segmentation modeling, dashboarding, GTM analytics, reproducible business insights | `Python` `SQL` `scikit-learn` `Tableau` |
 
 ## Project Categories
 
 ### AI, ML, and LLM Systems
 
-- [ClearClause - Production Legal RAG System](#clearclause---production-legal-rag-system)
+- [ClearClause](#clearclause)
 - [SpecMe - AI Product Copilot](#specme---ai-product-copilot)
 - [Production ML Serving Infrastructure](#production-ml-serving-infrastructure)
-- [LLM Evaluation & Inference Stack](#llm-evaluation--inference-stack)
-- [Real-Time Fraud Detection System](#real-time-fraud-detection-system)
+- [Llm_eval_inference_stack](#Llm_eval_inference_stack)
+- [Fraud-Detection-Api](#fraud-detection-api)
 - [Recommendation System Infrastructure](#recommendation-system-infrastructure)
-- [Ads Integrity & Content Moderation Platform](#ads-integrity--content-moderation-platform)
-- [Customer Churn Prediction & Intervention](#customer-churn-prediction--intervention)
-- [Browser Agent Runtime](#browser-agent-runtime)
+- [Ads_integrity_content_moderation_platform](#Ads_integrity_content_moderation_platform)
+- [Customer-churn-prediction-intervention](#Customer-churn-prediction-intervention)
+- [Browser-agent-runtime](#Browser-agent-runtime)
 - [Layout-Aware Document Intelligence Platform](#layout-aware-document-intelligence-platform)
 - [Multimodal Agent Evaluation Stack](#multimodal-agent-evaluation-stack)
-- [Clinical Prompt Evaluation Suite](#clinical-prompt-evaluation-suite)
+- [Clinical-prompt-evaluation-suite](#Clinical-prompt-evaluation-suite)
 - [Human Data Collection Platform](#human-data-collection-platform)
 - [Reward Modeling and Preference Data Lab](#reward-modeling-and-preference-data-lab)
-- [Spotify Music Popularity Pipeline](#spotify-music-popularity-pipeline)
-- [AI Trend Radar](#ai-trend-radar)
+- [SpotifySongPopularity](#spotifysongpopularity)
+- [AITrendRadar](#aitrendradar)
 - [ML Data Preparation Pipeline](#ml-data-preparation-pipeline)
 
 ### Backend, Full-Stack, Mobile, and Product Engineering
 
-- [BuckyConnect - Real-Time Collaboration Platform](#buckyconnect---real-time-collaboration-platform)
-- [E-Commerce Platform](#e-commerce-platform)
+- [BuckyConnect](#buckyconnect)
+- [E-Commerce Backend System](#e-commerce-backend-system)
 - [Usage Analytics Dashboard](#usage-analytics-dashboard)
 - [Real-Time Service Platform](#real-time-service-platform)
 - [Production Service API Platform](#production-service-api-platform)
-- [Enterprise Document Agent Infrastructure](#enterprise-document-agent-infrastructure)
+- [Interactive-agent-orchestration-platform](#Interactive-agent-orchestration-platform)
 - [Mobile Health Tracker (React Native)](#mobile-health-tracker-react-native)
 - [Restaurant Discovery Platform](#restaurant-discovery-platform)
 - [Event Management System](#event-management-system)
@@ -90,28 +90,28 @@ Across these builds, I focus on systems that are not only technically correct, b
 ### Quantitative Finance and Trading Systems
 
 - [Low-Latency Matching Engine and Market Data Feed](#low-latency-matching-engine-and-market-data-feed)
-- [High-Performance Trading Engine](#high-performance-trading-engine)
+- [Algorithmic Trading Strategy](#algorithmic-trading-strategy)
 - [Backtest Engineering Framework](#backtest-engineering-framework)
-- [Arbitrage Monitor and Alert System](#arbitrage-monitor-and-alert-system)
-- [Options Pricing and Greeks Calculator](#options-pricing-and-greeks-calculator)
+- [Statistical Arbitrage Pairs Trading Cointegration + Kalman Filters](#statistical-arbitrage-pairs-trading-cointegration--kalman-filters)
+- [Options Pricing and Greeks Engine](#options-pricing-and-greeks-engine)
 - [Portfolio Rebalancing and Risk Management](#portfolio-rebalancing-and-risk-management)
 
 ### Data Science, Econometrics, and Forecasting
 
-- [Customer Segmentation and GTM Analytics Platform](#customer-segmentation-and-gtm-analytics-platform)
-- [Analytics Data Pipeline System](#analytics-data-pipeline-system)
-- [Cloud-Based Data Processing Platform](#cloud-based-data-processing-platform)
+- [Product Metrics & Analytics Framework](#product-metrics--analytics-framework)
+- [Accounting-operations-platform](#Accounting-operations-platform)
+- [Cloud-native-production-platform](#Cloud-native-production-platform)
 - [Multi-Source Data Integration](#multi-source-data-integration)
-- [Randomized Controlled Trial (RCT) Evaluation](#randomized-controlled-trial-rct-evaluation)
-- [Time Series Forecasting and Demand Prediction](#time-series-forecasting-and-demand-prediction)
-- [Sales Attribution and Marketing Mix Modeling](#sales-attribution-and-marketing-mix-modeling)
+- [Randomized Controlled Trial Evaluation](#randomized-controlled-trial-evaluation)
+- [Retail Demand Forecasting System](#retail-demand-forecasting-system)
+- [Marketing-attribution-response-modeling](#Marketing-attribution-response-modeling)
 - [Causal Inference with Difference-in-Differences](#causal-inference-with-difference-in-differences)
 - [Experimental Design and Power Analysis Tool](#experimental-design-and-power-analysis-tool)
 - [Census Data Analytics and Visualization](#census-data-analytics-and-visualization)
 
 ### Cloud, Infrastructure, and Systems Engineering
 
-- [High-Performance Distributed System](#high-performance-distributed-system)
+- [High-performance-storage-infrastructure](#High-performance-storage-infrastructure)
 - [Real-Time Data Processing Platform](#real-time-data-processing-platform)
 - [Secure Data Processing Service](#secure-data-processing-service)
 - [Kubernetes Monitoring and Autoscaling Stack](#kubernetes-monitoring-and-autoscaling-stack)
@@ -122,7 +122,7 @@ Across these builds, I focus on systems that are not only technically correct, b
 - [Real-Time Control System](#real-time-control-system)
 - [Geometry Processing Pipeline](#geometry-processing-pipeline)
 - [Firmware Build and Verification Tooling](#firmware-build-and-verification-tooling)
-- [Infrastructure Automation and GitOps Platform](#infrastructure-automation-and-gitops-platform)
+- [Infrastructure-automation-framework](#Infrastructure-automation-framework)
 
 ---
 
@@ -130,7 +130,7 @@ Across these builds, I focus on systems that are not only technically correct, b
 
 ## AI, ML, and LLM Systems
 
-### ClearClause - Production Legal RAG System
+### ClearClause
 
 **Overview**  
 Built a production-grade legal contract analysis platform using retrieval-augmented generation (RAG) to help lawyers review contracts 5x faster. The system processes NDAs, employment agreements, and SaaS contracts, extracting key clauses, identifying risks, and comparing against standard language. The technical challenge was not just achieving high retrieval accuracy, but building a system lawyers would trust enough to use with real clients, which required comprehensive explainability, source attribution, and sub-second latency at scale.
@@ -210,7 +210,7 @@ Built end-to-end ML serving infrastructure supporting real-time and batch predic
 
 ---
 
-### LLM Evaluation & Inference Stack
+### Llm_eval_inference_stack
 
 **Overview**  
 Built comprehensive evaluation and serving infrastructure for large language models, supporting benchmarking, performance optimization, and production deployment. The system enables rapid experimentation with different models, prompts, and serving configurations while maintaining reproducibility and cost efficiency.
@@ -228,7 +228,7 @@ Built comprehensive evaluation and serving infrastructure for large language mod
 
 ---
 
-### Real-Time Fraud Detection System
+### Fraud-Detection-Api
 
 **Overview**  
 Built production fraud detection system processing payment transactions in real-time with machine learning models identifying fraudulent patterns. The system balances precision (minimizing false positives that block legitimate customers) with recall (catching actual fraud) while maintaining sub-second latency requirements for seamless checkout experiences. Implemented comprehensive feature engineering, model monitoring, and decision explainability for compliance and customer support.
@@ -279,7 +279,7 @@ Built ML platform powering personalized recommendations with model serving infra
 
 ---
 
-### Browser Agent Runtime
+### Browser-agent-runtime
 
 **Overview**  
 Built a browser-native agent runtime for navigating authenticated web flows using tool calls, background execution, and permission-aware action planning. The system enables agents to interact with complex websites, handle authentication, fill forms, extract data, and complete multi-step workflows while respecting security boundaries and handling edge cases gracefully.
@@ -333,7 +333,7 @@ Built an evaluation stack for multimodal agents covering tool-use accuracy, late
 
 ---
 
-### Clinical Prompt Evaluation Suite
+### Clinical-prompt-evaluation-suite
 
 **Overview**  
 Built a prompt evaluation suite for healthcare-style workflows using structured testing datasets, rubric-based scoring, and versioned prompt experiments. The system ensures LLM outputs meet clinical accuracy, safety, and consistency requirements before deployment.
@@ -387,7 +387,7 @@ Built a lab for collecting, evaluating, and versioning preference data used in r
 
 ---
 
-### Spotify Music Popularity Pipeline
+### SpotifySongPopularity
 
 **Overview**  
 Built end-to-end data pipeline ingesting Spotify API data, engineering features from audio characteristics and artist metadata, and training models predicting track popularity. The system demonstrates ETL design, feature engineering, and model deployment practices.
@@ -405,7 +405,7 @@ Built end-to-end data pipeline ingesting Spotify API data, engineering features 
 
 ---
 
-### AI Trend Radar
+### AITrendRadar
 
 **Overview**  
 Built automated system monitoring AI research papers, product launches, and industry trends using web scraping, NLP analysis, and trend detection algorithms. The system surfaces emerging topics, tracks technology adoption, and generates weekly summaries.
@@ -443,7 +443,7 @@ Built data preparation pipeline supporting machine learning workflows by handlin
 
 ## Backend, Full-Stack, Mobile, and Product Engineering
 
-### BuckyConnect - Real-Time Collaboration Platform
+### BuckyConnect
 
 **Overview**  
 Built full-stack real-time collaboration platform enabling teams to coordinate tasks, share updates, and track project progress with live synchronization across users. The system handles **280+ concurrent users** and **1,000+ events/sec** with WebSocket connections, GraphQL subscriptions, and optimized state management. Focus on responsive UI, conflict resolution, and seamless real-time experience even under network disruptions.
@@ -471,7 +471,7 @@ Built full-stack real-time collaboration platform enabling teams to coordinate t
 
 ---
 
-### E-Commerce Platform
+### E-Commerce Backend System
 
 **Overview**  
 Built full-stack e-commerce application with product catalog, shopping cart, checkout flow, order management, and payment processing. The system demonstrates end-to-end ownership from user-facing features through backend APIs, payment integration, and deployment infrastructure. Focus on polished UX, API design, and using AI tools for rapid iteration.
@@ -579,7 +579,7 @@ Built scalable API platform with end-to-end ownership from design through deploy
 
 ---
 
-### Enterprise Document Agent Infrastructure
+### Interactive-agent-orchestration-platform
 
 **Overview**  
 Built distributed services that let agents read, write, and validate large document workflows across cloud-backed and enterprise-style environments. The system enables automation of document processing tasks while respecting access controls, audit requirements, and compliance constraints.
@@ -698,7 +698,7 @@ Built systems-level trading infrastructure including order matching engine and m
 
 ---
 
-### High-Performance Trading Engine
+### Algorithmic Trading Strategy
 
 **Overview**  
 Built comprehensive backtesting and live trading engine supporting quantitative strategies across equities, options, and futures. The system processes historical data, executes strategies, tracks P&L, and generates performance analytics with proper handling of execution costs, slippage, and market impact.
@@ -744,7 +744,7 @@ Built rigorous backtesting framework emphasizing execution realism, transaction 
 
 ---
 
-### Arbitrage Monitor and Alert System
+### Statistical Arbitrage Pairs Trading Cointegration + Kalman Filters
 
 **Overview**  
 Built real-time system monitoring price discrepancies across exchanges, identifying arbitrage opportunities, and generating alerts. The system handles multiple asset classes, accounts for execution costs, and filters false positives from stale quotes.
@@ -762,7 +762,7 @@ Built real-time system monitoring price discrepancies across exchanges, identify
 
 ---
 
-### Options Pricing and Greeks Calculator
+### Options Pricing and Greeks Engine
 
 **Overview**  
 Built options pricing calculator computing theoretical values and risk metrics (Greeks) using Black-Scholes, binomial trees, and Monte Carlo simulation. The system handles American and European options with dividend adjustments and volatility surface interpolation.
@@ -800,7 +800,7 @@ Built portfolio management system with automated rebalancing, risk monitoring, a
 
 ## Data Science, Econometrics, and Forecasting
 
-### Customer Segmentation and GTM Analytics Platform
+### Product Metrics & Analytics Framework
 
 **Overview**  
 Built comprehensive analytics platform for customer segmentation, go-to-market strategy analysis, and business intelligence with machine learning models, interactive dashboards, and automated reporting. The system processes **500K+ customer records** to identify high-value segments, predict churn, and optimize marketing spend allocation.
@@ -827,7 +827,7 @@ Built comprehensive analytics platform for customer segmentation, go-to-market s
 
 ---
 
-### Analytics Data Pipeline System
+### Accounting-operations-platform
 
 **Overview**  
 Built ETL pipeline extracting data from multiple sources, transforming for analytics consumption, and loading into data warehouse with strong attention to data quality and reliability. The system supports downstream analytics, reporting, and machine learning workflows.
@@ -854,7 +854,7 @@ Built ETL pipeline extracting data from multiple sources, transforming for analy
 
 ---
 
-### Cloud-Based Data Processing Platform
+### Cloud-native-production-platform
 
 **Overview**  
 Built scalable data processing platform on cloud infrastructure handling batch and streaming workloads with PySpark, leveraging managed services for storage, compute, and orchestration. The system demonstrates cloud-native architecture, distributed processing, and data modeling practices.
@@ -906,7 +906,7 @@ Built data integration platform consolidating data from heterogeneous sources wi
 
 ---
 
-### Randomized Controlled Trial (RCT) Evaluation
+### Randomized Controlled Trial Evaluation
 
 **Overview**  
 Built comprehensive RCT evaluation framework using local average treatment effect (LATE) estimation via 2SLS, heterogeneous treatment effects analysis with causal forests, and multiple testing corrections. The project demonstrates understanding of causal inference, experimental design, and statistical rigor.
@@ -924,7 +924,7 @@ Built comprehensive RCT evaluation framework using local average treatment effec
 
 ---
 
-### Time Series Forecasting and Demand Prediction
+### Retail Demand Forecasting System
 
 **Overview**  
 Built time series forecasting models predicting demand, sales, and other business metrics using ARIMA, exponential smoothing, and machine learning approaches. The system handles seasonality, trends, and external factors with proper cross-validation and uncertainty quantification.
@@ -942,7 +942,7 @@ Built time series forecasting models predicting demand, sales, and other busines
 
 ---
 
-### Sales Attribution and Marketing Mix Modeling
+### Marketing-attribution-response-modeling
 
 **Overview**  
 Built attribution models allocating credit across marketing touchpoints and marketing mix models quantifying channel effectiveness. The system handles multi-touch attribution, incrementality testing, and budget optimization.
@@ -1016,7 +1016,7 @@ Built analytics platform exploring US Census data with interactive visualization
 
 ## Cloud, Infrastructure, and Systems Engineering
 
-### High-Performance Distributed System
+### High-performance-storage-infrastructure
 
 **Overview**  
 Built distributed system optimized for performance and scalability using C++ and Python, with focus on profiling, bottleneck identification, and architectural optimization. The system demonstrates understanding of distributed systems concepts, performance engineering, and production reliability practices.
@@ -1251,7 +1251,7 @@ Developed build and verification tooling for device software packages using scri
 
 ---
 
-### Infrastructure Automation and GitOps Platform
+### Infrastructure-automation-framework
 
 **Overview**  
 Built automation platform using GitOps principles for infrastructure management, deployment, and operations. The system uses Terraform for infrastructure-as-code, Helm for application deployment, and Git as source of truth.
@@ -1291,3 +1291,8 @@ Built automation platform using GitOps principles for infrastructure management,
 
 ---
 
+## Notes
+
+Some projects in this repository are fully implemented codebases, while others are portfolio-quality builds, research systems, or engineering blueprints designed to demonstrate architecture, technical depth, and system design thinking.
+
+Projects span multiple domains reflecting broad technical interests and the ability to move between different technology stacks, problem domains, and abstraction levels - from low-level systems programming to high-level product engineering.
