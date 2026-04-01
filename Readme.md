@@ -1290,9 +1290,3 @@ Built automation platform using GitOps principles for infrastructure management,
 `Linux` `SIMD` `Lock-Free Programming` `Real-Time Systems` `Profiling` `Performance Optimization` `Distributed Systems` `Concurrent Programming` `Network Programming` `Embedded Systems`
 
 ---
-
-## Notes
-
-Some projects in this repository are fully implemented codebases, while others are portfolio-quality builds, research systems, or engineering blueprints designed to demonstrate architecture, technical depth, and system design thinking.
-
-Projects span multiple domains reflecting broad technical interests and the ability to move between different technology stacks, problem domains, and abstraction levels - from low-level systems programming to high-level product engineering.
