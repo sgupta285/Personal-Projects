@@ -1,0 +1,8 @@
+apiVersion: 1
+
+providers:
+  - name: Starter Dashboards
+    folder: ML Serving
+    type: file
+    options:
+      path: /var/lib/grafana/dashboards

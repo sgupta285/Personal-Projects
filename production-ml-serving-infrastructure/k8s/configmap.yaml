@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ml-serving-config
+  namespace: ml-serving
+data:
+  APP_ENV: "production"
+  ENABLE_REDIS: "true"
+  ENABLE_DYNAMIC_BATCHING: "true"
+  REQUEST_BATCH_WINDOW_MS: "100"
+  REQUEST_MAX_BATCH_SIZE: "32"

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ml-serving-api
+  namespace: ml-serving
+spec:
+  selector:
+    app: ml-serving-api
+  ports:
+    - port: 80
+      targetPort: 8000

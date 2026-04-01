@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ml-serving-api
+  namespace: ml-serving
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ml-serving-api
+  template:
+    metadata:
+      labels:
+        app: ml-serving-api
+    spec:
+      containers:
+        - name: api
+          image: your-account.dkr.ecr.us-east-1.amazonaws.com/production-ml-serving-infrastructure:latest
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: ml-serving-config
+          env:
+            - name: DATABASE_URL
+              value: postgresql+psycopg://postgres:postgres@postgres.ml-serving.svc.cluster.local:5432/ml_serving
+            - name: REDIS_URL
+              value: redis://redis.ml-serving.svc.cluster.local:6379/0
+          readinessProbe:
+            httpGet:
+              path: /health/ready
+              port: 8000
+          livenessProbe:
+            httpGet:
+              path: /health/live
+              port: 8000
+          resources:
+            requests:
+              cpu: 250m
+              memory: 512Mi
+            limits:
+              cpu: "1"
+              memory: 1Gi
