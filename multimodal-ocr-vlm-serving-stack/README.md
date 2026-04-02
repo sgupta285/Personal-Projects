@@ -253,11 +253,4 @@ This is enough to make local debugging meaningful and to hook the service into G
 - Job state is persisted as JSON under `data/jobs/`
 - The mock engines are deterministic for the same payload, which keeps tests stable
 
-## Limitations
-
-- The local engines are mocks, not production OCR or CUDA-backed VLM runtimes
-- Redis is configuration-ready but not wired into the default queue path
-- There is no distributed job coordination in the local build
-- GPU memory accounting is estimated rather than measured from a live runtime
-
 
