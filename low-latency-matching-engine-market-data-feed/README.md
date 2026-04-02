@@ -208,5 +208,10 @@ or
 
 ```bash
 docker compose up --build
+
 ```
+
+##License
+
+MIT
 
