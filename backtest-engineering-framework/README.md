@@ -320,3 +320,8 @@ The source project brief emphasized:
 - realistic fill simulation
 
 This repo reflects those priorities directly. It is not a generic finance notebook collection. It is a backtesting repo built to make optimistic assumptions visible and expensive assumptions explicit.
+
+## License
+
+MIT
+
