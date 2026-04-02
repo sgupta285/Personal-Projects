@@ -164,7 +164,8 @@ docker build -t latdiag .
 docker run --rm -v "$PWD/artifacts:/app/artifacts" latdiag demo --output-dir artifacts/demo
 ```
 
+## License
 
-
+MIT
 
 
