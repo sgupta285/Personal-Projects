@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Projects-55-111827?style=for-the-badge" alt="55 projects" />
+  <img src="https://img.shields.io/badge/Projects-60-111827?style=for-the-badge" alt="55 projects" />
   <img src="https://img.shields.io/badge/Focus-AI%20%7C%20Backend%20%7C%20Infra%20%7C%20Quant-2563eb?style=for-the-badge" alt="focus areas" />
   <img src="https://img.shields.io/badge/Build%20Style-Production%20Minded-059669?style=for-the-badge" alt="production minded" />
   <img src="https://img.shields.io/badge/Stack-Python%20%7C%20C%2B%2B%20%7C%20React%20%7C%20K8s-f59e0b?style=for-the-badge" alt="stack" />
