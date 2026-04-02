@@ -1,0 +1,34 @@
+{
+  "title": "Recommendation Platform Overview",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Requests",
+      "targets": [
+        {
+          "expr": "sum(reco_requests_total)"
+        }
+      ]
+    },
+    {
+      "type": "stat",
+      "title": "Cache hits",
+      "targets": [
+        {
+          "expr": "sum(reco_cache_hits_total)"
+        }
+      ]
+    },
+    {
+      "type": "stat",
+      "title": "Avg latency",
+      "targets": [
+        {
+          "expr": "rate(reco_request_latency_seconds_sum[5m]) / rate(reco_request_latency_seconds_count[5m])"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 39,
+  "version": 1
+}

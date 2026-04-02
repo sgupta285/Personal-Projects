@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.pytest_cache/
+.coverage
+htmlcov/
+artifacts/models/*
+!artifacts/models/.gitkeep
+artifacts/mlruns/*
+!artifacts/mlruns/.gitkeep
+artifacts/benchmarks/*
+!artifacts/benchmarks/.gitkeep
+logs/*
+!logs/.gitkeep

@@ -1,0 +1,6756 @@
+{
+  "users": {
+    "user_0000": {
+      "preferred_categories": [
+        "fitness",
+        "food"
+      ],
+      "engagement_score": 0.849
+    },
+    "user_0001": {
+      "preferred_categories": [
+        "tech",
+        "fitness"
+      ],
+      "engagement_score": 0.957
+    },
+    "user_0002": {
+      "preferred_categories": [
+        "home",
+        "food"
+      ],
+      "engagement_score": 0.928
+    },
+    "user_0003": {
+      "preferred_categories": [
+        "sports",
+        "food"
+      ],
+      "engagement_score": 0.851
+    },
+    "user_0004": {
+      "preferred_categories": [
+        "fitness",
+        "sports"
+      ],
+      "engagement_score": 0.854
+    },
+    "user_0005": {
+      "preferred_categories": [
+        "home",
+        "fashion"
+      ],
+      "engagement_score": 0.294
+    },
+    "user_0006": {
+      "preferred_categories": [
+        "fitness",
+        "food"
+      ],
+      "engagement_score": 0.399
+    },
+    "user_0007": {
+      "preferred_categories": [
+        "fitness",
+        "beauty"
+      ],
+      "engagement_score": 0.631
+    },
+    "user_0008": {
+      "preferred_categories": [
+        "books",
+        "tech"
+      ],
+      "engagement_score": 0.224
+    },
+    "user_0009": {
+      "preferred_categories": [
+        "fitness",
+        "home"
+      ],
+      "engagement_score": 0.294
+    },
+    "user_0010": {
+      "preferred_categories": [
+        "beauty",
+        "home"
+      ],
+      "engagement_score": 0.778
+    },
+    "user_0011": {
+      "preferred_categories": [
+        "home",
+        "fitness"
+      ],
+      "engagement_score": 0.241
+    },
+    "user_0012": {
+      "preferred_categories": [
+        "sports",
+        "books"
+      ],
+      "engagement_score": 0.259
+    },
+    "user_0013": {
+      "preferred_categories": [
+        "food",
+        "sports"
+      ],
+      "engagement_score": 0.565
+    },
+    "user_0014": {
+      "preferred_categories": [
+        "fashion",
+        "books"
+      ],
+      "engagement_score": 0.3
+    },
+    "user_0015": {
+      "preferred_categories": [
+        "fitness",
+        "home"
+      ],
+      "engagement_score": 0.795
+    },
+    "user_0016": {
+      "preferred_categories": [
+        "home",
+        "fitness"
+      ],
+      "engagement_score": 0.957
+    },
+    "user_0017": {
+      "preferred_categories": [
+        "home",
+        "fitness"
+      ],
+      "engagement_score": 0.414
+    },
+    "user_0018": {
+      "preferred_categories": [
+        "fitness",
+        "home"
+      ],
+      "engagement_score": 0.328
+    },
+    "user_0019": {
+      "preferred_categories": [
+        "books",
+        "home"
+      ],
+      "engagement_score": 0.201
+    },
+    "user_0020": {
+      "preferred_categories": [
+        "fashion",
+        "home"
+      ],
+      "engagement_score": 0.971
+    },
+    "user_0021": {
+      "preferred_categories": [
+        "beauty",
+        "sports"
+      ],
+      "engagement_score": 0.927
+    },
+    "user_0022": {
+      "preferred_categories": [
+        "beauty",
+        "home"
+      ],
+      "engagement_score": 0.833
+    },
+    "user_0023": {
+      "preferred_categories": [
+        "fashion",
+        "beauty"
+      ],
+      "engagement_score": 0.733
+    },
+    "user_0024": {
+      "preferred_categories": [
+        "beauty",
+        "fashion"
+      ],
+      "engagement_score": 0.443
+    },
+    "user_0025": {
+      "preferred_categories": [
+        "sports",
+        "fitness"
+      ],
+      "engagement_score": 0.861
+    },
+    "user_0026": {
+      "preferred_categories": [
+        "home",
+        "fitness"
+      ],
+      "engagement_score": 0.642
+    },
+    "user_0027": {
+      "preferred_categories": [
+        "tech",
+        "books"
+      ],
+      "engagement_score": 0.99
+    },
+    "user_0028": {
+      "preferred_categories": [
+        "fitness",
+        "sports"
+      ],
+      "engagement_score": 0.606
+    },
+    "user_0029": {
+      "preferred_categories": [
+        "food",
+        "fitness"
+      ],
+      "engagement_score": 0.826
+    },
+    "user_0030": {
+      "preferred_categories": [
+        "fitness",
+        "books"
+      ],
+      "engagement_score": 0.565
+    },
+    "user_0031": {
+      "preferred_categories": [
+        "books",
+        "tech"
+      ],
+      "engagement_score": 0.437
+    },
+    "user_0032": {
+      "preferred_categories": [
+        "books",
+        "fitness"
+      ],
+      "engagement_score": 0.627
+    },
+    "user_0033": {
+      "preferred_categories": [
+        "fashion",
+        "sports"
+      ],
+      "engagement_score": 0.802
+    },
+    "user_0034": {
+      "preferred_categories": [
+        "fashion",
+        "food"
+      ],
+      "engagement_score": 0.83
+    },
+    "user_0035": {
+      "preferred_categories": [
+        "food",
+        "fashion"
+      ],
+      "engagement_score": 0.986
+    },
+    "user_0036": {
+      "preferred_categories": [
+        "food",
+        "books"
+      ],
+      "engagement_score": 0.427
+    },
+    "user_0037": {
+      "preferred_categories": [
+        "tech",
+        "books"
+      ],
+      "engagement_score": 0.767
+    },
+    "user_0038": {
+      "preferred_categories": [
+        "fashion",
+        "fitness"
+      ],
+      "engagement_score": 0.451
+    },
+    "user_0039": {
+      "preferred_categories": [
+        "home",
+        "tech"
+      ],
+      "engagement_score": 0.915
+    },
+    "user_0040": {
+      "preferred_categories": [
+        "fashion",
+        "food"
+      ],
+      "engagement_score": 0.627
+    },
+    "user_0041": {
+      "preferred_categories": [
+        "fitness",
+        "tech"
+      ],
+      "engagement_score": 0.471
+    },
+    "user_0042": {
+      "preferred_categories": [
+        "fitness",
+        "food"
+      ],
+      "engagement_score": 0.666
+    },
+    "user_0043": {
+      "preferred_categories": [
+        "home",
+        "sports"
+      ],
+      "engagement_score": 0.982
+    },
+    "user_0044": {
+      "preferred_categories": [
+        "sports",
+        "fitness"
+      ],
+      "engagement_score": 0.411
+    },
+    "user_0045": {
+      "preferred_categories": [
+        "sports",
+        "tech"
+      ],
+      "engagement_score": 0.801
+    },
+    "user_0046": {
+      "preferred_categories": [
+        "food",
+        "tech"
+      ],
+      "engagement_score": 0.428
+    },
+    "user_0047": {
+      "preferred_categories": [
+        "tech",
+        "fashion"
+      ],
+      "engagement_score": 0.536
+    },
+    "user_0048": {
+      "preferred_categories": [
+        "tech",
+        "home"
+      ],
+      "engagement_score": 0.433
+    },
+    "user_0049": {
+      "preferred_categories": [
+        "sports",
+        "food"
+      ],
+      "engagement_score": 0.419
+    },
+    "user_0050": {
+      "preferred_categories": [
+        "sports",
+        "food"
+      ],
+      "engagement_score": 0.273
+    },
+    "user_0051": {
+      "preferred_categories": [
+        "sports",
+        "home"
+      ],
+      "engagement_score": 0.802
+    },
+    "user_0052": {
+      "preferred_categories": [
+        "books",
+        "food"
+      ],
+      "engagement_score": 0.71
+    },
+    "user_0053": {
+      "preferred_categories": [
+        "books",
+        "tech"
+      ],
+      "engagement_score": 0.203
+    },
+    "user_0054": {
+      "preferred_categories": [
+        "books",
+        "fashion"
+      ],
+      "engagement_score": 0.945
+    },
+    "user_0055": {
+      "preferred_categories": [
+        "food",
+        "home"
+      ],
+      "engagement_score": 0.293
+    },
+    "user_0056": {
+      "preferred_categories": [
+        "home",
+        "tech"
+      ],
+      "engagement_score": 0.897
+    },
+    "user_0057": {
+      "preferred_categories": [
+        "fashion",
+        "fitness"
+      ],
+      "engagement_score": 0.685
+    },
+    "user_0058": {
+      "preferred_categories": [
+        "fashion",
+        "fitness"
+      ],
+      "engagement_score": 0.676
+    },
+    "user_0059": {
+      "preferred_categories": [
+        "fashion",
+        "home"
+      ],
+      "engagement_score": 0.488
+    },
+    "user_0060": {
+      "preferred_categories": [
+        "home",
+        "food"
+      ],
+      "engagement_score": 0.324
+    },
+    "user_0061": {
+      "preferred_categories": [
+        "fashion",
+        "sports"
+      ],
+      "engagement_score": 0.538
+    },
+    "user_0062": {
+      "preferred_categories": [
+        "tech",
+        "beauty"
+      ],
+      "engagement_score": 0.744
+    },
+    "user_0063": {
+      "preferred_categories": [
+        "books",
+        "beauty"
+      ],
+      "engagement_score": 0.851
+    },
+    "user_0064": {
+      "preferred_categories": [
+        "food",
+        "tech"
+      ],
+      "engagement_score": 0.79
+    },
+    "user_0065": {
+      "preferred_categories": [
+        "books",
+        "home"
+      ],
+      "engagement_score": 0.85
+    },
+    "user_0066": {
+      "preferred_categories": [
+        "food",
+        "fitness"
+      ],
+      "engagement_score": 0.416
+    },
+    "user_0067": {
+      "preferred_categories": [
+        "books",
+        "sports"
+      ],
+      "engagement_score": 0.841
+    },
+    "user_0068": {
+      "preferred_categories": [
+        "tech",
+        "home"
+      ],
+      "engagement_score": 0.674
+    },
+    "user_0069": {
+      "preferred_categories": [
+        "food",
+        "tech"
+      ],
+      "engagement_score": 0.863
+    },
+    "user_0070": {
+      "preferred_categories": [
+        "home",
+        "sports"
+      ],
+      "engagement_score": 0.63
+    },
+    "user_0071": {
+      "preferred_categories": [
+        "beauty",
+        "fashion"
+      ],
+      "engagement_score": 0.51
+    },
+    "user_0072": {
+      "preferred_categories": [
+        "home",
+        "fashion"
+      ],
+      "engagement_score": 0.552
+    },
+    "user_0073": {
+      "preferred_categories": [
+        "fitness",
+        "sports"
+      ],
+      "engagement_score": 0.632
+    },
+    "user_0074": {
+      "preferred_categories": [
+        "fashion",
+        "tech"
+      ],
+      "engagement_score": 0.655
+    },
+    "user_0075": {
+      "preferred_categories": [
+        "fashion",
+        "home"
+      ],
+      "engagement_score": 0.376
+    },
+    "user_0076": {
+      "preferred_categories": [
+        "tech",
+        "sports"
+      ],
+      "engagement_score": 0.601
+    },
+    "user_0077": {
+      "preferred_categories": [
+        "sports",
+        "books"
+      ],
+      "engagement_score": 0.616
+    },
+    "user_0078": {
+      "preferred_categories": [
+        "tech",
+        "fashion"
+      ],
+      "engagement_score": 0.376
+    },
+    "user_0079": {
+      "preferred_categories": [
+        "fashion",
+        "beauty"
+      ],
+      "engagement_score": 0.795
+    },
+    "user_0080": {
+      "preferred_categories": [
+        "fitness",
+        "beauty"
+      ],
+      "engagement_score": 0.615
+    },
+    "user_0081": {
+      "preferred_categories": [
+        "food",
+        "books"
+      ],
+      "engagement_score": 0.888
+    },
+    "user_0082": {
+      "preferred_categories": [
+        "fitness",
+        "sports"
+      ],
+      "engagement_score": 0.305
+    },
+    "user_0083": {
+      "preferred_categories": [
+        "fashion",
+        "home"
+      ],
+      "engagement_score": 0.562
+    },
+    "user_0084": {
+      "preferred_categories": [
+        "fitness",
+        "tech"
+      ],
+      "engagement_score": 0.239
+    },
+    "user_0085": {
+      "preferred_categories": [
+        "food",
+        "sports"
+      ],
+      "engagement_score": 0.529
+    },
+    "user_0086": {
+      "preferred_categories": [
+        "fashion",
+        "beauty"
+      ],
+      "engagement_score": 0.733
+    },
+    "user_0087": {
+      "preferred_categories": [
+        "food",
+        "fashion"
+      ],
+      "engagement_score": 0.303
+    },
+    "user_0088": {
+      "preferred_categories": [
+        "books",
+        "fitness"
+      ],
+      "engagement_score": 0.771
+    },
+    "user_0089": {
+      "preferred_categories": [
+        "fitness",
+        "fashion"
+      ],
+      "engagement_score": 0.337
+    },
+    "user_0090": {
+      "preferred_categories": [
+        "food",
+        "tech"
+      ],
+      "engagement_score": 0.855
+    },
+    "user_0091": {
+      "preferred_categories": [
+        "food",
+        "fashion"
+      ],
+      "engagement_score": 0.871
+    },
+    "user_0092": {
+      "preferred_categories": [
+        "sports",
+        "beauty"
+      ],
+      "engagement_score": 0.273
+    },
+    "user_0093": {
+      "preferred_categories": [
+        "home",
+        "fashion"
+      ],
+      "engagement_score": 0.487
+    },
+    "user_0094": {
+      "preferred_categories": [
+        "beauty",
+        "fashion"
+      ],
+      "engagement_score": 0.513
+    },
+    "user_0095": {
+      "preferred_categories": [
+        "books",
+        "beauty"
+      ],
+      "engagement_score": 0.893
+    },
+    "user_0096": {
+      "preferred_categories": [
+        "fitness",
+        "home"
+      ],
+      "engagement_score": 1.0
+    },
+    "user_0097": {
+      "preferred_categories": [
+        "sports",
+        "home"
+      ],
+      "engagement_score": 0.702
+    },
+    "user_0098": {
+      "preferred_categories": [
+        "books",
+        "tech"
+      ],
+      "engagement_score": 0.642
+    },
+    "user_0099": {
+      "preferred_categories": [
+        "food",
+        "sports"
+      ],
+      "engagement_score": 0.82
+    },
+    "user_0100": {
+      "preferred_categories": [
+        "fashion",
+        "books"
+      ],
+      "engagement_score": 0.369
+    },
+    "user_0101": {
+      "preferred_categories": [
+        "sports",
+        "books"
+      ],
+      "engagement_score": 0.753
+    },
+    "user_0102": {
+      "preferred_categories": [
+        "tech",
+        "home"
+      ],
+      "engagement_score": 0.536
+    },
+    "user_0103": {
+      "preferred_categories": [
+        "beauty",
+        "fashion"
+      ],
+      "engagement_score": 0.942
+    },
+    "user_0104": {
+      "preferred_categories": [
+        "fashion",
+        "beauty"
+      ],
+      "engagement_score": 0.283
+    },
+    "user_0105": {
+      "preferred_categories": [
+        "food",
+        "sports"
+      ],
+      "engagement_score": 0.403
+    },
+    "user_0106": {
+      "preferred_categories": [
+        "food",
+        "fashion"
+      ],
+      "engagement_score": 0.57
+    },
+    "user_0107": {
+      "preferred_categories": [
+        "food",
+        "tech"
+      ],
+      "engagement_score": 0.204
+    },
+    "user_0108": {
+      "preferred_categories": [
+        "sports",
+        "food"
+      ],
+      "engagement_score": 0.265
+    },
+    "user_0109": {
+      "preferred_categories": [
+        "sports",
+        "food"
+      ],
+      "engagement_score": 0.85
+    },
+    "user_0110": {
+      "preferred_categories": [
+        "fitness",
+        "food"
+      ],
+      "engagement_score": 0.474
+    },
+    "user_0111": {
+      "preferred_categories": [
+        "food",
+        "sports"
+      ],
+      "engagement_score": 0.762
+    },
+    "user_0112": {
+      "preferred_categories": [
+        "fitness",
+        "beauty"
+      ],
+      "engagement_score": 0.231
+    },
+    "user_0113": {
+      "preferred_categories": [
+        "fashion",
+        "tech"
+      ],
+      "engagement_score": 0.246
+    },
+    "user_0114": {
+      "preferred_categories": [
+        "fashion",
+        "beauty"
+      ],
+      "engagement_score": 0.988
+    },
+    "user_0115": {
+      "preferred_categories": [
+        "fashion",
+        "beauty"
+      ],
+      "engagement_score": 0.624
+    },
+    "user_0116": {
+      "preferred_categories": [
+        "tech",
+        "sports"
+      ],
+      "engagement_score": 0.206
+    },
+    "user_0117": {
+      "preferred_categories": [
+        "tech",
+        "fitness"
+      ],
+      "engagement_score": 0.344
+    },
+    "user_0118": {
+      "preferred_categories": [
+        "food",
+        "fitness"
+      ],
+      "engagement_score": 0.22
+    },
+    "user_0119": {
+      "preferred_categories": [
+        "fashion",
+        "fitness"
+      ],
+      "engagement_score": 0.405
+    },
+    "user_0120": {
+      "preferred_categories": [
+        "sports",
+        "tech"
+      ],
+      "engagement_score": 0.588
+    },
+    "user_0121": {
+      "preferred_categories": [
+        "tech",
+        "fashion"
+      ],
+      "engagement_score": 0.572
+    },
+    "user_0122": {
+      "preferred_categories": [
+        "sports",
+        "fashion"
+      ],
+      "engagement_score": 0.998
+    },
+    "user_0123": {
+      "preferred_categories": [
+        "books",
+        "fashion"
+      ],
+      "engagement_score": 0.321
+    },
+    "user_0124": {
+      "preferred_categories": [
+        "food",
+        "tech"
+      ],
+      "engagement_score": 0.251
+    },
+    "user_0125": {
+      "preferred_categories": [
+        "books",
+        "fitness"
+      ],
+      "engagement_score": 0.396
+    },
+    "user_0126": {
+      "preferred_categories": [
+        "fashion",
+        "books"
+      ],
+      "engagement_score": 0.816
+    },
+    "user_0127": {
+      "preferred_categories": [
+        "beauty",
+        "tech"
+      ],
+      "engagement_score": 0.353
+    },
+    "user_0128": {
+      "preferred_categories": [
+        "home",
+        "beauty"
+      ],
+      "engagement_score": 0.618
+    },
+    "user_0129": {
+      "preferred_categories": [
+        "tech",
+        "fashion"
+      ],
+      "engagement_score": 0.977
+    },
+    "user_0130": {
+      "preferred_categories": [
+        "fitness",
+        "tech"
+      ],
+      "engagement_score": 0.956
+    },
+    "user_0131": {
+      "preferred_categories": [
+        "fashion",
+        "tech"
+      ],
+      "engagement_score": 0.396
+    },
+    "user_0132": {
+      "preferred_categories": [
+        "home",
+        "sports"
+      ],
+      "engagement_score": 0.575
+    },
+    "user_0133": {
+      "preferred_categories": [
+        "home",
+        "sports"
+      ],
+      "engagement_score": 0.541
+    },
+    "user_0134": {
+      "preferred_categories": [
+        "home",
+        "beauty"
+      ],
+      "engagement_score": 0.924
+    },
+    "user_0135": {
+      "preferred_categories": [
+        "sports",
+        "fitness"
+      ],
+      "engagement_score": 0.201
+    },
+    "user_0136": {
+      "preferred_categories": [
+        "fashion",
+        "books"
+      ],
+      "engagement_score": 0.311
+    },
+    "user_0137": {
+      "preferred_categories": [
+        "fashion",
+        "fitness"
+      ],
+      "engagement_score": 0.729
+    },
+    "user_0138": {
+      "preferred_categories": [
+        "beauty",
+        "sports"
+      ],
+      "engagement_score": 0.585
+    },
+    "user_0139": {
+      "preferred_categories": [
+        "home",
+        "food"
+      ],
+      "engagement_score": 0.926
+    },
+    "user_0140": {
+      "preferred_categories": [
+        "home",
+        "fitness"
+      ],
+      "engagement_score": 0.91
+    },
+    "user_0141": {
+      "preferred_categories": [
+        "books",
+        "fitness"
+      ],
+      "engagement_score": 0.202
+    },
+    "user_0142": {
+      "preferred_categories": [
+        "food",
+        "books"
+      ],
+      "engagement_score": 0.892
+    },
+    "user_0143": {
+      "preferred_categories": [
+        "tech",
+        "fashion"
+      ],
+      "engagement_score": 0.789
+    },
+    "user_0144": {
+      "preferred_categories": [
+        "fashion",
+        "tech"
+      ],
+      "engagement_score": 0.738
+    },
+    "user_0145": {
+      "preferred_categories": [
+        "books",
+        "sports"
+      ],
+      "engagement_score": 0.98
+    },
+    "user_0146": {
+      "preferred_categories": [
+        "books",
+        "fitness"
+      ],
+      "engagement_score": 0.586
+    },
+    "user_0147": {
+      "preferred_categories": [
+        "fashion",
+        "sports"
+      ],
+      "engagement_score": 0.226
+    },
+    "user_0148": {
+      "preferred_categories": [
+        "fitness",
+        "food"
+      ],
+      "engagement_score": 0.8
+    },
+    "user_0149": {
+      "preferred_categories": [
+        "sports",
+        "beauty"
+      ],
+      "engagement_score": 0.543
+    },
+    "user_0150": {
+      "preferred_categories": [
+        "home",
+        "fashion"
+      ],
+      "engagement_score": 0.821
+    },
+    "user_0151": {
+      "preferred_categories": [
+        "food",
+        "sports"
+      ],
+      "engagement_score": 0.65
+    },
+    "user_0152": {
+      "preferred_categories": [
+        "home",
+        "sports"
+      ],
+      "engagement_score": 0.72
+    },
+    "user_0153": {
+      "preferred_categories": [
+        "books",
+        "home"
+      ],
+      "engagement_score": 0.665
+    },
+    "user_0154": {
+      "preferred_categories": [
+        "home",
+        "fitness"
+      ],
+      "engagement_score": 0.662
+    },
+    "user_0155": {
+      "preferred_categories": [
+        "home",
+        "beauty"
+      ],
+      "engagement_score": 0.878
+    },
+    "user_0156": {
+      "preferred_categories": [
+        "tech",
+        "fashion"
+      ],
+      "engagement_score": 0.701
+    },
+    "user_0157": {
+      "preferred_categories": [
+        "beauty",
+        "fitness"
+      ],
+      "engagement_score": 0.223
+    },
+    "user_0158": {
+      "preferred_categories": [
+        "fitness",
+        "tech"
+      ],
+      "engagement_score": 0.324
+    },
+    "user_0159": {
+      "preferred_categories": [
+        "sports",
+        "tech"
+      ],
+      "engagement_score": 0.378
+    },
+    "user_0160": {
+      "preferred_categories": [
+        "beauty",
+        "home"
+      ],
+      "engagement_score": 0.516
+    },
+    "user_0161": {
+      "preferred_categories": [
+        "food",
+        "sports"
+      ],
+      "engagement_score": 0.696
+    },
+    "user_0162": {
+      "preferred_categories": [
+        "home",
+        "sports"
+      ],
+      "engagement_score": 0.998
+    },
+    "user_0163": {
+      "preferred_categories": [
+        "home",
+        "books"
+      ],
+      "engagement_score": 0.647
+    },
+    "user_0164": {
+      "preferred_categories": [
+        "home",
+        "tech"
+      ],
+      "engagement_score": 0.425
+    },
+    "user_0165": {
+      "preferred_categories": [
+        "home",
+        "tech"
+      ],
+      "engagement_score": 0.452
+    },
+    "user_0166": {
+      "preferred_categories": [
+        "books",
+        "sports"
+      ],
+      "engagement_score": 0.889
+    },
+    "user_0167": {
+      "preferred_categories": [
+        "fashion",
+        "food"
+      ],
+      "engagement_score": 0.921
+    },
+    "user_0168": {
+      "preferred_categories": [
+        "beauty",
+        "tech"
+      ],
+      "engagement_score": 0.214
+    },
+    "user_0169": {
+      "preferred_categories": [
+        "fitness",
+        "tech"
+      ],
+      "engagement_score": 0.659
+    },
+    "user_0170": {
+      "preferred_categories": [
+        "beauty",
+        "tech"
+      ],
+      "engagement_score": 0.782
+    },
+    "user_0171": {
+      "preferred_categories": [
+        "sports",
+        "fitness"
+      ],
+      "engagement_score": 0.484
+    },
+    "user_0172": {
+      "preferred_categories": [
+        "tech",
+        "home"
+      ],
+      "engagement_score": 0.901
+    },
+    "user_0173": {
+      "preferred_categories": [
+        "beauty",
+        "food"
+      ],
+      "engagement_score": 0.373
+    },
+    "user_0174": {
+      "preferred_categories": [
+        "tech",
+        "fashion"
+      ],
+      "engagement_score": 0.82
+    },
+    "user_0175": {
+      "preferred_categories": [
+        "home",
+        "sports"
+      ],
+      "engagement_score": 0.701
+    },
+    "user_0176": {
+      "preferred_categories": [
+        "books",
+        "fitness"
+      ],
+      "engagement_score": 0.789
+    },
+    "user_0177": {
+      "preferred_categories": [
+        "beauty",
+        "sports"
+      ],
+      "engagement_score": 0.246
+    },
+    "user_0178": {
+      "preferred_categories": [
+        "fashion",
+        "fitness"
+      ],
+      "engagement_score": 0.874
+    },
+    "user_0179": {
+      "preferred_categories": [
+        "food",
+        "beauty"
+      ],
+      "engagement_score": 0.868
+    },
+    "user_0180": {
+      "preferred_categories": [
+        "beauty",
+        "sports"
+      ],
+      "engagement_score": 0.825
+    },
+    "user_0181": {
+      "preferred_categories": [
+        "fitness",
+        "books"
+      ],
+      "engagement_score": 0.252
+    },
+    "user_0182": {
+      "preferred_categories": [
+        "books",
+        "tech"
+      ],
+      "engagement_score": 0.436
+    },
+    "user_0183": {
+      "preferred_categories": [
+        "sports",
+        "books"
+      ],
+      "engagement_score": 0.85
+    },
+    "user_0184": {
+      "preferred_categories": [
+        "fitness",
+        "home"
+      ],
+      "engagement_score": 0.26
+    },
+    "user_0185": {
+      "preferred_categories": [
+        "food",
+        "sports"
+      ],
+      "engagement_score": 0.341
+    },
+    "user_0186": {
+      "preferred_categories": [
+        "food",
+        "home"
+      ],
+      "engagement_score": 0.861
+    },
+    "user_0187": {
+      "preferred_categories": [
+        "books",
+        "fashion"
+      ],
+      "engagement_score": 0.88
+    },
+    "user_0188": {
+      "preferred_categories": [
+        "sports",
+        "books"
+      ],
+      "engagement_score": 0.579
+    },
+    "user_0189": {
+      "preferred_categories": [
+        "home",
+        "fitness"
+      ],
+      "engagement_score": 0.464
+    },
+    "user_0190": {
+      "preferred_categories": [
+        "books",
+        "beauty"
+      ],
+      "engagement_score": 0.365
+    },
+    "user_0191": {
+      "preferred_categories": [
+        "tech",
+        "sports"
+      ],
+      "engagement_score": 0.513
+    },
+    "user_0192": {
+      "preferred_categories": [
+        "tech",
+        "home"
+      ],
+      "engagement_score": 0.686
+    },
+    "user_0193": {
+      "preferred_categories": [
+        "beauty",
+        "fitness"
+      ],
+      "engagement_score": 0.803
+    },
+    "user_0194": {
+      "preferred_categories": [
+        "fashion",
+        "books"
+      ],
+      "engagement_score": 0.835
+    },
+    "user_0195": {
+      "preferred_categories": [
+        "books",
+        "tech"
+      ],
+      "engagement_score": 0.421
+    },
+    "user_0196": {
+      "preferred_categories": [
+        "fitness",
+        "sports"
+      ],
+      "engagement_score": 0.315
+    },
+    "user_0197": {
+      "preferred_categories": [
+        "tech",
+        "fitness"
+      ],
+      "engagement_score": 0.914
+    },
+    "user_0198": {
+      "preferred_categories": [
+        "tech",
+        "fitness"
+      ],
+      "engagement_score": 0.535
+    },
+    "user_0199": {
+      "preferred_categories": [
+        "sports",
+        "books"
+      ],
+      "engagement_score": 0.28
+    },
+    "user_0200": {
+      "preferred_categories": [
+        "fitness",
+        "sports"
+      ],
+      "engagement_score": 0.216
+    },
+    "user_0201": {
+      "preferred_categories": [
+        "fitness",
+        "sports"
+      ],
+      "engagement_score": 0.667
+    },
+    "user_0202": {
+      "preferred_categories": [
+        "fashion",
+        "books"
+      ],
+      "engagement_score": 0.599
+    },
+    "user_0203": {
+      "preferred_categories": [
+        "tech",
+        "food"
+      ],
+      "engagement_score": 0.899
+    },
+    "user_0204": {
+      "preferred_categories": [
+        "books",
+        "beauty"
+      ],
+      "engagement_score": 0.64
+    },
+    "user_0205": {
+      "preferred_categories": [
+        "food",
+        "fashion"
+      ],
+      "engagement_score": 0.96
+    },
+    "user_0206": {
+      "preferred_categories": [
+        "tech",
+        "beauty"
+      ],
+      "engagement_score": 0.329
+    },
+    "user_0207": {
+      "preferred_categories": [
+        "food",
+        "tech"
+      ],
+      "engagement_score": 0.742
+    },
+    "user_0208": {
+      "preferred_categories": [
+        "food",
+        "books"
+      ],
+      "engagement_score": 0.94
+    },
+    "user_0209": {
+      "preferred_categories": [
+        "sports",
+        "tech"
+      ],
+      "engagement_score": 0.847
+    },
+    "user_0210": {
+      "preferred_categories": [
+        "books",
+        "food"
+      ],
+      "engagement_score": 0.754
+    },
+    "user_0211": {
+      "preferred_categories": [
+        "food",
+        "sports"
+      ],
+      "engagement_score": 0.612
+    },
+    "user_0212": {
+      "preferred_categories": [
+        "fitness",
+        "home"
+      ],
+      "engagement_score": 0.519
+    },
+    "user_0213": {
+      "preferred_categories": [
+        "food",
+        "fashion"
+      ],
+      "engagement_score": 0.747
+    },
+    "user_0214": {
+      "preferred_categories": [
+        "fitness",
+        "food"
+      ],
+      "engagement_score": 0.611
+    },
+    "user_0215": {
+      "preferred_categories": [
+        "books",
+        "home"
+      ],
+      "engagement_score": 0.611
+    },
+    "user_0216": {
+      "preferred_categories": [
+        "home",
+        "books"
+      ],
+      "engagement_score": 0.459
+    },
+    "user_0217": {
+      "preferred_categories": [
+        "food",
+        "fashion"
+      ],
+      "engagement_score": 0.203
+    },
+    "user_0218": {
+      "preferred_categories": [
+        "books",
+        "food"
+      ],
+      "engagement_score": 0.779
+    },
+    "user_0219": {
+      "preferred_categories": [
+        "food",
+        "books"
+      ],
+      "engagement_score": 0.445
+    },
+    "user_0220": {
+      "preferred_categories": [
+        "fitness",
+        "books"
+      ],
+      "engagement_score": 0.723
+    },
+    "user_0221": {
+      "preferred_categories": [
+        "food",
+        "home"
+      ],
+      "engagement_score": 0.705
+    },
+    "user_0222": {
+      "preferred_categories": [
+        "sports",
+        "fashion"
+      ],
+      "engagement_score": 0.623
+    },
+    "user_0223": {
+      "preferred_categories": [
+        "home",
+        "food"
+      ],
+      "engagement_score": 0.413
+    },
+    "user_0224": {
+      "preferred_categories": [
+        "food",
+        "home"
+      ],
+      "engagement_score": 0.74
+    },
+    "user_0225": {
+      "preferred_categories": [
+        "fashion",
+        "home"
+      ],
+      "engagement_score": 0.978
+    },
+    "user_0226": {
+      "preferred_categories": [
+        "home",
+        "books"
+      ],
+      "engagement_score": 0.203
+    },
+    "user_0227": {
+      "preferred_categories": [
+        "home",
+        "tech"
+      ],
+      "engagement_score": 0.351
+    },
+    "user_0228": {
+      "preferred_categories": [
+        "sports",
+        "home"
+      ],
+      "engagement_score": 0.575
+    },
+    "user_0229": {
+      "preferred_categories": [
+        "sports",
+        "beauty"
+      ],
+      "engagement_score": 0.406
+    },
+    "user_0230": {
+      "preferred_categories": [
+        "fashion",
+        "tech"
+      ],
+      "engagement_score": 0.4
+    },
+    "user_0231": {
+      "preferred_categories": [
+        "beauty",
+        "fitness"
+      ],
+      "engagement_score": 0.848
+    },
+    "user_0232": {
+      "preferred_categories": [
+        "food",
+        "fitness"
+      ],
+      "engagement_score": 0.402
+    },
+    "user_0233": {
+      "preferred_categories": [
+        "home",
+        "food"
+      ],
+      "engagement_score": 0.342
+    },
+    "user_0234": {
+      "preferred_categories": [
+        "home",
+        "food"
+      ],
+      "engagement_score": 0.532
+    },
+    "user_0235": {
+      "preferred_categories": [
+        "tech",
+        "sports"
+      ],
+      "engagement_score": 0.769
+    },
+    "user_0236": {
+      "preferred_categories": [
+        "tech",
+        "fitness"
+      ],
+      "engagement_score": 0.219
+    },
+    "user_0237": {
+      "preferred_categories": [
+        "home",
+        "fitness"
+      ],
+      "engagement_score": 0.301
+    },
+    "user_0238": {
+      "preferred_categories": [
+        "fitness",
+        "sports"
+      ],
+      "engagement_score": 0.352
+    },
+    "user_0239": {
+      "preferred_categories": [
+        "fashion",
+        "home"
+      ],
+      "engagement_score": 0.596
+    },
+    "user_0240": {
+      "preferred_categories": [
+        "fashion",
+        "food"
+      ],
+      "engagement_score": 0.434
+    },
+    "user_0241": {
+      "preferred_categories": [
+        "beauty",
+        "fashion"
+      ],
+      "engagement_score": 0.456
+    },
+    "user_0242": {
+      "preferred_categories": [
+        "home",
+        "books"
+      ],
+      "engagement_score": 0.285
+    },
+    "user_0243": {
+      "preferred_categories": [
+        "home",
+        "food"
+      ],
+      "engagement_score": 0.684
+    },
+    "user_0244": {
+      "preferred_categories": [
+        "food",
+        "fashion"
+      ],
+      "engagement_score": 0.541
+    },
+    "user_0245": {
+      "preferred_categories": [
+        "food",
+        "fitness"
+      ],
+      "engagement_score": 0.223
+    },
+    "user_0246": {
+      "preferred_categories": [
+        "sports",
+        "books"
+      ],
+      "engagement_score": 0.88
+    },
+    "user_0247": {
+      "preferred_categories": [
+        "food",
+        "sports"
+      ],
+      "engagement_score": 0.559
+    },
+    "user_0248": {
+      "preferred_categories": [
+        "sports",
+        "food"
+      ],
+      "engagement_score": 0.847
+    },
+    "user_0249": {
+      "preferred_categories": [
+        "food",
+        "home"
+      ],
+      "engagement_score": 0.768
+    }
+  },
+  "items": {
+    "item_0000": {
+      "category": "home",
+      "popularity": 0.944,
+      "price_tier": 4
+    },
+    "item_0001": {
+      "category": "home",
+      "popularity": 0.13,
+      "price_tier": 3
+    },
+    "item_0002": {
+      "category": "tech",
+      "popularity": 0.143,
+      "price_tier": 3
+    },
+    "item_0003": {
+      "category": "tech",
+      "popularity": 0.553,
+      "price_tier": 1
+    },
+    "item_0004": {
+      "category": "tech",
+      "popularity": 0.185,
+      "price_tier": 3
+    },
+    "item_0005": {
+      "category": "fashion",
+      "popularity": 0.767,
+      "price_tier": 3
+    },
+    "item_0006": {
+      "category": "sports",
+      "popularity": 0.504,
+      "price_tier": 4
+    },
+    "item_0007": {
+      "category": "food",
+      "popularity": 0.285,
+      "price_tier": 4
+    },
+    "item_0008": {
+      "category": "tech",
+      "popularity": 0.312,
+      "price_tier": 3
+    },
+    "item_0009": {
+      "category": "tech",
+      "popularity": 0.326,
+      "price_tier": 2
+    },
+    "item_0010": {
+      "category": "home",
+      "popularity": 0.954,
+      "price_tier": 4
+    },
+    "item_0011": {
+      "category": "beauty",
+      "popularity": 0.169,
+      "price_tier": 3
+    },
+    "item_0012": {
+      "category": "beauty",
+      "popularity": 0.25,
+      "price_tier": 1
+    },
+    "item_0013": {
+      "category": "sports",
+      "popularity": 0.5,
+      "price_tier": 2
+    },
+    "item_0014": {
+      "category": "food",
+      "popularity": 0.503,
+      "price_tier": 2
+    },
+    "item_0015": {
+      "category": "sports",
+      "popularity": 0.483,
+      "price_tier": 4
+    },
+    "item_0016": {
+      "category": "beauty",
+      "popularity": 0.531,
+      "price_tier": 3
+    },
+    "item_0017": {
+      "category": "fashion",
+      "popularity": 0.633,
+      "price_tier": 2
+    },
+    "item_0018": {
+      "category": "tech",
+      "popularity": 0.197,
+      "price_tier": 1
+    },
+    "item_0019": {
+      "category": "fashion",
+      "popularity": 0.726,
+      "price_tier": 3
+    },
+    "item_0020": {
+      "category": "fitness",
+      "popularity": 0.55,
+      "price_tier": 1
+    },
+    "item_0021": {
+      "category": "food",
+      "popularity": 0.406,
+      "price_tier": 1
+    },
+    "item_0022": {
+      "category": "fitness",
+      "popularity": 0.699,
+      "price_tier": 3
+    },
+    "item_0023": {
+      "category": "home",
+      "popularity": 0.847,
+      "price_tier": 2
+    },
+    "item_0024": {
+      "category": "books",
+      "popularity": 0.285,
+      "price_tier": 4
+    },
+    "item_0025": {
+      "category": "books",
+      "popularity": 0.318,
+      "price_tier": 4
+    },
+    "item_0026": {
+      "category": "fitness",
+      "popularity": 0.64,
+      "price_tier": 4
+    },
+    "item_0027": {
+      "category": "food",
+      "popularity": 0.4,
+      "price_tier": 4
+    },
+    "item_0028": {
+      "category": "food",
+      "popularity": 0.407,
+      "price_tier": 4
+    },
+    "item_0029": {
+      "category": "books",
+      "popularity": 0.77,
+      "price_tier": 3
+    },
+    "item_0030": {
+      "category": "home",
+      "popularity": 0.665,
+      "price_tier": 4
+    },
+    "item_0031": {
+      "category": "beauty",
+      "popularity": 0.1,
+      "price_tier": 2
+    },
+    "item_0032": {
+      "category": "beauty",
+      "popularity": 0.617,
+      "price_tier": 3
+    },
+    "item_0033": {
+      "category": "books",
+      "popularity": 0.726,
+      "price_tier": 1
+    },
+    "item_0034": {
+      "category": "fitness",
+      "popularity": 0.691,
+      "price_tier": 2
+    },
+    "item_0035": {
+      "category": "fashion",
+      "popularity": 0.818,
+      "price_tier": 2
+    },
+    "item_0036": {
+      "category": "books",
+      "popularity": 0.896,
+      "price_tier": 3
+    },
+    "item_0037": {
+      "category": "sports",
+      "popularity": 0.101,
+      "price_tier": 4
+    },
+    "item_0038": {
+      "category": "sports",
+      "popularity": 0.984,
+      "price_tier": 3
+    },
+    "item_0039": {
+      "category": "sports",
+      "popularity": 0.784,
+      "price_tier": 1
+    },
+    "item_0040": {
+      "category": "fashion",
+      "popularity": 0.603,
+      "price_tier": 2
+    },
+    "item_0041": {
+      "category": "tech",
+      "popularity": 0.685,
+      "price_tier": 1
+    },
+    "item_0042": {
+      "category": "books",
+      "popularity": 0.773,
+      "price_tier": 4
+    },
+    "item_0043": {
+      "category": "fashion",
+      "popularity": 0.9,
+      "price_tier": 3
+    },
+    "item_0044": {
+      "category": "beauty",
+      "popularity": 0.297,
+      "price_tier": 3
+    },
+    "item_0045": {
+      "category": "fashion",
+      "popularity": 0.837,
+      "price_tier": 3
+    },
+    "item_0046": {
+      "category": "sports",
+      "popularity": 0.473,
+      "price_tier": 2
+    },
+    "item_0047": {
+      "category": "books",
+      "popularity": 0.151,
+      "price_tier": 4
+    },
+    "item_0048": {
+      "category": "beauty",
+      "popularity": 0.41,
+      "price_tier": 1
+    },
+    "item_0049": {
+      "category": "food",
+      "popularity": 0.204,
+      "price_tier": 4
+    },
+    "item_0050": {
+      "category": "fitness",
+      "popularity": 0.706,
+      "price_tier": 3
+    },
+    "item_0051": {
+      "category": "food",
+      "popularity": 0.86,
+      "price_tier": 1
+    },
+    "item_0052": {
+      "category": "fitness",
+      "popularity": 0.123,
+      "price_tier": 4
+    },
+    "item_0053": {
+      "category": "fashion",
+      "popularity": 0.476,
+      "price_tier": 2
+    },
+    "item_0054": {
+      "category": "home",
+      "popularity": 0.124,
+      "price_tier": 3
+    },
+    "item_0055": {
+      "category": "home",
+      "popularity": 0.145,
+      "price_tier": 2
+    },
+    "item_0056": {
+      "category": "fashion",
+      "popularity": 0.164,
+      "price_tier": 3
+    },
+    "item_0057": {
+      "category": "home",
+      "popularity": 0.393,
+      "price_tier": 4
+    },
+    "item_0058": {
+      "category": "fitness",
+      "popularity": 0.367,
+      "price_tier": 1
+    },
+    "item_0059": {
+      "category": "home",
+      "popularity": 0.286,
+      "price_tier": 3
+    },
+    "item_0060": {
+      "category": "home",
+      "popularity": 0.797,
+      "price_tier": 1
+    },
+    "item_0061": {
+      "category": "food",
+      "popularity": 0.129,
+      "price_tier": 3
+    },
+    "item_0062": {
+      "category": "tech",
+      "popularity": 0.173,
+      "price_tier": 3
+    },
+    "item_0063": {
+      "category": "books",
+      "popularity": 0.844,
+      "price_tier": 4
+    },
+    "item_0064": {
+      "category": "fitness",
+      "popularity": 0.108,
+      "price_tier": 2
+    },
+    "item_0065": {
+      "category": "fashion",
+      "popularity": 0.604,
+      "price_tier": 3
+    },
+    "item_0066": {
+      "category": "food",
+      "popularity": 0.452,
+      "price_tier": 2
+    },
+    "item_0067": {
+      "category": "home",
+      "popularity": 0.954,
+      "price_tier": 1
+    },
+    "item_0068": {
+      "category": "books",
+      "popularity": 0.506,
+      "price_tier": 1
+    },
+    "item_0069": {
+      "category": "fashion",
+      "popularity": 0.654,
+      "price_tier": 2
+    },
+    "item_0070": {
+      "category": "home",
+      "popularity": 0.15,
+      "price_tier": 1
+    },
+    "item_0071": {
+      "category": "fashion",
+      "popularity": 0.324,
+      "price_tier": 3
+    },
+    "item_0072": {
+      "category": "sports",
+      "popularity": 0.361,
+      "price_tier": 3
+    },
+    "item_0073": {
+      "category": "food",
+      "popularity": 0.617,
+      "price_tier": 4
+    },
+    "item_0074": {
+      "category": "tech",
+      "popularity": 0.529,
+      "price_tier": 2
+    },
+    "item_0075": {
+      "category": "food",
+      "popularity": 0.59,
+      "price_tier": 3
+    },
+    "item_0076": {
+      "category": "fashion",
+      "popularity": 0.271,
+      "price_tier": 3
+    },
+    "item_0077": {
+      "category": "tech",
+      "popularity": 0.444,
+      "price_tier": 4
+    },
+    "item_0078": {
+      "category": "food",
+      "popularity": 0.648,
+      "price_tier": 1
+    },
+    "item_0079": {
+      "category": "books",
+      "popularity": 0.426,
+      "price_tier": 3
+    },
+    "item_0080": {
+      "category": "food",
+      "popularity": 0.279,
+      "price_tier": 3
+    },
+    "item_0081": {
+      "category": "books",
+      "popularity": 0.292,
+      "price_tier": 1
+    },
+    "item_0082": {
+      "category": "sports",
+      "popularity": 0.206,
+      "price_tier": 4
+    },
+    "item_0083": {
+      "category": "books",
+      "popularity": 0.609,
+      "price_tier": 3
+    },
+    "item_0084": {
+      "category": "fashion",
+      "popularity": 0.395,
+      "price_tier": 3
+    },
+    "item_0085": {
+      "category": "fashion",
+      "popularity": 0.84,
+      "price_tier": 2
+    },
+    "item_0086": {
+      "category": "tech",
+      "popularity": 0.152,
+      "price_tier": 2
+    },
+    "item_0087": {
+      "category": "books",
+      "popularity": 0.158,
+      "price_tier": 2
+    },
+    "item_0088": {
+      "category": "fitness",
+      "popularity": 0.308,
+      "price_tier": 1
+    },
+    "item_0089": {
+      "category": "sports",
+      "popularity": 0.586,
+      "price_tier": 3
+    },
+    "item_0090": {
+      "category": "fashion",
+      "popularity": 0.138,
+      "price_tier": 2
+    },
+    "item_0091": {
+      "category": "fitness",
+      "popularity": 0.626,
+      "price_tier": 1
+    },
+    "item_0092": {
+      "category": "fitness",
+      "popularity": 0.792,
+      "price_tier": 1
+    },
+    "item_0093": {
+      "category": "fitness",
+      "popularity": 0.597,
+      "price_tier": 3
+    },
+    "item_0094": {
+      "category": "food",
+      "popularity": 0.212,
+      "price_tier": 4
+    },
+    "item_0095": {
+      "category": "fitness",
+      "popularity": 0.468,
+      "price_tier": 3
+    },
+    "item_0096": {
+      "category": "fashion",
+      "popularity": 0.642,
+      "price_tier": 4
+    },
+    "item_0097": {
+      "category": "fashion",
+      "popularity": 0.473,
+      "price_tier": 3
+    },
+    "item_0098": {
+      "category": "beauty",
+      "popularity": 0.603,
+      "price_tier": 4
+    },
+    "item_0099": {
+      "category": "sports",
+      "popularity": 0.189,
+      "price_tier": 1
+    },
+    "item_0100": {
+      "category": "tech",
+      "popularity": 0.919,
+      "price_tier": 4
+    },
+    "item_0101": {
+      "category": "beauty",
+      "popularity": 0.803,
+      "price_tier": 3
+    },
+    "item_0102": {
+      "category": "sports",
+      "popularity": 0.759,
+      "price_tier": 4
+    },
+    "item_0103": {
+      "category": "books",
+      "popularity": 0.772,
+      "price_tier": 2
+    },
+    "item_0104": {
+      "category": "fashion",
+      "popularity": 0.285,
+      "price_tier": 3
+    },
+    "item_0105": {
+      "category": "tech",
+      "popularity": 0.962,
+      "price_tier": 3
+    },
+    "item_0106": {
+      "category": "books",
+      "popularity": 0.426,
+      "price_tier": 4
+    },
+    "item_0107": {
+      "category": "sports",
+      "popularity": 0.31,
+      "price_tier": 4
+    },
+    "item_0108": {
+      "category": "food",
+      "popularity": 0.279,
+      "price_tier": 2
+    },
+    "item_0109": {
+      "category": "fashion",
+      "popularity": 0.95,
+      "price_tier": 2
+    },
+    "item_0110": {
+      "category": "books",
+      "popularity": 0.286,
+      "price_tier": 1
+    },
+    "item_0111": {
+      "category": "fitness",
+      "popularity": 0.873,
+      "price_tier": 2
+    },
+    "item_0112": {
+      "category": "sports",
+      "popularity": 0.433,
+      "price_tier": 2
+    },
+    "item_0113": {
+      "category": "home",
+      "popularity": 0.833,
+      "price_tier": 2
+    },
+    "item_0114": {
+      "category": "food",
+      "popularity": 0.75,
+      "price_tier": 2
+    },
+    "item_0115": {
+      "category": "tech",
+      "popularity": 0.111,
+      "price_tier": 4
+    },
+    "item_0116": {
+      "category": "sports",
+      "popularity": 0.374,
+      "price_tier": 4
+    },
+    "item_0117": {
+      "category": "home",
+      "popularity": 0.117,
+      "price_tier": 3
+    },
+    "item_0118": {
+      "category": "sports",
+      "popularity": 0.175,
+      "price_tier": 4
+    },
+    "item_0119": {
+      "category": "sports",
+      "popularity": 0.559,
+      "price_tier": 4
+    },
+    "item_0120": {
+      "category": "books",
+      "popularity": 0.701,
+      "price_tier": 3
+    },
+    "item_0121": {
+      "category": "tech",
+      "popularity": 0.711,
+      "price_tier": 1
+    },
+    "item_0122": {
+      "category": "food",
+      "popularity": 0.177,
+      "price_tier": 1
+    },
+    "item_0123": {
+      "category": "sports",
+      "popularity": 0.31,
+      "price_tier": 4
+    },
+    "item_0124": {
+      "category": "fitness",
+      "popularity": 0.305,
+      "price_tier": 4
+    },
+    "item_0125": {
+      "category": "sports",
+      "popularity": 0.811,
+      "price_tier": 3
+    },
+    "item_0126": {
+      "category": "food",
+      "popularity": 0.519,
+      "price_tier": 2
+    },
+    "item_0127": {
+      "category": "fitness",
+      "popularity": 0.288,
+      "price_tier": 4
+    },
+    "item_0128": {
+      "category": "tech",
+      "popularity": 0.804,
+      "price_tier": 1
+    },
+    "item_0129": {
+      "category": "books",
+      "popularity": 0.446,
+      "price_tier": 4
+    },
+    "item_0130": {
+      "category": "food",
+      "popularity": 0.299,
+      "price_tier": 1
+    },
+    "item_0131": {
+      "category": "books",
+      "popularity": 0.969,
+      "price_tier": 3
+    },
+    "item_0132": {
+      "category": "sports",
+      "popularity": 0.821,
+      "price_tier": 4
+    },
+    "item_0133": {
+      "category": "tech",
+      "popularity": 0.367,
+      "price_tier": 2
+    },
+    "item_0134": {
+      "category": "home",
+      "popularity": 0.938,
+      "price_tier": 3
+    },
+    "item_0135": {
+      "category": "tech",
+      "popularity": 0.982,
+      "price_tier": 3
+    },
+    "item_0136": {
+      "category": "home",
+      "popularity": 0.398,
+      "price_tier": 2
+    },
+    "item_0137": {
+      "category": "fashion",
+      "popularity": 0.329,
+      "price_tier": 1
+    },
+    "item_0138": {
+      "category": "food",
+      "popularity": 0.793,
+      "price_tier": 3
+    },
+    "item_0139": {
+      "category": "beauty",
+      "popularity": 0.41,
+      "price_tier": 1
+    },
+    "item_0140": {
+      "category": "books",
+      "popularity": 0.489,
+      "price_tier": 1
+    },
+    "item_0141": {
+      "category": "food",
+      "popularity": 0.935,
+      "price_tier": 2
+    },
+    "item_0142": {
+      "category": "fitness",
+      "popularity": 0.921,
+      "price_tier": 4
+    },
+    "item_0143": {
+      "category": "home",
+      "popularity": 0.38,
+      "price_tier": 1
+    },
+    "item_0144": {
+      "category": "tech",
+      "popularity": 0.312,
+      "price_tier": 4
+    },
+    "item_0145": {
+      "category": "tech",
+      "popularity": 0.19,
+      "price_tier": 2
+    },
+    "item_0146": {
+      "category": "sports",
+      "popularity": 0.648,
+      "price_tier": 1
+    },
+    "item_0147": {
+      "category": "fashion",
+      "popularity": 0.41,
+      "price_tier": 2
+    },
+    "item_0148": {
+      "category": "tech",
+      "popularity": 0.805,
+      "price_tier": 2
+    },
+    "item_0149": {
+      "category": "fashion",
+      "popularity": 0.128,
+      "price_tier": 1
+    },
+    "item_0150": {
+      "category": "fashion",
+      "popularity": 0.154,
+      "price_tier": 1
+    },
+    "item_0151": {
+      "category": "fashion",
+      "popularity": 0.556,
+      "price_tier": 3
+    },
+    "item_0152": {
+      "category": "fitness",
+      "popularity": 0.419,
+      "price_tier": 1
+    },
+    "item_0153": {
+      "category": "fashion",
+      "popularity": 0.588,
+      "price_tier": 1
+    },
+    "item_0154": {
+      "category": "tech",
+      "popularity": 0.229,
+      "price_tier": 4
+    },
+    "item_0155": {
+      "category": "fitness",
+      "popularity": 0.819,
+      "price_tier": 4
+    },
+    "item_0156": {
+      "category": "fashion",
+      "popularity": 0.561,
+      "price_tier": 4
+    },
+    "item_0157": {
+      "category": "tech",
+      "popularity": 0.115,
+      "price_tier": 3
+    },
+    "item_0158": {
+      "category": "fashion",
+      "popularity": 0.813,
+      "price_tier": 4
+    },
+    "item_0159": {
+      "category": "beauty",
+      "popularity": 0.791,
+      "price_tier": 3
+    },
+    "item_0160": {
+      "category": "fashion",
+      "popularity": 0.823,
+      "price_tier": 1
+    },
+    "item_0161": {
+      "category": "books",
+      "popularity": 0.286,
+      "price_tier": 3
+    },
+    "item_0162": {
+      "category": "tech",
+      "popularity": 0.593,
+      "price_tier": 3
+    },
+    "item_0163": {
+      "category": "food",
+      "popularity": 0.235,
+      "price_tier": 3
+    },
+    "item_0164": {
+      "category": "books",
+      "popularity": 0.441,
+      "price_tier": 4
+    },
+    "item_0165": {
+      "category": "books",
+      "popularity": 0.994,
+      "price_tier": 4
+    },
+    "item_0166": {
+      "category": "beauty",
+      "popularity": 0.686,
+      "price_tier": 1
+    },
+    "item_0167": {
+      "category": "fitness",
+      "popularity": 0.381,
+      "price_tier": 1
+    },
+    "item_0168": {
+      "category": "sports",
+      "popularity": 0.695,
+      "price_tier": 4
+    },
+    "item_0169": {
+      "category": "tech",
+      "popularity": 0.519,
+      "price_tier": 3
+    },
+    "item_0170": {
+      "category": "books",
+      "popularity": 0.212,
+      "price_tier": 2
+    },
+    "item_0171": {
+      "category": "books",
+      "popularity": 0.98,
+      "price_tier": 3
+    },
+    "item_0172": {
+      "category": "books",
+      "popularity": 0.527,
+      "price_tier": 2
+    },
+    "item_0173": {
+      "category": "fitness",
+      "popularity": 0.169,
+      "price_tier": 4
+    },
+    "item_0174": {
+      "category": "food",
+      "popularity": 0.93,
+      "price_tier": 3
+    },
+    "item_0175": {
+      "category": "sports",
+      "popularity": 0.985,
+      "price_tier": 1
+    },
+    "item_0176": {
+      "category": "beauty",
+      "popularity": 0.923,
+      "price_tier": 4
+    },
+    "item_0177": {
+      "category": "sports",
+      "popularity": 0.562,
+      "price_tier": 1
+    },
+    "item_0178": {
+      "category": "food",
+      "popularity": 0.806,
+      "price_tier": 4
+    },
+    "item_0179": {
+      "category": "fitness",
+      "popularity": 0.982,
+      "price_tier": 1
+    },
+    "item_0180": {
+      "category": "fitness",
+      "popularity": 0.737,
+      "price_tier": 1
+    },
+    "item_0181": {
+      "category": "tech",
+      "popularity": 0.849,
+      "price_tier": 4
+    },
+    "item_0182": {
+      "category": "tech",
+      "popularity": 0.51,
+      "price_tier": 4
+    },
+    "item_0183": {
+      "category": "beauty",
+      "popularity": 0.914,
+      "price_tier": 4
+    },
+    "item_0184": {
+      "category": "fashion",
+      "popularity": 0.687,
+      "price_tier": 3
+    },
+    "item_0185": {
+      "category": "beauty",
+      "popularity": 0.36,
+      "price_tier": 1
+    },
+    "item_0186": {
+      "category": "food",
+      "popularity": 0.703,
+      "price_tier": 4
+    },
+    "item_0187": {
+      "category": "tech",
+      "popularity": 0.824,
+      "price_tier": 4
+    },
+    "item_0188": {
+      "category": "beauty",
+      "popularity": 0.444,
+      "price_tier": 3
+    },
+    "item_0189": {
+      "category": "beauty",
+      "popularity": 0.339,
+      "price_tier": 3
+    },
+    "item_0190": {
+      "category": "home",
+      "popularity": 0.573,
+      "price_tier": 1
+    },
+    "item_0191": {
+      "category": "tech",
+      "popularity": 0.801,
+      "price_tier": 3
+    },
+    "item_0192": {
+      "category": "books",
+      "popularity": 0.44,
+      "price_tier": 3
+    },
+    "item_0193": {
+      "category": "tech",
+      "popularity": 0.699,
+      "price_tier": 2
+    },
+    "item_0194": {
+      "category": "books",
+      "popularity": 0.377,
+      "price_tier": 1
+    },
+    "item_0195": {
+      "category": "food",
+      "popularity": 0.789,
+      "price_tier": 3
+    },
+    "item_0196": {
+      "category": "home",
+      "popularity": 0.423,
+      "price_tier": 2
+    },
+    "item_0197": {
+      "category": "tech",
+      "popularity": 0.754,
+      "price_tier": 3
+    },
+    "item_0198": {
+      "category": "beauty",
+      "popularity": 0.799,
+      "price_tier": 3
+    },
+    "item_0199": {
+      "category": "tech",
+      "popularity": 0.95,
+      "price_tier": 2
+    },
+    "item_0200": {
+      "category": "food",
+      "popularity": 0.333,
+      "price_tier": 3
+    },
+    "item_0201": {
+      "category": "books",
+      "popularity": 0.741,
+      "price_tier": 1
+    },
+    "item_0202": {
+      "category": "beauty",
+      "popularity": 0.584,
+      "price_tier": 1
+    },
+    "item_0203": {
+      "category": "food",
+      "popularity": 0.485,
+      "price_tier": 3
+    },
+    "item_0204": {
+      "category": "fashion",
+      "popularity": 0.859,
+      "price_tier": 4
+    },
+    "item_0205": {
+      "category": "books",
+      "popularity": 0.543,
+      "price_tier": 3
+    },
+    "item_0206": {
+      "category": "food",
+      "popularity": 0.751,
+      "price_tier": 3
+    },
+    "item_0207": {
+      "category": "books",
+      "popularity": 0.391,
+      "price_tier": 4
+    },
+    "item_0208": {
+      "category": "books",
+      "popularity": 0.606,
+      "price_tier": 2
+    },
+    "item_0209": {
+      "category": "sports",
+      "popularity": 0.67,
+      "price_tier": 3
+    },
+    "item_0210": {
+      "category": "food",
+      "popularity": 0.569,
+      "price_tier": 4
+    },
+    "item_0211": {
+      "category": "sports",
+      "popularity": 0.712,
+      "price_tier": 2
+    },
+    "item_0212": {
+      "category": "tech",
+      "popularity": 0.711,
+      "price_tier": 4
+    },
+    "item_0213": {
+      "category": "beauty",
+      "popularity": 0.626,
+      "price_tier": 3
+    },
+    "item_0214": {
+      "category": "tech",
+      "popularity": 0.134,
+      "price_tier": 1
+    },
+    "item_0215": {
+      "category": "beauty",
+      "popularity": 0.31,
+      "price_tier": 3
+    },
+    "item_0216": {
+      "category": "fashion",
+      "popularity": 0.612,
+      "price_tier": 4
+    },
+    "item_0217": {
+      "category": "sports",
+      "popularity": 0.773,
+      "price_tier": 4
+    },
+    "item_0218": {
+      "category": "fashion",
+      "popularity": 0.839,
+      "price_tier": 2
+    },
+    "item_0219": {
+      "category": "books",
+      "popularity": 0.85,
+      "price_tier": 2
+    },
+    "item_0220": {
+      "category": "books",
+      "popularity": 0.924,
+      "price_tier": 3
+    },
+    "item_0221": {
+      "category": "home",
+      "popularity": 0.397,
+      "price_tier": 3
+    },
+    "item_0222": {
+      "category": "food",
+      "popularity": 0.798,
+      "price_tier": 4
+    },
+    "item_0223": {
+      "category": "books",
+      "popularity": 0.612,
+      "price_tier": 4
+    },
+    "item_0224": {
+      "category": "books",
+      "popularity": 0.267,
+      "price_tier": 4
+    },
+    "item_0225": {
+      "category": "beauty",
+      "popularity": 0.204,
+      "price_tier": 2
+    },
+    "item_0226": {
+      "category": "beauty",
+      "popularity": 0.344,
+      "price_tier": 3
+    },
+    "item_0227": {
+      "category": "fitness",
+      "popularity": 0.504,
+      "price_tier": 2
+    },
+    "item_0228": {
+      "category": "beauty",
+      "popularity": 0.499,
+      "price_tier": 2
+    },
+    "item_0229": {
+      "category": "sports",
+      "popularity": 0.37,
+      "price_tier": 3
+    },
+    "item_0230": {
+      "category": "fitness",
+      "popularity": 0.236,
+      "price_tier": 2
+    },
+    "item_0231": {
+      "category": "books",
+      "popularity": 0.209,
+      "price_tier": 1
+    },
+    "item_0232": {
+      "category": "books",
+      "popularity": 0.212,
+      "price_tier": 2
+    },
+    "item_0233": {
+      "category": "beauty",
+      "popularity": 0.931,
+      "price_tier": 1
+    },
+    "item_0234": {
+      "category": "home",
+      "popularity": 0.731,
+      "price_tier": 3
+    },
+    "item_0235": {
+      "category": "food",
+      "popularity": 0.244,
+      "price_tier": 4
+    },
+    "item_0236": {
+      "category": "sports",
+      "popularity": 0.515,
+      "price_tier": 2
+    },
+    "item_0237": {
+      "category": "food",
+      "popularity": 0.682,
+      "price_tier": 4
+    },
+    "item_0238": {
+      "category": "sports",
+      "popularity": 0.597,
+      "price_tier": 4
+    },
+    "item_0239": {
+      "category": "books",
+      "popularity": 0.585,
+      "price_tier": 2
+    },
+    "item_0240": {
+      "category": "food",
+      "popularity": 0.775,
+      "price_tier": 2
+    },
+    "item_0241": {
+      "category": "books",
+      "popularity": 0.383,
+      "price_tier": 3
+    },
+    "item_0242": {
+      "category": "sports",
+      "popularity": 0.273,
+      "price_tier": 3
+    },
+    "item_0243": {
+      "category": "home",
+      "popularity": 0.248,
+      "price_tier": 4
+    },
+    "item_0244": {
+      "category": "sports",
+      "popularity": 0.465,
+      "price_tier": 3
+    },
+    "item_0245": {
+      "category": "beauty",
+      "popularity": 0.563,
+      "price_tier": 1
+    },
+    "item_0246": {
+      "category": "books",
+      "popularity": 0.125,
+      "price_tier": 1
+    },
+    "item_0247": {
+      "category": "sports",
+      "popularity": 0.908,
+      "price_tier": 2
+    },
+    "item_0248": {
+      "category": "fitness",
+      "popularity": 0.246,
+      "price_tier": 1
+    },
+    "item_0249": {
+      "category": "home",
+      "popularity": 0.718,
+      "price_tier": 2
+    },
+    "item_0250": {
+      "category": "books",
+      "popularity": 0.914,
+      "price_tier": 3
+    },
+    "item_0251": {
+      "category": "sports",
+      "popularity": 0.459,
+      "price_tier": 2
+    },
+    "item_0252": {
+      "category": "home",
+      "popularity": 0.49,
+      "price_tier": 4
+    },
+    "item_0253": {
+      "category": "beauty",
+      "popularity": 0.251,
+      "price_tier": 1
+    },
+    "item_0254": {
+      "category": "home",
+      "popularity": 0.592,
+      "price_tier": 1
+    },
+    "item_0255": {
+      "category": "fashion",
+      "popularity": 0.143,
+      "price_tier": 2
+    },
+    "item_0256": {
+      "category": "home",
+      "popularity": 0.133,
+      "price_tier": 2
+    },
+    "item_0257": {
+      "category": "books",
+      "popularity": 0.693,
+      "price_tier": 3
+    },
+    "item_0258": {
+      "category": "home",
+      "popularity": 0.911,
+      "price_tier": 3
+    },
+    "item_0259": {
+      "category": "tech",
+      "popularity": 0.171,
+      "price_tier": 3
+    },
+    "item_0260": {
+      "category": "tech",
+      "popularity": 0.82,
+      "price_tier": 1
+    },
+    "item_0261": {
+      "category": "tech",
+      "popularity": 0.928,
+      "price_tier": 2
+    },
+    "item_0262": {
+      "category": "tech",
+      "popularity": 0.877,
+      "price_tier": 1
+    },
+    "item_0263": {
+      "category": "beauty",
+      "popularity": 0.792,
+      "price_tier": 1
+    },
+    "item_0264": {
+      "category": "food",
+      "popularity": 0.707,
+      "price_tier": 2
+    },
+    "item_0265": {
+      "category": "beauty",
+      "popularity": 0.276,
+      "price_tier": 1
+    },
+    "item_0266": {
+      "category": "home",
+      "popularity": 0.345,
+      "price_tier": 3
+    },
+    "item_0267": {
+      "category": "home",
+      "popularity": 0.48,
+      "price_tier": 1
+    },
+    "item_0268": {
+      "category": "sports",
+      "popularity": 0.525,
+      "price_tier": 3
+    },
+    "item_0269": {
+      "category": "books",
+      "popularity": 0.983,
+      "price_tier": 1
+    },
+    "item_0270": {
+      "category": "home",
+      "popularity": 0.631,
+      "price_tier": 1
+    },
+    "item_0271": {
+      "category": "books",
+      "popularity": 0.623,
+      "price_tier": 2
+    },
+    "item_0272": {
+      "category": "sports",
+      "popularity": 0.533,
+      "price_tier": 4
+    },
+    "item_0273": {
+      "category": "tech",
+      "popularity": 0.719,
+      "price_tier": 1
+    },
+    "item_0274": {
+      "category": "fitness",
+      "popularity": 0.513,
+      "price_tier": 1
+    },
+    "item_0275": {
+      "category": "fitness",
+      "popularity": 0.244,
+      "price_tier": 1
+    },
+    "item_0276": {
+      "category": "fashion",
+      "popularity": 0.363,
+      "price_tier": 2
+    },
+    "item_0277": {
+      "category": "beauty",
+      "popularity": 0.94,
+      "price_tier": 2
+    },
+    "item_0278": {
+      "category": "fashion",
+      "popularity": 0.237,
+      "price_tier": 3
+    },
+    "item_0279": {
+      "category": "sports",
+      "popularity": 0.147,
+      "price_tier": 1
+    },
+    "item_0280": {
+      "category": "fashion",
+      "popularity": 0.775,
+      "price_tier": 1
+    },
+    "item_0281": {
+      "category": "fitness",
+      "popularity": 0.613,
+      "price_tier": 4
+    },
+    "item_0282": {
+      "category": "beauty",
+      "popularity": 0.851,
+      "price_tier": 2
+    },
+    "item_0283": {
+      "category": "tech",
+      "popularity": 0.52,
+      "price_tier": 3
+    },
+    "item_0284": {
+      "category": "beauty",
+      "popularity": 0.905,
+      "price_tier": 3
+    },
+    "item_0285": {
+      "category": "beauty",
+      "popularity": 0.847,
+      "price_tier": 2
+    },
+    "item_0286": {
+      "category": "home",
+      "popularity": 0.122,
+      "price_tier": 4
+    },
+    "item_0287": {
+      "category": "food",
+      "popularity": 0.795,
+      "price_tier": 2
+    },
+    "item_0288": {
+      "category": "home",
+      "popularity": 0.209,
+      "price_tier": 2
+    },
+    "item_0289": {
+      "category": "fashion",
+      "popularity": 0.892,
+      "price_tier": 3
+    },
+    "item_0290": {
+      "category": "beauty",
+      "popularity": 0.755,
+      "price_tier": 2
+    },
+    "item_0291": {
+      "category": "fitness",
+      "popularity": 0.562,
+      "price_tier": 4
+    },
+    "item_0292": {
+      "category": "home",
+      "popularity": 0.554,
+      "price_tier": 4
+    },
+    "item_0293": {
+      "category": "sports",
+      "popularity": 0.625,
+      "price_tier": 2
+    },
+    "item_0294": {
+      "category": "books",
+      "popularity": 0.806,
+      "price_tier": 2
+    },
+    "item_0295": {
+      "category": "fashion",
+      "popularity": 0.663,
+      "price_tier": 3
+    },
+    "item_0296": {
+      "category": "home",
+      "popularity": 0.431,
+      "price_tier": 4
+    },
+    "item_0297": {
+      "category": "books",
+      "popularity": 0.77,
+      "price_tier": 3
+    },
+    "item_0298": {
+      "category": "home",
+      "popularity": 0.694,
+      "price_tier": 4
+    },
+    "item_0299": {
+      "category": "food",
+      "popularity": 0.537,
+      "price_tier": 1
+    },
+    "item_0300": {
+      "category": "fashion",
+      "popularity": 0.318,
+      "price_tier": 1
+    },
+    "item_0301": {
+      "category": "fashion",
+      "popularity": 0.166,
+      "price_tier": 1
+    },
+    "item_0302": {
+      "category": "beauty",
+      "popularity": 0.206,
+      "price_tier": 1
+    },
+    "item_0303": {
+      "category": "fashion",
+      "popularity": 0.483,
+      "price_tier": 3
+    },
+    "item_0304": {
+      "category": "fashion",
+      "popularity": 0.274,
+      "price_tier": 2
+    },
+    "item_0305": {
+      "category": "beauty",
+      "popularity": 0.418,
+      "price_tier": 3
+    },
+    "item_0306": {
+      "category": "tech",
+      "popularity": 0.301,
+      "price_tier": 3
+    },
+    "item_0307": {
+      "category": "fitness",
+      "popularity": 0.743,
+      "price_tier": 1
+    },
+    "item_0308": {
+      "category": "fashion",
+      "popularity": 0.73,
+      "price_tier": 3
+    },
+    "item_0309": {
+      "category": "sports",
+      "popularity": 0.494,
+      "price_tier": 4
+    },
+    "item_0310": {
+      "category": "beauty",
+      "popularity": 0.9,
+      "price_tier": 1
+    },
+    "item_0311": {
+      "category": "fashion",
+      "popularity": 0.851,
+      "price_tier": 2
+    },
+    "item_0312": {
+      "category": "fitness",
+      "popularity": 0.12,
+      "price_tier": 1
+    },
+    "item_0313": {
+      "category": "fitness",
+      "popularity": 0.928,
+      "price_tier": 1
+    },
+    "item_0314": {
+      "category": "fitness",
+      "popularity": 0.712,
+      "price_tier": 3
+    },
+    "item_0315": {
+      "category": "sports",
+      "popularity": 0.974,
+      "price_tier": 4
+    },
+    "item_0316": {
+      "category": "tech",
+      "popularity": 0.193,
+      "price_tier": 2
+    },
+    "item_0317": {
+      "category": "fashion",
+      "popularity": 0.839,
+      "price_tier": 3
+    },
+    "item_0318": {
+      "category": "fashion",
+      "popularity": 0.269,
+      "price_tier": 3
+    },
+    "item_0319": {
+      "category": "books",
+      "popularity": 0.581,
+      "price_tier": 3
+    },
+    "item_0320": {
+      "category": "food",
+      "popularity": 0.694,
+      "price_tier": 3
+    },
+    "item_0321": {
+      "category": "fitness",
+      "popularity": 0.327,
+      "price_tier": 4
+    },
+    "item_0322": {
+      "category": "food",
+      "popularity": 0.132,
+      "price_tier": 2
+    },
+    "item_0323": {
+      "category": "books",
+      "popularity": 0.484,
+      "price_tier": 3
+    },
+    "item_0324": {
+      "category": "tech",
+      "popularity": 0.231,
+      "price_tier": 4
+    },
+    "item_0325": {
+      "category": "food",
+      "popularity": 0.891,
+      "price_tier": 3
+    },
+    "item_0326": {
+      "category": "fitness",
+      "popularity": 0.65,
+      "price_tier": 2
+    },
+    "item_0327": {
+      "category": "sports",
+      "popularity": 0.876,
+      "price_tier": 4
+    },
+    "item_0328": {
+      "category": "fitness",
+      "popularity": 0.631,
+      "price_tier": 1
+    },
+    "item_0329": {
+      "category": "beauty",
+      "popularity": 0.512,
+      "price_tier": 2
+    },
+    "item_0330": {
+      "category": "beauty",
+      "popularity": 0.979,
+      "price_tier": 2
+    },
+    "item_0331": {
+      "category": "tech",
+      "popularity": 0.43,
+      "price_tier": 3
+    },
+    "item_0332": {
+      "category": "tech",
+      "popularity": 0.238,
+      "price_tier": 3
+    },
+    "item_0333": {
+      "category": "beauty",
+      "popularity": 0.89,
+      "price_tier": 4
+    },
+    "item_0334": {
+      "category": "books",
+      "popularity": 0.242,
+      "price_tier": 3
+    },
+    "item_0335": {
+      "category": "books",
+      "popularity": 0.101,
+      "price_tier": 3
+    },
+    "item_0336": {
+      "category": "fashion",
+      "popularity": 0.504,
+      "price_tier": 1
+    },
+    "item_0337": {
+      "category": "beauty",
+      "popularity": 0.682,
+      "price_tier": 1
+    },
+    "item_0338": {
+      "category": "beauty",
+      "popularity": 0.554,
+      "price_tier": 3
+    },
+    "item_0339": {
+      "category": "fashion",
+      "popularity": 0.982,
+      "price_tier": 1
+    },
+    "item_0340": {
+      "category": "beauty",
+      "popularity": 0.935,
+      "price_tier": 4
+    },
+    "item_0341": {
+      "category": "food",
+      "popularity": 0.157,
+      "price_tier": 1
+    },
+    "item_0342": {
+      "category": "home",
+      "popularity": 0.662,
+      "price_tier": 1
+    },
+    "item_0343": {
+      "category": "home",
+      "popularity": 0.443,
+      "price_tier": 4
+    },
+    "item_0344": {
+      "category": "books",
+      "popularity": 0.779,
+      "price_tier": 4
+    },
+    "item_0345": {
+      "category": "tech",
+      "popularity": 0.778,
+      "price_tier": 1
+    },
+    "item_0346": {
+      "category": "tech",
+      "popularity": 0.223,
+      "price_tier": 2
+    },
+    "item_0347": {
+      "category": "fitness",
+      "popularity": 0.179,
+      "price_tier": 1
+    },
+    "item_0348": {
+      "category": "sports",
+      "popularity": 0.696,
+      "price_tier": 1
+    },
+    "item_0349": {
+      "category": "tech",
+      "popularity": 0.275,
+      "price_tier": 2
+    },
+    "item_0350": {
+      "category": "fitness",
+      "popularity": 0.152,
+      "price_tier": 2
+    },
+    "item_0351": {
+      "category": "books",
+      "popularity": 0.322,
+      "price_tier": 3
+    },
+    "item_0352": {
+      "category": "sports",
+      "popularity": 0.58,
+      "price_tier": 3
+    },
+    "item_0353": {
+      "category": "food",
+      "popularity": 0.369,
+      "price_tier": 4
+    },
+    "item_0354": {
+      "category": "sports",
+      "popularity": 0.146,
+      "price_tier": 4
+    },
+    "item_0355": {
+      "category": "sports",
+      "popularity": 0.353,
+      "price_tier": 4
+    },
+    "item_0356": {
+      "category": "food",
+      "popularity": 0.395,
+      "price_tier": 1
+    },
+    "item_0357": {
+      "category": "home",
+      "popularity": 0.274,
+      "price_tier": 4
+    },
+    "item_0358": {
+      "category": "tech",
+      "popularity": 0.8,
+      "price_tier": 1
+    },
+    "item_0359": {
+      "category": "food",
+      "popularity": 0.475,
+      "price_tier": 3
+    },
+    "item_0360": {
+      "category": "sports",
+      "popularity": 0.754,
+      "price_tier": 4
+    },
+    "item_0361": {
+      "category": "fitness",
+      "popularity": 0.33,
+      "price_tier": 1
+    },
+    "item_0362": {
+      "category": "sports",
+      "popularity": 0.391,
+      "price_tier": 3
+    },
+    "item_0363": {
+      "category": "fashion",
+      "popularity": 0.464,
+      "price_tier": 2
+    },
+    "item_0364": {
+      "category": "fashion",
+      "popularity": 0.981,
+      "price_tier": 1
+    },
+    "item_0365": {
+      "category": "fashion",
+      "popularity": 0.588,
+      "price_tier": 4
+    },
+    "item_0366": {
+      "category": "tech",
+      "popularity": 0.427,
+      "price_tier": 4
+    },
+    "item_0367": {
+      "category": "tech",
+      "popularity": 0.558,
+      "price_tier": 3
+    },
+    "item_0368": {
+      "category": "sports",
+      "popularity": 0.416,
+      "price_tier": 1
+    },
+    "item_0369": {
+      "category": "tech",
+      "popularity": 0.121,
+      "price_tier": 2
+    },
+    "item_0370": {
+      "category": "home",
+      "popularity": 0.262,
+      "price_tier": 3
+    },
+    "item_0371": {
+      "category": "fitness",
+      "popularity": 0.163,
+      "price_tier": 4
+    },
+    "item_0372": {
+      "category": "food",
+      "popularity": 0.417,
+      "price_tier": 3
+    },
+    "item_0373": {
+      "category": "home",
+      "popularity": 0.366,
+      "price_tier": 4
+    },
+    "item_0374": {
+      "category": "tech",
+      "popularity": 0.125,
+      "price_tier": 4
+    },
+    "item_0375": {
+      "category": "beauty",
+      "popularity": 0.186,
+      "price_tier": 2
+    },
+    "item_0376": {
+      "category": "fashion",
+      "popularity": 0.606,
+      "price_tier": 1
+    },
+    "item_0377": {
+      "category": "sports",
+      "popularity": 0.101,
+      "price_tier": 4
+    },
+    "item_0378": {
+      "category": "beauty",
+      "popularity": 0.769,
+      "price_tier": 1
+    },
+    "item_0379": {
+      "category": "beauty",
+      "popularity": 0.11,
+      "price_tier": 2
+    },
+    "item_0380": {
+      "category": "home",
+      "popularity": 0.402,
+      "price_tier": 3
+    },
+    "item_0381": {
+      "category": "fitness",
+      "popularity": 0.234,
+      "price_tier": 4
+    },
+    "item_0382": {
+      "category": "food",
+      "popularity": 0.594,
+      "price_tier": 3
+    },
+    "item_0383": {
+      "category": "food",
+      "popularity": 0.904,
+      "price_tier": 4
+    },
+    "item_0384": {
+      "category": "books",
+      "popularity": 0.296,
+      "price_tier": 3
+    },
+    "item_0385": {
+      "category": "books",
+      "popularity": 0.121,
+      "price_tier": 3
+    },
+    "item_0386": {
+      "category": "home",
+      "popularity": 0.637,
+      "price_tier": 2
+    },
+    "item_0387": {
+      "category": "fitness",
+      "popularity": 0.713,
+      "price_tier": 2
+    },
+    "item_0388": {
+      "category": "fashion",
+      "popularity": 0.697,
+      "price_tier": 1
+    },
+    "item_0389": {
+      "category": "home",
+      "popularity": 0.952,
+      "price_tier": 2
+    },
+    "item_0390": {
+      "category": "books",
+      "popularity": 0.384,
+      "price_tier": 3
+    },
+    "item_0391": {
+      "category": "food",
+      "popularity": 0.148,
+      "price_tier": 2
+    },
+    "item_0392": {
+      "category": "fitness",
+      "popularity": 0.167,
+      "price_tier": 2
+    },
+    "item_0393": {
+      "category": "fitness",
+      "popularity": 0.511,
+      "price_tier": 1
+    },
+    "item_0394": {
+      "category": "tech",
+      "popularity": 0.288,
+      "price_tier": 4
+    },
+    "item_0395": {
+      "category": "food",
+      "popularity": 0.469,
+      "price_tier": 4
+    },
+    "item_0396": {
+      "category": "home",
+      "popularity": 0.733,
+      "price_tier": 1
+    },
+    "item_0397": {
+      "category": "fitness",
+      "popularity": 0.284,
+      "price_tier": 1
+    },
+    "item_0398": {
+      "category": "home",
+      "popularity": 0.506,
+      "price_tier": 4
+    },
+    "item_0399": {
+      "category": "food",
+      "popularity": 0.655,
+      "price_tier": 4
+    },
+    "item_0400": {
+      "category": "sports",
+      "popularity": 0.397,
+      "price_tier": 2
+    },
+    "item_0401": {
+      "category": "beauty",
+      "popularity": 0.123,
+      "price_tier": 1
+    },
+    "item_0402": {
+      "category": "tech",
+      "popularity": 0.122,
+      "price_tier": 1
+    },
+    "item_0403": {
+      "category": "fitness",
+      "popularity": 0.911,
+      "price_tier": 3
+    },
+    "item_0404": {
+      "category": "books",
+      "popularity": 0.494,
+      "price_tier": 3
+    },
+    "item_0405": {
+      "category": "fashion",
+      "popularity": 0.698,
+      "price_tier": 2
+    },
+    "item_0406": {
+      "category": "books",
+      "popularity": 0.604,
+      "price_tier": 2
+    },
+    "item_0407": {
+      "category": "fitness",
+      "popularity": 0.752,
+      "price_tier": 4
+    },
+    "item_0408": {
+      "category": "fitness",
+      "popularity": 0.736,
+      "price_tier": 1
+    },
+    "item_0409": {
+      "category": "fashion",
+      "popularity": 0.701,
+      "price_tier": 2
+    },
+    "item_0410": {
+      "category": "home",
+      "popularity": 0.86,
+      "price_tier": 1
+    },
+    "item_0411": {
+      "category": "fitness",
+      "popularity": 0.701,
+      "price_tier": 3
+    },
+    "item_0412": {
+      "category": "home",
+      "popularity": 0.407,
+      "price_tier": 3
+    },
+    "item_0413": {
+      "category": "home",
+      "popularity": 0.804,
+      "price_tier": 1
+    },
+    "item_0414": {
+      "category": "tech",
+      "popularity": 0.401,
+      "price_tier": 4
+    },
+    "item_0415": {
+      "category": "food",
+      "popularity": 0.48,
+      "price_tier": 4
+    },
+    "item_0416": {
+      "category": "food",
+      "popularity": 0.546,
+      "price_tier": 2
+    },
+    "item_0417": {
+      "category": "food",
+      "popularity": 0.452,
+      "price_tier": 2
+    },
+    "item_0418": {
+      "category": "sports",
+      "popularity": 0.137,
+      "price_tier": 4
+    },
+    "item_0419": {
+      "category": "fitness",
+      "popularity": 0.677,
+      "price_tier": 2
+    },
+    "item_0420": {
+      "category": "books",
+      "popularity": 0.339,
+      "price_tier": 3
+    },
+    "item_0421": {
+      "category": "food",
+      "popularity": 0.41,
+      "price_tier": 3
+    },
+    "item_0422": {
+      "category": "sports",
+      "popularity": 0.731,
+      "price_tier": 4
+    },
+    "item_0423": {
+      "category": "beauty",
+      "popularity": 0.427,
+      "price_tier": 1
+    },
+    "item_0424": {
+      "category": "beauty",
+      "popularity": 0.697,
+      "price_tier": 4
+    },
+    "item_0425": {
+      "category": "beauty",
+      "popularity": 0.75,
+      "price_tier": 4
+    },
+    "item_0426": {
+      "category": "sports",
+      "popularity": 0.247,
+      "price_tier": 1
+    },
+    "item_0427": {
+      "category": "books",
+      "popularity": 0.178,
+      "price_tier": 4
+    },
+    "item_0428": {
+      "category": "sports",
+      "popularity": 0.569,
+      "price_tier": 1
+    },
+    "item_0429": {
+      "category": "home",
+      "popularity": 0.291,
+      "price_tier": 2
+    },
+    "item_0430": {
+      "category": "fashion",
+      "popularity": 0.797,
+      "price_tier": 3
+    },
+    "item_0431": {
+      "category": "fashion",
+      "popularity": 0.993,
+      "price_tier": 3
+    },
+    "item_0432": {
+      "category": "home",
+      "popularity": 0.134,
+      "price_tier": 3
+    },
+    "item_0433": {
+      "category": "sports",
+      "popularity": 0.638,
+      "price_tier": 4
+    },
+    "item_0434": {
+      "category": "sports",
+      "popularity": 0.539,
+      "price_tier": 1
+    },
+    "item_0435": {
+      "category": "tech",
+      "popularity": 0.479,
+      "price_tier": 1
+    },
+    "item_0436": {
+      "category": "beauty",
+      "popularity": 0.886,
+      "price_tier": 2
+    },
+    "item_0437": {
+      "category": "tech",
+      "popularity": 0.247,
+      "price_tier": 1
+    },
+    "item_0438": {
+      "category": "tech",
+      "popularity": 0.885,
+      "price_tier": 1
+    },
+    "item_0439": {
+      "category": "books",
+      "popularity": 0.678,
+      "price_tier": 2
+    },
+    "item_0440": {
+      "category": "fashion",
+      "popularity": 0.795,
+      "price_tier": 4
+    },
+    "item_0441": {
+      "category": "home",
+      "popularity": 0.408,
+      "price_tier": 1
+    },
+    "item_0442": {
+      "category": "books",
+      "popularity": 0.113,
+      "price_tier": 1
+    },
+    "item_0443": {
+      "category": "fitness",
+      "popularity": 0.443,
+      "price_tier": 1
+    },
+    "item_0444": {
+      "category": "beauty",
+      "popularity": 0.26,
+      "price_tier": 4
+    },
+    "item_0445": {
+      "category": "beauty",
+      "popularity": 0.569,
+      "price_tier": 1
+    },
+    "item_0446": {
+      "category": "fashion",
+      "popularity": 0.493,
+      "price_tier": 1
+    },
+    "item_0447": {
+      "category": "fitness",
+      "popularity": 0.453,
+      "price_tier": 1
+    },
+    "item_0448": {
+      "category": "food",
+      "popularity": 0.928,
+      "price_tier": 3
+    },
+    "item_0449": {
+      "category": "fashion",
+      "popularity": 0.234,
+      "price_tier": 3
+    },
+    "item_0450": {
+      "category": "home",
+      "popularity": 0.398,
+      "price_tier": 2
+    },
+    "item_0451": {
+      "category": "fitness",
+      "popularity": 0.608,
+      "price_tier": 2
+    },
+    "item_0452": {
+      "category": "beauty",
+      "popularity": 0.734,
+      "price_tier": 4
+    },
+    "item_0453": {
+      "category": "sports",
+      "popularity": 0.155,
+      "price_tier": 4
+    },
+    "item_0454": {
+      "category": "tech",
+      "popularity": 0.284,
+      "price_tier": 4
+    },
+    "item_0455": {
+      "category": "sports",
+      "popularity": 0.485,
+      "price_tier": 3
+    },
+    "item_0456": {
+      "category": "books",
+      "popularity": 0.812,
+      "price_tier": 4
+    },
+    "item_0457": {
+      "category": "books",
+      "popularity": 0.113,
+      "price_tier": 2
+    },
+    "item_0458": {
+      "category": "beauty",
+      "popularity": 0.653,
+      "price_tier": 4
+    },
+    "item_0459": {
+      "category": "books",
+      "popularity": 0.409,
+      "price_tier": 4
+    },
+    "item_0460": {
+      "category": "food",
+      "popularity": 0.721,
+      "price_tier": 4
+    },
+    "item_0461": {
+      "category": "tech",
+      "popularity": 0.41,
+      "price_tier": 4
+    },
+    "item_0462": {
+      "category": "food",
+      "popularity": 0.658,
+      "price_tier": 2
+    },
+    "item_0463": {
+      "category": "books",
+      "popularity": 0.671,
+      "price_tier": 3
+    },
+    "item_0464": {
+      "category": "fitness",
+      "popularity": 0.141,
+      "price_tier": 2
+    },
+    "item_0465": {
+      "category": "home",
+      "popularity": 0.866,
+      "price_tier": 1
+    },
+    "item_0466": {
+      "category": "fitness",
+      "popularity": 0.846,
+      "price_tier": 1
+    },
+    "item_0467": {
+      "category": "fashion",
+      "popularity": 0.118,
+      "price_tier": 4
+    },
+    "item_0468": {
+      "category": "fitness",
+      "popularity": 0.549,
+      "price_tier": 1
+    },
+    "item_0469": {
+      "category": "sports",
+      "popularity": 0.586,
+      "price_tier": 4
+    },
+    "item_0470": {
+      "category": "tech",
+      "popularity": 0.201,
+      "price_tier": 1
+    },
+    "item_0471": {
+      "category": "sports",
+      "popularity": 0.441,
+      "price_tier": 2
+    },
+    "item_0472": {
+      "category": "fashion",
+      "popularity": 0.458,
+      "price_tier": 4
+    },
+    "item_0473": {
+      "category": "food",
+      "popularity": 0.933,
+      "price_tier": 3
+    },
+    "item_0474": {
+      "category": "fashion",
+      "popularity": 0.268,
+      "price_tier": 2
+    },
+    "item_0475": {
+      "category": "fitness",
+      "popularity": 0.66,
+      "price_tier": 1
+    },
+    "item_0476": {
+      "category": "home",
+      "popularity": 0.542,
+      "price_tier": 3
+    },
+    "item_0477": {
+      "category": "tech",
+      "popularity": 0.147,
+      "price_tier": 2
+    },
+    "item_0478": {
+      "category": "sports",
+      "popularity": 0.786,
+      "price_tier": 2
+    },
+    "item_0479": {
+      "category": "beauty",
+      "popularity": 0.951,
+      "price_tier": 2
+    },
+    "item_0480": {
+      "category": "fashion",
+      "popularity": 0.568,
+      "price_tier": 1
+    },
+    "item_0481": {
+      "category": "home",
+      "popularity": 0.171,
+      "price_tier": 3
+    },
+    "item_0482": {
+      "category": "home",
+      "popularity": 0.483,
+      "price_tier": 4
+    },
+    "item_0483": {
+      "category": "tech",
+      "popularity": 0.549,
+      "price_tier": 2
+    },
+    "item_0484": {
+      "category": "beauty",
+      "popularity": 0.669,
+      "price_tier": 4
+    },
+    "item_0485": {
+      "category": "fashion",
+      "popularity": 0.944,
+      "price_tier": 3
+    },
+    "item_0486": {
+      "category": "home",
+      "popularity": 0.586,
+      "price_tier": 2
+    },
+    "item_0487": {
+      "category": "fashion",
+      "popularity": 0.534,
+      "price_tier": 2
+    },
+    "item_0488": {
+      "category": "sports",
+      "popularity": 0.232,
+      "price_tier": 4
+    },
+    "item_0489": {
+      "category": "sports",
+      "popularity": 0.803,
+      "price_tier": 4
+    },
+    "item_0490": {
+      "category": "tech",
+      "popularity": 0.351,
+      "price_tier": 1
+    },
+    "item_0491": {
+      "category": "beauty",
+      "popularity": 0.21,
+      "price_tier": 2
+    },
+    "item_0492": {
+      "category": "fitness",
+      "popularity": 0.704,
+      "price_tier": 2
+    },
+    "item_0493": {
+      "category": "tech",
+      "popularity": 0.443,
+      "price_tier": 2
+    },
+    "item_0494": {
+      "category": "sports",
+      "popularity": 0.836,
+      "price_tier": 3
+    },
+    "item_0495": {
+      "category": "home",
+      "popularity": 0.157,
+      "price_tier": 3
+    },
+    "item_0496": {
+      "category": "beauty",
+      "popularity": 0.157,
+      "price_tier": 2
+    },
+    "item_0497": {
+      "category": "food",
+      "popularity": 0.351,
+      "price_tier": 1
+    },
+    "item_0498": {
+      "category": "fashion",
+      "popularity": 0.332,
+      "price_tier": 1
+    },
+    "item_0499": {
+      "category": "fitness",
+      "popularity": 0.254,
+      "price_tier": 2
+    },
+    "item_0500": {
+      "category": "sports",
+      "popularity": 0.698,
+      "price_tier": 4
+    },
+    "item_0501": {
+      "category": "beauty",
+      "popularity": 0.798,
+      "price_tier": 1
+    },
+    "item_0502": {
+      "category": "food",
+      "popularity": 0.162,
+      "price_tier": 1
+    },
+    "item_0503": {
+      "category": "fitness",
+      "popularity": 0.33,
+      "price_tier": 4
+    },
+    "item_0504": {
+      "category": "home",
+      "popularity": 0.321,
+      "price_tier": 1
+    },
+    "item_0505": {
+      "category": "fashion",
+      "popularity": 0.801,
+      "price_tier": 3
+    },
+    "item_0506": {
+      "category": "beauty",
+      "popularity": 0.94,
+      "price_tier": 4
+    },
+    "item_0507": {
+      "category": "tech",
+      "popularity": 0.918,
+      "price_tier": 4
+    },
+    "item_0508": {
+      "category": "books",
+      "popularity": 0.67,
+      "price_tier": 2
+    },
+    "item_0509": {
+      "category": "home",
+      "popularity": 0.405,
+      "price_tier": 1
+    },
+    "item_0510": {
+      "category": "beauty",
+      "popularity": 0.896,
+      "price_tier": 2
+    },
+    "item_0511": {
+      "category": "home",
+      "popularity": 0.65,
+      "price_tier": 4
+    },
+    "item_0512": {
+      "category": "sports",
+      "popularity": 0.741,
+      "price_tier": 2
+    },
+    "item_0513": {
+      "category": "books",
+      "popularity": 0.419,
+      "price_tier": 3
+    },
+    "item_0514": {
+      "category": "beauty",
+      "popularity": 0.612,
+      "price_tier": 4
+    },
+    "item_0515": {
+      "category": "beauty",
+      "popularity": 0.441,
+      "price_tier": 4
+    },
+    "item_0516": {
+      "category": "home",
+      "popularity": 0.51,
+      "price_tier": 3
+    },
+    "item_0517": {
+      "category": "food",
+      "popularity": 0.816,
+      "price_tier": 3
+    },
+    "item_0518": {
+      "category": "fitness",
+      "popularity": 0.176,
+      "price_tier": 1
+    },
+    "item_0519": {
+      "category": "home",
+      "popularity": 0.765,
+      "price_tier": 1
+    },
+    "item_0520": {
+      "category": "fitness",
+      "popularity": 0.972,
+      "price_tier": 2
+    },
+    "item_0521": {
+      "category": "fitness",
+      "popularity": 0.246,
+      "price_tier": 2
+    },
+    "item_0522": {
+      "category": "sports",
+      "popularity": 0.578,
+      "price_tier": 2
+    },
+    "item_0523": {
+      "category": "fashion",
+      "popularity": 0.991,
+      "price_tier": 4
+    },
+    "item_0524": {
+      "category": "food",
+      "popularity": 0.214,
+      "price_tier": 2
+    },
+    "item_0525": {
+      "category": "fashion",
+      "popularity": 0.666,
+      "price_tier": 3
+    },
+    "item_0526": {
+      "category": "beauty",
+      "popularity": 0.218,
+      "price_tier": 4
+    },
+    "item_0527": {
+      "category": "fashion",
+      "popularity": 0.737,
+      "price_tier": 4
+    },
+    "item_0528": {
+      "category": "fashion",
+      "popularity": 0.837,
+      "price_tier": 3
+    },
+    "item_0529": {
+      "category": "sports",
+      "popularity": 0.849,
+      "price_tier": 3
+    },
+    "item_0530": {
+      "category": "fashion",
+      "popularity": 0.247,
+      "price_tier": 3
+    },
+    "item_0531": {
+      "category": "food",
+      "popularity": 0.254,
+      "price_tier": 3
+    },
+    "item_0532": {
+      "category": "food",
+      "popularity": 0.859,
+      "price_tier": 3
+    },
+    "item_0533": {
+      "category": "beauty",
+      "popularity": 0.336,
+      "price_tier": 4
+    },
+    "item_0534": {
+      "category": "food",
+      "popularity": 0.306,
+      "price_tier": 4
+    },
+    "item_0535": {
+      "category": "food",
+      "popularity": 0.633,
+      "price_tier": 2
+    },
+    "item_0536": {
+      "category": "fashion",
+      "popularity": 0.68,
+      "price_tier": 4
+    },
+    "item_0537": {
+      "category": "food",
+      "popularity": 0.102,
+      "price_tier": 2
+    },
+    "item_0538": {
+      "category": "fashion",
+      "popularity": 0.909,
+      "price_tier": 1
+    },
+    "item_0539": {
+      "category": "beauty",
+      "popularity": 0.687,
+      "price_tier": 4
+    },
+    "item_0540": {
+      "category": "books",
+      "popularity": 0.433,
+      "price_tier": 3
+    },
+    "item_0541": {
+      "category": "beauty",
+      "popularity": 0.886,
+      "price_tier": 3
+    },
+    "item_0542": {
+      "category": "tech",
+      "popularity": 0.463,
+      "price_tier": 1
+    },
+    "item_0543": {
+      "category": "fashion",
+      "popularity": 0.675,
+      "price_tier": 4
+    },
+    "item_0544": {
+      "category": "food",
+      "popularity": 0.17,
+      "price_tier": 3
+    },
+    "item_0545": {
+      "category": "fashion",
+      "popularity": 0.371,
+      "price_tier": 2
+    },
+    "item_0546": {
+      "category": "fitness",
+      "popularity": 0.6,
+      "price_tier": 1
+    },
+    "item_0547": {
+      "category": "books",
+      "popularity": 0.861,
+      "price_tier": 1
+    },
+    "item_0548": {
+      "category": "tech",
+      "popularity": 0.667,
+      "price_tier": 2
+    },
+    "item_0549": {
+      "category": "books",
+      "popularity": 0.253,
+      "price_tier": 2
+    },
+    "item_0550": {
+      "category": "sports",
+      "popularity": 0.44,
+      "price_tier": 4
+    },
+    "item_0551": {
+      "category": "fitness",
+      "popularity": 0.447,
+      "price_tier": 3
+    },
+    "item_0552": {
+      "category": "fitness",
+      "popularity": 0.966,
+      "price_tier": 3
+    },
+    "item_0553": {
+      "category": "sports",
+      "popularity": 0.533,
+      "price_tier": 3
+    },
+    "item_0554": {
+      "category": "sports",
+      "popularity": 0.133,
+      "price_tier": 2
+    },
+    "item_0555": {
+      "category": "beauty",
+      "popularity": 0.335,
+      "price_tier": 3
+    },
+    "item_0556": {
+      "category": "home",
+      "popularity": 0.941,
+      "price_tier": 1
+    },
+    "item_0557": {
+      "category": "beauty",
+      "popularity": 0.275,
+      "price_tier": 4
+    },
+    "item_0558": {
+      "category": "fashion",
+      "popularity": 0.832,
+      "price_tier": 3
+    },
+    "item_0559": {
+      "category": "fitness",
+      "popularity": 0.726,
+      "price_tier": 2
+    },
+    "item_0560": {
+      "category": "books",
+      "popularity": 0.261,
+      "price_tier": 1
+    },
+    "item_0561": {
+      "category": "fitness",
+      "popularity": 0.485,
+      "price_tier": 3
+    },
+    "item_0562": {
+      "category": "sports",
+      "popularity": 0.521,
+      "price_tier": 1
+    },
+    "item_0563": {
+      "category": "fitness",
+      "popularity": 0.319,
+      "price_tier": 3
+    },
+    "item_0564": {
+      "category": "food",
+      "popularity": 0.132,
+      "price_tier": 1
+    },
+    "item_0565": {
+      "category": "tech",
+      "popularity": 0.311,
+      "price_tier": 3
+    },
+    "item_0566": {
+      "category": "home",
+      "popularity": 0.396,
+      "price_tier": 2
+    },
+    "item_0567": {
+      "category": "beauty",
+      "popularity": 0.978,
+      "price_tier": 2
+    },
+    "item_0568": {
+      "category": "books",
+      "popularity": 0.709,
+      "price_tier": 4
+    },
+    "item_0569": {
+      "category": "fashion",
+      "popularity": 0.451,
+      "price_tier": 2
+    },
+    "item_0570": {
+      "category": "fashion",
+      "popularity": 0.112,
+      "price_tier": 4
+    },
+    "item_0571": {
+      "category": "fitness",
+      "popularity": 0.88,
+      "price_tier": 3
+    },
+    "item_0572": {
+      "category": "sports",
+      "popularity": 0.253,
+      "price_tier": 2
+    },
+    "item_0573": {
+      "category": "tech",
+      "popularity": 0.893,
+      "price_tier": 1
+    },
+    "item_0574": {
+      "category": "books",
+      "popularity": 0.539,
+      "price_tier": 2
+    },
+    "item_0575": {
+      "category": "books",
+      "popularity": 0.76,
+      "price_tier": 4
+    },
+    "item_0576": {
+      "category": "fitness",
+      "popularity": 0.244,
+      "price_tier": 1
+    },
+    "item_0577": {
+      "category": "sports",
+      "popularity": 0.77,
+      "price_tier": 4
+    },
+    "item_0578": {
+      "category": "fitness",
+      "popularity": 0.818,
+      "price_tier": 3
+    },
+    "item_0579": {
+      "category": "home",
+      "popularity": 0.156,
+      "price_tier": 4
+    },
+    "item_0580": {
+      "category": "fashion",
+      "popularity": 0.881,
+      "price_tier": 1
+    },
+    "item_0581": {
+      "category": "beauty",
+      "popularity": 0.714,
+      "price_tier": 2
+    },
+    "item_0582": {
+      "category": "tech",
+      "popularity": 0.312,
+      "price_tier": 1
+    },
+    "item_0583": {
+      "category": "tech",
+      "popularity": 0.935,
+      "price_tier": 2
+    },
+    "item_0584": {
+      "category": "beauty",
+      "popularity": 0.498,
+      "price_tier": 4
+    },
+    "item_0585": {
+      "category": "tech",
+      "popularity": 0.288,
+      "price_tier": 3
+    },
+    "item_0586": {
+      "category": "tech",
+      "popularity": 0.494,
+      "price_tier": 1
+    },
+    "item_0587": {
+      "category": "tech",
+      "popularity": 0.986,
+      "price_tier": 2
+    },
+    "item_0588": {
+      "category": "books",
+      "popularity": 0.823,
+      "price_tier": 2
+    },
+    "item_0589": {
+      "category": "fitness",
+      "popularity": 0.269,
+      "price_tier": 3
+    },
+    "item_0590": {
+      "category": "fitness",
+      "popularity": 0.344,
+      "price_tier": 2
+    },
+    "item_0591": {
+      "category": "beauty",
+      "popularity": 0.116,
+      "price_tier": 3
+    },
+    "item_0592": {
+      "category": "beauty",
+      "popularity": 0.879,
+      "price_tier": 3
+    },
+    "item_0593": {
+      "category": "food",
+      "popularity": 0.386,
+      "price_tier": 3
+    },
+    "item_0594": {
+      "category": "sports",
+      "popularity": 0.416,
+      "price_tier": 3
+    },
+    "item_0595": {
+      "category": "fashion",
+      "popularity": 0.942,
+      "price_tier": 3
+    },
+    "item_0596": {
+      "category": "beauty",
+      "popularity": 0.854,
+      "price_tier": 2
+    },
+    "item_0597": {
+      "category": "tech",
+      "popularity": 0.927,
+      "price_tier": 2
+    },
+    "item_0598": {
+      "category": "tech",
+      "popularity": 0.982,
+      "price_tier": 2
+    },
+    "item_0599": {
+      "category": "home",
+      "popularity": 0.298,
+      "price_tier": 1
+    },
+    "item_0600": {
+      "category": "books",
+      "popularity": 0.462,
+      "price_tier": 3
+    },
+    "item_0601": {
+      "category": "home",
+      "popularity": 0.377,
+      "price_tier": 1
+    },
+    "item_0602": {
+      "category": "beauty",
+      "popularity": 0.133,
+      "price_tier": 1
+    },
+    "item_0603": {
+      "category": "fitness",
+      "popularity": 0.95,
+      "price_tier": 1
+    },
+    "item_0604": {
+      "category": "sports",
+      "popularity": 0.701,
+      "price_tier": 3
+    },
+    "item_0605": {
+      "category": "fashion",
+      "popularity": 0.422,
+      "price_tier": 1
+    },
+    "item_0606": {
+      "category": "books",
+      "popularity": 0.623,
+      "price_tier": 3
+    },
+    "item_0607": {
+      "category": "beauty",
+      "popularity": 0.694,
+      "price_tier": 4
+    },
+    "item_0608": {
+      "category": "food",
+      "popularity": 0.673,
+      "price_tier": 4
+    },
+    "item_0609": {
+      "category": "home",
+      "popularity": 0.163,
+      "price_tier": 2
+    },
+    "item_0610": {
+      "category": "fitness",
+      "popularity": 0.157,
+      "price_tier": 4
+    },
+    "item_0611": {
+      "category": "fashion",
+      "popularity": 0.489,
+      "price_tier": 2
+    },
+    "item_0612": {
+      "category": "beauty",
+      "popularity": 0.808,
+      "price_tier": 3
+    },
+    "item_0613": {
+      "category": "sports",
+      "popularity": 0.907,
+      "price_tier": 2
+    },
+    "item_0614": {
+      "category": "beauty",
+      "popularity": 0.52,
+      "price_tier": 2
+    },
+    "item_0615": {
+      "category": "home",
+      "popularity": 0.872,
+      "price_tier": 4
+    },
+    "item_0616": {
+      "category": "tech",
+      "popularity": 0.55,
+      "price_tier": 2
+    },
+    "item_0617": {
+      "category": "fashion",
+      "popularity": 0.35,
+      "price_tier": 3
+    },
+    "item_0618": {
+      "category": "books",
+      "popularity": 0.28,
+      "price_tier": 3
+    },
+    "item_0619": {
+      "category": "food",
+      "popularity": 0.914,
+      "price_tier": 3
+    },
+    "item_0620": {
+      "category": "sports",
+      "popularity": 0.111,
+      "price_tier": 2
+    },
+    "item_0621": {
+      "category": "food",
+      "popularity": 0.925,
+      "price_tier": 2
+    },
+    "item_0622": {
+      "category": "food",
+      "popularity": 0.682,
+      "price_tier": 4
+    },
+    "item_0623": {
+      "category": "home",
+      "popularity": 0.603,
+      "price_tier": 4
+    },
+    "item_0624": {
+      "category": "food",
+      "popularity": 0.664,
+      "price_tier": 1
+    },
+    "item_0625": {
+      "category": "food",
+      "popularity": 0.985,
+      "price_tier": 2
+    },
+    "item_0626": {
+      "category": "beauty",
+      "popularity": 0.993,
+      "price_tier": 4
+    },
+    "item_0627": {
+      "category": "fitness",
+      "popularity": 0.781,
+      "price_tier": 4
+    },
+    "item_0628": {
+      "category": "food",
+      "popularity": 0.52,
+      "price_tier": 2
+    },
+    "item_0629": {
+      "category": "home",
+      "popularity": 0.876,
+      "price_tier": 4
+    },
+    "item_0630": {
+      "category": "home",
+      "popularity": 0.329,
+      "price_tier": 2
+    },
+    "item_0631": {
+      "category": "sports",
+      "popularity": 0.316,
+      "price_tier": 3
+    },
+    "item_0632": {
+      "category": "tech",
+      "popularity": 0.96,
+      "price_tier": 4
+    },
+    "item_0633": {
+      "category": "fashion",
+      "popularity": 0.858,
+      "price_tier": 2
+    },
+    "item_0634": {
+      "category": "home",
+      "popularity": 0.554,
+      "price_tier": 3
+    },
+    "item_0635": {
+      "category": "home",
+      "popularity": 0.526,
+      "price_tier": 1
+    },
+    "item_0636": {
+      "category": "fitness",
+      "popularity": 0.155,
+      "price_tier": 1
+    },
+    "item_0637": {
+      "category": "food",
+      "popularity": 0.102,
+      "price_tier": 2
+    },
+    "item_0638": {
+      "category": "food",
+      "popularity": 0.154,
+      "price_tier": 4
+    },
+    "item_0639": {
+      "category": "fashion",
+      "popularity": 0.901,
+      "price_tier": 3
+    },
+    "item_0640": {
+      "category": "beauty",
+      "popularity": 0.363,
+      "price_tier": 1
+    },
+    "item_0641": {
+      "category": "food",
+      "popularity": 0.252,
+      "price_tier": 3
+    },
+    "item_0642": {
+      "category": "tech",
+      "popularity": 0.213,
+      "price_tier": 3
+    },
+    "item_0643": {
+      "category": "fashion",
+      "popularity": 0.899,
+      "price_tier": 2
+    },
+    "item_0644": {
+      "category": "sports",
+      "popularity": 0.345,
+      "price_tier": 4
+    },
+    "item_0645": {
+      "category": "home",
+      "popularity": 0.388,
+      "price_tier": 4
+    },
+    "item_0646": {
+      "category": "beauty",
+      "popularity": 0.184,
+      "price_tier": 1
+    },
+    "item_0647": {
+      "category": "fitness",
+      "popularity": 0.465,
+      "price_tier": 4
+    },
+    "item_0648": {
+      "category": "sports",
+      "popularity": 0.979,
+      "price_tier": 3
+    },
+    "item_0649": {
+      "category": "fashion",
+      "popularity": 0.956,
+      "price_tier": 4
+    },
+    "item_0650": {
+      "category": "fashion",
+      "popularity": 0.338,
+      "price_tier": 4
+    },
+    "item_0651": {
+      "category": "fitness",
+      "popularity": 0.953,
+      "price_tier": 3
+    },
+    "item_0652": {
+      "category": "tech",
+      "popularity": 0.983,
+      "price_tier": 2
+    },
+    "item_0653": {
+      "category": "books",
+      "popularity": 0.827,
+      "price_tier": 2
+    },
+    "item_0654": {
+      "category": "food",
+      "popularity": 0.679,
+      "price_tier": 4
+    },
+    "item_0655": {
+      "category": "fitness",
+      "popularity": 0.947,
+      "price_tier": 4
+    },
+    "item_0656": {
+      "category": "food",
+      "popularity": 0.771,
+      "price_tier": 4
+    },
+    "item_0657": {
+      "category": "fitness",
+      "popularity": 0.832,
+      "price_tier": 4
+    },
+    "item_0658": {
+      "category": "fitness",
+      "popularity": 0.713,
+      "price_tier": 1
+    },
+    "item_0659": {
+      "category": "fashion",
+      "popularity": 0.314,
+      "price_tier": 2
+    },
+    "item_0660": {
+      "category": "books",
+      "popularity": 0.988,
+      "price_tier": 2
+    },
+    "item_0661": {
+      "category": "sports",
+      "popularity": 0.631,
+      "price_tier": 1
+    },
+    "item_0662": {
+      "category": "beauty",
+      "popularity": 0.914,
+      "price_tier": 1
+    },
+    "item_0663": {
+      "category": "beauty",
+      "popularity": 0.999,
+      "price_tier": 3
+    },
+    "item_0664": {
+      "category": "fitness",
+      "popularity": 0.25,
+      "price_tier": 3
+    },
+    "item_0665": {
+      "category": "home",
+      "popularity": 0.144,
+      "price_tier": 4
+    },
+    "item_0666": {
+      "category": "home",
+      "popularity": 0.534,
+      "price_tier": 1
+    },
+    "item_0667": {
+      "category": "home",
+      "popularity": 0.626,
+      "price_tier": 1
+    },
+    "item_0668": {
+      "category": "food",
+      "popularity": 0.513,
+      "price_tier": 3
+    },
+    "item_0669": {
+      "category": "books",
+      "popularity": 0.169,
+      "price_tier": 2
+    },
+    "item_0670": {
+      "category": "beauty",
+      "popularity": 0.746,
+      "price_tier": 2
+    },
+    "item_0671": {
+      "category": "fashion",
+      "popularity": 0.182,
+      "price_tier": 1
+    },
+    "item_0672": {
+      "category": "tech",
+      "popularity": 0.214,
+      "price_tier": 2
+    },
+    "item_0673": {
+      "category": "tech",
+      "popularity": 0.599,
+      "price_tier": 1
+    },
+    "item_0674": {
+      "category": "sports",
+      "popularity": 0.202,
+      "price_tier": 4
+    },
+    "item_0675": {
+      "category": "fitness",
+      "popularity": 0.176,
+      "price_tier": 4
+    },
+    "item_0676": {
+      "category": "home",
+      "popularity": 0.897,
+      "price_tier": 1
+    },
+    "item_0677": {
+      "category": "home",
+      "popularity": 0.787,
+      "price_tier": 2
+    },
+    "item_0678": {
+      "category": "tech",
+      "popularity": 0.2,
+      "price_tier": 2
+    },
+    "item_0679": {
+      "category": "beauty",
+      "popularity": 0.764,
+      "price_tier": 3
+    },
+    "item_0680": {
+      "category": "tech",
+      "popularity": 0.372,
+      "price_tier": 3
+    },
+    "item_0681": {
+      "category": "tech",
+      "popularity": 0.903,
+      "price_tier": 3
+    },
+    "item_0682": {
+      "category": "fashion",
+      "popularity": 0.911,
+      "price_tier": 3
+    },
+    "item_0683": {
+      "category": "home",
+      "popularity": 0.599,
+      "price_tier": 3
+    },
+    "item_0684": {
+      "category": "beauty",
+      "popularity": 0.214,
+      "price_tier": 4
+    },
+    "item_0685": {
+      "category": "beauty",
+      "popularity": 0.519,
+      "price_tier": 3
+    },
+    "item_0686": {
+      "category": "food",
+      "popularity": 0.801,
+      "price_tier": 2
+    },
+    "item_0687": {
+      "category": "fashion",
+      "popularity": 0.884,
+      "price_tier": 2
+    },
+    "item_0688": {
+      "category": "fitness",
+      "popularity": 0.972,
+      "price_tier": 3
+    },
+    "item_0689": {
+      "category": "fashion",
+      "popularity": 0.226,
+      "price_tier": 2
+    },
+    "item_0690": {
+      "category": "fashion",
+      "popularity": 0.282,
+      "price_tier": 2
+    },
+    "item_0691": {
+      "category": "fitness",
+      "popularity": 0.807,
+      "price_tier": 1
+    },
+    "item_0692": {
+      "category": "books",
+      "popularity": 0.431,
+      "price_tier": 2
+    },
+    "item_0693": {
+      "category": "books",
+      "popularity": 0.177,
+      "price_tier": 4
+    },
+    "item_0694": {
+      "category": "books",
+      "popularity": 0.923,
+      "price_tier": 2
+    },
+    "item_0695": {
+      "category": "tech",
+      "popularity": 0.34,
+      "price_tier": 3
+    },
+    "item_0696": {
+      "category": "fitness",
+      "popularity": 0.576,
+      "price_tier": 1
+    },
+    "item_0697": {
+      "category": "fitness",
+      "popularity": 0.914,
+      "price_tier": 4
+    },
+    "item_0698": {
+      "category": "tech",
+      "popularity": 0.77,
+      "price_tier": 2
+    },
+    "item_0699": {
+      "category": "books",
+      "popularity": 0.654,
+      "price_tier": 1
+    },
+    "item_0700": {
+      "category": "beauty",
+      "popularity": 0.667,
+      "price_tier": 1
+    },
+    "item_0701": {
+      "category": "fashion",
+      "popularity": 0.156,
+      "price_tier": 4
+    },
+    "item_0702": {
+      "category": "sports",
+      "popularity": 0.386,
+      "price_tier": 4
+    },
+    "item_0703": {
+      "category": "tech",
+      "popularity": 0.571,
+      "price_tier": 4
+    },
+    "item_0704": {
+      "category": "food",
+      "popularity": 0.183,
+      "price_tier": 1
+    },
+    "item_0705": {
+      "category": "fashion",
+      "popularity": 0.763,
+      "price_tier": 1
+    },
+    "item_0706": {
+      "category": "books",
+      "popularity": 0.578,
+      "price_tier": 2
+    },
+    "item_0707": {
+      "category": "beauty",
+      "popularity": 0.176,
+      "price_tier": 1
+    },
+    "item_0708": {
+      "category": "books",
+      "popularity": 0.93,
+      "price_tier": 2
+    },
+    "item_0709": {
+      "category": "beauty",
+      "popularity": 0.315,
+      "price_tier": 2
+    },
+    "item_0710": {
+      "category": "books",
+      "popularity": 0.312,
+      "price_tier": 4
+    },
+    "item_0711": {
+      "category": "fashion",
+      "popularity": 0.413,
+      "price_tier": 2
+    },
+    "item_0712": {
+      "category": "fitness",
+      "popularity": 0.246,
+      "price_tier": 4
+    },
+    "item_0713": {
+      "category": "home",
+      "popularity": 0.34,
+      "price_tier": 1
+    },
+    "item_0714": {
+      "category": "tech",
+      "popularity": 0.414,
+      "price_tier": 2
+    },
+    "item_0715": {
+      "category": "home",
+      "popularity": 0.991,
+      "price_tier": 4
+    },
+    "item_0716": {
+      "category": "home",
+      "popularity": 0.833,
+      "price_tier": 1
+    },
+    "item_0717": {
+      "category": "sports",
+      "popularity": 0.701,
+      "price_tier": 1
+    },
+    "item_0718": {
+      "category": "food",
+      "popularity": 0.286,
+      "price_tier": 2
+    },
+    "item_0719": {
+      "category": "home",
+      "popularity": 0.589,
+      "price_tier": 3
+    },
+    "item_0720": {
+      "category": "books",
+      "popularity": 0.167,
+      "price_tier": 4
+    },
+    "item_0721": {
+      "category": "fashion",
+      "popularity": 0.864,
+      "price_tier": 4
+    },
+    "item_0722": {
+      "category": "books",
+      "popularity": 0.617,
+      "price_tier": 3
+    },
+    "item_0723": {
+      "category": "food",
+      "popularity": 0.321,
+      "price_tier": 1
+    },
+    "item_0724": {
+      "category": "fitness",
+      "popularity": 0.513,
+      "price_tier": 3
+    },
+    "item_0725": {
+      "category": "sports",
+      "popularity": 0.481,
+      "price_tier": 3
+    },
+    "item_0726": {
+      "category": "fashion",
+      "popularity": 0.71,
+      "price_tier": 3
+    },
+    "item_0727": {
+      "category": "books",
+      "popularity": 0.667,
+      "price_tier": 3
+    },
+    "item_0728": {
+      "category": "food",
+      "popularity": 0.861,
+      "price_tier": 4
+    },
+    "item_0729": {
+      "category": "fashion",
+      "popularity": 0.621,
+      "price_tier": 3
+    },
+    "item_0730": {
+      "category": "sports",
+      "popularity": 0.556,
+      "price_tier": 1
+    },
+    "item_0731": {
+      "category": "fitness",
+      "popularity": 0.611,
+      "price_tier": 3
+    },
+    "item_0732": {
+      "category": "tech",
+      "popularity": 0.417,
+      "price_tier": 3
+    },
+    "item_0733": {
+      "category": "fashion",
+      "popularity": 0.605,
+      "price_tier": 1
+    },
+    "item_0734": {
+      "category": "food",
+      "popularity": 0.656,
+      "price_tier": 4
+    },
+    "item_0735": {
+      "category": "food",
+      "popularity": 0.241,
+      "price_tier": 1
+    },
+    "item_0736": {
+      "category": "home",
+      "popularity": 0.155,
+      "price_tier": 1
+    },
+    "item_0737": {
+      "category": "food",
+      "popularity": 0.288,
+      "price_tier": 1
+    },
+    "item_0738": {
+      "category": "books",
+      "popularity": 0.258,
+      "price_tier": 2
+    },
+    "item_0739": {
+      "category": "sports",
+      "popularity": 0.961,
+      "price_tier": 3
+    },
+    "item_0740": {
+      "category": "food",
+      "popularity": 0.187,
+      "price_tier": 4
+    },
+    "item_0741": {
+      "category": "fitness",
+      "popularity": 0.386,
+      "price_tier": 1
+    },
+    "item_0742": {
+      "category": "tech",
+      "popularity": 0.989,
+      "price_tier": 2
+    },
+    "item_0743": {
+      "category": "home",
+      "popularity": 0.505,
+      "price_tier": 4
+    },
+    "item_0744": {
+      "category": "fitness",
+      "popularity": 0.516,
+      "price_tier": 1
+    },
+    "item_0745": {
+      "category": "sports",
+      "popularity": 0.338,
+      "price_tier": 2
+    },
+    "item_0746": {
+      "category": "books",
+      "popularity": 0.603,
+      "price_tier": 4
+    },
+    "item_0747": {
+      "category": "books",
+      "popularity": 0.868,
+      "price_tier": 3
+    },
+    "item_0748": {
+      "category": "fashion",
+      "popularity": 0.495,
+      "price_tier": 1
+    },
+    "item_0749": {
+      "category": "beauty",
+      "popularity": 0.537,
+      "price_tier": 3
+    },
+    "item_0750": {
+      "category": "home",
+      "popularity": 0.412,
+      "price_tier": 4
+    },
+    "item_0751": {
+      "category": "home",
+      "popularity": 0.943,
+      "price_tier": 3
+    },
+    "item_0752": {
+      "category": "sports",
+      "popularity": 0.433,
+      "price_tier": 4
+    },
+    "item_0753": {
+      "category": "books",
+      "popularity": 0.611,
+      "price_tier": 3
+    },
+    "item_0754": {
+      "category": "home",
+      "popularity": 0.899,
+      "price_tier": 3
+    },
+    "item_0755": {
+      "category": "fitness",
+      "popularity": 0.776,
+      "price_tier": 4
+    },
+    "item_0756": {
+      "category": "sports",
+      "popularity": 0.59,
+      "price_tier": 2
+    },
+    "item_0757": {
+      "category": "tech",
+      "popularity": 0.129,
+      "price_tier": 4
+    },
+    "item_0758": {
+      "category": "sports",
+      "popularity": 0.561,
+      "price_tier": 1
+    },
+    "item_0759": {
+      "category": "books",
+      "popularity": 0.158,
+      "price_tier": 1
+    },
+    "item_0760": {
+      "category": "beauty",
+      "popularity": 0.765,
+      "price_tier": 2
+    },
+    "item_0761": {
+      "category": "food",
+      "popularity": 0.613,
+      "price_tier": 3
+    },
+    "item_0762": {
+      "category": "food",
+      "popularity": 0.733,
+      "price_tier": 2
+    },
+    "item_0763": {
+      "category": "fitness",
+      "popularity": 0.216,
+      "price_tier": 1
+    },
+    "item_0764": {
+      "category": "tech",
+      "popularity": 0.254,
+      "price_tier": 4
+    },
+    "item_0765": {
+      "category": "home",
+      "popularity": 0.592,
+      "price_tier": 2
+    },
+    "item_0766": {
+      "category": "sports",
+      "popularity": 0.162,
+      "price_tier": 1
+    },
+    "item_0767": {
+      "category": "food",
+      "popularity": 0.244,
+      "price_tier": 4
+    },
+    "item_0768": {
+      "category": "sports",
+      "popularity": 0.843,
+      "price_tier": 4
+    },
+    "item_0769": {
+      "category": "food",
+      "popularity": 0.906,
+      "price_tier": 3
+    },
+    "item_0770": {
+      "category": "tech",
+      "popularity": 0.933,
+      "price_tier": 1
+    },
+    "item_0771": {
+      "category": "sports",
+      "popularity": 0.245,
+      "price_tier": 3
+    },
+    "item_0772": {
+      "category": "tech",
+      "popularity": 0.94,
+      "price_tier": 1
+    },
+    "item_0773": {
+      "category": "home",
+      "popularity": 0.196,
+      "price_tier": 1
+    },
+    "item_0774": {
+      "category": "beauty",
+      "popularity": 0.683,
+      "price_tier": 3
+    },
+    "item_0775": {
+      "category": "fitness",
+      "popularity": 0.943,
+      "price_tier": 1
+    },
+    "item_0776": {
+      "category": "fitness",
+      "popularity": 0.266,
+      "price_tier": 3
+    },
+    "item_0777": {
+      "category": "home",
+      "popularity": 0.501,
+      "price_tier": 1
+    },
+    "item_0778": {
+      "category": "food",
+      "popularity": 0.653,
+      "price_tier": 2
+    },
+    "item_0779": {
+      "category": "fashion",
+      "popularity": 0.866,
+      "price_tier": 4
+    },
+    "item_0780": {
+      "category": "tech",
+      "popularity": 0.695,
+      "price_tier": 2
+    },
+    "item_0781": {
+      "category": "fashion",
+      "popularity": 0.312,
+      "price_tier": 3
+    },
+    "item_0782": {
+      "category": "sports",
+      "popularity": 0.904,
+      "price_tier": 2
+    },
+    "item_0783": {
+      "category": "books",
+      "popularity": 0.844,
+      "price_tier": 3
+    },
+    "item_0784": {
+      "category": "tech",
+      "popularity": 0.512,
+      "price_tier": 2
+    },
+    "item_0785": {
+      "category": "beauty",
+      "popularity": 0.885,
+      "price_tier": 3
+    },
+    "item_0786": {
+      "category": "tech",
+      "popularity": 0.437,
+      "price_tier": 1
+    },
+    "item_0787": {
+      "category": "food",
+      "popularity": 0.897,
+      "price_tier": 2
+    },
+    "item_0788": {
+      "category": "food",
+      "popularity": 0.643,
+      "price_tier": 1
+    },
+    "item_0789": {
+      "category": "food",
+      "popularity": 0.84,
+      "price_tier": 4
+    },
+    "item_0790": {
+      "category": "home",
+      "popularity": 0.147,
+      "price_tier": 3
+    },
+    "item_0791": {
+      "category": "fitness",
+      "popularity": 0.257,
+      "price_tier": 3
+    },
+    "item_0792": {
+      "category": "home",
+      "popularity": 0.482,
+      "price_tier": 3
+    },
+    "item_0793": {
+      "category": "sports",
+      "popularity": 0.295,
+      "price_tier": 1
+    },
+    "item_0794": {
+      "category": "food",
+      "popularity": 0.848,
+      "price_tier": 4
+    },
+    "item_0795": {
+      "category": "sports",
+      "popularity": 0.522,
+      "price_tier": 4
+    },
+    "item_0796": {
+      "category": "fashion",
+      "popularity": 0.666,
+      "price_tier": 2
+    },
+    "item_0797": {
+      "category": "sports",
+      "popularity": 0.262,
+      "price_tier": 4
+    },
+    "item_0798": {
+      "category": "fitness",
+      "popularity": 0.327,
+      "price_tier": 2
+    },
+    "item_0799": {
+      "category": "home",
+      "popularity": 0.176,
+      "price_tier": 1
+    },
+    "item_0800": {
+      "category": "sports",
+      "popularity": 0.607,
+      "price_tier": 3
+    },
+    "item_0801": {
+      "category": "sports",
+      "popularity": 0.566,
+      "price_tier": 3
+    },
+    "item_0802": {
+      "category": "sports",
+      "popularity": 0.439,
+      "price_tier": 4
+    },
+    "item_0803": {
+      "category": "fitness",
+      "popularity": 0.718,
+      "price_tier": 2
+    },
+    "item_0804": {
+      "category": "sports",
+      "popularity": 0.199,
+      "price_tier": 2
+    },
+    "item_0805": {
+      "category": "food",
+      "popularity": 0.605,
+      "price_tier": 3
+    },
+    "item_0806": {
+      "category": "books",
+      "popularity": 0.338,
+      "price_tier": 1
+    },
+    "item_0807": {
+      "category": "sports",
+      "popularity": 0.466,
+      "price_tier": 1
+    },
+    "item_0808": {
+      "category": "beauty",
+      "popularity": 0.694,
+      "price_tier": 4
+    },
+    "item_0809": {
+      "category": "food",
+      "popularity": 0.677,
+      "price_tier": 1
+    },
+    "item_0810": {
+      "category": "fashion",
+      "popularity": 0.252,
+      "price_tier": 2
+    },
+    "item_0811": {
+      "category": "books",
+      "popularity": 0.494,
+      "price_tier": 3
+    },
+    "item_0812": {
+      "category": "fashion",
+      "popularity": 0.142,
+      "price_tier": 3
+    },
+    "item_0813": {
+      "category": "tech",
+      "popularity": 0.89,
+      "price_tier": 1
+    },
+    "item_0814": {
+      "category": "beauty",
+      "popularity": 0.286,
+      "price_tier": 1
+    },
+    "item_0815": {
+      "category": "books",
+      "popularity": 0.336,
+      "price_tier": 1
+    },
+    "item_0816": {
+      "category": "food",
+      "popularity": 0.393,
+      "price_tier": 3
+    },
+    "item_0817": {
+      "category": "sports",
+      "popularity": 0.277,
+      "price_tier": 1
+    },
+    "item_0818": {
+      "category": "home",
+      "popularity": 0.275,
+      "price_tier": 3
+    },
+    "item_0819": {
+      "category": "home",
+      "popularity": 0.412,
+      "price_tier": 3
+    },
+    "item_0820": {
+      "category": "home",
+      "popularity": 0.164,
+      "price_tier": 2
+    },
+    "item_0821": {
+      "category": "fashion",
+      "popularity": 0.482,
+      "price_tier": 2
+    },
+    "item_0822": {
+      "category": "fitness",
+      "popularity": 0.545,
+      "price_tier": 1
+    },
+    "item_0823": {
+      "category": "beauty",
+      "popularity": 0.769,
+      "price_tier": 2
+    },
+    "item_0824": {
+      "category": "fitness",
+      "popularity": 0.563,
+      "price_tier": 3
+    },
+    "item_0825": {
+      "category": "tech",
+      "popularity": 0.348,
+      "price_tier": 4
+    },
+    "item_0826": {
+      "category": "fitness",
+      "popularity": 0.775,
+      "price_tier": 3
+    },
+    "item_0827": {
+      "category": "home",
+      "popularity": 0.758,
+      "price_tier": 3
+    },
+    "item_0828": {
+      "category": "sports",
+      "popularity": 0.594,
+      "price_tier": 3
+    },
+    "item_0829": {
+      "category": "fashion",
+      "popularity": 0.988,
+      "price_tier": 3
+    },
+    "item_0830": {
+      "category": "books",
+      "popularity": 0.846,
+      "price_tier": 1
+    },
+    "item_0831": {
+      "category": "sports",
+      "popularity": 0.24,
+      "price_tier": 2
+    },
+    "item_0832": {
+      "category": "home",
+      "popularity": 0.901,
+      "price_tier": 2
+    },
+    "item_0833": {
+      "category": "books",
+      "popularity": 0.385,
+      "price_tier": 2
+    },
+    "item_0834": {
+      "category": "food",
+      "popularity": 0.995,
+      "price_tier": 2
+    },
+    "item_0835": {
+      "category": "food",
+      "popularity": 0.636,
+      "price_tier": 4
+    },
+    "item_0836": {
+      "category": "home",
+      "popularity": 0.289,
+      "price_tier": 1
+    },
+    "item_0837": {
+      "category": "fitness",
+      "popularity": 0.112,
+      "price_tier": 3
+    },
+    "item_0838": {
+      "category": "food",
+      "popularity": 0.848,
+      "price_tier": 1
+    },
+    "item_0839": {
+      "category": "sports",
+      "popularity": 0.751,
+      "price_tier": 3
+    },
+    "item_0840": {
+      "category": "food",
+      "popularity": 0.442,
+      "price_tier": 3
+    },
+    "item_0841": {
+      "category": "home",
+      "popularity": 0.846,
+      "price_tier": 2
+    },
+    "item_0842": {
+      "category": "beauty",
+      "popularity": 0.772,
+      "price_tier": 2
+    },
+    "item_0843": {
+      "category": "fashion",
+      "popularity": 0.682,
+      "price_tier": 3
+    },
+    "item_0844": {
+      "category": "sports",
+      "popularity": 0.997,
+      "price_tier": 2
+    },
+    "item_0845": {
+      "category": "food",
+      "popularity": 0.488,
+      "price_tier": 1
+    },
+    "item_0846": {
+      "category": "tech",
+      "popularity": 0.228,
+      "price_tier": 3
+    },
+    "item_0847": {
+      "category": "fashion",
+      "popularity": 0.525,
+      "price_tier": 2
+    },
+    "item_0848": {
+      "category": "sports",
+      "popularity": 0.806,
+      "price_tier": 3
+    },
+    "item_0849": {
+      "category": "beauty",
+      "popularity": 0.893,
+      "price_tier": 1
+    },
+    "item_0850": {
+      "category": "beauty",
+      "popularity": 0.942,
+      "price_tier": 1
+    },
+    "item_0851": {
+      "category": "books",
+      "popularity": 0.41,
+      "price_tier": 3
+    },
+    "item_0852": {
+      "category": "books",
+      "popularity": 0.706,
+      "price_tier": 1
+    },
+    "item_0853": {
+      "category": "fashion",
+      "popularity": 0.723,
+      "price_tier": 1
+    },
+    "item_0854": {
+      "category": "beauty",
+      "popularity": 0.697,
+      "price_tier": 2
+    },
+    "item_0855": {
+      "category": "books",
+      "popularity": 0.784,
+      "price_tier": 3
+    },
+    "item_0856": {
+      "category": "fashion",
+      "popularity": 0.331,
+      "price_tier": 2
+    },
+    "item_0857": {
+      "category": "beauty",
+      "popularity": 0.333,
+      "price_tier": 1
+    },
+    "item_0858": {
+      "category": "fitness",
+      "popularity": 0.926,
+      "price_tier": 4
+    },
+    "item_0859": {
+      "category": "sports",
+      "popularity": 0.848,
+      "price_tier": 2
+    },
+    "item_0860": {
+      "category": "beauty",
+      "popularity": 0.694,
+      "price_tier": 4
+    },
+    "item_0861": {
+      "category": "home",
+      "popularity": 0.699,
+      "price_tier": 3
+    },
+    "item_0862": {
+      "category": "tech",
+      "popularity": 0.543,
+      "price_tier": 1
+    },
+    "item_0863": {
+      "category": "tech",
+      "popularity": 0.143,
+      "price_tier": 2
+    },
+    "item_0864": {
+      "category": "home",
+      "popularity": 0.468,
+      "price_tier": 4
+    },
+    "item_0865": {
+      "category": "food",
+      "popularity": 0.413,
+      "price_tier": 1
+    },
+    "item_0866": {
+      "category": "fashion",
+      "popularity": 0.295,
+      "price_tier": 2
+    },
+    "item_0867": {
+      "category": "fitness",
+      "popularity": 0.521,
+      "price_tier": 2
+    },
+    "item_0868": {
+      "category": "fitness",
+      "popularity": 0.969,
+      "price_tier": 1
+    },
+    "item_0869": {
+      "category": "beauty",
+      "popularity": 0.429,
+      "price_tier": 1
+    },
+    "item_0870": {
+      "category": "fashion",
+      "popularity": 0.998,
+      "price_tier": 1
+    },
+    "item_0871": {
+      "category": "fitness",
+      "popularity": 0.411,
+      "price_tier": 4
+    },
+    "item_0872": {
+      "category": "books",
+      "popularity": 0.272,
+      "price_tier": 1
+    },
+    "item_0873": {
+      "category": "home",
+      "popularity": 0.628,
+      "price_tier": 2
+    },
+    "item_0874": {
+      "category": "home",
+      "popularity": 0.646,
+      "price_tier": 1
+    },
+    "item_0875": {
+      "category": "beauty",
+      "popularity": 0.724,
+      "price_tier": 2
+    },
+    "item_0876": {
+      "category": "food",
+      "popularity": 0.267,
+      "price_tier": 4
+    },
+    "item_0877": {
+      "category": "beauty",
+      "popularity": 0.521,
+      "price_tier": 1
+    },
+    "item_0878": {
+      "category": "tech",
+      "popularity": 0.102,
+      "price_tier": 2
+    },
+    "item_0879": {
+      "category": "fashion",
+      "popularity": 0.134,
+      "price_tier": 1
+    },
+    "item_0880": {
+      "category": "books",
+      "popularity": 0.193,
+      "price_tier": 4
+    },
+    "item_0881": {
+      "category": "tech",
+      "popularity": 0.949,
+      "price_tier": 1
+    },
+    "item_0882": {
+      "category": "home",
+      "popularity": 0.87,
+      "price_tier": 1
+    },
+    "item_0883": {
+      "category": "food",
+      "popularity": 0.857,
+      "price_tier": 1
+    },
+    "item_0884": {
+      "category": "home",
+      "popularity": 0.737,
+      "price_tier": 4
+    },
+    "item_0885": {
+      "category": "home",
+      "popularity": 0.298,
+      "price_tier": 4
+    },
+    "item_0886": {
+      "category": "books",
+      "popularity": 0.919,
+      "price_tier": 4
+    },
+    "item_0887": {
+      "category": "fashion",
+      "popularity": 0.266,
+      "price_tier": 4
+    },
+    "item_0888": {
+      "category": "home",
+      "popularity": 0.825,
+      "price_tier": 3
+    },
+    "item_0889": {
+      "category": "fashion",
+      "popularity": 0.343,
+      "price_tier": 3
+    },
+    "item_0890": {
+      "category": "books",
+      "popularity": 0.164,
+      "price_tier": 1
+    },
+    "item_0891": {
+      "category": "beauty",
+      "popularity": 0.111,
+      "price_tier": 4
+    },
+    "item_0892": {
+      "category": "beauty",
+      "popularity": 0.871,
+      "price_tier": 3
+    },
+    "item_0893": {
+      "category": "tech",
+      "popularity": 0.49,
+      "price_tier": 4
+    },
+    "item_0894": {
+      "category": "books",
+      "popularity": 0.993,
+      "price_tier": 3
+    },
+    "item_0895": {
+      "category": "home",
+      "popularity": 0.161,
+      "price_tier": 3
+    },
+    "item_0896": {
+      "category": "fashion",
+      "popularity": 0.434,
+      "price_tier": 2
+    },
+    "item_0897": {
+      "category": "fitness",
+      "popularity": 0.13,
+      "price_tier": 2
+    },
+    "item_0898": {
+      "category": "tech",
+      "popularity": 0.308,
+      "price_tier": 2
+    },
+    "item_0899": {
+      "category": "fitness",
+      "popularity": 0.812,
+      "price_tier": 3
+    },
+    "item_0900": {
+      "category": "sports",
+      "popularity": 0.726,
+      "price_tier": 2
+    },
+    "item_0901": {
+      "category": "beauty",
+      "popularity": 0.89,
+      "price_tier": 1
+    },
+    "item_0902": {
+      "category": "tech",
+      "popularity": 0.392,
+      "price_tier": 2
+    },
+    "item_0903": {
+      "category": "books",
+      "popularity": 0.851,
+      "price_tier": 3
+    },
+    "item_0904": {
+      "category": "books",
+      "popularity": 0.838,
+      "price_tier": 1
+    },
+    "item_0905": {
+      "category": "home",
+      "popularity": 0.546,
+      "price_tier": 3
+    },
+    "item_0906": {
+      "category": "food",
+      "popularity": 0.465,
+      "price_tier": 3
+    },
+    "item_0907": {
+      "category": "home",
+      "popularity": 0.657,
+      "price_tier": 1
+    },
+    "item_0908": {
+      "category": "food",
+      "popularity": 0.873,
+      "price_tier": 1
+    },
+    "item_0909": {
+      "category": "fashion",
+      "popularity": 0.695,
+      "price_tier": 1
+    },
+    "item_0910": {
+      "category": "books",
+      "popularity": 0.888,
+      "price_tier": 1
+    },
+    "item_0911": {
+      "category": "food",
+      "popularity": 0.752,
+      "price_tier": 4
+    },
+    "item_0912": {
+      "category": "food",
+      "popularity": 0.222,
+      "price_tier": 1
+    },
+    "item_0913": {
+      "category": "beauty",
+      "popularity": 0.974,
+      "price_tier": 1
+    },
+    "item_0914": {
+      "category": "home",
+      "popularity": 0.277,
+      "price_tier": 1
+    },
+    "item_0915": {
+      "category": "fashion",
+      "popularity": 0.512,
+      "price_tier": 1
+    },
+    "item_0916": {
+      "category": "books",
+      "popularity": 0.446,
+      "price_tier": 1
+    },
+    "item_0917": {
+      "category": "beauty",
+      "popularity": 0.62,
+      "price_tier": 4
+    },
+    "item_0918": {
+      "category": "books",
+      "popularity": 0.333,
+      "price_tier": 1
+    },
+    "item_0919": {
+      "category": "tech",
+      "popularity": 0.909,
+      "price_tier": 3
+    },
+    "item_0920": {
+      "category": "tech",
+      "popularity": 0.228,
+      "price_tier": 4
+    },
+    "item_0921": {
+      "category": "fashion",
+      "popularity": 0.381,
+      "price_tier": 3
+    },
+    "item_0922": {
+      "category": "home",
+      "popularity": 0.468,
+      "price_tier": 3
+    },
+    "item_0923": {
+      "category": "sports",
+      "popularity": 0.783,
+      "price_tier": 1
+    },
+    "item_0924": {
+      "category": "fitness",
+      "popularity": 0.534,
+      "price_tier": 2
+    },
+    "item_0925": {
+      "category": "sports",
+      "popularity": 0.668,
+      "price_tier": 1
+    },
+    "item_0926": {
+      "category": "tech",
+      "popularity": 0.721,
+      "price_tier": 3
+    },
+    "item_0927": {
+      "category": "fitness",
+      "popularity": 0.669,
+      "price_tier": 1
+    },
+    "item_0928": {
+      "category": "sports",
+      "popularity": 0.519,
+      "price_tier": 1
+    },
+    "item_0929": {
+      "category": "home",
+      "popularity": 0.61,
+      "price_tier": 3
+    },
+    "item_0930": {
+      "category": "beauty",
+      "popularity": 0.967,
+      "price_tier": 2
+    },
+    "item_0931": {
+      "category": "fitness",
+      "popularity": 0.949,
+      "price_tier": 4
+    },
+    "item_0932": {
+      "category": "beauty",
+      "popularity": 0.252,
+      "price_tier": 2
+    },
+    "item_0933": {
+      "category": "fitness",
+      "popularity": 0.4,
+      "price_tier": 1
+    },
+    "item_0934": {
+      "category": "tech",
+      "popularity": 0.538,
+      "price_tier": 1
+    },
+    "item_0935": {
+      "category": "fitness",
+      "popularity": 0.786,
+      "price_tier": 4
+    },
+    "item_0936": {
+      "category": "books",
+      "popularity": 0.916,
+      "price_tier": 4
+    },
+    "item_0937": {
+      "category": "books",
+      "popularity": 0.903,
+      "price_tier": 4
+    },
+    "item_0938": {
+      "category": "fashion",
+      "popularity": 0.134,
+      "price_tier": 2
+    },
+    "item_0939": {
+      "category": "fashion",
+      "popularity": 0.604,
+      "price_tier": 3
+    },
+    "item_0940": {
+      "category": "sports",
+      "popularity": 0.54,
+      "price_tier": 2
+    },
+    "item_0941": {
+      "category": "books",
+      "popularity": 0.332,
+      "price_tier": 1
+    },
+    "item_0942": {
+      "category": "fashion",
+      "popularity": 0.651,
+      "price_tier": 3
+    },
+    "item_0943": {
+      "category": "sports",
+      "popularity": 0.449,
+      "price_tier": 1
+    },
+    "item_0944": {
+      "category": "sports",
+      "popularity": 0.845,
+      "price_tier": 3
+    },
+    "item_0945": {
+      "category": "tech",
+      "popularity": 0.332,
+      "price_tier": 1
+    },
+    "item_0946": {
+      "category": "books",
+      "popularity": 0.687,
+      "price_tier": 1
+    },
+    "item_0947": {
+      "category": "tech",
+      "popularity": 0.186,
+      "price_tier": 3
+    },
+    "item_0948": {
+      "category": "fashion",
+      "popularity": 0.879,
+      "price_tier": 4
+    },
+    "item_0949": {
+      "category": "beauty",
+      "popularity": 0.771,
+      "price_tier": 1
+    },
+    "item_0950": {
+      "category": "food",
+      "popularity": 0.514,
+      "price_tier": 1
+    },
+    "item_0951": {
+      "category": "sports",
+      "popularity": 0.584,
+      "price_tier": 1
+    },
+    "item_0952": {
+      "category": "home",
+      "popularity": 0.295,
+      "price_tier": 3
+    },
+    "item_0953": {
+      "category": "food",
+      "popularity": 0.159,
+      "price_tier": 2
+    },
+    "item_0954": {
+      "category": "fitness",
+      "popularity": 0.556,
+      "price_tier": 3
+    },
+    "item_0955": {
+      "category": "fashion",
+      "popularity": 0.328,
+      "price_tier": 4
+    },
+    "item_0956": {
+      "category": "books",
+      "popularity": 0.641,
+      "price_tier": 4
+    },
+    "item_0957": {
+      "category": "food",
+      "popularity": 0.888,
+      "price_tier": 4
+    },
+    "item_0958": {
+      "category": "fashion",
+      "popularity": 0.29,
+      "price_tier": 2
+    },
+    "item_0959": {
+      "category": "food",
+      "popularity": 0.374,
+      "price_tier": 4
+    },
+    "item_0960": {
+      "category": "fashion",
+      "popularity": 0.806,
+      "price_tier": 3
+    },
+    "item_0961": {
+      "category": "food",
+      "popularity": 0.52,
+      "price_tier": 1
+    },
+    "item_0962": {
+      "category": "home",
+      "popularity": 0.241,
+      "price_tier": 2
+    },
+    "item_0963": {
+      "category": "fitness",
+      "popularity": 0.531,
+      "price_tier": 3
+    },
+    "item_0964": {
+      "category": "fashion",
+      "popularity": 0.76,
+      "price_tier": 2
+    },
+    "item_0965": {
+      "category": "beauty",
+      "popularity": 0.419,
+      "price_tier": 2
+    },
+    "item_0966": {
+      "category": "sports",
+      "popularity": 0.662,
+      "price_tier": 3
+    },
+    "item_0967": {
+      "category": "sports",
+      "popularity": 0.966,
+      "price_tier": 2
+    },
+    "item_0968": {
+      "category": "home",
+      "popularity": 0.612,
+      "price_tier": 1
+    },
+    "item_0969": {
+      "category": "beauty",
+      "popularity": 0.686,
+      "price_tier": 1
+    },
+    "item_0970": {
+      "category": "books",
+      "popularity": 0.838,
+      "price_tier": 1
+    },
+    "item_0971": {
+      "category": "fitness",
+      "popularity": 0.709,
+      "price_tier": 4
+    },
+    "item_0972": {
+      "category": "fashion",
+      "popularity": 0.391,
+      "price_tier": 3
+    },
+    "item_0973": {
+      "category": "books",
+      "popularity": 0.831,
+      "price_tier": 3
+    },
+    "item_0974": {
+      "category": "food",
+      "popularity": 0.691,
+      "price_tier": 2
+    },
+    "item_0975": {
+      "category": "tech",
+      "popularity": 0.802,
+      "price_tier": 4
+    },
+    "item_0976": {
+      "category": "books",
+      "popularity": 0.523,
+      "price_tier": 2
+    },
+    "item_0977": {
+      "category": "home",
+      "popularity": 0.52,
+      "price_tier": 4
+    },
+    "item_0978": {
+      "category": "home",
+      "popularity": 0.208,
+      "price_tier": 1
+    },
+    "item_0979": {
+      "category": "fitness",
+      "popularity": 0.446,
+      "price_tier": 2
+    },
+    "item_0980": {
+      "category": "books",
+      "popularity": 0.475,
+      "price_tier": 4
+    },
+    "item_0981": {
+      "category": "books",
+      "popularity": 0.795,
+      "price_tier": 3
+    },
+    "item_0982": {
+      "category": "beauty",
+      "popularity": 0.652,
+      "price_tier": 3
+    },
+    "item_0983": {
+      "category": "fitness",
+      "popularity": 0.624,
+      "price_tier": 3
+    },
+    "item_0984": {
+      "category": "books",
+      "popularity": 0.309,
+      "price_tier": 4
+    },
+    "item_0985": {
+      "category": "sports",
+      "popularity": 0.202,
+      "price_tier": 4
+    },
+    "item_0986": {
+      "category": "books",
+      "popularity": 0.454,
+      "price_tier": 2
+    },
+    "item_0987": {
+      "category": "sports",
+      "popularity": 0.533,
+      "price_tier": 3
+    },
+    "item_0988": {
+      "category": "fashion",
+      "popularity": 0.505,
+      "price_tier": 4
+    },
+    "item_0989": {
+      "category": "fitness",
+      "popularity": 0.161,
+      "price_tier": 1
+    },
+    "item_0990": {
+      "category": "tech",
+      "popularity": 0.798,
+      "price_tier": 4
+    },
+    "item_0991": {
+      "category": "books",
+      "popularity": 0.576,
+      "price_tier": 1
+    },
+    "item_0992": {
+      "category": "home",
+      "popularity": 0.369,
+      "price_tier": 1
+    },
+    "item_0993": {
+      "category": "home",
+      "popularity": 0.742,
+      "price_tier": 2
+    },
+    "item_0994": {
+      "category": "sports",
+      "popularity": 0.31,
+      "price_tier": 1
+    },
+    "item_0995": {
+      "category": "beauty",
+      "popularity": 0.48,
+      "price_tier": 4
+    },
+    "item_0996": {
+      "category": "tech",
+      "popularity": 0.33,
+      "price_tier": 1
+    },
+    "item_0997": {
+      "category": "home",
+      "popularity": 0.849,
+      "price_tier": 1
+    },
+    "item_0998": {
+      "category": "tech",
+      "popularity": 0.971,
+      "price_tier": 3
+    },
+    "item_0999": {
+      "category": "tech",
+      "popularity": 0.563,
+      "price_tier": 3
+    }
+  }
+}

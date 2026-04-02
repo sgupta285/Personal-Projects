@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: recommendation-api-config
+data:
+  APP_ENV: production
+  API_HOST: 0.0.0.0
+  API_PORT: "8000"
+  DATABASE_URL: sqlite:///./data/app.db
+  REDIS_URL: redis://redis:6379/0

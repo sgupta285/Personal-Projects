@@ -1,0 +1,28 @@
+### Home feed
+POST http://localhost:8000/v1/recommendations/home
+Content-Type: application/json
+
+{
+  "user_id": "user_0005",
+  "surface": "home",
+  "limit": 10,
+  "context": {
+    "hour_of_day": 20,
+    "device_type": "ios"
+  }
+}
+
+### Related items
+POST http://localhost:8000/v1/recommendations/related
+Content-Type: application/json
+
+{
+  "user_id": "user_0005",
+  "item_id": "item_0007",
+  "surface": "related_items",
+  "limit": 10,
+  "context": {
+    "hour_of_day": 20,
+    "device_type": "ios"
+  }
+}
