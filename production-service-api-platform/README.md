@@ -285,30 +285,6 @@ The `k8s/` directory includes:
 - `configmap.yaml`
 - `hpa.yaml`
 
-These are intentionally lightweight but cover the basics: readiness, liveness, resource settings, and horizontal autoscaling.
 
-## Java client example
 
-The portfolio README lists both Python and Java in the stack for this project. To keep that true without splitting the repository into two backends, I added a focused Java client example under `java-client/` that shows how a partner team could call the platform from a Java service. fileciteturn8file3
-
-## Tradeoffs
-
-- I used path-based versioning because it is explicit and easy for partner teams to reason about.
-- SQLite is the local default because it lowers setup friction. PostgreSQL is still the deployment target.
-- Redis is optional in development so the repo remains runnable on a clean machine.
-- The bearer-token flow is signed locally rather than wired to a third-party identity provider. That keeps the repository self-contained while preserving the same request contract.
-- The sample domain is intentionally narrow. The goal here is to showcase API platform concerns, not to simulate an entire business.
-
-## Reproducibility notes
-
-- The app will create its local SQLite database automatically.
-- The seed script creates a known demo client and sample orders.
-- The token script generates deterministic claim structure using the current environment settings.
-- Tests isolate themselves on a temporary SQLite database.
-
-## Limitations
-
-- OAuth is modeled, not delegated to a real external identity provider.
-- Quotas are process-local in the in-memory fallback path. Redis should be used for multi-instance enforcement.
-- The benchmark script is a lightweight check, not a full distributed load harness.
-- This starter prioritizes clarity and reliability over squeezing out every last millisecond.
+## 
