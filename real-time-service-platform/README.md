@@ -240,22 +240,6 @@ The Kubernetes manifests include:
 
 These map directly to the operational expectations described in the portfolio brief: rolling updates, health checks, and autoscaling.
 
-### CI
-
-GitHub Actions runs the test suite on pushes and pull requests. The repo keeps CI lean, which is usually the right move early on.
-
-## Design tradeoffs
-
-- I used SQLite by default for fast local setup and deterministic tests, even though the deployment path is PostgreSQL-first.
-- The async path uses FastAPI background tasks rather than a full broker and worker system. That keeps the repo understandable and runnable, while still reflecting the intent of non-blocking work.
-- The Redis integration is config-ready but intentionally light. The README required Redis in the stack, but the portfolio description did not justify building a much larger distributed caching subsystem here.
-
-## Reproducibility notes
-
-- The seed script creates a default admin and operator account.
-- Tests recreate the database per run.
-- The smoke test exercises the core auth and sync flow.
-- The benchmark gives a repeatable local latency snapshot.
 
 ## Default seeded users
 
