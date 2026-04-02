@@ -264,9 +264,4 @@ The source project explicitly mentions hardware-software integration. A simulato
 - The cache is content-based and local, not distributed.
 - Verification checks package integrity and metadata consistency, not deep runtime correctness on real hardware.
 
-## Reproducibility notes
 
-- The build metadata is written to `build/<board>/manifest.json`.
-- The release bundle in `dist/` includes both a manifest and a verification payload.
-- The checksum sidecar makes it easy to compare release outputs in automation.
-- The CI job exercises the same top-level verification flow a local engineer would run.
