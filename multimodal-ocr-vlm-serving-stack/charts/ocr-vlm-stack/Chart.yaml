@@ -1,0 +1,5 @@
+apiVersion: v2
+name: ocr-vlm-stack
+description: Helm chart for queue-backed OCR and VLM serving workloads
+version: 0.1.0
+appVersion: "0.1.0"

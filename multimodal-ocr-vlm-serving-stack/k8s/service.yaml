@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: multimodal-ocr-vlm-api
+spec:
+  selector:
+    app: multimodal-ocr-vlm-api
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8000

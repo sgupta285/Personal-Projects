@@ -1,0 +1,16 @@
+image:
+  repository: ghcr.io/example/multimodal-ocr-vlm-serving-stack
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  port: 80
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 8
+  targetCPUUtilizationPercentage: 70
+
+env:
+  gpuMemoryBudgetMb: 4096

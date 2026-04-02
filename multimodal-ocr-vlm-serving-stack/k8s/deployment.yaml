@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multimodal-ocr-vlm-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: multimodal-ocr-vlm-api
+  template:
+    metadata:
+      labels:
+        app: multimodal-ocr-vlm-api
+    spec:
+      containers:
+        - name: api
+          image: ghcr.io/example/multimodal-ocr-vlm-serving-stack:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: GPU_MEMORY_BUDGET_MB
+              value: "4096"
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 8000
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 8000
