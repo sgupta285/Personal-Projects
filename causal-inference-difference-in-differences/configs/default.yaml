@@ -1,0 +1,27 @@
+data:
+  n_units: 40
+  n_periods: 24
+  seed: 42
+  treated_share: 0.25
+  treatment_start: 14
+  policy_effect: 2.25
+  violating_units: 2
+  output_path: data/sample/panel.csv
+analysis:
+  outcome_col: outcome
+  unit_col: unit_id
+  time_col: time_id
+  treated_col: treated
+  post_col: post
+  ever_treated_col: ever_treated
+  treatment_time_col: treatment_time
+  cohort_col: treatment_cohort
+  cluster_col: unit_id
+  placebo_shift: 4
+  pre_periods_for_parallel_trends: 6
+  min_pre_periods_for_synth: 8
+  output_dir: artifacts
+benchmark:
+  replications: 3
+  seed: 123
+  output_path: artifacts/benchmarks/benchmark_results.json

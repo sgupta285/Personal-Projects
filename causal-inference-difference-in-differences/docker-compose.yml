@@ -1,0 +1,6 @@
+services:
+  did-lab:
+    build: .
+    volumes:
+      - .:/app
+    command: python -m did_lab.cli --config configs/default.yaml run-analysis
