@@ -321,4 +321,9 @@ The source description for this project implies the following expectations, whic
 - retry safety with manual DLQ replay
 - a scaling story based on queue depth and processing latency
 
+## License
+
+MIT
+
+
 
