@@ -298,4 +298,8 @@ That is the cleanest way to keep the fallback interpretable and portable. A larg
 
 Notebook-only causal projects are hard to test and easy to break quietly. The CLI makes the analysis reproducible from a fresh clone, while still leaving room for notebooks if someone wants to add more exploratory work.
 
+## License
+
+MIT
+
 
