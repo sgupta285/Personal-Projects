@@ -147,22 +147,4 @@ Password for both demo users: `demo12345`
 - `POST /api/checkin/validate/` validate check-in token
 - `GET /api/analytics/events/{id}/summary/` organizer summary
 
-## Design decisions
 
-The payment and email integrations are wrapped behind provider interfaces. That keeps the local developer workflow lightweight while preserving the boundaries needed for real integrations later.
-
-Capacity and waitlist rules live in the registration service layer instead of being scattered through views. This keeps the business logic testable and avoids subtle race-condition behavior in the request handlers.
-
-Admission is modeled as a token attached to a confirmed registration. In production this could become a signed QR payload or wallet pass, but the same validation interface would still apply.
-
-## Tradeoffs
-
-- Local development uses SQLite by default for easier setup, while the container path uses PostgreSQL.
-- Payment processing is intentionally stubbed to keep the project runnable without external credentials.
-- The frontend focuses on the main organizer and attendee workflows instead of covering every admin edge case.
-
-## Reproducibility notes
-
-- Seed data is deterministic.
-- Tests cover capacity handling, waitlist promotion, and check-in validation.
-- All externally coupled services are abstracted behind local stubs.
