@@ -5,30 +5,44 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Projects-60-111827?style=for-the-badge" alt="60 projects" />
+  <img src="https://img.shields.io/badge/Projects-55-111827?style=for-the-badge" alt="55 projects" />
   <img src="https://img.shields.io/badge/Focus-AI%20%7C%20Backend%20%7C%20Infra%20%7C%20Quant-2563eb?style=for-the-badge" alt="focus areas" />
   <img src="https://img.shields.io/badge/Build%20Style-Production%20Minded-059669?style=for-the-badge" alt="production minded" />
   <img src="https://img.shields.io/badge/Stack-Python%20%7C%20C%2B%2B%20%7C%20React%20%7C%20K8s-f59e0b?style=for-the-badge" alt="stack" />
+</p>
+
+<p align="center">
+  Live portfolio website: <a href="https://personal-website-srijan.vercel.app/">personal-website-srijan.vercel.app</a>
 </p>
 
 ---
 
 ## Overview
 
-This repository is a curated portfolio of projects spanning **AI systems, machine learning, backend engineering, distributed systems, cloud infrastructure, quantitative finance, forecasting, experimentation, and applied econometrics**.
+This repository is a working portfolio of projects across **AI systems, backend engineering, distributed infrastructure, quantitative finance, forecasting, experimentation, and applied econometrics**. Some of these projects started as product ideas, some as research questions, and some as systems problems, but they all reflect the same way I like to build: start with a real constraint, make the technical core solid, and stay with the system long enough to make it useful in practice.
 
-The goal of this README is not just to list projects. It is to show how I think about building systems end to end: from **modeling and experimentation** to **latency, observability, deployment, scalability, reliability, and product impact**.
+I care a lot about the space between modeling and engineering. Good models matter, but so do latency, observability, failure handling, deployment hygiene, and whether the output is something a user or teammate can actually trust. That is the common thread across this portfolio.
 
-Across these builds, I focus on systems that are not only technically correct, but also **usable in real environments**.
+## About Me
+
+I am a Computer Science, Data Science, and Economics student at the **University of Wisconsin-Madison**, and most of my work sits at the intersection of machine learning, backend systems, analytics, and product development. I enjoy projects where the hard part is not just getting something to work once, but turning it into a reliable tool, service, or workflow that people would actually want to use.
+
+Across the projects below, you will see a mix of legal RAG, document intelligence, fraud detection, forecasting, experimentation, low-latency market infrastructure, developer tooling, and analytics systems. The surface area changes, but my approach is pretty consistent:
+
+- I like owning problems end to end, from data and modeling through APIs, deployment, monitoring, and user-facing workflows.
+- I bias toward measurable improvements such as lower latency, better reliability, clearer decision-making, and faster iteration.
+- I care about systems that are explainable, maintainable, and grounded in a real use case rather than just a good demo.
 
 ## At a Glance
 
 - **Core themes:** AI/LLM systems, agentic workflows, backend platforms, real-time systems, cloud-native infrastructure, quantitative research, analytics, experimentation, and forecasting
 - **Representative tools:** Python, C++, Go, Rust, FastAPI, React, Kotlin, Playwright, Kubernetes, Docker, PostgreSQL, Redis, AWS, Terraform, MLflow, Spark, Tableau, Power BI, Prometheus, Grafana
-- **Build philosophy:** measurable impact, reproducibility, scalability, observability, and production-minded engineering
+- **How to read this README:** skim the project directory for the short version, then jump into the detailed summaries for architecture, tradeoffs, results, and tooling
 
 ## Repository Navigation
 
+- [About Me](#about-me)
+- [Live Portfolio Website](https://personal-website-srijan.vercel.app/)
 - [Featured Projects](#featured-projects)
 - [Project Categories](#project-categories)
 - [Detailed Project Summaries](#detailed-project-summaries)
@@ -45,84 +59,86 @@ Across these builds, I focus on systems that are not only technically correct, b
 |---|---|---|
 | **ClearClause** | Production-minded legal RAG, hybrid retrieval, reranking, low-latency inference, observability | `Python` `FastAPI` `pgvector` `Redis` `Kubernetes` |
 | **SpecMe** | Agentic product copilot, structured workflows, versioned outputs, human-in-the-loop product UX | `TypeScript` `Next.js` `FastAPI` `pgvector` `Docker` |
-| **Browser-agent-runtime** | Frontier-style browser automation, tool interfaces, action planning, permission-aware agents | `Python` `Playwright` `CDP` `FastAPI` `Redis` |
+| **Browser Agent Runtime** | Frontier-style browser automation, tool interfaces, action planning, permission-aware agents | `Python` `Playwright` `CDP` `FastAPI` `Redis` |
 | **Layout-Aware Document Intelligence Platform** | Multimodal document understanding, deterministic parsing, VLM-style pipelines, enterprise infra | `Python` `Rust` `FastAPI` `Kubernetes` `PostgreSQL` |
 | **Production ML Serving Infrastructure** | Model deployment, real-time/batch predictions, comprehensive monitoring, MLOps | `Python` `PyTorch` `FastAPI` `Kubernetes` `AWS` |
 | **BuckyConnect** | Real-time product engineering, GraphQL, WebSockets, AWS deployment | `React` `TypeScript` `GraphQL` `Redis` `AWS` |
 | **Low-Latency Matching Engine and Market Data Feed** | Systems-level performance, feed handling, event processing, low-latency trading infrastructure | `C++` `Linux` `Sockets` `Python` |
-| **Product Metrics & Analytics Framework** | Segmentation modeling, dashboarding, GTM analytics, reproducible business insights | `Python` `SQL` `scikit-learn` `Tableau` |
+| **Product Metrics and Analytics Framework** | Segmentation modeling, dashboarding, GTM analytics, reproducible business insights | `Python` `SQL` `scikit-learn` `Tableau` |
 
 ## Project Categories
 
+This section is the quickest useful map of the repo. Each entry gives the short, concrete version of what the project actually is before the deeper write-up later in the README.
+
 ### AI, ML, and LLM Systems
 
-- [ClearClause](#clearclause)
-- [SpecMe - AI Product Copilot](#specme---ai-product-copilot)
-- [Production ML Serving Infrastructure](#production-ml-serving-infrastructure)
-- [Llm_eval_inference_stack](#Llm_eval_inference_stack)
-- [Fraud-Detection-Api](#fraud-detection-api)
-- [Recommendation System Infrastructure](#recommendation-system-infrastructure)
-- [Ads_integrity_content_moderation_platform](#Ads_integrity_content_moderation_platform)
-- [Customer-churn-prediction-intervention](#Customer-churn-prediction-intervention)
-- [Browser-agent-runtime](#Browser-agent-runtime)
-- [Layout-Aware Document Intelligence Platform](#layout-aware-document-intelligence-platform)
-- [Multimodal Agent Evaluation Stack](#multimodal-agent-evaluation-stack)
-- [Clinical-prompt-evaluation-suite](#Clinical-prompt-evaluation-suite)
-- [Human Data Collection Platform](#human-data-collection-platform)
-- [Reward Modeling and Preference Data Lab](#reward-modeling-and-preference-data-lab)
-- [SpotifySongPopularity](#spotifysongpopularity)
-- [AITrendRadar](#aitrendradar)
-- [ML Data Preparation Pipeline](#ml-data-preparation-pipeline)
+- [ClearClause](#clearclause): Legal contract review assistant with hybrid retrieval, reranking, caching, and clause-level explanations.
+- [SpecMe - AI Product Copilot](#specme---ai-product-copilot): Product copilot that turns rough PM notes into structured engineering specs, edge cases, and implementation guidance.
+- [Production ML Serving Infrastructure](#production-ml-serving-infrastructure): Real-time and batch model-serving stack with monitoring, rollout safety, and production MLOps workflows.
+- [LLM Evaluation and Inference Stack](#llm-evaluation-and-inference-stack): Reproducible benchmarking and serving layer for comparing models, prompts, latency, and cost.
+- [Fraud Detection API](#fraud-detection-api): Real-time fraud scoring service with streaming features, model monitoring, and explainable decisions.
+- [Customer Churn Prediction and Intervention](#customer-churn-prediction-and-intervention): Churn modeling workflow that pairs predictions with SHAP-based drivers and a faster retention playbook.
+- [Recommendation System Infrastructure](#recommendation-system-infrastructure): Candidate generation, ranking, feature store, and experimentation stack for personalized recommendations.
+- [Ads Integrity Content Moderation Platform](#ads-integrity-content-moderation-platform): Trust-and-safety pipeline for reviewing ads with automated checks, model-based scoring, and reviewer escalation.
+- [Browser Agent Runtime](#browser-agent-runtime): Browser-native agent runtime with tool use, permissions, and recovery across authenticated workflows.
+- [Layout-Aware Document Intelligence Platform](#layout-aware-document-intelligence-platform): Structured parsing pipeline for PDFs and scans with layout awareness, table extraction, and deterministic outputs.
+- [Multimodal Agent Evaluation Stack](#multimodal-agent-evaluation-stack): Benchmark suite for multimodal agents measuring task success, latency, traces, and recovery quality.
+- [Clinical Prompt Evaluation Suite](#clinical-prompt-evaluation-suite): Prompt testing framework for healthcare-style workflows with rubrics, safety checks, and versioned experiments.
+- [Human Data Collection Platform](#human-data-collection-platform): Full-stack labeling and annotation system for preference, ranking, and evaluation datasets.
+- [Reward Modeling and Preference Data Lab](#reward-modeling-and-preference-data-lab): Experiment layer for collecting, versioning, and analyzing preference data used in RLHF-style work.
+- [Spotify Song Popularity Analysis](#spotify-song-popularity-analysis): ETL and modeling pipeline for predicting track popularity from audio and artist features.
+- [AI Trend Radar](#ai-trend-radar): Automated research and product trend monitor that scrapes, classifies, and summarizes AI developments.
+- [ML Data Preparation Pipeline](#ml-data-preparation-pipeline): Reusable preprocessing and validation pipeline for turning messy data into model-ready training sets.
 
 ### Backend, Full-Stack, Mobile, and Product Engineering
 
-- [BuckyConnect](#buckyconnect)
-- [E-Commerce Backend System](#e-commerce-backend-system)
-- [Usage Analytics Dashboard](#usage-analytics-dashboard)
-- [Real-Time Service Platform](#real-time-service-platform)
-- [Production Service API Platform](#production-service-api-platform)
-- [Interactive-agent-orchestration-platform](#Interactive-agent-orchestration-platform)
-- [Mobile Health Tracker (React Native)](#mobile-health-tracker-react-native)
-- [Restaurant Discovery Platform](#restaurant-discovery-platform)
-- [Event Management System](#event-management-system)
-- [Habit Tracker with Social Features](#habit-tracker-with-social-features)
+- [BuckyConnect](#buckyconnect): Real-time collaboration platform with GraphQL, live updates, Redis-backed state, and AWS deployment.
+- [E-Commerce Backend System](#e-commerce-backend-system): Backend for catalog, orders, payments, and account management with reliable transactional flows.
+- [Usage Analytics Dashboard](#usage-analytics-dashboard): Product analytics workspace with funnels, retention views, segmentation, and self-serve reporting.
+- [Real-Time Service Platform](#real-time-service-platform): Low-latency service architecture for live updates, concurrent activity, and resilient real-time messaging.
+- [Production Service API Platform](#production-service-api-platform): Documented production API layer with validation, authentication, rate limits, and observability.
+- [Interactive Agent Orchestration Platform](#interactive-agent-orchestration-platform): Distributed services for document-heavy agent workflows with queues, tracing, and access control.
+- [Mobile Health Tracker (React Native)](#mobile-health-tracker-react-native): Cross-platform health app with offline storage, sync, and native fitness integrations.
+- [Restaurant Discovery Platform](#restaurant-discovery-platform): Full-stack discovery and booking product with search, reviews, maps, and reservations.
+- [Event Management System](#event-management-system): Conference and meetup platform with registration, ticketing, waitlists, and admin operations.
+- [Habit Tracker with Social Features](#habit-tracker-with-social-features): Accountability-focused habit app with streaks, challenges, notifications, and leaderboards.
 
 ### Quantitative Finance and Trading Systems
 
-- [Low-Latency Matching Engine and Market Data Feed](#low-latency-matching-engine-and-market-data-feed)
-- [Algorithmic Trading Strategy](#algorithmic-trading-strategy)
-- [Backtest Engineering Framework](#backtest-engineering-framework)
-- [Statistical Arbitrage Pairs Trading Cointegration + Kalman Filters](#statistical-arbitrage-pairs-trading-cointegration--kalman-filters)
-- [Options Pricing and Greeks Engine](#options-pricing-and-greeks-engine)
-- [Portfolio Rebalancing and Risk Management](#portfolio-rebalancing-and-risk-management)
+- [Low-Latency Matching Engine and Market Data Feed](#low-latency-matching-engine-and-market-data-feed): C++ trading infrastructure focused on microsecond execution, order books, and feed parsing.
+- [Algorithmic Trading Strategy](#algorithmic-trading-strategy): Event-driven backtesting and live-trading engine with realistic execution costs, P&L tracking, and scenario analysis.
+- [Backtest Engineering Framework](#backtest-engineering-framework): Research framework centered on execution realism, train-test discipline, and statistical rigor.
+- [Statistical Arbitrage Pairs Trading with Cointegration and Kalman Filters](#statistical-arbitrage-pairs-trading-with-cointegration-and-kalman-filters): Real-time stat-arb monitoring stack for spread signals, validation, and alerting.
+- [Options Pricing and Greeks Engine](#options-pricing-and-greeks-engine): Pricing and risk tool covering Black-Scholes, trees, Monte Carlo, and full Greeks support.
+- [Portfolio Rebalancing and Risk Management](#portfolio-rebalancing-and-risk-management): Allocation and risk engine for rebalancing, VaR/CVaR, and efficient-frontier optimization.
 
 ### Data Science, Econometrics, and Forecasting
 
-- [Product Metrics & Analytics Framework](#product-metrics--analytics-framework)
-- [Accounting-operations-platform](#Accounting-operations-platform)
-- [Cloud-native-production-platform](#Cloud-native-production-platform)
-- [Multi-Source Data Integration](#multi-source-data-integration)
-- [Randomized Controlled Trial Evaluation](#randomized-controlled-trial-evaluation)
-- [Retail Demand Forecasting System](#retail-demand-forecasting-system)
-- [Marketing-attribution-response-modeling](#Marketing-attribution-response-modeling)
-- [Causal Inference with Difference-in-Differences](#causal-inference-with-difference-in-differences)
-- [Experimental Design and Power Analysis Tool](#experimental-design-and-power-analysis-tool)
-- [Census Data Analytics and Visualization](#census-data-analytics-and-visualization)
+- [Product Metrics and Analytics Framework](#product-metrics-and-analytics-framework): Customer analytics stack for segmentation, churn, attribution, and executive dashboards.
+- [Accounting Operations Platform](#accounting-operations-platform): ETL and warehouse pipeline for finance and ops reporting with strong data quality checks.
+- [Cloud Native Production Platform](#cloud-native-production-platform): Distributed data platform on AWS and Spark for large-scale processing and analytics-ready modeling.
+- [Multi-Source Data Integration](#multi-source-data-integration): Integration layer for reconciling APIs, files, and databases with lineage and schema evolution.
+- [Randomized Controlled Trial Evaluation](#randomized-controlled-trial-evaluation): Causal analysis workflow for experiments with treatment effects, heterogeneity, and reporting.
+- [Retail Demand Forecasting System](#retail-demand-forecasting-system): SKU-level forecasting workflow with uncertainty bands, external regressors, and planning outputs.
+- [Marketing Attribution Response Modeling](#marketing-attribution-response-modeling): Attribution and response modeling workflow for channel mix, spend allocation, and marketing lift.
+- [Causal Inference with Difference-in-Differences](#causal-inference-with-difference-in-differences): Policy and intervention analysis using panel methods, robustness checks, and counterfactual reasoning.
+- [Experimental Design and Power Analysis Tool](#experimental-design-and-power-analysis-tool): Pre-experiment toolkit for sample sizing, power analysis, and guardrail metrics.
+- [Census Data Analytics and Visualization](#census-data-analytics-and-visualization): Demographic analysis and dashboards translating census data into practical planning views.
 
 ### Cloud, Infrastructure, and Systems Engineering
 
-- [High-performance-storage-infrastructure](#High-performance-storage-infrastructure)
-- [Real-Time Data Processing Platform](#real-time-data-processing-platform)
-- [Secure Data Processing Service](#secure-data-processing-service)
-- [Kubernetes Monitoring and Autoscaling Stack](#kubernetes-monitoring-and-autoscaling-stack)
-- [Multimodal OCR and VLM Serving Stack](#multimodal-ocr-and-vlm-serving-stack)
-- [Linux Latency Diagnostics and Scheduler Profiler](#linux-latency-diagnostics-and-scheduler-profiler)
-- [Device Telemetry SDK and Recorder](#device-telemetry-sdk-and-recorder)
-- [Distributed Data Acquisition System](#distributed-data-acquisition-system)
-- [Real-Time Control System](#real-time-control-system)
-- [Geometry Processing Pipeline](#geometry-processing-pipeline)
-- [Firmware Build and Verification Tooling](#firmware-build-and-verification-tooling)
-- [Infrastructure-automation-framework](#Infrastructure-automation-framework)
+- [High Performance Storage Infrastructure](#high-performance-storage-infrastructure): Storage-system work focused on throughput, reliability, and performance tuning.
+- [Real-Time Data Processing Platform](#real-time-data-processing-platform): Streaming data platform for ingestion, processing, and downstream analytics at low latency.
+- [Secure Data Processing Service](#secure-data-processing-service): Secure processing pipeline with encryption, access control, auditability, and controlled data handling.
+- [Kubernetes Monitoring and Autoscaling Stack](#kubernetes-monitoring-and-autoscaling-stack): Cluster observability and autoscaling stack driven by useful operational signals.
+- [Multimodal OCR and VLM Serving Stack](#multimodal-ocr-and-vlm-serving-stack): Serving and orchestration layer for OCR and multimodal model workloads.
+- [Linux Latency Diagnostics and Scheduler Profiler](#linux-latency-diagnostics-and-scheduler-profiler): Low-level Linux tooling for identifying scheduler, I/O, and latency bottlenecks.
+- [Device Telemetry SDK and Recorder](#device-telemetry-sdk-and-recorder): Telemetry collection SDK for capturing device signals reliably in production.
+- [Distributed Data Acquisition System](#distributed-data-acquisition-system): Distributed ingestion system coordinating capture, buffering, and synchronization across nodes.
+- [Real-Time Control System](#real-time-control-system): Control-plane software for time-sensitive orchestration and deterministic behavior.
+- [Geometry Processing Pipeline](#geometry-processing-pipeline): Batch pipeline for transforming, validating, and optimizing geometry assets or scientific data.
+- [Firmware Build and Verification Tooling](#firmware-build-and-verification-tooling): Tooling to automate firmware builds, validation, and repeatable release checks.
+- [Infrastructure Automation Framework](#infrastructure-automation-framework): GitOps-friendly automation for infrastructure provisioning, deployment, and config drift reduction.
 
 ---
 
@@ -210,7 +226,7 @@ Built end-to-end ML serving infrastructure supporting real-time and batch predic
 
 ---
 
-### Llm_eval_inference_stack
+### LLM Evaluation and Inference Stack
 
 **Overview**  
 Built comprehensive evaluation and serving infrastructure for large language models, supporting benchmarking, performance optimization, and production deployment. The system enables rapid experimentation with different models, prompts, and serving configurations while maintaining reproducibility and cost efficiency.
@@ -228,7 +244,7 @@ Built comprehensive evaluation and serving infrastructure for large language mod
 
 ---
 
-### Fraud-Detection-Api
+### Fraud Detection API
 
 **Overview**  
 Built production fraud detection system processing payment transactions in real-time with machine learning models identifying fraudulent patterns. The system balances precision (minimizing false positives that block legitimate customers) with recall (catching actual fraud) while maintaining sub-second latency requirements for seamless checkout experiences. Implemented comprehensive feature engineering, model monitoring, and decision explainability for compliance and customer support.
@@ -251,6 +267,31 @@ Built production fraud detection system processing payment transactions in real-
 
 **Tech stack**  
 `Python` `XGBoost` `scikit-learn` `FastAPI` `Kafka` `Redis` `PostgreSQL` `Docker` `Kubernetes` `Prometheus`
+
+---
+
+### Customer Churn Prediction and Intervention
+
+**Overview**  
+Built a churn prediction workflow designed for retention teams that need more than a risk score. The system predicts churn, surfaces the drivers behind each prediction, and helps teams decide who to contact first and when to intervene. The goal was to turn churn modeling into something operational instead of leaving it as a dashboard no one acts on.
+
+**Key results**
+- Modeled churn across **500K+ customers** with **87% precision** and **82% recall**, giving retention teams a cleaner set of high-risk accounts to review
+- Reduced time-to-intervention from **14 days to 2 days** by pairing predictions with clear reason codes and a prioritized outreach workflow
+- Used SHAP explanations and time-to-churn modeling so teams could distinguish between customers who were slipping quietly and customers who were close to immediate drop-off
+- Packaged the work into dashboards and repeatable analyst workflows, making the model easier to trust and easier to operationalize
+
+**Technical deep dive**
+- Engineered features from product activity, support interactions, tenure, billing history, and engagement decay instead of relying on static snapshots
+- Trained gradient-boosted models for classification and paired them with Cox-style survival analysis to estimate intervention timing
+- Used SHAP values to explain the strongest churn drivers at the individual account level, which made the output much more useful for customer-facing teams
+- Built dashboard views for priority queues, segment-level churn patterns, and intervention outcomes so analysts could see both the big picture and the account-level details
+
+**Focus areas**  
+`Churn Modeling` `Explainable ML` `Retention Analytics` `Survival Analysis` `Operational Analytics` `Customer Intelligence`
+
+**Tech stack**  
+`Python` `SQL` `XGBoost` `scikit-learn` `SHAP` `Tableau` `R`
 
 ---
 
@@ -279,7 +320,32 @@ Built ML platform powering personalized recommendations with model serving infra
 
 ---
 
-### Browser-agent-runtime
+### Ads Integrity Content Moderation Platform
+
+**Overview**  
+Built a trust-and-safety moderation workflow for ad review where the system has to move quickly without sacrificing consistency. The platform screens content for unsafe, low-quality, or policy-violating material, routes higher-risk cases to reviewers, and keeps an audit trail of how each decision was made.
+
+**Key results**
+- Combined rule-based checks and model-based scoring so obviously safe or obviously unsafe submissions could be handled faster, reducing manual review load
+- Built reviewer escalation paths with attached evidence, making moderation decisions easier to explain and revisit when policies changed
+- Designed the pipeline for low-latency screening so moderation could fit into real approval workflows instead of becoming a bottleneck
+- Added logging and traceability that made the system more useful for policy operations, enforcement reviews, and post-incident analysis
+
+**Technical deep dive**
+- Layered deterministic policy checks with NLP-based risk scoring to catch both straightforward violations and fuzzier quality or safety issues
+- Routed submissions into review queues by severity so human reviewers spent time on the ambiguous cases rather than the obvious ones
+- Preserved evidence, scores, and policy tags throughout the decision path to support auditability and consistent reviewer handoffs
+- Structured the service as a production-minded API workflow rather than a notebook-style model demo, which made it easier to plug into moderation operations
+
+**Focus areas**  
+`Trust and Safety` `Content Moderation` `Real-Time ML` `Operational Workflows` `Policy Enforcement` `Auditability`
+
+**Tech stack**  
+`Python` `FastAPI` `PyTorch` `Redis` `PostgreSQL` `Docker`
+
+---
+
+### Browser Agent Runtime
 
 **Overview**  
 Built a browser-native agent runtime for navigating authenticated web flows using tool calls, background execution, and permission-aware action planning. The system enables agents to interact with complex websites, handle authentication, fill forms, extract data, and complete multi-step workflows while respecting security boundaries and handling edge cases gracefully.
@@ -333,7 +399,7 @@ Built an evaluation stack for multimodal agents covering tool-use accuracy, late
 
 ---
 
-### Clinical-prompt-evaluation-suite
+### Clinical Prompt Evaluation Suite
 
 **Overview**  
 Built a prompt evaluation suite for healthcare-style workflows using structured testing datasets, rubric-based scoring, and versioned prompt experiments. The system ensures LLM outputs meet clinical accuracy, safety, and consistency requirements before deployment.
@@ -387,7 +453,7 @@ Built a lab for collecting, evaluating, and versioning preference data used in r
 
 ---
 
-### SpotifySongPopularity
+### Spotify Song Popularity Analysis
 
 **Overview**  
 Built end-to-end data pipeline ingesting Spotify API data, engineering features from audio characteristics and artist metadata, and training models predicting track popularity. The system demonstrates ETL design, feature engineering, and model deployment practices.
@@ -405,7 +471,7 @@ Built end-to-end data pipeline ingesting Spotify API data, engineering features 
 
 ---
 
-### AITrendRadar
+### AI Trend Radar
 
 **Overview**  
 Built automated system monitoring AI research papers, product launches, and industry trends using web scraping, NLP analysis, and trend detection algorithms. The system surfaces emerging topics, tracks technology adoption, and generates weekly summaries.
@@ -579,7 +645,7 @@ Built scalable API platform with end-to-end ownership from design through deploy
 
 ---
 
-### Interactive-agent-orchestration-platform
+### Interactive Agent Orchestration Platform
 
 **Overview**  
 Built distributed services that let agents read, write, and validate large document workflows across cloud-backed and enterprise-style environments. The system enables automation of document processing tasks while respecting access controls, audit requirements, and compliance constraints.
@@ -744,7 +810,7 @@ Built rigorous backtesting framework emphasizing execution realism, transaction 
 
 ---
 
-### Statistical Arbitrage Pairs Trading Cointegration + Kalman Filters
+### Statistical Arbitrage Pairs Trading with Cointegration and Kalman Filters
 
 **Overview**  
 Built real-time system monitoring price discrepancies across exchanges, identifying arbitrage opportunities, and generating alerts. The system handles multiple asset classes, accounts for execution costs, and filters false positives from stale quotes.
@@ -800,7 +866,7 @@ Built portfolio management system with automated rebalancing, risk monitoring, a
 
 ## Data Science, Econometrics, and Forecasting
 
-### Product Metrics & Analytics Framework
+### Product Metrics and Analytics Framework
 
 **Overview**  
 Built comprehensive analytics platform for customer segmentation, go-to-market strategy analysis, and business intelligence with machine learning models, interactive dashboards, and automated reporting. The system processes **500K+ customer records** to identify high-value segments, predict churn, and optimize marketing spend allocation.
@@ -827,7 +893,7 @@ Built comprehensive analytics platform for customer segmentation, go-to-market s
 
 ---
 
-### Accounting-operations-platform
+### Accounting Operations Platform
 
 **Overview**  
 Built ETL pipeline extracting data from multiple sources, transforming for analytics consumption, and loading into data warehouse with strong attention to data quality and reliability. The system supports downstream analytics, reporting, and machine learning workflows.
@@ -854,7 +920,7 @@ Built ETL pipeline extracting data from multiple sources, transforming for analy
 
 ---
 
-### Cloud-native-production-platform
+### Cloud Native Production Platform
 
 **Overview**  
 Built scalable data processing platform on cloud infrastructure handling batch and streaming workloads with PySpark, leveraging managed services for storage, compute, and orchestration. The system demonstrates cloud-native architecture, distributed processing, and data modeling practices.
@@ -942,7 +1008,7 @@ Built time series forecasting models predicting demand, sales, and other busines
 
 ---
 
-### Marketing-attribution-response-modeling
+### Marketing Attribution Response Modeling
 
 **Overview**  
 Built attribution models allocating credit across marketing touchpoints and marketing mix models quantifying channel effectiveness. The system handles multi-touch attribution, incrementality testing, and budget optimization.
@@ -1016,7 +1082,7 @@ Built analytics platform exploring US Census data with interactive visualization
 
 ## Cloud, Infrastructure, and Systems Engineering
 
-### High-performance-storage-infrastructure
+### High Performance Storage Infrastructure
 
 **Overview**  
 Built distributed system optimized for performance and scalability using C++ and Python, with focus on profiling, bottleneck identification, and architectural optimization. The system demonstrates understanding of distributed systems concepts, performance engineering, and production reliability practices.
@@ -1251,7 +1317,7 @@ Developed build and verification tooling for device software packages using scri
 
 ---
 
-### Infrastructure-automation-framework
+### Infrastructure Automation Framework
 
 **Overview**  
 Built automation platform using GitOps principles for infrastructure management, deployment, and operations. The system uses Terraform for infrastructure-as-code, Helm for application deployment, and Git as source of truth.
