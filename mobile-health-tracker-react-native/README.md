@@ -236,4 +236,6 @@ A mobile repo should be runnable out of the box. The mock remote adapter keeps t
 
 Native health integrations are platform-specific and permission-heavy. The interface keeps the app stable whether those integrations are live, incomplete, or unavailable.
 
+## License
 
+MIT
