@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: production-service-api-platform
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: production-service-api-platform
+  template:
+    metadata:
+      labels:
+        app: production-service-api-platform
+    spec:
+      containers:
+        - name: api
+          image: ghcr.io/example/production-service-api-platform:latest
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: production-service-api-platform-config
+          readinessProbe:
+            httpGet:
+              path: /health/ready
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health/live
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "256Mi"
+            limits:
+              cpu: "1000m"
+              memory: "512Mi"

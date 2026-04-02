@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: production-service-api-platform
+spec:
+  selector:
+    app: production-service-api-platform
+  ports:
+    - port: 80
+      targetPort: 8000
