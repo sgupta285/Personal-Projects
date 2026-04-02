@@ -270,37 +270,8 @@ The Kubernetes folder includes:
 
 That is enough to show how the API would be rolled out behind a service with readiness gating and horizontal scaling.
 
-## Design decisions and tradeoffs
+## License
 
-### Why the catalog is synthetic
+MIT
 
-The uploaded README described system behaviors and architecture, not a specific production dataset. I used generated interaction data so the repository stays runnable out of the box while still demonstrating the requested training, retrieval, and ranking flow.
 
-### Why FAISS is optional locally
-
-FAISS is the right fit for ANN retrieval, but it can be painful on some local setups. The fallback path keeps the repo easy to run while preserving the same service boundary and ranking logic.
-
-### Why the experiment layer is intentionally narrow
-
-The README emphasized experimentation infrastructure and metric tracking. For a standalone repo, a stable hashing-based bucketing service is enough to make that story credible without adding fake complexity.
-
-### Why the second-stage ranker is small
-
-The important part here is the serving pattern, not pretending a giant deep learning model is necessary. A compact PyTorch reranker keeps the repo fast enough to run while still showing the two-stage architecture the README calls for.
-
-## Reliability, scalability, and reproducibility notes
-
-- Request responses are cached to reduce repeat work.
-- Readiness checks keep bad pods out of service until artifacts are loaded.
-- Training artifacts are written deterministically from seeded data generation.
-- MLflow logs model runs so ranking experiments can be compared.
-- The candidate pool size is deliberately larger than the final top-k to reflect production reranking patterns.
-
-## Limitations
-
-- External Redis and PostgreSQL are scaffolded but not required for the default local path.
-- The ANN index is in-process, not distributed.
-- Experiment summaries are request-level aggregations rather than warehouse-backed reporting.
-- The feature store is lightweight and file-backed instead of a dedicated online feature service.
-
-Those limitations are deliberate. They keep the repository runnable while staying faithful to the architecture and operational expectations defined in the uploaded README.
