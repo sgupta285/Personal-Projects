@@ -1,0 +1,53 @@
+{
+  "summary": {
+    "population_total": 330293420.0,
+    "weighted_median_income": 80064.08188543441,
+    "weighted_poverty_rate": 12.711765928737725,
+    "weighted_owner_occupied_rate": 61.238265756239706,
+    "weighted_median_age": 38.30409076072383
+  },
+  "top_states_by_income": [
+    {
+      "name": "Washington",
+      "median_income": 91700
+    },
+    {
+      "name": "California",
+      "median_income": 91500
+    },
+    {
+      "name": "New York",
+      "median_income": 81500
+    },
+    {
+      "name": "Illinois",
+      "median_income": 78500
+    },
+    {
+      "name": "Texas",
+      "median_income": 76000
+    }
+  ],
+  "top_counties_by_home_value": [
+    {
+      "name": "New York County, NY",
+      "median_home_value": 1160000
+    },
+    {
+      "name": "King County, WA",
+      "median_home_value": 841000
+    },
+    {
+      "name": "Los Angeles County, CA",
+      "median_home_value": 789000
+    },
+    {
+      "name": "San Diego County, CA",
+      "median_home_value": 766000
+    },
+    {
+      "name": "Miami-Dade County, FL",
+      "median_home_value": 430000
+    }
+  ]
+}

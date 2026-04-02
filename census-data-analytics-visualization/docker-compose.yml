@@ -1,0 +1,8 @@
+services:
+  censusviz:
+    build: .
+    ports:
+      - "8050:8050"
+    environment:
+      - PYTHONPATH=/app/src
+      - DEFAULT_YEAR=2022

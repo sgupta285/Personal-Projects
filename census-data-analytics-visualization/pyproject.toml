@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "census-data-analytics-visualization"
+version = "0.1.0"
+description = "Interactive census analytics and demographic visualization platform"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Srijan Gupta"}]
+dependencies = [
+  "pandas>=2.2",
+  "numpy>=1.26",
+  "plotly>=5.24",
+  "dash>=2.18",
+  "requests>=2.32",
+  "pydantic>=2.9",
+  "python-dotenv>=1.0",
+  "pydantic-settings>=2.5"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3",
+  "ruff>=0.6"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

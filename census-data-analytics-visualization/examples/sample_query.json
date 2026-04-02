@@ -1,0 +1,6 @@
+{
+  "metric": "median_income",
+  "geography": "state",
+  "year": 2022,
+  "notes": "Representative local demo query using the processed sample dataset."
+}

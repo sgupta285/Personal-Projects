@@ -1,0 +1,3 @@
+weighted_summary: 0.000971s
+state_top_income: 0.001529s
+county_moe: 0.001648s
