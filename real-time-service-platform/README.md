@@ -262,6 +262,4 @@ GitHub Actions runs the test suite on pushes and pull requests. The repo keeps C
 - `admin / adminpass`
 - `operator / operatorpass`
 
-## Limitations
-
-This is a strong local foundation, but it is still a single-service repository. It does not include distributed tracing backends, broker-based async queues, or a production secret manager. Those are deliberate omissions so the code stays readable and runnable while still demonstrating the engineering patterns the original project brief emphasized.
+## 
