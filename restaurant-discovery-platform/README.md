@@ -350,15 +350,6 @@ Important deployment assumptions:
 - wire `/metrics` into a Prometheus scrape job
 - swap mock providers for live booking and place-enrichment connectors
 
-## Observability notes
-
-The original project brief does not explicitly require a full observability stack, but the portfolio README consistently emphasizes production-minded delivery. To stay aligned with that style without overbuilding the repo, I added:
-
-- request counters labeled by method, path, and status
-- request latency histograms
-- health endpoint for orchestration readiness and liveness
-- simple smoke and benchmark scripts for repeatable validation
-
 
 
 ## Reproducibility
