@@ -235,4 +235,6 @@ Run it with:
 python benchmarks/benchmark_queries.py
 ```
 
+## License
 
+MIT
