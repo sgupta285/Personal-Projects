@@ -257,11 +257,6 @@ Python is better for structured manifests, packaging, and verification logic. Ba
 
 The source project explicitly mentions hardware-software integration. A simulator is the lightest way to make that part concrete in a repo that still runs on a developer workstation and in CI.
 
-## Limitations
 
-- The firmware sample targets the host compiler rather than a real MCU cross-compiler.
-- The hardware integration check is a simulator handshake, not a board flash-and-readback cycle.
-- The cache is content-based and local, not distributed.
-- Verification checks package integrity and metadata consistency, not deep runtime correctness on real hardware.
 
 
