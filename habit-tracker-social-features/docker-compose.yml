@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: habits
+      POSTGRES_USER: habits
+      POSTGRES_PASSWORD: habits
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/src/db/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./backend/src/db/seed.sql:/docker-entrypoint-initdb.d/02-seed.sql:ro
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  backend:
+    build:
+      context: ./backend
+    environment:
+      PORT: 4000
+      DATABASE_URL: postgresql://habits:habits@postgres:5432/habits
+      REDIS_URL: redis://redis:6379
+      JWT_SECRET: change-me
+      FCM_SERVER_KEY: demo-key
+    depends_on:
+      - postgres
+      - redis
+    ports:
+      - "4000:4000"
+
+volumes:
+  postgres_data:

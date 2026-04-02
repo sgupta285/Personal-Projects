@@ -1,0 +1,14 @@
+node_modules
+dist
+.env
+.env.local
+coverage
+.expo
+.expo-shared
+backend/node_modules
+mobile/node_modules
+backend/.turbo
+mobile/.turbo
+backend/build
+mobile/build
+*.log
