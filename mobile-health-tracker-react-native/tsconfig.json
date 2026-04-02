@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "lib": ["DOM", "ES2021"],
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "noEmit": true,
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2021",
+    "types": ["jest"]
+  },
+  "include": ["App.tsx", "src", "tests"]
+}
