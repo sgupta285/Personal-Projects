@@ -247,10 +247,5 @@ The metrics endpoint exposes:
 
 This is enough to make local debugging meaningful and to hook the service into Grafana in a fuller deployment.
 
-## Reproducibility notes
-
-- Sample images can be regenerated deterministically with `scripts/seed_samples.py`
-- Job state is persisted as JSON under `data/jobs/`
-- The mock engines are deterministic for the same payload, which keeps tests stable
 
 
