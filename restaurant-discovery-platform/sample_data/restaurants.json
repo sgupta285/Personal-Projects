@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Lakeview Tandoor",
+    "city": "Chicago",
+    "cuisine": "Indian",
+    "neighborhood": "Lakeview",
+    "price_tier": 2,
+    "vegetarian_friendly": true,
+    "takes_reservations": true
+  },
+  {
+    "name": "West Loop Ember House",
+    "city": "Chicago",
+    "cuisine": "American",
+    "neighborhood": "West Loop",
+    "price_tier": 4,
+    "vegetarian_friendly": false,
+    "takes_reservations": true
+  },
+  {
+    "name": "Green Mint Kitchen",
+    "city": "Chicago",
+    "cuisine": "Mediterranean",
+    "neighborhood": "Lincoln Park",
+    "price_tier": 2,
+    "vegetarian_friendly": true,
+    "takes_reservations": true
+  },
+  {
+    "name": "Sora Omakase Bar",
+    "city": "Chicago",
+    "cuisine": "Japanese",
+    "neighborhood": "River North",
+    "price_tier": 4,
+    "vegetarian_friendly": false,
+    "takes_reservations": true
+  },
+  {
+    "name": "Harbor Cafe",
+    "city": "Milwaukee",
+    "cuisine": "Cafe",
+    "neighborhood": "Historic Third Ward",
+    "price_tier": 1,
+    "vegetarian_friendly": true,
+    "takes_reservations": false
+  }
+]

@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: restaurant-discovery-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: restaurant-discovery-backend
+  template:
+    metadata:
+      labels:
+        app: restaurant-discovery-backend
+    spec:
+      containers:
+        - name: backend
+          image: restaurant-discovery-backend:latest
+          ports:
+            - containerPort: 8000
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000

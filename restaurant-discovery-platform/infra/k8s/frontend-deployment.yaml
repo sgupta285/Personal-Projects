@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: restaurant-discovery-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: restaurant-discovery-frontend
+  template:
+    metadata:
+      labels:
+        app: restaurant-discovery-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: restaurant-discovery-frontend:latest
+          ports:
+            - containerPort: 5173

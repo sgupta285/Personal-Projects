@@ -1,0 +1,127 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #111827;
+  background: #f7f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+header {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: #6366f1;
+}
+
+.hero-copy,
+.muted {
+  color: #6b7280;
+}
+
+.filter-bar,
+.layout-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.filter-bar {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 20px;
+}
+
+.filter-bar label,
+.checkbox-label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px;
+  background: white;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+.filter-bar input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+.layout-grid {
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+.restaurant-list {
+  display: grid;
+  gap: 14px;
+}
+
+.restaurant-card,
+.detail-panel,
+.detail-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+}
+
+.restaurant-card {
+  padding: 18px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.restaurant-card__top,
+.restaurant-card__footer,
+.detail-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.detail-panel {
+  padding: 20px;
+  align-self: start;
+  position: sticky;
+  top: 20px;
+}
+
+.detail-card {
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.review-item {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 12px;
+  margin-top: 12px;
+}
+
+.empty-state {
+  padding: 32px 12px;
+}
+
+@media (max-width: 900px) {
+  .layout-grid,
+  .filter-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-panel {
+    position: static;
+  }
+}
