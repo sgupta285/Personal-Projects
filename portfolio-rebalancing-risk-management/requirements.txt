@@ -1,0 +1,4 @@
+numpy>=1.26
+pandas>=2.2
+cvxpy>=1.4
+psycopg[binary]>=3.1

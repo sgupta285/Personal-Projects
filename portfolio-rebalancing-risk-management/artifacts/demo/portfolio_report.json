@@ -1,0 +1,240 @@
+{
+  "risk_snapshot": {
+    "portfolio_value": 142298.48,
+    "daily_var": 0.00929,
+    "daily_cvar": 0.011719,
+    "annualized_volatility": 0.09597,
+    "sharpe_ratio": 1.67166
+  },
+  "portfolio_snapshot": [
+    {
+      "ticker": "AGG",
+      "shares": 410.0,
+      "lot_cost": 98.0,
+      "close": 124.3322,
+      "asset_class": "Fixed Income",
+      "target_weight": 0.25,
+      "market_value": 50976.202,
+      "current_weight": 0.3582343345025985,
+      "weight_drift": 0.1082343345025985,
+      "drift_bps": 1082.3433450259852
+    },
+    {
+      "ticker": "EFA",
+      "shares": 125.0,
+      "lot_cost": 72.0,
+      "close": 161.0182,
+      "asset_class": "International Equity",
+      "target_weight": 0.15,
+      "market_value": 20127.275,
+      "current_weight": 0.1414440598178693,
+      "weight_drift": -0.008555940182130684,
+      "drift_bps": -85.55940182130684
+    },
+    {
+      "ticker": "GLD",
+      "shares": 90.0,
+      "lot_cost": 169.0,
+      "close": 100.4171,
+      "asset_class": "Commodities",
+      "target_weight": 0.1,
+      "market_value": 9037.539,
+      "current_weight": 0.06351114132053777,
+      "weight_drift": -0.036488858679462235,
+      "drift_bps": -364.88858679462237
+    },
+    {
+      "ticker": "SPY",
+      "shares": 260.0,
+      "lot_cost": 370.0,
+      "close": 154.9163,
+      "asset_class": "US Equity",
+      "target_weight": 0.35,
+      "market_value": 40278.238000000005,
+      "current_weight": 0.2830545866258784,
+      "weight_drift": -0.06694541337412158,
+      "drift_bps": -669.4541337412157
+    },
+    {
+      "ticker": "VNQ",
+      "shares": 140.0,
+      "lot_cost": 89.0,
+      "close": 156.2802,
+      "asset_class": "Real Estate",
+      "target_weight": 0.15,
+      "market_value": 21879.228000000003,
+      "current_weight": 0.15375587773311594,
+      "weight_drift": 0.0037558777331159476,
+      "drift_bps": 37.558777331159476
+    }
+  ],
+  "rebalancing_plan": [
+    {
+      "ticker": "SPY",
+      "current_weight": 0.283055,
+      "target_weight": 0.35,
+      "recommended_weight": 0.151995,
+      "trade_value": -18649.51,
+      "action": "sell"
+    },
+    {
+      "ticker": "GLD",
+      "current_weight": 0.063511,
+      "target_weight": 0.1,
+      "recommended_weight": 0.189367,
+      "trade_value": 17909.11,
+      "action": "buy"
+    },
+    {
+      "ticker": "AGG",
+      "current_weight": 0.358234,
+      "target_weight": 0.25,
+      "recommended_weight": 0.4,
+      "trade_value": 5943.19,
+      "action": "buy"
+    },
+    {
+      "ticker": "VNQ",
+      "current_weight": 0.153756,
+      "target_weight": 0.15,
+      "recommended_weight": 0.120859,
+      "trade_value": -4681.14,
+      "action": "sell"
+    },
+    {
+      "ticker": "EFA",
+      "current_weight": 0.141444,
+      "target_weight": 0.15,
+      "recommended_weight": 0.137778,
+      "trade_value": -521.65,
+      "action": "sell"
+    }
+  ],
+  "efficient_frontier": [
+    {
+      "expected_return": 0.14757890702432788,
+      "annualized_volatility": 0.08064604036505456,
+      "weights": {
+        "AGG": 0.3778722662468645,
+        "EFA": 0.14285939342397513,
+        "GLD": 0.1963508648362793,
+        "SPY": 0.15760100109796066,
+        "VNQ": 0.12531647439492044
+      }
+    },
+    {
+      "expected_return": 0.14757890702432788,
+      "annualized_volatility": 0.08064604036505456,
+      "weights": {
+        "AGG": 0.3778722662468645,
+        "EFA": 0.14285939342397513,
+        "GLD": 0.1963508648362793,
+        "SPY": 0.15760100109796066,
+        "VNQ": 0.12531647439492044
+      }
+    },
+    {
+      "expected_return": 0.14757890702432788,
+      "annualized_volatility": 0.08064604036505456,
+      "weights": {
+        "AGG": 0.3778722662468645,
+        "EFA": 0.14285939342397513,
+        "GLD": 0.1963508648362793,
+        "SPY": 0.15760100109796066,
+        "VNQ": 0.12531647439492044
+      }
+    },
+    {
+      "expected_return": 0.14757890702432788,
+      "annualized_volatility": 0.08064604036505456,
+      "weights": {
+        "AGG": 0.3778722662468645,
+        "EFA": 0.14285939342397513,
+        "GLD": 0.1963508648362793,
+        "SPY": 0.15760100109796066,
+        "VNQ": 0.12531647439492044
+      }
+    },
+    {
+      "expected_return": 0.14757890702432788,
+      "annualized_volatility": 0.08064604036505456,
+      "weights": {
+        "AGG": 0.3778722662468645,
+        "EFA": 0.14285939342397513,
+        "GLD": 0.1963508648362793,
+        "SPY": 0.15760100109796066,
+        "VNQ": 0.12531647439492044
+      }
+    },
+    {
+      "expected_return": 0.14757890702432788,
+      "annualized_volatility": 0.08064604036505456,
+      "weights": {
+        "AGG": 0.3778722662468645,
+        "EFA": 0.14285939342397513,
+        "GLD": 0.1963508648362793,
+        "SPY": 0.15760100109796066,
+        "VNQ": 0.12531647439492044
+      }
+    },
+    {
+      "expected_return": 0.14757890702432788,
+      "annualized_volatility": 0.08064604036505456,
+      "weights": {
+        "AGG": 0.3778722662468645,
+        "EFA": 0.14285939342397513,
+        "GLD": 0.1963508648362793,
+        "SPY": 0.15760100109796066,
+        "VNQ": 0.12531647439492044
+      }
+    },
+    {
+      "expected_return": 0.14757890702432788,
+      "annualized_volatility": 0.08064604036505456,
+      "weights": {
+        "AGG": 0.3778722662468645,
+        "EFA": 0.14285939342397513,
+        "GLD": 0.1963508648362793,
+        "SPY": 0.15760100109796066,
+        "VNQ": 0.12531647439492044
+      }
+    }
+  ],
+  "correlation_matrix": {
+    "AGG": {
+      "AGG": 1.0,
+      "EFA": -0.0391,
+      "GLD": 0.0925,
+      "SPY": -0.1531,
+      "VNQ": 0.0023
+    },
+    "EFA": {
+      "AGG": -0.0391,
+      "EFA": 1.0,
+      "GLD": 0.1553,
+      "SPY": 0.6949,
+      "VNQ": 0.4767
+    },
+    "GLD": {
+      "AGG": 0.0925,
+      "EFA": 0.1553,
+      "GLD": 1.0,
+      "SPY": 0.1112,
+      "VNQ": 0.1156
+    },
+    "SPY": {
+      "AGG": -0.1531,
+      "EFA": 0.6949,
+      "GLD": 0.1112,
+      "SPY": 1.0,
+      "VNQ": 0.5487
+    },
+    "VNQ": {
+      "AGG": 0.0023,
+      "EFA": 0.4767,
+      "GLD": 0.1156,
+      "SPY": 0.5487,
+      "VNQ": 1.0
+    }
+  }
+}

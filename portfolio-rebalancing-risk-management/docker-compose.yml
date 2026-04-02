@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: portfolio
+      POSTGRES_USER: portfolio
+      POSTGRES_PASSWORD: portfolio
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./migrations/sql:/docker-entrypoint-initdb.d
+  app:
+    build: .
+    environment:
+      DATABASE_URL: postgresql://portfolio:portfolio@postgres:5432/portfolio
+      PYTHONPATH: /app/src
+    depends_on:
+      - postgres
+    command: ["python", "scripts/run_demo.py"]

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "portfolio-rebalancing-risk-management"
+version = "0.1.0"
+description = "Portfolio drift monitoring, risk analytics, and constrained rebalancing recommendations."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+  { name = "Srijan Gupta" }
+]
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.2"
+]
+
+[project.optional-dependencies]
+opt = [
+  "cvxpy>=1.4"
+]
+dev = [
+  "pytest>=8.2"
+]
+postgres = [
+  "psycopg[binary]>=3.1"
+]
+
+[project.scripts]
+portfolio-risk = "portfolio_risk.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-q"

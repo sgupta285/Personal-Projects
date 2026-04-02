@@ -1,0 +1,6 @@
+ticker,asset_class,target_weight
+SPY,US Equity,0.35
+AGG,Fixed Income,0.25
+GLD,Commodities,0.1
+VNQ,Real Estate,0.15
+EFA,International Equity,0.15

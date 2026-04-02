@@ -1,0 +1,6 @@
+ticker,current_weight,target_weight,recommended_weight,trade_value,action
+SPY,0.283055,0.35,0.151995,-18649.51,sell
+GLD,0.063511,0.1,0.189367,17909.11,buy
+AGG,0.358234,0.25,0.4,5943.19,buy
+VNQ,0.153756,0.15,0.120859,-4681.14,sell
+EFA,0.141444,0.15,0.137778,-521.65,sell
