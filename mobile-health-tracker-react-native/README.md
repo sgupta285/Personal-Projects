@@ -236,15 +236,4 @@ A mobile repo should be runnable out of the box. The mock remote adapter keeps t
 
 Native health integrations are platform-specific and permission-heavy. The interface keeps the app stable whether those integrations are live, incomplete, or unavailable.
 
-## Tradeoffs and limitations
 
-- Background sync is modeled, but the repository triggers it manually instead of wiring platform-specific background task schedulers.
-- HealthKit and Google Fit are adapter stubs rather than fully provisioned native integrations.
-- Nutrition logging uses a straightforward manual-entry model and does not include barcode scanning or a food database.
-- This repo does not include a production backend because the source README defines the project as a mobile app, not a multi-repo platform.
-
-## Reproducibility notes
-
-- Demo seed data gives every fresh clone a usable state.
-- The app does not require a live backend for the main flows.
-- The architecture is stable enough to extend with native health modules or a hosted sync API later without rewriting the UI.
