@@ -245,6 +245,8 @@ The metrics endpoint exposes:
 - estimated GPU memory usage
 - memory-cache hits
 
+## License
 
+MIT
 
 
