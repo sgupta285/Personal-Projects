@@ -1,0 +1,6 @@
+{
+  "first_build_cache_hit": true,
+  "second_build_cache_hit": true
+}
+first_build_seconds=10.0043
+second_build_seconds=7.1495

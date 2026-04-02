@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fwtool"
+version = "0.1.0"
+description = "Firmware build and verification tooling"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+fwtool = "fwtool.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "tools/fwtool"}
+
+[tool.setuptools.packages.find]
+where = ["tools/fwtool"]
+
+[tool.pytest.ini_options]
+pythonpath = ["tools/fwtool"]
+testpaths = ["tools/fwtool/tests"]

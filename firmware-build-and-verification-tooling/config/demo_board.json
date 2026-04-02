@@ -1,0 +1,12 @@
+{
+  "board": "demo-board",
+  "toolchain": "gcc",
+  "flash_limit_bytes": 262144,
+  "ram_limit_bytes": 65536,
+  "components": ["bootloader", "application"],
+  "device_simulator": {
+    "transport": "tcp",
+    "host": "127.0.0.1",
+    "port": 9107
+  }
+}

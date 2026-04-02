@@ -1,0 +1,6 @@
+{
+  "board": "demo-board",
+  "version": "1.0.0",
+  "manifest": "/mnt/data/firmware-build-and-verification-tooling/build/demo-board/manifest.json",
+  "cache_hit": true
+}

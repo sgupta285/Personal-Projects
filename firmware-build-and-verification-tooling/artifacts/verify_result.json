@@ -1,0 +1,21 @@
+{
+  "board": "demo-board",
+  "version": "1.0.0",
+  "checks": [
+    {
+      "component": "bootloader",
+      "expected_sha256": "941fa8ce697ce93e45fdbf5a22bb022648e73359316ae8dbf4b61cb51f560e2e",
+      "actual_sha256": "941fa8ce697ce93e45fdbf5a22bb022648e73359316ae8dbf4b61cb51f560e2e",
+      "size_bytes": 15560,
+      "sha_match": true
+    },
+    {
+      "component": "application",
+      "expected_sha256": "a957419b022a4aa334e09c7115663fef657f29673065307879f358c9fa211760",
+      "actual_sha256": "a957419b022a4aa334e09c7115663fef657f29673065307879f358c9fa211760",
+      "size_bytes": 15560,
+      "sha_match": true
+    }
+  ],
+  "all_passed": true
+}
