@@ -286,18 +286,6 @@ Streaks, reminders, and achievements are the heart of the product. Pure function
 ### Why offline fallback in the mobile app
 The source README explicitly mentioned push notification integration and mobile development. Mobile products need to behave sensibly when connectivity is poor, so the app stores auth state and queued check-ins locally.
 
-## Tradeoffs
-
-- The mobile app uses Expo-friendly notification registration rather than a full native FCM bridge configuration.
-- The backend uses SQL scripts for schema setup rather than a full migration framework to keep local startup straightforward.
-- The social graph is intentionally lean. The README supported friends, challenges, and leaderboards, but not a complete chat or feed system.
-- The API uses a seeded email login flow for demo convenience instead of a full account creation stack.
-
-## Reproducibility notes
-
-- Seed SQL creates a predictable demo state
-- Reminder logic is deterministic
-- Leaderboard ranking is deterministic
-- Tests focus on the product logic that matters most to the habit loop
+## 
 
 
