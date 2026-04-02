@@ -362,3 +362,7 @@ The repository is designed to be reproducible from a fresh checkout:
 4. validate with tests, smoke script, and benchmark script
 
 That flow is enough to inspect the search experience, create content, moderate it, and test reservation booking end to end.
+
+##License
+
+MIT
