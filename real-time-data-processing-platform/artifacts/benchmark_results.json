@@ -1,0 +1,21 @@
+{
+  "events_requested": 1200,
+  "accepted_events": 1200,
+  "processed_events": 1200,
+  "duplicates_skipped": 0,
+  "dlq_events": 0,
+  "throughput_events_per_sec": 400.34,
+  "mean_latency_ms": 4.04,
+  "p95_latency_ms": 9.02,
+  "queue_depth": 0,
+  "autoscaler": {
+    "current_workers": 3,
+    "desired_workers": 2,
+    "queue_depth": 0,
+    "p95_latency_ms": 9.02,
+    "reason": "low_backlog"
+  },
+  "latency_summary_ms": {
+    "mean_of_summary_points": 6.53
+  }
+}

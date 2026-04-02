@@ -1,0 +1,12 @@
+services:
+  api:
+    build: .
+    command: uvicorn rtdp.api:app --app-dir src --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    environment:
+      RTDP_DB_PATH: /app/data/rtdp.db
+      RTDP_PARTITIONS: 6
+      RTDP_WORKER_COUNT: 3
+    volumes:
+      - ./data:/app/data

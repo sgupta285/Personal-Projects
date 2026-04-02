@@ -1,0 +1,50 @@
+{
+  "_aws": {
+    "timestamp": 1775108784091,
+    "CloudWatchMetrics": [
+      {
+        "Namespace": "RTDP",
+        "Dimensions": [
+          [
+            "service"
+          ]
+        ],
+        "Metrics": [
+          {
+            "Name": "accepted_events",
+            "Unit": "Count"
+          },
+          {
+            "Name": "processed_events",
+            "Unit": "Count"
+          },
+          {
+            "Name": "dlq_events",
+            "Unit": "Count"
+          },
+          {
+            "Name": "p95_latency_ms",
+            "Unit": "Milliseconds"
+          }
+        ]
+      }
+    ]
+  },
+  "service": "real-time-data-processing-platform",
+  "accepted_events": 3,
+  "duplicates_skipped": 0,
+  "processed_events": 2,
+  "failed_events": 1,
+  "dlq_events": 1,
+  "retries": 1,
+  "mean_latency_ms": 0.06,
+  "p95_latency_ms": 0.04,
+  "queue_depth_by_partition": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0
+  }
+}
