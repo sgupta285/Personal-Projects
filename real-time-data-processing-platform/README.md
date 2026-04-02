@@ -298,11 +298,7 @@ This repo does not pretend to be a full AWS production deployment. The point is 
 
 ### Why SQLite locally instead of DynamoDB?
 
-Because local reproducibility matters. The repo uses a persistence layer shaped like DynamoDB access patterns, but keeps local startup friction low.
-
-### Why an in-process broker instead of Kafka?
-
-For the same reason. The README calls for Kafka-like technologies, backpressure, partitioning, and consumer groups. This implementation keeps those concepts visible without forcing a heavy local cluster just to run a portfolio project.
+Because local reproducibility matters. The repo uses a persistence layer shaped like DynamoDB access patterns, but keeps local startup friction low..
 
 ### How exactly-once works here
 
@@ -325,15 +321,4 @@ The source description for this project implies the following expectations, whic
 - retry safety with manual DLQ replay
 - a scaling story based on queue depth and processing latency
 
-## Limitations
 
-- The broker is intentionally lightweight and in-process.
-- Local state uses SQLite, not a real DynamoDB table.
-- Autoscaling is advisory in local mode. It calculates a recommendation instead of changing worker counts live.
-- CloudWatch integration is represented through structured telemetry rather than a real AWS SDK sink.
-
-## Reproducibility notes
-
-- Tests create isolated temporary databases.
-- The demo and benchmark are deterministic enough for repeated local runs.
-- No external cloud account is needed to exercise the main flows.
