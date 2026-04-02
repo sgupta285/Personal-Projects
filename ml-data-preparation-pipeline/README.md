@@ -226,23 +226,6 @@ Build and run the pipeline container:
 docker compose up --build
 ```
 
-## Design decisions
+## License
 
-- I kept the interface CLI-first instead of wrapping the pipeline in an API because the README describes a preparation workflow, not a serving product.
-- I used a static HTML dashboard artifact rather than a full BI app to keep the repo reproducible and commit-friendly.
-- The validation layer mixes config-driven checks and lightweight expectation rules so the repo stays inspectable.
-- Winsorization is based on training quantiles only, which is one of the small choices that prevents data leakage from sneaking into preprocessing.
-
-## Tradeoffs and limitations
-
-- The expectation runner is intentionally lightweight. It borrows the spirit of Great Expectations while avoiding a large project bootstrap for a small repo.
-- The anomaly detection check uses simple z-scores, which is easy to explain but not robust for every distribution.
-- PostgreSQL export focuses on prepared training data only. A larger production setup would usually version both train and test outputs along with schema metadata.
-- The quality dashboard is static. That keeps the output reproducible, but it is not meant to replace a monitoring tool.
-
-## Reproducibility notes
-
-- The sample dataset generator uses a fixed seed.
-- The train-test split uses a fixed random state.
-- Config lives in `configs/pipeline.yaml` so the pipeline can be rerun consistently.
-- Serialized preprocessing artifacts are written to the `artifacts/models` directory.
+MIT
