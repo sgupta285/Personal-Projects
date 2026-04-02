@@ -270,3 +270,6 @@ The scope here is intentionally smaller than a service platform. Instead of addi
 
 That keeps the repo honest to the stated project while still making it easy to validate.
 
+##License
+
+MIT
