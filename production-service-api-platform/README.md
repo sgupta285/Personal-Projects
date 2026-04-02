@@ -287,4 +287,6 @@ The `k8s/` directory includes:
 
 
 
-## 
+## License
+
+MIT
