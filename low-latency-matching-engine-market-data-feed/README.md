@@ -196,23 +196,6 @@ The source README emphasized production-minded performance work, but this repo a
 
 Because they are part of the system design described in the source material. They help show how the codebase would evolve toward a more aggressive latency target without making the basic engine impossible to read.
 
-### Why a simplified binary feed?
-
-Real FIX and full ITCH implementations are large and protocol-heavy. The portfolio README referenced binary parsing and zero-copy techniques, so the repo includes a compact ITCH-style wire format that lets the parser and feed replay path stay concrete.
-
-## Reproducibility notes
-
-- fixture generation is deterministic
-- tests do not depend on external services
-- Docker provides a portable build path
-- benchmark output is simple enough to compare across runs and machines
-
-## Limitations
-
-- this is a single-symbol sample engine
-- the UDP publisher is for local fan-out and inspection, not production multicast
-- the price-level data structure is built for clarity and repeatability, not exchange-grade completeness
-- the parser models ITCH-style ideas rather than implementing the full protocol surface
 
 ## Docker
 
