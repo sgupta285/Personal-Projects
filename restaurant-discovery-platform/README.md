@@ -359,24 +359,7 @@ The original project brief does not explicitly require a full observability stac
 - health endpoint for orchestration readiness and liveness
 - simple smoke and benchmark scripts for repeatable validation
 
-## Tradeoffs
 
-A few things are deliberately simplified:
-
-- The frontend is a focused demo interface, not a complete design system.
-- The booking integration is mocked because the brief implies third-party integration but does not require coupling the repo to a live vendor.
-- Restaurant search uses SQL text matching and lightweight distance sorting instead of full geospatial indexing.
-- Moderation is an admin API flow rather than a separate back-office UI.
-
-These tradeoffs keep the project believable and runnable while staying loyal to the source brief.
-
-## Limitations
-
-- No payment or prepaid reservation handling
-- No image upload or asset moderation pipeline
-- No email or SMS notification workflow
-- No real external provider credentials included
-- Frontend does not yet include account management screens beyond API-driven flows
 
 ## Reproducibility
 
