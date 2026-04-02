@@ -260,6 +260,4 @@ This is enough to make local debugging meaningful and to hook the service into G
 - There is no distributed job coordination in the local build
 - GPU memory accounting is estimated rather than measured from a live runtime
 
-## Why the scope looks this way
 
-I kept this repository close to what the source README explicitly supports: serving, batching, queue-backed workers, caching, deployment tooling, and observability. That makes the repo practical, coherent, and runnable without inventing extra product scope.
