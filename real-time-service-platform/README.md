@@ -246,4 +246,6 @@ These map directly to the operational expectations described in the portfolio br
 - `admin / adminpass`
 - `operator / operatorpass`
 
-## 
+## License
+
+MIT
