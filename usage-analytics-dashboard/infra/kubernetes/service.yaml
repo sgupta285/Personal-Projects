@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: usage-analytics-dashboard-api
+spec:
+  selector:
+    app: usage-analytics-dashboard-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000

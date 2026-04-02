@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: usage-analytics-dashboard-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: usage-analytics-dashboard-api
+  template:
+    metadata:
+      labels:
+        app: usage-analytics-dashboard-api
+    spec:
+      containers:
+        - name: api
+          image: usage-analytics-dashboard-api:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: usage-analytics-secrets
+                  key: database-url
+            - name: REDIS_URL
+              value: redis://usage-analytics-redis:6379/0
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000

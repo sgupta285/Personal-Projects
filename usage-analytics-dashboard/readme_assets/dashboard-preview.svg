@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+  <rect width="1200" height="650" fill="#f8fafc"/>
+  <rect x="40" y="40" width="1120" height="120" rx="20" fill="#ffffff" stroke="#dbe4f0"/>
+  <rect x="40" y="190" width="260" height="120" rx="18" fill="#ffffff" stroke="#dbe4f0"/>
+  <rect x="320" y="190" width="260" height="120" rx="18" fill="#ffffff" stroke="#dbe4f0"/>
+  <rect x="600" y="190" width="260" height="120" rx="18" fill="#ffffff" stroke="#dbe4f0"/>
+  <rect x="880" y="190" width="280" height="120" rx="18" fill="#ffffff" stroke="#dbe4f0"/>
+  <rect x="40" y="340" width="560" height="260" rx="18" fill="#ffffff" stroke="#dbe4f0"/>
+  <rect x="620" y="340" width="540" height="260" rx="18" fill="#ffffff" stroke="#dbe4f0"/>
+  <polyline points="80,540 160,500 240,520 320,450 400,470 480,410 560,430" fill="none" stroke="#2563eb" stroke-width="6"/>
+  <rect x="700" y="470" width="340" height="22" rx="11" fill="#cbd5e1"/>
+  <rect x="700" y="510" width="260" height="22" rx="11" fill="#cbd5e1"/>
+  <rect x="700" y="550" width="180" height="22" rx="11" fill="#cbd5e1"/>
+  <text x="80" y="95" font-family="Inter, Arial, sans-serif" font-size="42" fill="#0f172a">Usage Analytics Dashboard</text>
+  <text x="80" y="130" font-family="Inter, Arial, sans-serif" font-size="20" fill="#475569">Preview placeholder for README screenshots and demo docs</text>
+</svg>
