@@ -1,0 +1,4 @@
+baseline: samples/captures/release_v110.jsonl
+candidate: samples/captures/release_v120.jsonl
+threshold_pct: 10.0
+output_dir: artifacts/report

@@ -1,0 +1,13 @@
+#!/usr/bin/env bpftrace
+tracepoint:sched:sched_wakeup
+{
+  @start[args->pid] = nsecs;
+}
+
+tracepoint:sched:sched_switch
+/@start[args->next_pid]/
+{
+  $delta = (nsecs - @start[args->next_pid]) / 1000;
+  printf("cpu=%d pid=%d comm=%s wake_to_run_us=%llu\n", cpu, args->next_pid, str(args->next_comm), $delta);
+  delete(@start[args->next_pid]);
+}

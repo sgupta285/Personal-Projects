@@ -1,0 +1,10 @@
+{
+  "title": "Linux Latency Diagnostics",
+  "panels": [
+    {"type": "table", "title": "Regression Findings", "targets": [{"expr": "latdiag_regressions_total"}]},
+    {"type": "table", "title": "CPU Hot Spots", "targets": [{"expr": "latdiag_cpu_hotspot_p99_us"}]},
+    {"type": "table", "title": "Scheduler Delay", "targets": [{"expr": "latdiag_scheduler_delay_p99_us"}]}
+  ],
+  "schemaVersion": 39,
+  "version": 1
+}

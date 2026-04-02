@@ -1,0 +1,5 @@
+typer<1,>=0.12
+pydantic<3,>=2.6
+
+[dev]
+pytest<9,>=8

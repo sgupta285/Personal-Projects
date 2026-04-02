@@ -1,0 +1,204 @@
+Metadata-Version: 2.4
+Name: latdiag
+Version: 0.1.0
+Summary: Linux latency diagnostics and scheduler profiling toolkit
+Author: Srijan Gupta
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: typer<1,>=0.12
+Requires-Dist: pydantic<3,>=2.6
+Provides-Extra: dev
+Requires-Dist: pytest<9,>=8; extra == "dev"
+
+# Linux Latency Diagnostics and Scheduler Profiler
+
+Linux-first diagnostics toolkit for tracking syscall latency, scheduler delays, interrupt behavior, and cross-release performance regressions in latency-sensitive services.
+
+## Why this project exists
+
+Tail latency problems are rarely obvious from CPU and memory dashboards alone. This repository focuses on the system-level signals that usually explain the ugly cases: runnable queue buildup, interrupt storms, syscall tail growth, CPU hot spots, and scheduler delays that only show up under load. The goal is to make release-to-release comparison practical instead of turning every investigation into an ad hoc shell session.
+
+The implementation follows the scope implied by the source README: Python for offline analysis, Bash for host-side collection, `perf` and tracing-oriented workflows for Linux visibility, Grafana-ready outputs for dashboards, and an eBPF-style capture hook for environments that use `bpftrace` or similar tooling.
+
+## What is included
+
+- Python CLI for capture, summary, regression comparison, and report generation
+- Host collection wrappers for `perf`, `ftrace`, and optional `bpftrace`
+- Offline comparison workflow that flags latency regressions across releases
+- CPU hot-spot ranking and syscall-tail analysis
+- Scheduler-delay breakdowns by process name
+- Static HTML report generation for incident review and handoff
+- Grafana dashboard JSON stub for teams that export metrics into a dashboard system
+- Sample captures and a reproducible demo workflow
+- Tests, Docker support for analysis-only usage, and CI
+
+## Repository layout
+
+```text
+.
+├── configs/
+├── dashboards/
+├── latdiag/
+│   ├── analysis.py
+│   ├── cli.py
+│   ├── collect.py
+│   ├── io.py
+│   ├── models.py
+│   └── reporting/
+├── samples/
+├── scripts/
+├── tests/
+├── Dockerfile
+├── Makefile
+└── pyproject.toml
+```
+
+## Architecture
+
+### 1. Host-side capture
+
+The Bash scripts are meant to run on Linux hosts where the scheduler and interrupt behavior actually matters.
+
+- `scripts/collect_perf.sh` captures `perf stat` and `perf sched` artifacts.
+- `scripts/ftrace_capture.sh` toggles a small set of tracepoints and writes out the raw trace.
+- `scripts/bpftrace_sched_lat.bt` provides an eBPF-style wake-to-run probe for teams that already use `bpftrace`.
+
+These scripts are deliberately simple. They are intended to be checked into a service repository or called from incident-response playbooks rather than hidden inside a large agent.
+
+### 2. Normalized event model
+
+The Python package uses a small normalized event schema:
+
+- `event_type`: scheduler delay, syscall latency, interrupt, or perf counter
+- `duration_us`: normalized latency value in microseconds
+- `cpu`, `pid`, `tid`, `comm`: enough metadata to explain where the pain is
+- optional fields such as `syscall` and `irq`
+
+This keeps the analysis pipeline deterministic and testable even when raw collectors differ by kernel version or environment.
+
+### 3. Offline analysis and release comparison
+
+The main workflow is:
+
+1. collect a baseline capture for a known-good release
+2. collect a candidate capture for the new release
+3. compare distributions by event type
+4. surface regressions when p99 growth crosses a threshold
+5. generate a report that can be attached to an incident or release review
+
+The comparison logic intentionally focuses on practical outcomes rather than overcomplicated statistics. It answers the questions an engineer usually asks first:
+
+- Did scheduler delay get worse?
+- Which CPUs or workers look hottest?
+- Which syscalls picked up tail growth?
+- Did interrupt service time change enough to justify deeper driver or IRQ balancing work?
+
+## Quick start
+
+### Local analysis setup
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e .[dev]
+```
+
+### Run the demo path
+
+```bash
+latdiag demo --output-dir artifacts/demo
+```
+
+This generates:
+
+- `artifacts/demo/baseline.jsonl`
+- `artifacts/demo/candidate.jsonl`
+- `artifacts/demo/report/comparison.json`
+- `artifacts/demo/report/comparison.html`
+
+### Compare the sample release captures
+
+```bash
+latdiag compare \
+  samples/captures/release_v110.jsonl \
+  samples/captures/release_v120.jsonl \
+  --output-dir artifacts/report \
+  --threshold-pct 10
+```
+
+### Summarize a capture
+
+```bash
+latdiag summarize-capture samples/captures/release_v120.jsonl
+```
+
+### Capture a quick local snapshot
+
+```bash
+latdiag capture --output artifacts/raw/local.jsonl --release local-dev --sample
+```
+
+Use `--sample` when you want a deterministic local run. Drop it when running on a Linux host with the right tooling installed.
+
+## Example collection commands
+
+```bash
+./scripts/collect_perf.sh artifacts/raw
+./scripts/ftrace_capture.sh artifacts/raw/ftrace
+sudo bpftrace ./scripts/bpftrace_sched_lat.bt
+```
+
+## Observability and dashboards
+
+The repository includes `dashboards/grafana-latency-overview.json` as a starting point for a dashboard pipeline. The analysis tool itself is offline-first, but the output structure is shaped so the same metrics can be published by a service-side exporter if needed.
+
+The project intentionally stops short of pretending to be a full metrics platform. Its job is to explain latency regressions and hot paths, not to replace a central monitoring stack.
+
+## Testing
+
+```bash
+pytest -q
+```
+
+The tests cover:
+
+- JSONL capture parsing
+- summary statistics
+- release regression detection
+- end-to-end demo report generation
+
+## Docker usage
+
+The Docker image is analysis-only. It does not try to capture privileged kernel traces from inside a container.
+
+```bash
+docker build -t latdiag .
+docker run --rm -v "$PWD/artifacts:/app/artifacts" latdiag demo --output-dir artifacts/demo
+```
+
+## Benchmarking and repeatability
+
+This repo is intentionally lightweight, but it still supports repeatable comparisons:
+
+- the sample captures are deterministic
+- the event schema is stable and text-based
+- report generation is pure and reproducible from the same inputs
+- CI runs the same demo and regression logic every time
+
+## Design choices and tradeoffs
+
+- **Offline-first analysis**: more reliable for investigations and easier to test than a fully live collector stack.
+- **Small event schema**: easier to normalize across `perf`, `ftrace`, and eBPF-style sources.
+- **HTML reports over a heavy UI**: faster to ship, easier to archive with release artifacts.
+- **Host-side capture scripts**: practical for real Linux systems, but they assume proper privileges and kernel support.
+
+## Limitations
+
+- The sample workflow is synthetic and meant for reproducibility, not kernel-truth benchmarking.
+- Live collection quality depends on host permissions, kernel configuration, and installed tools.
+- The Grafana dashboard is a seed, not a turnkey metrics backend.
+- The Docker image intentionally avoids privileged tracing.
+
+## Reproducibility notes
+
+When you need stable comparison output for CI or release review, use the provided sample captures or save host captures as JSONL and rerun the same `latdiag compare` command. The report pipeline is deterministic for the same input files.

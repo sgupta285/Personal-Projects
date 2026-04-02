@@ -1,0 +1,5 @@
+{"timestamp":"2026-04-02T08:00:00Z","release":"v1.2.0","event_type":"scheduler_delay","duration_us":210.0,"cpu":0,"pid":201,"tid":201,"comm":"worker-a","syscall":null,"irq":null,"metadata":{"source":"sample"}}
+{"timestamp":"2026-04-02T08:00:01Z","release":"v1.2.0","event_type":"scheduler_delay","duration_us":290.0,"cpu":0,"pid":202,"tid":202,"comm":"worker-a","syscall":null,"irq":null,"metadata":{"source":"sample"}}
+{"timestamp":"2026-04-02T08:00:02Z","release":"v1.2.0","event_type":"syscall_latency","duration_us":118.0,"cpu":1,"pid":203,"tid":203,"comm":"gateway","syscall":"epoll_wait","irq":null,"metadata":{"source":"sample"}}
+{"timestamp":"2026-04-02T08:00:03Z","release":"v1.2.0","event_type":"syscall_latency","duration_us":175.0,"cpu":1,"pid":204,"tid":204,"comm":"gateway","syscall":"recvfrom","irq":null,"metadata":{"source":"sample"}}
+{"timestamp":"2026-04-02T08:00:04Z","release":"v1.2.0","event_type":"interrupt","duration_us":98.0,"cpu":3,"pid":0,"tid":0,"comm":"irq/eth0","syscall":null,"irq":"eth0-TxRx","metadata":{"source":"sample"}}
