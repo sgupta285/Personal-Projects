@@ -187,6 +187,4 @@ This repo is intentionally lightweight, but it still supports repeatable compari
 - The Grafana dashboard is a seed, not a turnkey metrics backend.
 - The Docker image intentionally avoids privileged tracing.
 
-## Reproducibility notes
 
-When you need stable comparison output for CI or release review, use the provided sample captures or save host captures as JSONL and rerun the same `latdiag compare` command. The report pipeline is deterministic for the same input files.
