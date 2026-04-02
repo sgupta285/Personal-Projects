@@ -320,4 +320,6 @@ Because the README explicitly calls out OAuth 2.0, JWT, and MFA support. Leaving
 
 Because the service core should stay easy to run locally, but the repository still needs a credible native path for security-sensitive preprocessing and performance-oriented workloads.
 
+## License
 
+MIT
