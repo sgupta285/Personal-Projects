@@ -1,6 +1,6 @@
 # Causal Inference with Difference-in-Differences
 
-A GitHub-ready policy evaluation repository for panel-data causal inference using difference-in-differences as the primary design, with event-study diagnostics, placebo checks, and a synthetic-control fallback when the usual parallel-trends story starts to look shaky.
+A policy evaluation repository for panel-data causal inference using difference-in-differences as the primary design, with event-study diagnostics, placebo checks, and a synthetic-control fallback when the usual parallel-trends story starts to look shaky.
 
 This project was built around a practical workflow rather than a single regression table. The point is to move from raw panel data to a defensible analysis package that shows the baseline estimate, checks the identifying assumptions, visualizes treatment dynamics over time, and offers a second design when the treated and control groups do not move together before treatment.
 
@@ -298,19 +298,4 @@ That is the cleanest way to keep the fallback interpretable and portable. A larg
 
 Notebook-only causal projects are hard to test and easy to break quietly. The CLI makes the analysis reproducible from a fresh clone, while still leaving room for notebooks if someone wants to add more exploratory work.
 
-## Tradeoffs and limitations
 
-- the sample dataset is simulated, not sourced from a live policy dataset
-- the baseline DiD is intentionally transparent, not maximally feature-rich
-- the synthetic-control implementation assumes one treated unit for the fallback path
-- the parallel-trends check is a practical screening step, not a complete identification proof
-- the event study is useful for inspection, but like any event-study design it still depends on the design assumptions being credible
-- the R path is included for parity but is not required for the main workflow
-
-## Reproducibility notes
-
-- the data generator uses explicit random seeds
-- benchmark replications are deterministic given the config seed
-- reports are written from code, not copied by hand
-- tests are small enough to run locally without special infrastructure
-- Docker gives a consistent environment for a clean rerun
