@@ -1,0 +1,33 @@
+{
+  "expectations": [
+    {
+      "type": "expect_column_to_exist",
+      "column": "customer_id"
+    },
+    {
+      "type": "expect_column_values_to_not_be_null",
+      "column": "customer_id"
+    },
+    {
+      "type": "expect_column_values_to_be_between",
+      "column": "monthly_spend",
+      "min_value": 0,
+      "max_value": 10000
+    },
+    {
+      "type": "expect_column_values_to_be_between",
+      "column": "sessions_last_30d",
+      "min_value": 0,
+      "max_value": 1000
+    },
+    {
+      "type": "expect_column_values_to_be_in_set",
+      "column": "plan_tier",
+      "value_set": [
+        "basic",
+        "pro",
+        "business"
+      ]
+    }
+  ]
+}

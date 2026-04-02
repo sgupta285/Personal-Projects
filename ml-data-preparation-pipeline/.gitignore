@@ -1,0 +1,11 @@
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.venv/
+.env
+artifacts/models/*.joblib
+artifacts/reports/*.html
+artifacts/reports/*.json
+artifacts/logs/*.log
+*.pyc
+.DS_Store

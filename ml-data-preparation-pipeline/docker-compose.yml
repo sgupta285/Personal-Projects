@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: ml_prep
+      POSTGRES_USER: ml_user
+      POSTGRES_PASSWORD: ml_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  pipeline:
+    build: .
+    depends_on:
+      - postgres
+    env_file:
+      - .env.example
+    volumes:
+      - ./:/app
+    command: ["python", "scripts/run_pipeline.py"]
+volumes:
+  postgres_data:

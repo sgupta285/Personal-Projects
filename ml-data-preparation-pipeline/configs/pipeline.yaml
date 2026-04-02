@@ -1,0 +1,53 @@
+project_name: ml-data-preparation-pipeline
+dataset:
+  path: data/raw/customer_events.csv
+  target_column: churned
+  id_columns:
+    - customer_id
+  train_size: 0.8
+  random_state: 42
+validation:
+  required_columns:
+    - customer_id
+    - monthly_spend
+    - sessions_last_30d
+    - avg_session_minutes
+    - support_tickets
+    - region
+    - device_type
+    - plan_tier
+    - signup_channel
+    - is_premium
+    - churned
+  null_threshold: 0.15
+  duplicate_key_columns:
+    - customer_id
+  anomaly_zscore_threshold: 3.0
+preprocessing:
+  numeric_columns:
+    - monthly_spend
+    - sessions_last_30d
+    - avg_session_minutes
+    - support_tickets
+    - account_age_days
+  categorical_columns:
+    - region
+    - device_type
+    - plan_tier
+    - signup_channel
+  boolean_columns:
+    - is_premium
+  winsorize_limits: [0.01, 0.99]
+feature_engineering:
+  spend_per_session: true
+  ticket_rate: true
+  engagement_bucket: true
+reporting:
+  html_report_path: artifacts/reports/data_quality_report.html
+  json_summary_path: artifacts/reports/pipeline_summary.json
+artifacts:
+  fitted_pipeline_path: artifacts/models/preprocessing_pipeline.joblib
+  transformed_train_path: data/processed/train_features.csv
+  transformed_test_path: data/processed/test_features.csv
+postgres:
+  staging_table: ml_features_staging
