@@ -1,0 +1,141 @@
+{
+  "between_subjects": {
+    "design_type": "between_subjects",
+    "outcome_type": "continuous",
+    "alpha": 0.05,
+    "target_power": 0.8,
+    "effect_size": 0.3,
+    "treatment_ratio": 1.0,
+    "total_required_n": 350,
+    "treatment_n": 175,
+    "control_n": 175,
+    "estimated_cost": 350.0,
+    "minimum_detectable_effect": 0.3,
+    "notes": [
+      "Uses cost-aware Neyman-style allocation when treatment and control costs differ.",
+      "Reported MDE reflects the current budget when budget is supplied, otherwise it matches the requested effect size."
+    ]
+  },
+  "within_subjects": {
+    "design_type": "within_subjects",
+    "outcome_type": "continuous",
+    "alpha": 0.05,
+    "target_power": 0.8,
+    "effect_size": 0.25,
+    "treatment_ratio": 1.0,
+    "total_required_n": 128,
+    "treatment_n": 128,
+    "control_n": 128,
+    "estimated_cost": 128.0,
+    "minimum_detectable_effect": 0.25,
+    "notes": [
+      "Assumes a paired design where each subject is observed before and after treatment.",
+      "Effect size is interpreted as the standardized mean difference in paired outcomes."
+    ]
+  },
+  "clustered": {
+    "design_type": "clustered",
+    "outcome_type": "continuous",
+    "alpha": 0.05,
+    "target_power": 0.8,
+    "effect_size": 0.3,
+    "treatment_ratio": 1.0,
+    "total_required_n": 683,
+    "treatment_n": 341,
+    "control_n": 342,
+    "estimated_cost": 683.0,
+    "minimum_detectable_effect": 0.3,
+    "notes": [
+      "Uses cost-aware Neyman-style allocation when treatment and control costs differ.",
+      "Reported MDE reflects the current budget when budget is supplied, otherwise it matches the requested effect size.",
+      "Clustered design inflates the individual-level sample size by a design effect of 1.950.",
+      "Requires about 18 treatment clusters and 18 control clusters."
+    ]
+  },
+  "analysis_plan": {
+    "design_type": "between_subjects",
+    "outcome_type": "continuous",
+    "estimand": "Average treatment effect on the outcome mean",
+    "statistical_test": "Two-sample t-test with OLS confirmation",
+    "adjustment_recommendation": "Use CUPED or ANCOVA adjustment if high-quality pre-period covariates are available.",
+    "randomization_recommendation": "Use blocked randomization on pre-period risk or geography to stabilize balance.",
+    "notes": [
+      "Pre-register the estimand, alpha, minimum detectable effect, and stopping rule.",
+      "Monitor sample ratio mismatch and attrition before locking the primary analysis."
+    ]
+  },
+  "cost_curve": [
+    {
+      "budget": 200.0,
+      "mde": 0.3962,
+      "estimated_cost": 200.0,
+      "required_n": 350
+    },
+    {
+      "budget": 363.64,
+      "mde": 0.2941,
+      "estimated_cost": 363.0,
+      "required_n": 350
+    },
+    {
+      "budget": 527.27,
+      "mde": 0.2441,
+      "estimated_cost": 527.0,
+      "required_n": 350
+    },
+    {
+      "budget": 690.91,
+      "mde": 0.2133,
+      "estimated_cost": 690.0,
+      "required_n": 350
+    },
+    {
+      "budget": 854.55,
+      "mde": 0.1917,
+      "estimated_cost": 854.0,
+      "required_n": 350
+    },
+    {
+      "budget": 1018.18,
+      "mde": 0.1756,
+      "estimated_cost": 1018.0,
+      "required_n": 350
+    },
+    {
+      "budget": 1181.82,
+      "mde": 0.163,
+      "estimated_cost": 1181.0,
+      "required_n": 350
+    },
+    {
+      "budget": 1345.45,
+      "mde": 0.1528,
+      "estimated_cost": 1345.0,
+      "required_n": 350
+    },
+    {
+      "budget": 1509.09,
+      "mde": 0.1442,
+      "estimated_cost": 1509.0,
+      "required_n": 350
+    },
+    {
+      "budget": 1672.73,
+      "mde": 0.137,
+      "estimated_cost": 1672.0,
+      "required_n": 350
+    },
+    {
+      "budget": 1836.36,
+      "mde": 0.1308,
+      "estimated_cost": 1836.0,
+      "required_n": 350
+    },
+    {
+      "budget": 2000.0,
+      "mde": 0.1253,
+      "estimated_cost": 2000.0,
+      "required_n": 350
+    }
+  ]
+}

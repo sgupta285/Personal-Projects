@@ -1,0 +1,9 @@
+subject_id,country,risk_bucket
+s001,US,high
+s002,US,low
+s003,US,high
+s004,US,low
+s005,CA,high
+s006,CA,low
+s007,CA,high
+s008,CA,low
