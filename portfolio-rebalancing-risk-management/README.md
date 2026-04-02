@@ -230,22 +230,4 @@ The tests cover:
 
 Open `notebooks/portfolio_analysis.ipynb` after generating the sample data. It mirrors the CLI path and is useful for inspection or quick extensions.
 
-## Reproducibility notes
 
-- Sample data generation is seeded
-- The CLI consumes plain CSV inputs
-- Report outputs are written deterministically from those inputs
-- The fallback optimizer is deterministic
-- CI regenerates sample data on each run before testing
-
-## Limitations
-
-A few things are intentionally out of scope:
-
-- no broker connectivity
-- no tax-lot-aware optimization
-- no transaction cost model beyond turnover control
-- no intraday pricing or live market data
-- no stress testing against historical crash windows
-
-That keeps the project aligned with the README brief instead of pretending to be a full portfolio OMS.
