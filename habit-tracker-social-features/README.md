@@ -293,14 +293,6 @@ The source README explicitly mentioned push notification integration and mobile 
 - The social graph is intentionally lean. The README supported friends, challenges, and leaderboards, but not a complete chat or feed system.
 - The API uses a seeded email login flow for demo convenience instead of a full account creation stack.
 
-## Limitations
-
-- No background sync worker for draining the offline queue automatically
-- No calendar visualizations or long-term analytics history
-- No full push delivery worker or retry queue
-- No multi-tenant isolation layer
-- No image uploads or rich profile management
-
 ## Reproducibility notes
 
 - Seed SQL creates a predictable demo state
@@ -308,19 +300,4 @@ The source README explicitly mentioned push notification integration and mobile 
 - Leaderboard ranking is deterministic
 - Tests focus on the product logic that matters most to the habit loop
 
-## Screenshots
 
-This repo does not include generated screenshots. The app is ready to run locally through Expo, and the backend ships with seeded data so the first-run experience is immediate.
-
-## Source alignment
-
-This repository was built directly from the uploaded README entry for **Habit Tracker with Social Features**, which described:
-- friend challenges
-- streak tracking
-- achievement badges
-- smart notification timing
-- progress sharing
-- leaderboards
-- React Native, Node.js, PostgreSQL, Redis, and Firebase Cloud Messaging
-
-Those were treated as the source of truth for the build.
