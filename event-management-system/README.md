@@ -147,4 +147,7 @@ Password for both demo users: `demo12345`
 - `POST /api/checkin/validate/` validate check-in token
 - `GET /api/analytics/events/{id}/summary/` organizer summary
 
+## License
+
+MIT
 
