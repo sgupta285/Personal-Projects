@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "backtest-engineering-framework"
+version = "0.1.0"
+description = "Rigorous backtesting framework with execution realism, walk-forward analysis, and statistical controls"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas==2.2.3",
+  "numpy==2.1.3",
+  "scipy==1.14.1",
+  "matplotlib==3.9.2",
+  "PyYAML==6.0.2"
+]
+
+[tool.setuptools]
+package-dir = {"" = "python"}
+
+[tool.setuptools.packages.find]
+where = ["python"]
+
+[tool.pytest.ini_options]
+pythonpath = ["python"]
+testpaths = ["tests"]
+
+asyncio_default_fixture_loop_scope = "function"

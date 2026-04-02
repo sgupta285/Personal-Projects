@@ -1,0 +1,28 @@
+data_path: data/sample/us_etf_sample.csv
+tickers:
+  - SPY
+  - QQQ
+  - IWM
+  - TLT
+execution:
+  tier: M4
+  commission_per_share: 0.0035
+  spread_bps: 3.0
+  route_fee_bps: 0.5
+  latency_ms: 7.0
+  annual_borrow_bps: 30.0
+strategy:
+  short_window: 20
+  long_window: 80
+  volatility_lookback: 20
+  target_gross_leverage: 1.0
+walk_forward:
+  train_days: 504
+  test_days: 126
+  step_days: 126
+sweep:
+  short_windows: [10, 20]
+  long_windows: [60, 100]
+initial_capital: 1000000
+output_dir: artifacts
+seed: 42
