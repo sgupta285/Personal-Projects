@@ -164,20 +164,7 @@ docker build -t latdiag .
 docker run --rm -v "$PWD/artifacts:/app/artifacts" latdiag demo --output-dir artifacts/demo
 ```
 
-## Benchmarking and repeatability
 
-This repo is intentionally lightweight, but it still supports repeatable comparisons:
 
-- the sample captures are deterministic
-- the event schema is stable and text-based
-- report generation is pure and reproducible from the same inputs
-- CI runs the same demo and regression logic every time
-
-## Design choices and tradeoffs
-
-- **Offline-first analysis**: more reliable for investigations and easier to test than a fully live collector stack.
-- **Small event schema**: easier to normalize across `perf`, `ftrace`, and eBPF-style sources.
-- **HTML reports over a heavy UI**: faster to ship, easier to archive with release artifacts.
-- **Host-side capture scripts**: practical for real Linux systems, but they assume proper privileges and kernel support.
 
 
