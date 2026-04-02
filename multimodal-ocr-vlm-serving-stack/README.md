@@ -245,7 +245,6 @@ The metrics endpoint exposes:
 - estimated GPU memory usage
 - memory-cache hits
 
-This is enough to make local debugging meaningful and to hook the service into Grafana in a fuller deployment.
 
 
 
