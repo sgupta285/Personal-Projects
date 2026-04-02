@@ -270,20 +270,3 @@ The scope here is intentionally smaller than a service platform. Instead of addi
 
 That keeps the repo honest to the stated project while still making it easy to validate.
 
-## Tradeoffs
-
-- Binary-outcome sizing uses a standardized effect-size bridge for simplicity rather than a very large menu of bespoke proportion-test variants.
-- Clustered calculations rely on design-effect inflation, which is the right planning approximation for many settings, but not a replacement for a full mixed-model simulation study.
-- The Streamlit layer is intentionally lightweight and not coupled to persistence.
-
-## Limitations
-
-- No sequential-testing engine
-- No CUPED variance model estimation from historical data
-- No production user management or saved scenario storage
-- No Bayesian power or decision-theoretic planning
-- No exact randomization inference workflow
-
-## Reproducibility
-
-The calculations are deterministic. Randomization helpers take explicit seeds, tests run against fixed examples, and the demo script writes a predictable JSON artifact. That makes the repo easy to inspect, rerun, and adapt.
