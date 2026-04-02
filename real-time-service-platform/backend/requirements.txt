@@ -1,0 +1,12 @@
+fastapi==0.116.1
+uvicorn[standard]==0.35.0
+sqlalchemy==2.0.41
+pydantic-settings==2.10.1
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.5.0
+python-multipart==0.0.20
+prometheus-client==0.22.1
+httpx==0.28.1
+fakeredis==2.31.0
+redis==6.4.0
+pytest==8.4.1

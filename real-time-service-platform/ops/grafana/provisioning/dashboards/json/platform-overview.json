@@ -1,0 +1,14 @@
+{
+  "annotations": {
+    "list": []
+  },
+  "editable": true,
+  "panels": [],
+  "schemaVersion": 39,
+  "style": "dark",
+  "tags": [
+    "service-platform"
+  ],
+  "title": "Real-Time Service Platform Overview",
+  "version": 1
+}

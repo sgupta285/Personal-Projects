@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: realtime-service-platform
+spec:
+  selector:
+    app: realtime-service-platform
+  ports:
+    - port: 80
+      targetPort: 8000

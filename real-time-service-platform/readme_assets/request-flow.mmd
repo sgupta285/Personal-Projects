@@ -1,0 +1,12 @@
+flowchart LR
+    Client --> API[FastAPI API]
+    API --> RL[Rate limiting]
+    RL --> Auth[JWT / RBAC]
+    Auth --> Sync[Sync endpoint]
+    Auth --> Async[Async endpoint]
+    Sync --> CB[Circuit breaker]
+    Async --> CB
+    CB --> Downstream[Downstream dependency]
+    API --> PG[(PostgreSQL)]
+    API --> Redis[(Redis)]
+    API --> Metrics[Prometheus / Grafana]

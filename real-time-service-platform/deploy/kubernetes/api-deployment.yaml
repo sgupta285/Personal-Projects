@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: realtime-service-platform
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: realtime-service-platform
+  template:
+    metadata:
+      labels:
+        app: realtime-service-platform
+    spec:
+      containers:
+        - name: api
+          image: realtime-service-platform:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: DATABASE_URL
+              value: postgresql://service_user:service_pass@postgres:5432/service_platform
+            - name: REDIS_URL
+              value: redis://redis:6379/0
+          readinessProbe:
+            httpGet:
+              path: /v1/system/ready
+              port: 8000
+          livenessProbe:
+            httpGet:
+              path: /v1/system/health
+              port: 8000
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi

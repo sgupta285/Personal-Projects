@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.env
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+node_modules/
+*.sqlite3
+*.db
+prometheus_data/
+grafana_data/
+.mypy_cache/
+.dist/
+*.log
