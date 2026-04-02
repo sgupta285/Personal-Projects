@@ -320,19 +320,4 @@ Because the README explicitly calls out OAuth 2.0, JWT, and MFA support. Leaving
 
 Because the service core should stay easy to run locally, but the repository still needs a credible native path for security-sensitive preprocessing and performance-oriented workloads.
 
-## Limitations
 
-- Local providers simulate KMS and Secrets Manager behavior, but they are not drop-in replacements for cloud IAM semantics.
-- Local MFA demo codes are intentionally exposed to simplify development.
-- SQLite is used for portability and is not a substitute for a production PostgreSQL deployment.
-- Row and column policies are intentionally clear and small, not a full policy engine.
-
-## Reproducibility notes
-
-- The service boots from a clean directory and seeds deterministic local users.
-- Audit verification is deterministic because the chain is derived from canonical JSON payloads.
-- Benchmarks are synthetic and meant for regression comparison, not marketing claims.
-
-## Why this repo matches the source project
-
-The source portfolio entry emphasized encryption at rest, OAuth 2.0 and JWT authentication, MFA support, fine-grained permissions, secrets management, immutable auditing, and compliance evidence. This repository implements each of those controls in a runnable local system and keeps the deployment story aligned with Docker, Kubernetes, PostgreSQL-style storage, and AWS-managed security primitives.
