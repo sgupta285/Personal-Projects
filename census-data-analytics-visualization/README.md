@@ -235,15 +235,4 @@ Run it with:
 python benchmarks/benchmark_queries.py
 ```
 
-## Reproducibility notes
 
-- The repository ships with local processed data and local geometry.
-- No network call is required to run the dashboard, demo, tests, or benchmarks.
-- If you add a Census API key later, the integration surface is already present in `fetch.py`.
-
-## Limitations
-
-- The bundled dataset is intentionally small and illustrative.
-- The included geometry is simplified and not suitable for publication-grade cartography.
-- The trend chart is a curated analytical view, not a full historical Census ingestion pipeline.
-- The repository focuses on exploratory analytics, not full report publishing or authenticated multi-user access.
