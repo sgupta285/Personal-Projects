@@ -253,9 +253,6 @@ Because the point of this repo is the tooling around the firmware lifecycle, not
 
 Python is better for structured manifests, packaging, and verification logic. Bash is still useful for one-command operational workflows like environment setup and smoke checks. That split matches how release tooling often evolves in real teams.
 
-### Why include a device simulator?
-
-The source project explicitly mentions hardware-software integration. A simulator is the lightest way to make that part concrete in a repo that still runs on a developer workstation and in CI.
 
 
 
