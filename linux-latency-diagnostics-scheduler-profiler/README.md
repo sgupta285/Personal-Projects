@@ -180,11 +180,4 @@ This repo is intentionally lightweight, but it still supports repeatable compari
 - **HTML reports over a heavy UI**: faster to ship, easier to archive with release artifacts.
 - **Host-side capture scripts**: practical for real Linux systems, but they assume proper privileges and kernel support.
 
-## Limitations
-
-- The sample workflow is synthetic and meant for reproducibility, not kernel-truth benchmarking.
-- Live collection quality depends on host permissions, kernel configuration, and installed tools.
-- The Grafana dashboard is a seed, not a turnkey metrics backend.
-- The Docker image intentionally avoids privileged tracing.
-
 
