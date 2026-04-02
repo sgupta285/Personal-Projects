@@ -286,6 +286,8 @@ Streaks, reminders, and achievements are the heart of the product. Pure function
 ### Why offline fallback in the mobile app
 The source README explicitly mentioned push notification integration and mobile development. Mobile products need to behave sensibly when connectivity is poor, so the app stores auth state and queued check-ins locally.
 
-## 
+## License
+
+MIT
 
 
