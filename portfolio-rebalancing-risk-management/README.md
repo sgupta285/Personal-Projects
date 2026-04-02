@@ -230,4 +230,6 @@ The tests cover:
 
 Open `notebooks/portfolio_analysis.ipynb` after generating the sample data. It mirrors the CLI path and is useful for inspection or quick extensions.
 
+## License
 
+MIT
