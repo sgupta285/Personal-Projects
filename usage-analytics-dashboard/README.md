@@ -249,3 +249,6 @@ python scripts/benchmark_api.py
 - `infra/kubernetes/` contains API deployment, service, and HPA manifests.
 - `sql/materialized_views.sql` shows how to switch the production deployment to true PostgreSQL materialized views.
 
+## Licemse
+
+MIT
