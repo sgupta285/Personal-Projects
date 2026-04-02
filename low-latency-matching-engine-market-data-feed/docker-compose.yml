@@ -1,0 +1,4 @@
+services:
+  engine:
+    build: .
+    command: ["./build/matching_engine_app", "data/orders.csv"]
