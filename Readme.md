@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  Live portfolio website: <a href="https://personal-website-srijan.vercel.app/">personal-website-srijan.vercel.app</a>
+  Live portfolio website: <a href="https://srijangupta.com/">srijangupta.com</a>
 </p>
 
 ---
@@ -25,7 +25,7 @@ I care a lot about the space between modeling and engineering. Good models matte
 
 ## About Me
 
-I am a Computer Science, Data Science, and Economics student at the **University of Wisconsin-Madison**, and most of my work sits at the intersection of machine learning, backend systems, analytics, and product development. I enjoy projects where the hard part is not just getting something to work once, but turning it into a reliable tool, service, or workflow that people would actually want to use.
+I completed a triple major in Computer Science, Data Science, and Economics at the **University of Wisconsin-Madison**, and I am now pursuing an **MS in Computer Science at NYU Tandon School of Engineering** (started Fall 2026, expected December 2027). Most of my work sits at the intersection of machine learning, backend systems, analytics, and product development. I enjoy projects where the hard part is not just getting something to work once, but turning it into a reliable tool, service, or workflow that people would actually want to use.
 
 Across the projects below, you will see a mix of legal RAG, document intelligence, fraud detection, forecasting, experimentation, low-latency market infrastructure, developer tooling, and analytics systems. The surface area changes, but my approach is pretty consistent:
 
@@ -42,7 +42,7 @@ Across the projects below, you will see a mix of legal RAG, document intelligenc
 ## Repository Navigation
 
 - [About Me](#about-me)
-- [Live Portfolio Website](https://personal-website-srijan.vercel.app/)
+- [Live Portfolio Website](https://srijangupta.com/)
 - [Featured Projects](#featured-projects)
 - [Project Categories](#project-categories)
 - [Detailed Project Summaries](#detailed-project-summaries)
