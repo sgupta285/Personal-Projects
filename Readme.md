@@ -100,6 +100,7 @@ This section is the quickest useful map of the repo. Each entry gives the short,
 - [Interactive Agent Orchestration Platform](#interactive-agent-orchestration-platform): Distributed services for document-heavy agent workflows with queues, tracing, and access control.
 - [Mobile Health Tracker (React Native)](#mobile-health-tracker-react-native): Cross-platform health app with offline storage, sync, and native fitness integrations.
 - [Restaurant Discovery Platform](#restaurant-discovery-platform): Full-stack discovery and booking product with search, reviews, maps, and reservations.
+- [NYC Public Space Explorer](#nyc-public-space-explorer): Interactive Leaflet map for exploring ~2,000 NYC public spaces with filtering, search, and a Python geospatial data pipeline.
 - [Event Management System](#event-management-system): Conference and meetup platform with registration, ticketing, waitlists, and admin operations.
 - [Habit Tracker with Social Features](#habit-tracker-with-social-features): Accountability-focused habit app with streaks, challenges, notifications, and leaderboards.
 
@@ -696,6 +697,30 @@ Built restaurant discovery and reservation platform with search, filtering, revi
 
 **Tech stack**  
 `React` `Node.js` `Express` `MongoDB` `ElasticSearch` `Google Maps API`
+
+---
+
+### NYC Public Space Explorer
+
+**Overview**  
+Built an interactive web map for exploring approximately **2,000 New York City public spaces**, including parks, gardens, plazas, and playgrounds, using NYC Open Data. The interface supports filtering by borough, space type, minimum size, and waterfront access, plus name search, live result counts, and detailed popups. The project combines a lightweight Leaflet frontend with a Python data pipeline that cleans and structures the source data into map-ready GeoJSON.
+
+**Key results**
+- Visualized approximately **2,000 public spaces** as interactive map points, using space type for visual grouping and acreage to represent relative size
+- Built responsive filtering and search workflows with live match counts, detailed popups, and a legend that work across desktop and mobile layouts
+- Created a reproducible cleaning and QA pipeline that removes incomplete or out-of-bounds records, repairs invalid geometry, de-duplicates locations, normalizes fields, and generates structured GeoJSON
+
+**Technical deep dive**
+- Implemented the map with Leaflet and plain JavaScript, loading a local GeoJSON dataset and rendering searchable, filterable public-space markers
+- Built `scripts/prepare_data.py` with Python and Shapely to compute polygon centroids, repair invalid rings, validate NYC bounding-box coordinates, and normalize source fields
+- Added a Bash-based data retrieval workflow for the NYC Open Data source and kept field definitions and provenance documented alongside the generated dataset
+- Structured the project as a lightweight static web application with separate HTML, CSS, JavaScript, data, and data-processing layers for straightforward local serving and maintenance
+
+**Focus areas**  
+`Interactive Mapping` `Geospatial Data` `Data Visualization` `Open Data` `Data Pipelines` `Data Quality` `Frontend Engineering`
+
+**Tech stack**  
+`HTML` `CSS` `JavaScript` `Leaflet` `Python` `Shapely` `GeoJSON` `Bash`
 
 ---
 
