@@ -1,0 +1,3 @@
+# Large raw pull; regenerate with scripts/fetch_data.sh
+data/parks_raw.json
+.DS_Store
